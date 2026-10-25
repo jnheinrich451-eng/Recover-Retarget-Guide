@@ -1,0 +1,2292 @@
+[
+ {
+  "pair": "000000000035.1.003/vehicle",
+  "t_a": 4,
+  "F_pair": 77,
+  "n_cotracker_tracks": 6240,
+  "n_static": 2093,
+  "n_with_Z_lift": 386,
+  "n_rejected_depth_edge": 517,
+  "z_lift_proxy": "median lifted depth of >=2 D4RT static tracks within 4.0 px at t_a agreeing within 10%",
+  "mask_dilate_px": 6,
+  "cameras": {
+   "ba": {
+    "split": {
+     "median_px": 8.580644025664617,
+     "p90_px": 9.657250609778144,
+     "n_points": 103,
+     "dropped": {
+      "too_few_obs": 0,
+      "span_too_short": 1868,
+      "too_few_even_or_odd": 0,
+      "no_baseline": 0,
+      "behind_camera": 122
+     },
+     "reproj_ok": false
+    },
+    "lift_tercile_information": {
+     "median_Ztri_over_Zlift": 7.044387945090178,
+     "ci95": [
+      1.2260076006630198,
+      141.5968299356871
+     ],
+     "n": 8,
+     "tol": 0.05,
+     "terciles": {
+      "near": {
+       "median": 33.2213949830009,
+       "n": 3,
+       "z_lift_range": [
+        4.450643062591553,
+        4.781724452972412
+       ]
+      },
+      "mid": {
+       "median": 3.4928650449070546,
+       "n": 3,
+       "z_lift_range": [
+        4.862112045288086,
+        7.739884376525879
+       ]
+      },
+      "far": {
+       "median": 268.3768572870025,
+       "n": 2,
+       "z_lift_range": [
+        7.739884376525879,
+        8.077661275863647
+       ]
+      }
+     },
+     "depth_dependent": true
+    },
+    "band_gauge": {
+     "n_band_points": 0,
+     "min_points": 30,
+     "tol": 0.05,
+     "band_pixels": 18776,
+     "ratio": null,
+     "ci95": null,
+     "half_fit": null,
+     "half_verify": null,
+     "verify_rel_diff": null,
+     "band_reproj_median_px": null,
+     "outcome": "undetermined (n=0<30)"
+    },
+    "rebin": {},
+    "cotracker_over_d4rt_Ztri": {
+     "n_matched": 67,
+     "radius_px": 4.0,
+     "median": 1.1038172433951918,
+     "ci95": [
+      0.8987108501223553,
+      2.057980762536188
+     ],
+     "in_band": {
+      "median": null,
+      "ci95": null,
+      "n": 0
+     },
+     "by_image_row": {
+      "top": {
+       "median": 3.6790280498070516,
+       "n": 22
+      },
+      "middle": {
+       "median": 0.9882466730881525,
+       "n": 22
+      },
+      "bottom": {
+       "median": 0.6032615610973007,
+       "n": 23
+      }
+     },
+     "by_depth_B": {
+      "near": {
+       "median": 2.4646253893170087,
+       "n": 21
+      },
+      "mid": {
+       "median": 1.0040470713651692,
+       "n": 21
+      },
+      "far": {
+       "median": 0.5974002719959794,
+       "n": 25
+      }
+     }
+    },
+    "d4rt_split_px": 4.157972292070118
+   },
+   "vipe_over_sigma": {
+    "split": {
+     "median_px": 5.289988417344632,
+     "p90_px": 7.067384226775889,
+     "n_points": 214,
+     "dropped": {
+      "too_few_obs": 0,
+      "span_too_short": 1868,
+      "too_few_even_or_odd": 0,
+      "no_baseline": 0,
+      "behind_camera": 11
+     },
+     "reproj_ok": false
+    },
+    "lift_tercile_information": {
+     "median_Ztri_over_Zlift": 3.371795085132794,
+     "ci95": [
+      2.5690213010758933,
+      3.5839106689186138
+     ],
+     "n": 16,
+     "tol": 0.05,
+     "terciles": {
+      "near": {
+       "median": 3.389630110077719,
+       "n": 6,
+       "z_lift_range": [
+        4.281611204147339,
+        4.450643062591553
+       ]
+      },
+      "mid": {
+       "median": 3.5839106689186138,
+       "n": 5,
+       "z_lift_range": [
+        4.450643062591553,
+        6.243232250213623
+       ]
+      },
+      "far": {
+       "median": 1.2544491272907288,
+       "n": 5,
+       "z_lift_range": [
+        7.028579473495483,
+        8.077661275863647
+       ]
+      }
+     },
+     "depth_dependent": true
+    },
+    "band_gauge": {
+     "n_band_points": 0,
+     "min_points": 30,
+     "tol": 0.05,
+     "band_pixels": 18776,
+     "ratio": null,
+     "ci95": null,
+     "half_fit": null,
+     "half_verify": null,
+     "verify_rel_diff": null,
+     "band_reproj_median_px": null,
+     "outcome": "undetermined (n=0<30)"
+    },
+    "rebin": {
+     "by_lift_depth": {
+      "mid": {
+       "median": 3.438798285921342,
+       "n": 8,
+       "range": [
+        4.450643062591553,
+        4.862112045288086
+       ]
+      },
+      "far": {
+       "median": 1.9194262750308524,
+       "n": 6,
+       "range": [
+        6.243232250213623,
+        8.077661275863647
+       ]
+      }
+     },
+     "by_triangulated_depth": {
+      "near": {
+       "median": 1.2544491272907288,
+       "n": 5,
+       "range": [
+        9.203648409182179,
+        11.012574025087066
+       ]
+      },
+      "mid": {
+       "median": 3.4243139589690403,
+       "n": 5,
+       "range": [
+        14.791361200874253,
+        15.950707155570479
+       ]
+      },
+      "far": {
+       "median": 4.280183999454664,
+       "n": 6,
+       "range": [
+        15.968015487179107,
+        44.5118598991636
+       ]
+      }
+     },
+     "by_image_row": {
+      "top": {
+       "median": 3.354946261186397,
+       "n": 5,
+       "range": [
+        86.22845865885417,
+        94.06820475260416
+       ]
+      },
+      "middle": {
+       "median": 3.4243139589690403,
+       "n": 5,
+       "range": [
+        94.14326171875,
+        105.9092529296875
+       ]
+      },
+      "bottom": {
+       "median": 1.63349689175983,
+       "n": 6,
+       "range": [
+        105.93902180989583,
+        141.28470052083333
+       ]
+      }
+     }
+    },
+    "cotracker_over_d4rt_Ztri": {
+     "n_matched": 138,
+     "radius_px": 4.0,
+     "median": 0.6355877683447935,
+     "ci95": [
+      0.5915185766776436,
+      0.7570362081967134
+     ],
+     "in_band": {
+      "median": null,
+      "ci95": null,
+      "n": 0
+     },
+     "by_image_row": {
+      "top": {
+       "median": 0.8147985162427068,
+       "n": 46
+      },
+      "middle": {
+       "median": 1.017883387231778,
+       "n": 46
+      },
+      "bottom": {
+       "median": 0.5146264148539075,
+       "n": 46
+      }
+     },
+     "by_depth_B": {
+      "near": {
+       "median": 1.6527427068378724,
+       "n": 46
+      },
+      "mid": {
+       "median": 0.516506713715098,
+       "n": 46
+      },
+      "far": {
+       "median": 0.6090063576029539,
+       "n": 46
+      }
+     }
+    },
+    "d4rt_split_px": 5.673998043499419
+   }
+  },
+  "delta_F": {
+   "beta_cotracker": null,
+   "beta_d4rt": null,
+   "note": "needs both band ratios and the D4RT band parallax (rerun refine_m3_camera_ba.py)"
+  }
+ },
+ {
+  "pair": "000000000035.1.003/vehicle",
+  "t_a": 4,
+  "F_pair": 77,
+  "n_cotracker_tracks": 6240,
+  "n_static": 2093,
+  "n_with_Z_lift": 386,
+  "n_rejected_depth_edge": 517,
+  "z_lift_proxy": "median lifted depth of >=2 D4RT static tracks within 4.0 px at t_a agreeing within 10%",
+  "mask_dilate_px": 6,
+  "cameras": {
+   "ba": {
+    "split": {
+     "median_px": 8.58093120116139,
+     "p90_px": 9.657451360845211,
+     "n_points": 103,
+     "dropped": {
+      "too_few_obs": 0,
+      "span_too_short": 1868,
+      "too_few_even_or_odd": 0,
+      "no_baseline": 0,
+      "behind_camera": 122
+     },
+     "reproj_ok": false
+    },
+    "lift_tercile_gauge": {
+     "median_Ztri_over_Zlift": 7.044265025221046,
+     "ci95": [
+      1.2260382709588007,
+      141.6462658213984
+     ],
+     "n": 8,
+     "tol": 0.05,
+     "outcome": "fail",
+     "read_on": "all",
+     "terciles": {
+      "near": {
+       "median": 33.239442962010514,
+       "n": 3,
+       "z_lift_range": [
+        4.450643062591553,
+        4.781724452972412
+       ]
+      },
+      "mid": {
+       "median": 3.4929698496222086,
+       "n": 3,
+       "z_lift_range": [
+        4.862112045288086,
+        7.739884376525879
+       ]
+      },
+      "far": {
+       "median": 275.5762387246201,
+       "n": 2,
+       "z_lift_range": [
+        7.739884376525879,
+        8.077661275863647
+       ]
+      }
+     },
+     "depth_dependent": true
+    },
+    "band_gauge": {
+     "n_band_points": 0,
+     "min_points": 30,
+     "tol": 0.05,
+     "band_pixels": 18776,
+     "ratio": null,
+     "ci95": null,
+     "half_fit": null,
+     "half_verify": null,
+     "verify_rel_diff": null,
+     "band_reproj_median_px": null,
+     "outcome": "undetermined (n=0<30)"
+    },
+    "rebin": {},
+    "cotracker_over_d4rt_Ztri": {
+     "n_matched": 67,
+     "radius_px": 4.0,
+     "median": 1.1039072101047247,
+     "ci95": [
+      0.8987311782764236,
+      2.0580044707733305
+     ],
+     "by_image_row": {
+      "top": {
+       "median": 3.6791990451661936,
+       "n": 22
+      },
+      "middle": {
+       "median": 0.9882763059302314,
+       "n": 22
+      },
+      "bottom": {
+       "median": 0.6032662058370379,
+       "n": 23
+      }
+     },
+     "by_depth_B": {
+      "near": {
+       "median": 2.464779415528582,
+       "n": 21
+      },
+      "mid": {
+       "median": 1.0040774620275235,
+       "n": 21
+      },
+      "far": {
+       "median": 0.5974052824389025,
+       "n": 25
+      }
+     }
+    },
+    "d4rt_split_px": 4.15844166366619
+   },
+   "vipe_over_sigma": {
+    "split": {
+     "median_px": 5.289988417344632,
+     "p90_px": 7.067384226775889,
+     "n_points": 214,
+     "dropped": {
+      "too_few_obs": 0,
+      "span_too_short": 1868,
+      "too_few_even_or_odd": 0,
+      "no_baseline": 0,
+      "behind_camera": 11
+     },
+     "reproj_ok": false
+    },
+    "lift_tercile_gauge": {
+     "median_Ztri_over_Zlift": 3.371795085132794,
+     "ci95": [
+      2.5690213010758933,
+      3.5839106689186138
+     ],
+     "n": 16,
+     "tol": 0.05,
+     "outcome": "fail",
+     "read_on": "near",
+     "terciles": {
+      "near": {
+       "median": 3.389630110077719,
+       "n": 6,
+       "z_lift_range": [
+        4.281611204147339,
+        4.450643062591553
+       ]
+      },
+      "mid": {
+       "median": 3.5839106689186138,
+       "n": 5,
+       "z_lift_range": [
+        4.450643062591553,
+        6.243232250213623
+       ]
+      },
+      "far": {
+       "median": 1.2544491272907288,
+       "n": 5,
+       "z_lift_range": [
+        7.028579473495483,
+        8.077661275863647
+       ]
+      }
+     },
+     "depth_dependent": true,
+     "near": {
+      "median_Ztri_over_Zlift": 3.389630110077719,
+      "ci95": [
+       2.946221216051308,
+       3.5913617032481726
+      ],
+      "n": 6
+     }
+    },
+    "band_gauge": {
+     "n_band_points": 0,
+     "min_points": 30,
+     "tol": 0.05,
+     "band_pixels": 18776,
+     "ratio": null,
+     "ci95": null,
+     "half_fit": null,
+     "half_verify": null,
+     "verify_rel_diff": null,
+     "band_reproj_median_px": null,
+     "outcome": "undetermined (n=0<30)"
+    },
+    "rebin": {
+     "by_lift_depth": {
+      "mid": {
+       "median": 3.438798285921342,
+       "n": 8,
+       "range": [
+        4.450643062591553,
+        4.862112045288086
+       ]
+      },
+      "far": {
+       "median": 1.9194262750308524,
+       "n": 6,
+       "range": [
+        6.243232250213623,
+        8.077661275863647
+       ]
+      }
+     },
+     "by_triangulated_depth": {
+      "near": {
+       "median": 1.2544491272907288,
+       "n": 5,
+       "range": [
+        9.203648409182179,
+        11.012574025087066
+       ]
+      },
+      "mid": {
+       "median": 3.4243139589690403,
+       "n": 5,
+       "range": [
+        14.791361200874253,
+        15.950707155570479
+       ]
+      },
+      "far": {
+       "median": 4.280183999454664,
+       "n": 6,
+       "range": [
+        15.968015487179107,
+        44.5118598991636
+       ]
+      }
+     },
+     "by_image_row": {
+      "top": {
+       "median": 3.354946261186397,
+       "n": 5,
+       "range": [
+        86.22845865885417,
+        94.06820475260416
+       ]
+      },
+      "middle": {
+       "median": 3.4243139589690403,
+       "n": 5,
+       "range": [
+        94.14326171875,
+        105.9092529296875
+       ]
+      },
+      "bottom": {
+       "median": 1.63349689175983,
+       "n": 6,
+       "range": [
+        105.93902180989583,
+        141.28470052083333
+       ]
+      }
+     }
+    },
+    "cotracker_over_d4rt_Ztri": {
+     "n_matched": 138,
+     "radius_px": 4.0,
+     "median": 0.6355877683447935,
+     "ci95": [
+      0.5915185766776436,
+      0.7570362081967134
+     ],
+     "by_image_row": {
+      "top": {
+       "median": 0.8147985162427068,
+       "n": 46
+      },
+      "middle": {
+       "median": 1.017883387231778,
+       "n": 46
+      },
+      "bottom": {
+       "median": 0.5146264148539075,
+       "n": 46
+      }
+     },
+     "by_depth_B": {
+      "near": {
+       "median": 1.6527427068378724,
+       "n": 46
+      },
+      "mid": {
+       "median": 0.516506713715098,
+       "n": 46
+      },
+      "far": {
+       "median": 0.6090063576029539,
+       "n": 46
+      }
+     }
+    },
+    "d4rt_split_px": 5.673998043499419
+   }
+  },
+  "solve": {
+   "ba": {
+    "nfev": 400,
+    "status": 0,
+    "stages": [
+     {
+      "loss": "linear",
+      "nfev": 200,
+      "status": 0
+     },
+     {
+      "loss": "huber",
+      "f_scale": 2.0,
+      "nfev": 200,
+      "status": 0,
+      "kept": true
+     }
+    ],
+    "reproj_rms_before": 4.816750870021989,
+    "reproj_rms_after": 1.2951678668264013,
+    "n_obs": 3134,
+    "n_points": 236,
+    "n_cams": 77,
+    "prior_rms_rel_after": 0.015599946558495979,
+    "focal_scale": null,
+    "dropped_observations": {
+     "behind": 159,
+     "outside": 93,
+     "far_from_init": 1992
+    }
+   },
+   "n_solve_points": 236,
+   "n_held": 1062,
+   "held_split_px_init": 8.681512457015415,
+   "held_split_px": 3.467475835179976,
+   "held_split_p90_px": 5.708112203411948,
+   "n_held_scored": 104,
+   "reproj_ok": false,
+   "band_gauge": {
+    "n_band_points": 0,
+    "min_points": 30,
+    "tol": 0.05,
+    "band_pixels": 18776,
+    "ratio": null,
+    "ci95": null,
+    "half_fit": null,
+    "half_verify": null,
+    "verify_rel_diff": null,
+    "band_reproj_median_px": null,
+    "outcome": "undetermined (n=0<30)"
+   },
+   "rebin": {},
+   "rot_change_vs_init_deg_max": 34.03729520258789,
+   "trans_change_vs_init_rel_max": 3.9928902975868117
+  }
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "t_a": 47,
+  "F_pair": 33,
+  "n_cotracker_tracks": 6240,
+  "n_static": 2629,
+  "n_with_Z_lift": 1022,
+  "n_rejected_depth_edge": 201,
+  "z_lift_proxy": "median lifted depth of >=2 D4RT static tracks within 4.0 px at t_a agreeing within 10%",
+  "mask_dilate_px": 6,
+  "cameras": {
+   "ba": {
+    "split": {
+     "median_px": 0.8639242448180047,
+     "p90_px": 1.8598555999202857,
+     "n_points": 2478,
+     "dropped": {
+      "too_few_obs": 0,
+      "span_too_short": 149,
+      "too_few_even_or_odd": 0,
+      "no_baseline": 0,
+      "behind_camera": 2
+     },
+     "reproj_ok": true
+    },
+    "lift_tercile_information": {
+     "median_Ztri_over_Zlift": 1.1303570989079448,
+     "ci95": [
+      1.122877947635046,
+      1.1381907998820775
+     ],
+     "n": 1003,
+     "tol": 0.05,
+     "terciles": {
+      "near": {
+       "median": 1.1008652916994417,
+       "n": 335,
+       "z_lift_range": [
+        2.3426674604415894,
+        4.284723520278931
+       ]
+      },
+      "mid": {
+       "median": 1.1485520329541643,
+       "n": 334,
+       "z_lift_range": [
+        4.289340972900391,
+        7.864488840103149
+       ]
+      },
+      "far": {
+       "median": 1.9454793979026608,
+       "n": 334,
+       "z_lift_range": [
+        7.864488840103149,
+        12.102953433990479
+       ]
+      }
+     },
+     "depth_dependent": true
+    },
+    "band_gauge": {
+     "n_band_points": 231,
+     "min_points": 30,
+     "tol": 0.05,
+     "band_pixels": 26323,
+     "ratio": 1.179784551325673,
+     "ci95": [
+      1.142524634970911,
+      1.2239388145340337
+     ],
+     "ci_half_width": 0.040707089781561345,
+     "half_fit": 1.2213715723531786,
+     "half_verify": 1.1523084240263222,
+     "verify_rel_diff": 0.0565455672050682,
+     "band_reproj_median_px": 0.6650649571596049,
+     "outcome": "undetermined (half-split or interval wider than tol)"
+    },
+    "rebin": {
+     "by_lift_depth": {
+      "near": {
+       "median": 1.1009819348159973,
+       "n": 334,
+       "range": [
+        2.3426674604415894,
+        4.275473117828369
+       ]
+      },
+      "mid": {
+       "median": 1.1485520329541643,
+       "n": 334,
+       "range": [
+        4.284723520278931,
+        7.857614517211914
+       ]
+      },
+      "far": {
+       "median": 1.9449243973743042,
+       "n": 335,
+       "range": [
+        7.864488840103149,
+        12.102953433990479
+       ]
+      }
+     },
+     "by_triangulated_depth": {
+      "near": {
+       "median": 1.1004201681932417,
+       "n": 334,
+       "range": [
+        2.338147449081447,
+        4.566894690767121
+       ]
+      },
+      "mid": {
+       "median": 1.098366090793708,
+       "n": 334,
+       "range": [
+        4.56975669616351,
+        12.565829998258346
+       ]
+      },
+      "far": {
+       "median": 2.2403934535102663,
+       "n": 335,
+       "range": [
+        12.691939211257795,
+        79.47477690917705
+       ]
+      }
+     },
+     "by_image_row": {
+      "top": {
+       "median": 2.231665692033916,
+       "n": 334,
+       "range": [
+        4.7761474609375,
+        100.77794596354167
+       ]
+      },
+      "middle": {
+       "median": 1.098366090793708,
+       "n": 334,
+       "range": [
+        100.97422688802084,
+        156.66705729166668
+       ]
+      },
+      "bottom": {
+       "median": 1.100810711597355,
+       "n": 335,
+       "range": [
+        156.75222981770833,
+        226.77913411458334
+       ]
+      }
+     }
+    },
+    "cotracker_over_d4rt_Ztri": {
+     "n_matched": 1598,
+     "radius_px": 4.0,
+     "median": 1.0528236275902998,
+     "ci95": [
+      1.0307828136922794,
+      1.0910273183002117
+     ],
+     "in_band": {
+      "median": 1.1264643379946109,
+      "ci95": [
+       1.0737322008535157,
+       1.218368645516636
+      ],
+      "n": 414
+     },
+     "by_image_row": {
+      "top": {
+       "median": 3.0969699298872047,
+       "n": 533
+      },
+      "middle": {
+       "median": 1.0334585401589722,
+       "n": 532
+      },
+      "bottom": {
+       "median": 0.9422728793632483,
+       "n": 533
+      }
+     },
+     "by_depth_B": {
+      "near": {
+       "median": 0.9633410797895912,
+       "n": 529
+      },
+      "mid": {
+       "median": 2.7677209921019648,
+       "n": 536
+      },
+      "far": {
+       "median": 1.7202265005806137,
+       "n": 533
+      }
+     }
+    },
+    "d4rt_split_px": 0.8795449360013067
+   },
+   "vipe_over_sigma": {
+    "split": {
+     "median_px": 0.7632897536697756,
+     "p90_px": 1.3486190235910522,
+     "n_points": 2480,
+     "dropped": {
+      "too_few_obs": 0,
+      "span_too_short": 149,
+      "too_few_even_or_odd": 0,
+      "no_baseline": 0,
+      "behind_camera": 0
+     },
+     "reproj_ok": true
+    },
+    "lift_tercile_information": {
+     "median_Ztri_over_Zlift": 1.1210026070924974,
+     "ci95": [
+      1.110990464101137,
+      1.1322063881395463
+     ],
+     "n": 1003,
+     "tol": 0.05,
+     "terciles": {
+      "near": {
+       "median": 1.0868611803895871,
+       "n": 335,
+       "z_lift_range": [
+        2.3426674604415894,
+        4.284723520278931
+       ]
+      },
+      "mid": {
+       "median": 1.1402936833633621,
+       "n": 334,
+       "z_lift_range": [
+        4.289340972900391,
+        7.864488840103149
+       ]
+      },
+      "far": {
+       "median": 1.9036300040968368,
+       "n": 334,
+       "z_lift_range": [
+        7.864488840103149,
+        12.102953433990479
+       ]
+      }
+     },
+     "depth_dependent": true
+    },
+    "band_gauge": {
+     "n_band_points": 231,
+     "min_points": 30,
+     "tol": 0.05,
+     "band_pixels": 26323,
+     "ratio": 1.2020981034103948,
+     "ci95": [
+      1.1538190487998412,
+      1.2507015338236596
+     ],
+     "ci_half_width": 0.04844124251190918,
+     "half_fit": 1.2506656363090864,
+     "half_verify": 1.1741928157690094,
+     "verify_rel_diff": 0.06114569579584883,
+     "band_reproj_median_px": 0.6520121871479263,
+     "outcome": "undetermined (half-split or interval wider than tol)"
+    },
+    "rebin": {
+     "by_lift_depth": {
+      "near": {
+       "median": 1.087119059421481,
+       "n": 334,
+       "range": [
+        2.3426674604415894,
+        4.275473117828369
+       ]
+      },
+      "mid": {
+       "median": 1.1402936833633621,
+       "n": 334,
+       "range": [
+        4.284723520278931,
+        7.857614517211914
+       ]
+      },
+      "far": {
+       "median": 1.9032795403285157,
+       "n": 335,
+       "range": [
+        7.864488840103149,
+        12.102953433990479
+       ]
+      }
+     },
+     "by_triangulated_depth": {
+      "near": {
+       "median": 1.085329853642146,
+       "n": 334,
+       "range": [
+        2.4304980509984566,
+        4.509080235644033
+       ]
+      },
+      "mid": {
+       "median": 1.0894355062863652,
+       "n": 334,
+       "range": [
+        4.509710625792582,
+        12.66710130550979
+       ]
+      },
+      "far": {
+       "median": 2.208501920144807,
+       "n": 335,
+       "range": [
+        12.709787069282635,
+        54.284628159414986
+       ]
+      }
+     },
+     "by_image_row": {
+      "top": {
+       "median": 2.1931986059369732,
+       "n": 334,
+       "range": [
+        4.7761474609375,
+        100.77794596354167
+       ]
+      },
+      "middle": {
+       "median": 1.089038550394458,
+       "n": 334,
+       "range": [
+        100.97422688802084,
+        156.66705729166668
+       ]
+      },
+      "bottom": {
+       "median": 1.0863953386544882,
+       "n": 335,
+       "range": [
+        156.75222981770833,
+        226.77913411458334
+       ]
+      }
+     }
+    },
+    "cotracker_over_d4rt_Ztri": {
+     "n_matched": 1598,
+     "radius_px": 4.0,
+     "median": 1.0528847865728335,
+     "ci95": [
+      1.0283595892780777,
+      1.093766524229552
+     ],
+     "in_band": {
+      "median": 1.1334154122151079,
+      "ci95": [
+       1.0670549749839537,
+       1.2368811453122768
+      ],
+      "n": 414
+     },
+     "by_image_row": {
+      "top": {
+       "median": 3.073496315150382,
+       "n": 533
+      },
+      "middle": {
+       "median": 1.0340216045153687,
+       "n": 532
+      },
+      "bottom": {
+       "median": 0.940810903957876,
+       "n": 533
+      }
+     },
+     "by_depth_B": {
+      "near": {
+       "median": 0.9588725989535705,
+       "n": 531
+      },
+      "mid": {
+       "median": 2.749350638783433,
+       "n": 531
+      },
+      "far": {
+       "median": 1.719495452679644,
+       "n": 536
+      }
+     }
+    },
+    "d4rt_split_px": 1.2799504350348103
+   }
+  },
+  "delta_F": {
+   "beta_cotracker": 1.179784551325673,
+   "beta_d4rt": 1.148954869444884,
+   "band_parallax_p90_px": 22.80477510900337,
+   "delta_F_px": 0.6119160818850938,
+   "delta_F_patch": 0.12429545413290968,
+   "rule": "<= 0.3 patch: tracker choice immaterial, D4RT value is the bridge; else interval + low/high sensitivity run",
+   "outcome": "immaterial"
+  }
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "t_a": 0,
+  "F_pair": 81,
+  "n_cotracker_tracks": 6240,
+  "n_static": 4265,
+  "n_with_Z_lift": 154,
+  "n_rejected_depth_edge": 1,
+  "z_lift_proxy": "median lifted depth of >=2 D4RT static tracks within 4.0 px at t_a agreeing within 10%",
+  "mask_dilate_px": 6,
+  "cameras": {
+   "ba": {
+    "split": {
+     "median_px": 1.0896423648869673,
+     "p90_px": 1.464250148574059,
+     "n_points": 4125,
+     "dropped": {
+      "too_few_obs": 0,
+      "span_too_short": 140,
+      "too_few_even_or_odd": 0,
+      "no_baseline": 0,
+      "behind_camera": 0
+     },
+     "reproj_ok": true
+    },
+    "lift_tercile_information": {
+     "median_Ztri_over_Zlift": 3.404173424769283,
+     "ci95": [
+      3.3193427612665887,
+      3.5326973362534173
+     ],
+     "n": 152,
+     "tol": 0.05,
+     "terciles": {
+      "near": {
+       "median": 1.3464047336032616,
+       "n": 51,
+       "z_lift_range": [
+        1.8538091778755188,
+        7.7725443840026855
+       ]
+      },
+      "mid": {
+       "median": 3.6357564510921265,
+       "n": 51,
+       "z_lift_range": [
+        7.8001368045806885,
+        8.18019151687622
+       ]
+      },
+      "far": {
+       "median": 3.3439227048733624,
+       "n": 50,
+       "z_lift_range": [
+        8.203423500061035,
+        10.091466903686523
+       ]
+      }
+     },
+     "depth_dependent": true
+    },
+    "band_gauge": {
+     "n_band_points": 28,
+     "min_points": 30,
+     "tol": 0.05,
+     "band_pixels": 25015,
+     "ratio": null,
+     "ci95": null,
+     "half_fit": null,
+     "half_verify": null,
+     "verify_rel_diff": null,
+     "band_reproj_median_px": 1.0885854950971776,
+     "outcome": "undetermined (n=28<30)"
+    },
+    "rebin": {
+     "by_lift_depth": {
+      "near": {
+       "median": 1.3464047336032616,
+       "n": 51,
+       "range": [
+        1.8538091778755188,
+        7.7725443840026855
+       ]
+      },
+      "mid": {
+       "median": 3.640482769071083,
+       "n": 48,
+       "range": [
+        7.8001368045806885,
+        8.174098491668701
+       ]
+      },
+      "far": {
+       "median": 3.3536585376717385,
+       "n": 53,
+       "range": [
+        8.18019151687622,
+        10.091466903686523
+       ]
+      }
+     },
+     "by_triangulated_depth": {
+      "near": {
+       "median": 1.3464047336032616,
+       "n": 51,
+       "range": [
+        2.1745084806387873,
+        27.083783327394467
+       ]
+      },
+      "mid": {
+       "median": 3.3937331725419293,
+       "n": 50,
+       "range": [
+        27.240670711404697,
+        28.88735499181761
+       ]
+      },
+      "far": {
+       "median": 4.312455288413802,
+       "n": 51,
+       "range": [
+        28.90761799130762,
+        72.34128856495502
+       ]
+      }
+     },
+     "by_image_row": {
+      "top": {
+       "median": 3.834596080244596,
+       "n": 46,
+       "range": [
+        2.1333335876464843,
+        32.00000203450521
+       ]
+      },
+      "middle": {
+       "median": 3.536313750153301,
+       "n": 51,
+       "range": [
+        36.26667073567708,
+        83.2
+       ]
+      },
+      "bottom": {
+       "median": 1.3491982687276003,
+       "n": 55,
+       "range": [
+        87.4666748046875,
+        249.6
+       ]
+      }
+     }
+    },
+    "cotracker_over_d4rt_Ztri": {
+     "n_matched": 1425,
+     "radius_px": 4.0,
+     "median": 3.1489164922051893,
+     "ci95": [
+      3.0255393671955306,
+      3.3008244371192395
+     ],
+     "in_band": {
+      "median": 1.3168270508046256,
+      "ci95": [
+       1.2702647224004553,
+       1.3915151618439863
+      ],
+      "n": 352
+     },
+     "by_image_row": {
+      "top": {
+       "median": 5.767321578062565,
+       "n": 474
+      },
+      "middle": {
+       "median": 3.928419072281933,
+       "n": 463
+      },
+      "bottom": {
+       "median": 1.146216858399923,
+       "n": 488
+      }
+     },
+     "by_depth_B": {
+      "near": {
+       "median": 1.1456310052027243,
+       "n": 471
+      },
+      "mid": {
+       "median": 5.470792436704864,
+       "n": 477
+      },
+      "far": {
+       "median": 3.033945086507961,
+       "n": 477
+      }
+     }
+    },
+    "d4rt_split_px": 0.6533016583681541
+   },
+   "vipe_over_sigma": {
+    "split": {
+     "median_px": 0.6782395020133023,
+     "p90_px": 1.3232535160702787,
+     "n_points": 4112,
+     "dropped": {
+      "too_few_obs": 0,
+      "span_too_short": 140,
+      "too_few_even_or_odd": 0,
+      "no_baseline": 0,
+      "behind_camera": 13
+     },
+     "reproj_ok": true
+    },
+    "lift_tercile_information": {
+     "median_Ztri_over_Zlift": 3.375385720772752,
+     "ci95": [
+      3.284622965514128,
+      3.5125844876097942
+     ],
+     "n": 152,
+     "tol": 0.05,
+     "terciles": {
+      "near": {
+       "median": 1.2926154259118483,
+       "n": 51,
+       "z_lift_range": [
+        1.8538091778755188,
+        7.7725443840026855
+       ]
+      },
+      "mid": {
+       "median": 3.613061707928654,
+       "n": 51,
+       "z_lift_range": [
+        7.8001368045806885,
+        8.18019151687622
+       ]
+      },
+      "far": {
+       "median": 3.3077332792007157,
+       "n": 50,
+       "z_lift_range": [
+        8.203423500061035,
+        10.091466903686523
+       ]
+      }
+     },
+     "depth_dependent": true
+    },
+    "band_gauge": {
+     "n_band_points": 28,
+     "min_points": 30,
+     "tol": 0.05,
+     "band_pixels": 25015,
+     "ratio": null,
+     "ci95": null,
+     "half_fit": null,
+     "half_verify": null,
+     "verify_rel_diff": null,
+     "band_reproj_median_px": 0.9188263977132011,
+     "outcome": "undetermined (n=28<30)"
+    },
+    "rebin": {
+     "by_lift_depth": {
+      "near": {
+       "median": 1.2926154259118483,
+       "n": 51,
+       "range": [
+        1.8538091778755188,
+        7.7725443840026855
+       ]
+      },
+      "mid": {
+       "median": 3.7346672619167975,
+       "n": 48,
+       "range": [
+        7.8001368045806885,
+        8.174098491668701
+       ]
+      },
+      "far": {
+       "median": 3.3196965662666256,
+       "n": 53,
+       "range": [
+        8.18019151687622,
+        10.091466903686523
+       ]
+      }
+     },
+     "by_triangulated_depth": {
+      "near": {
+       "median": 1.2926154259118483,
+       "n": 51,
+       "range": [
+        2.359932569518414,
+        26.972610385887812
+       ]
+      },
+      "mid": {
+       "median": 3.403247703654173,
+       "n": 50,
+       "range": [
+        27.008399978001425,
+        28.96410534732134
+       ]
+      },
+      "far": {
+       "median": 6.40254388073792,
+       "n": 51,
+       "range": [
+        29.006345502771435,
+        309.4939660855756
+       ]
+      }
+     },
+     "by_image_row": {
+      "top": {
+       "median": 3.935699635602797,
+       "n": 46,
+       "range": [
+        2.1333335876464843,
+        32.00000203450521
+       ]
+      },
+      "middle": {
+       "median": 3.5044328901037165,
+       "n": 51,
+       "range": [
+        36.26667073567708,
+        83.2
+       ]
+      },
+      "bottom": {
+       "median": 1.3440739264372565,
+       "n": 55,
+       "range": [
+        87.4666748046875,
+        249.6
+       ]
+      }
+     }
+    },
+    "cotracker_over_d4rt_Ztri": {
+     "n_matched": 1423,
+     "radius_px": 4.0,
+     "median": 3.449384170751625,
+     "ci95": [
+      3.2968586128940567,
+      3.664819893066878
+     ],
+     "in_band": {
+      "median": 1.3309919280245213,
+      "ci95": [
+       1.285450811680434,
+       1.4213847231789458
+      ],
+      "n": 352
+     },
+     "by_image_row": {
+      "top": {
+       "median": 8.037076216054338,
+       "n": 472
+      },
+      "middle": {
+       "median": 4.569291740602642,
+       "n": 463
+      },
+      "bottom": {
+       "median": 1.1217748317666019,
+       "n": 488
+      }
+     },
+     "by_depth_B": {
+      "near": {
+       "median": 1.11974818295085,
+       "n": 474
+      },
+      "mid": {
+       "median": 7.340668579626264,
+       "n": 470
+      },
+      "far": {
+       "median": 3.298364397957738,
+       "n": 479
+      }
+     }
+    },
+    "d4rt_split_px": 1.3275097419465522
+   }
+  },
+  "delta_F": {
+   "beta_cotracker": null,
+   "beta_d4rt": 1.1668649581794057,
+   "note": "needs both band ratios and the D4RT band parallax (rerun refine_m3_camera_ba.py)"
+  }
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "t_a": 0,
+  "F_pair": 81,
+  "n_cotracker_tracks": 6240,
+  "n_static": 4737,
+  "n_with_Z_lift": 1222,
+  "n_rejected_depth_edge": 166,
+  "z_lift_proxy": "median lifted depth of >=2 D4RT static tracks within 4.0 px at t_a agreeing within 10%",
+  "mask_dilate_px": 6,
+  "cameras": {
+   "ba": {
+    "split": {
+     "median_px": 0.6446160619569679,
+     "p90_px": 1.109211583690695,
+     "n_points": 3107,
+     "dropped": {
+      "too_few_obs": 0,
+      "span_too_short": 1630,
+      "too_few_even_or_odd": 0,
+      "no_baseline": 0,
+      "behind_camera": 0
+     },
+     "reproj_ok": true
+    },
+    "lift_tercile_information": {
+     "median_Ztri_over_Zlift": 1.0218670580106437,
+     "ci95": [
+      1.0142440985493981,
+      1.0277316819854672
+     ],
+     "n": 959,
+     "tol": 0.05,
+     "terciles": {
+      "near": {
+       "median": 1.0144578157672177,
+       "n": 320,
+       "z_lift_range": [
+        1.3935503959655762,
+        2.517409086227417
+       ]
+      },
+      "mid": {
+       "median": 1.017092904927676,
+       "n": 320,
+       "z_lift_range": [
+        2.5216004848480225,
+        3.7770755290985107
+       ]
+      },
+      "far": {
+       "median": 1.0376311273538021,
+       "n": 319,
+       "z_lift_range": [
+        3.7770755290985107,
+        9.589166641235352
+       ]
+      }
+     },
+     "depth_dependent": false
+    },
+    "band_gauge": {
+     "n_band_points": 509,
+     "min_points": 30,
+     "tol": 0.05,
+     "band_pixels": 24268,
+     "ratio": 0.9919993500155645,
+     "ci95": [
+      0.9815736206457772,
+      0.9990607697565275
+     ],
+     "ci_half_width": 0.008743574555375111,
+     "half_fit": 0.9881680262149559,
+     "half_verify": 0.9956021181008813,
+     "verify_rel_diff": 0.007523105067870572,
+     "band_reproj_median_px": 0.6125362621892343,
+     "outcome": "determined"
+    },
+    "rebin": {
+     "by_lift_depth": {
+      "near": {
+       "median": 1.0144578157672177,
+       "n": 320,
+       "range": [
+        1.3935503959655762,
+        2.517409086227417
+       ]
+      },
+      "mid": {
+       "median": 1.016521219953728,
+       "n": 319,
+       "range": [
+        2.5216004848480225,
+        3.7664976119995117
+       ]
+      },
+      "far": {
+       "median": 1.0382429559795123,
+       "n": 320,
+       "range": [
+        3.7770755290985107,
+        9.589166641235352
+       ]
+      }
+     },
+     "by_triangulated_depth": {
+      "near": {
+       "median": 1.0017606327942778,
+       "n": 320,
+       "range": [
+        1.4458874814092422,
+        2.5354915602301444
+       ]
+      },
+      "mid": {
+       "median": 1.019541270601042,
+       "n": 319,
+       "range": [
+        2.537024513155545,
+        3.48474353576954
+       ]
+      },
+      "far": {
+       "median": 1.0586688992431579,
+       "n": 320,
+       "range": [
+        3.4863920140600166,
+        12.350362605509304
+       ]
+      }
+     },
+     "by_image_row": {
+      "top": {
+       "median": 1.057123840010508,
+       "n": 306,
+       "range": [
+        14.933334350585938,
+        91.73333333333333
+       ]
+      },
+      "middle": {
+       "median": 0.9925173446238479,
+       "n": 331,
+       "range": [
+        96.00000813802083,
+        160.0
+       ]
+      },
+      "bottom": {
+       "median": 1.01580885319804,
+       "n": 322,
+       "range": [
+        164.26668294270834,
+        206.933349609375
+       ]
+      }
+     }
+    },
+    "cotracker_over_d4rt_Ztri": {
+     "n_matched": 1427,
+     "radius_px": 4.0,
+     "median": 0.9684304107087737,
+     "ci95": [
+      0.9584885026275108,
+      0.979924718396668
+     ],
+     "in_band": {
+      "median": 0.9531886841729552,
+      "ci95": [
+       0.9413991972933464,
+       0.9644575266974246
+      ],
+      "n": 607
+     },
+     "by_image_row": {
+      "top": {
+       "median": 0.9866330882558054,
+       "n": 467
+      },
+      "middle": {
+       "median": 0.9908162906161675,
+       "n": 475
+      },
+      "bottom": {
+       "median": 0.9488280790185577,
+       "n": 485
+      }
+     },
+     "by_depth_B": {
+      "near": {
+       "median": 0.9959158049337862,
+       "n": 476
+      },
+      "mid": {
+       "median": 0.9662784575352157,
+       "n": 475
+      },
+      "far": {
+       "median": 0.9110950682317387,
+       "n": 476
+      }
+     }
+    },
+    "d4rt_split_px": 0.6509210895282355
+   },
+   "vipe_over_sigma": {
+    "split": {
+     "median_px": 1.0360237745166248,
+     "p90_px": 1.5134266583383686,
+     "n_points": 3103,
+     "dropped": {
+      "too_few_obs": 0,
+      "span_too_short": 1630,
+      "too_few_even_or_odd": 0,
+      "no_baseline": 0,
+      "behind_camera": 4
+     },
+     "reproj_ok": true
+    },
+    "lift_tercile_information": {
+     "median_Ztri_over_Zlift": 1.0471644863889817,
+     "ci95": [
+      1.0379657257766863,
+      1.0531076159842
+     ],
+     "n": 959,
+     "tol": 0.05,
+     "terciles": {
+      "near": {
+       "median": 1.0639196710499066,
+       "n": 320,
+       "z_lift_range": [
+        1.3935503959655762,
+        2.517409086227417
+       ]
+      },
+      "mid": {
+       "median": 1.033060783866109,
+       "n": 320,
+       "z_lift_range": [
+        2.5216004848480225,
+        3.7770755290985107
+       ]
+      },
+      "far": {
+       "median": 1.0668568414729158,
+       "n": 319,
+       "z_lift_range": [
+        3.7770755290985107,
+        9.589166641235352
+       ]
+      }
+     },
+     "depth_dependent": false
+    },
+    "band_gauge": {
+     "n_band_points": 509,
+     "min_points": 30,
+     "tol": 0.05,
+     "band_pixels": 24268,
+     "ratio": 1.029827545261315,
+     "ci95": [
+      1.0223422073667345,
+      1.0335678323274493
+     ],
+     "ci_half_width": 0.0056128124803573876,
+     "half_fit": 1.0287024910218725,
+     "half_verify": 1.0299608419085975,
+     "verify_rel_diff": 0.0012232408278460838,
+     "band_reproj_median_px": 0.9904598268045807,
+     "outcome": "determined"
+    },
+    "rebin": {
+     "by_lift_depth": {
+      "near": {
+       "median": 1.0639196710499066,
+       "n": 320,
+       "range": [
+        1.3935503959655762,
+        2.517409086227417
+       ]
+      },
+      "mid": {
+       "median": 1.0329450675997762,
+       "n": 319,
+       "range": [
+        2.5216004848480225,
+        3.7664976119995117
+       ]
+      },
+      "far": {
+       "median": 1.0669856144805525,
+       "n": 320,
+       "range": [
+        3.7770755290985107,
+        9.589166641235352
+       ]
+      }
+     },
+     "by_triangulated_depth": {
+      "near": {
+       "median": 1.0484177012183165,
+       "n": 320,
+       "range": [
+        1.6937206779738383,
+        2.586861600353545
+       ]
+      },
+      "mid": {
+       "median": 1.0308164967983,
+       "n": 319,
+       "range": [
+        2.5890797423412266,
+        3.8125521155830095
+       ]
+      },
+      "far": {
+       "median": 1.1125671964041575,
+       "n": 320,
+       "range": [
+        3.828509443060894,
+        18.010689723364123
+       ]
+      }
+     },
+     "by_image_row": {
+      "top": {
+       "median": 1.0847511680824327,
+       "n": 306,
+       "range": [
+        14.933334350585938,
+        91.73333333333333
+       ]
+      },
+      "middle": {
+       "median": 1.0219862318793496,
+       "n": 331,
+       "range": [
+        96.00000813802083,
+        160.0
+       ]
+      },
+      "bottom": {
+       "median": 1.0576690629688978,
+       "n": 322,
+       "range": [
+        164.26668294270834,
+        206.933349609375
+       ]
+      }
+     }
+    },
+    "cotracker_over_d4rt_Ztri": {
+     "n_matched": 1421,
+     "radius_px": 4.0,
+     "median": 0.9775456909451914,
+     "ci95": [
+      0.9685528040839673,
+      0.9891120007721862
+     ],
+     "in_band": {
+      "median": 0.9569825176604998,
+      "ci95": [
+       0.9465770172977981,
+       0.9692216506331284
+      ],
+      "n": 606
+     },
+     "by_image_row": {
+      "top": {
+       "median": 1.007317506391839,
+       "n": 467
+      },
+      "middle": {
+       "median": 1.0001037725579296,
+       "n": 469
+      },
+      "bottom": {
+       "median": 0.9571089997306726,
+       "n": 485
+      }
+     },
+     "by_depth_B": {
+      "near": {
+       "median": 0.9977459428924165,
+       "n": 472
+      },
+      "mid": {
+       "median": 0.9710801486649159,
+       "n": 473
+      },
+      "far": {
+       "median": 0.9413166046360685,
+       "n": 476
+      }
+     }
+    },
+    "d4rt_split_px": 1.1221908629793154
+   }
+  },
+  "delta_F": {
+   "beta_cotracker": 0.9919993500155645,
+   "beta_d4rt": 1.0665964097519405,
+   "band_parallax_p90_px": 68.52948569921534,
+   "delta_F_px": 4.792907693732456,
+   "delta_F_patch": 0.9735593752894051,
+   "rule": "<= 0.3 patch: tracker choice immaterial, D4RT value is the bridge; else interval + low/high sensitivity run",
+   "outcome": "interval + sensitivity run"
+  }
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "t_a": 47,
+  "F_pair": 33,
+  "n_cotracker_tracks": 6240,
+  "n_static": 3621,
+  "n_with_Z_lift": 915,
+  "n_rejected_depth_edge": 78,
+  "z_lift_proxy": "median lifted depth of >=2 D4RT static tracks within 4.0 px at t_a agreeing within 10%",
+  "mask_dilate_px": 6,
+  "cameras": {
+   "ba": {
+    "split": {
+     "median_px": 1.257069899305964,
+     "p90_px": 1.791866454331764,
+     "n_points": 3063,
+     "dropped": {
+      "too_few_obs": 0,
+      "span_too_short": 558,
+      "too_few_even_or_odd": 0,
+      "no_baseline": 0,
+      "behind_camera": 0
+     },
+     "reproj_ok": true
+    },
+    "lift_tercile_information": {
+     "median_Ztri_over_Zlift": 1.3661508211306044,
+     "ci95": [
+      1.3393656463961054,
+      1.4305075016962172
+     ],
+     "n": 913,
+     "tol": 0.05,
+     "terciles": {
+      "near": {
+       "median": 1.2872311028543224,
+       "n": 305,
+       "z_lift_range": [
+        1.2173566222190857,
+        5.18286395072937
+       ]
+      },
+      "mid": {
+       "median": 1.5759464246022845,
+       "n": 304,
+       "z_lift_range": [
+        5.188373327255249,
+        5.715069055557251
+       ]
+      },
+      "far": {
+       "median": 1.448694563091177,
+       "n": 304,
+       "z_lift_range": [
+        5.717933177947998,
+        6.514156818389893
+       ]
+      }
+     },
+     "depth_dependent": true
+    },
+    "band_gauge": {
+     "n_band_points": 306,
+     "min_points": 30,
+     "tol": 0.05,
+     "band_pixels": 21403,
+     "ratio": 1.291778448482574,
+     "ci95": [
+      1.2751272657910562,
+      1.3089829189886082
+     ],
+     "ci_half_width": 0.016927826598776008,
+     "half_fit": 1.2830927929704325,
+     "half_verify": 1.2987110723677466,
+     "verify_rel_diff": 0.012172369358537827,
+     "band_reproj_median_px": 1.3828800187051982,
+     "outcome": "determined"
+    },
+    "rebin": {
+     "by_lift_depth": {
+      "near": {
+       "median": 1.2871637421610806,
+       "n": 304,
+       "range": [
+        1.2173566222190857,
+        5.181410789489746
+       ]
+      },
+      "mid": {
+       "median": 1.5759464246022845,
+       "n": 304,
+       "range": [
+        5.18286395072937,
+        5.7124481201171875
+       ]
+      },
+      "far": {
+       "median": 1.4493926847245817,
+       "n": 305,
+       "range": [
+        5.715069055557251,
+        6.514156818389893
+       ]
+      }
+     },
+     "by_triangulated_depth": {
+      "near": {
+       "median": 1.1908669950036788,
+       "n": 304,
+       "range": [
+        1.5030890187422152,
+        6.29641139994743
+       ]
+      },
+      "mid": {
+       "median": 1.3559309693232917,
+       "n": 304,
+       "range": [
+        6.304229819160008,
+        9.25917356030439
+       ]
+      },
+      "far": {
+       "median": 2.1622532378277124,
+       "n": 305,
+       "range": [
+        9.270273914189506,
+        75.15649755559548
+       ]
+      }
+     },
+     "by_image_row": {
+      "top": {
+       "median": 1.2876673055460914,
+       "n": 304,
+       "range": [
+        1.1657241821289062,
+        67.08941650390625
+       ]
+      },
+      "middle": {
+       "median": 1.6744499847785939,
+       "n": 304,
+       "range": [
+        67.28092041015626,
+        108.5423095703125
+       ]
+      },
+      "bottom": {
+       "median": 1.2914477705859977,
+       "n": 305,
+       "range": [
+        108.55289713541667,
+        232.38194986979167
+       ]
+      }
+     }
+    },
+    "cotracker_over_d4rt_Ztri": {
+     "n_matched": 1567,
+     "radius_px": 4.0,
+     "median": 1.4143260094377976,
+     "ci95": [
+      1.3664916130075615,
+      1.4601258395287464
+     ],
+     "in_band": {
+      "median": 1.091518060121295,
+      "ci95": [
+       1.0806114149926578,
+       1.1073358825606527
+      ],
+      "n": 574
+     },
+     "by_image_row": {
+      "top": {
+       "median": 1.4234502291683249,
+       "n": 522
+      },
+      "middle": {
+       "median": 1.9128539554482136,
+       "n": 522
+      },
+      "bottom": {
+       "median": 1.078959871062208,
+       "n": 523
+      }
+     },
+     "by_depth_B": {
+      "near": {
+       "median": 1.0743550596244198,
+       "n": 522
+      },
+      "mid": {
+       "median": 2.1736725934872316,
+       "n": 522
+      },
+      "far": {
+       "median": 1.3132672847929232,
+       "n": 523
+      }
+     }
+    },
+    "d4rt_split_px": 0.5220741519441325
+   },
+   "vipe_over_sigma": {
+    "split": {
+     "median_px": 0.5923534598877965,
+     "p90_px": 0.9463758289028896,
+     "n_points": 3057,
+     "dropped": {
+      "too_few_obs": 0,
+      "span_too_short": 558,
+      "too_few_even_or_odd": 0,
+      "no_baseline": 0,
+      "behind_camera": 6
+     },
+     "reproj_ok": true
+    },
+    "lift_tercile_information": {
+     "median_Ztri_over_Zlift": 1.4118759420908646,
+     "ci95": [
+      1.3502440775480535,
+      1.5144589953335217
+     ],
+     "n": 911,
+     "tol": 0.05,
+     "terciles": {
+      "near": {
+       "median": 1.0773064658499374,
+       "n": 304,
+       "z_lift_range": [
+        1.2173566222190857,
+        5.18286395072937
+       ]
+      },
+      "mid": {
+       "median": 1.6448669875925659,
+       "n": 304,
+       "z_lift_range": [
+        5.188373327255249,
+        5.715069055557251
+       ]
+      },
+      "far": {
+       "median": 2.0007720472341264,
+       "n": 303,
+       "z_lift_range": [
+        5.717933177947998,
+        6.514156818389893
+       ]
+      }
+     },
+     "depth_dependent": true
+    },
+    "band_gauge": {
+     "n_band_points": 306,
+     "min_points": 30,
+     "tol": 0.05,
+     "band_pixels": 21403,
+     "ratio": 1.0875704408279243,
+     "ci95": [
+      1.0704238805212654,
+      1.1683744145250992
+     ],
+     "ci_half_width": 0.0489752670019169,
+     "half_fit": 1.0801258858600704,
+     "half_verify": 1.091440674921383,
+     "verify_rel_diff": 0.01047543551120711,
+     "band_reproj_median_px": 0.5389720367649112,
+     "outcome": "determined"
+    },
+    "rebin": {
+     "by_lift_depth": {
+      "near": {
+       "median": 1.0773064658499374,
+       "n": 304,
+       "range": [
+        1.2173566222190857,
+        5.18286395072937
+       ]
+      },
+      "mid": {
+       "median": 1.6444742437359063,
+       "n": 303,
+       "range": [
+        5.188373327255249,
+        5.7124481201171875
+       ]
+      },
+      "far": {
+       "median": 2.0033362822817073,
+       "n": 304,
+       "range": [
+        5.715069055557251,
+        6.514156818389893
+       ]
+      }
+     },
+     "by_triangulated_depth": {
+      "near": {
+       "median": 1.024561073619266,
+       "n": 304,
+       "range": [
+        1.2029665191174266,
+        6.21628474505258
+       ]
+      },
+      "mid": {
+       "median": 1.4115515843425712,
+       "n": 303,
+       "range": [
+        6.221431804183384,
+        11.583470731924413
+       ]
+      },
+      "far": {
+       "median": 2.8331098563940813,
+       "n": 304,
+       "range": [
+        11.61725296349849,
+        717.1388466143766
+       ]
+      }
+     },
+     "by_image_row": {
+      "top": {
+       "median": 1.2414066273365183,
+       "n": 304,
+       "range": [
+        1.1657241821289062,
+        67.41829833984374
+       ]
+      },
+      "middle": {
+       "median": 2.1429894640433598,
+       "n": 303,
+       "range": [
+        67.58878580729167,
+        108.55289713541667
+       ]
+      },
+      "bottom": {
+       "median": 1.0862092538738315,
+       "n": 304,
+       "range": [
+        108.567529296875,
+        232.38194986979167
+       ]
+      }
+     }
+    },
+    "cotracker_over_d4rt_Ztri": {
+     "n_matched": 1562,
+     "radius_px": 4.0,
+     "median": 1.7586521828045822,
+     "ci95": [
+      1.6604137212643726,
+      1.8315115754782905
+     ],
+     "in_band": {
+      "median": 1.1240893996762094,
+      "ci95": [
+       1.0996854153390636,
+       1.1697613565199934
+      ],
+      "n": 573
+     },
+     "by_image_row": {
+      "top": {
+       "median": 1.7271932750854788,
+       "n": 521
+      },
+      "middle": {
+       "median": 2.8312213594306863,
+       "n": 520
+      },
+      "bottom": {
+       "median": 1.0968282430737533,
+       "n": 521
+      }
+     },
+     "by_depth_B": {
+      "near": {
+       "median": 1.0872179302097849,
+       "n": 519
+      },
+      "mid": {
+       "median": 3.066682199287301,
+       "n": 521
+      },
+      "far": {
+       "median": 1.7844074147031688,
+       "n": 522
+      }
+     }
+    },
+    "d4rt_split_px": 1.2490981982146245
+   }
+  },
+  "delta_F": {
+   "beta_cotracker": 1.291778448482574,
+   "beta_d4rt": 1.0998833474690148,
+   "band_parallax_p90_px": 95.12265174033124,
+   "delta_F_px": 16.595915290828337,
+   "delta_F_patch": 3.3710452934495057,
+   "rule": "<= 0.3 patch: tracker choice immaterial, D4RT value is the bridge; else interval + low/high sensitivity run",
+   "outcome": "interval + sensitivity run"
+  }
+ }
+]

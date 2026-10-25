@@ -1,0 +1,220 @@
+{
+ "schema": "m2e_qc_v1",
+ "clip": "000000000370.1.008",
+ "category": "human",
+ "disposition": "accepted",
+ "label": null,
+ "t_a": 0,
+ "K_1024": [
+  [
+   705.0342407226562,
+   0.0,
+   512.6447143554688
+  ],
+  [
+   0.0,
+   1362.1864013671875,
+   506.46942138671875
+  ],
+  [
+   0.0,
+   0.0,
+   1.0
+  ]
+ ],
+ "fx_over_fy": 0.5175754507716664,
+ "object_depth_source_gauge": {
+  "z_obj_per_candidate": {
+   "2": 1.0149741587755432,
+   "0": 1.0718705645837767,
+   "1": 1.0089889406672825,
+   "3": 1.0133523048954889
+  },
+  "z_obj_selected": 1.0149741587755432,
+  "z_placement_c1": 0.8920817378544283,
+  "z_obj_over_z_placement": 1.1377591488608285,
+  "z_proxy_visible_surface": 0.8688422433881937,
+  "z_obj_over_z_proxy_visible": 1.1681915405234948,
+  "z_obj_spread_rel": 0.06200345461419053,
+  "object_within_band_range": {
+   "object_zeta_hat_range": [
+    3.828145523071289,
+    4.877233190536499
+   ],
+   "band_zeta_hat_range": [
+    0.47604953646659853,
+    5.145022773742676
+   ],
+   "inside": true,
+   "frac_object_inside_band_range": 1.0
+  },
+  "note": "alpha spread across seeds mixes the control's constraint with Depth-Anything's per-image gauge (reviewer 2026-09-27); z_obj is the quantity alpha produces"
+ },
+ "alpha": 0.2142922674477744,
+ "b": -0.0026768977348850635,
+ "alpha_source": "ground_band",
+ "flag": null,
+ "alpha_band": 0.2142922674477744,
+ "alpha_object_corrected": null,
+ "band_vs_object_ratio": null,
+ "alpha_naive_over_reversed": 0.9860771264766274,
+ "alpha_boot_ci": {
+  "block_32": {
+   "block": 32,
+   "n_units": 425,
+   "ci": [
+    0.21147300133398483,
+    0.2166410035751504
+   ],
+   "unreliable": false
+  },
+  "block_64": {
+   "block": 64,
+   "n_units": 114,
+   "ci": [
+    0.20984600971247971,
+    0.2188096592236765
+   ],
+   "unreliable": false
+  },
+  "pixel": {
+   "block": 0,
+   "n_units": 388191,
+   "ci": [
+    0.21421961070621945,
+    0.21436984307765633
+   ],
+   "unreliable": false
+  }
+ },
+ "alpha_per_candidate": {
+  "2": 0.2142922674477744,
+  "0": 0.21097692984514568,
+  "1": 0.2133781149514809,
+  "3": 0.2172426950824504
+ },
+ "alpha_spread_rel": 0.02930184317255457,
+ "alpha_low_confidence": false,
+ "delta_deg": -12.30182443525027,
+ "delta_deg_abs": 12.30182443525027,
+ "delta_instrument": "keypoints",
+ "delta_definition": "delta = yaw of the ANCHOR minus yaw of the POSED PROXY, positive about the UP plane normal (rot_about(n, +delta) turns the proxy onto the anchor); shared by the scan and the keypoint instrument",
+ "delta_vs_g_tar_deg": null,
+ "front_back_margin": null,
+ "g_front_back": {
+  "outcome": "n/a (keypoints read front from back directly)"
+ },
+ "gtar_shape_yaw": null,
+ "flatten_predicted_yaw": null,
+ "r2_fallback": null,
+ "delta_curve_width_deg": null,
+ "variant": "body",
+ "r2_iou_vs_anchor_mask": 0.8647833808284806,
+ "gaussians_available": false,
+ "pointmap_source": "n/a (Body estimates its own depth)",
+ "gauge_alignment": {
+  "mode": "median_ratio",
+  "scale_k": 4.417639875370227,
+  "shift_t": 0.0,
+  "n_pixels": 20939,
+  "k_median_ratio": 4.417639875370227,
+  "k_regression": 0.16473952222450858,
+  "t_regression": 4.332025352608078,
+  "resid_rms_regression": 0.07578282601386373,
+  "resid_rms_used": 0.2559521592174671,
+  "median_depth_body": 4.481993247808574,
+  "median_depth_anchor": 1.0145673649853482,
+  "median_depth_proxy_visible": 0.8688422433881937,
+  "body_over_proxy_visible": 1.167723338392106,
+  "projection_unchanged": {
+   "iou_pre": 0.8647833808284806,
+   "iou_post": 0.8647833808284806
+  },
+  "note": "keypoints kept in Body's own gauge for delta (a direction)"
+ },
+ "r2_n_success": null,
+ "r2_per_seed": null,
+ "r2_object_depth": null,
+ "gate_outcomes": {
+  "g_alpha_positive": {
+   "band": true,
+   "object": true,
+   "outcome": "pass"
+  },
+  "g_alpha_ci": {
+   "value": 0.02411660627196951,
+   "threshold": null,
+   "outcome": "ungated"
+  },
+  "g_alpha_pixels": {
+   "value": 388191,
+   "threshold": null,
+   "outcome": "ungated"
+  },
+  "g_delta_scan_peaked": {
+   "outcome": "n/a (keypoints)"
+  },
+  "g_estimator_sign": {
+   "spearman_full_frame": 0.9730966913265608,
+   "outcome": "pass"
+  },
+  "g_front_back": {
+   "outcome": "n/a (keypoints read front from back directly)"
+  }
+ },
+ "config_hash": "3c6581e849c5dbd0",
+ "upstream_hashes": {
+  "c3": "77d27800e45d54428d6dd7c8308b3a6b7fcc137b55bb3698d2bba404a5799ff2",
+  "c1": "e3498223af72979455955a6f7d8980e200cef81a985998f8b72730f597a867ac",
+  "m2a": "e7701204f51c71281c2f42bb8fff64f9067561f350a9d3d333b7a3a96b500eff",
+  "proxy_cache_key": "3fc7ee649366f17e",
+  "c2_params": {
+   "r": 4,
+   "w": 6,
+   "N": 32,
+   "sigma1": 2.0,
+   "sigma2": 0.5,
+   "fill_order": "fill_then_coarsen"
+  },
+  "m2d_qc": "bc4d98a2d1d99cb5f7d0da835eeb1e8dc633af6d329222cf27d0634d0cd6276e",
+  "m2d_fidelity": "81ffcdd8cfe9dbcf42c5d37de8860f9dd7b46370e837e3c90f4815101215db77",
+  "alpha": "808106f8fc20c0313769bcb3f7251fe4a768ae44a0acbd9c8dfbeabbd0986774",
+  "delta": "a4a7903df89c6a0debbee14b979373488d3966cd9ceab852906b1f6df28433f7",
+  "r2": "2466348d19c02ffdaa048d0a391be65f39c59e7efe76514cc2faf16d51c72a1d"
+ },
+ "gtar_shape_extents": {
+  "g_tar": {
+   "extents": [
+    0.22057212917680769,
+    0.07540051851544426,
+    0.03701622278618297
+   ],
+   "ratios_to_largest": [
+    1.0,
+    0.34184064322561897,
+    0.16781912984351371
+   ],
+   "width_over_length": 0.34184064322561897,
+   "height_over_length": 0.16781912984351371
+  },
+  "proxy_posed": {
+   "extents": [
+    0.1951165808366983,
+    0.052630627826760944,
+    0.023030533605517784
+   ],
+   "ratios_to_largest": [
+    1.0,
+    0.2697393917065913,
+    0.11803473342326071
+   ],
+   "width_over_length": 0.2697393917065913,
+   "height_over_length": 0.11803473342326071
+  },
+  "g_tar_over_proxy_ratios": [
+   1.0,
+   1.2672996741886915,
+   1.4217775139266098
+  ]
+ }
+}

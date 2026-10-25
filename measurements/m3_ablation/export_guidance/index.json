@@ -1,0 +1,303 @@
+[
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "video": "000000000265.2.003_vehicle/A0_seed0_rec_F33.mp4",
+  "role": "backbone",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "video": "000000000265.2.003_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "role": "A3 of record",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "video": "000000000265.2.003_vehicle/A3_seed0_rec_F33_sm_sky.mp4",
+  "role": "noobj",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "video": "000000000265.2.003_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm_sky_g0.5.mp4",
+  "role": "gamma0.5",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "video": "000000000265.2.003_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm_sky_g0.25.mp4",
+  "role": "gamma0.25",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "video": "000000000265.2.003_vehicle/A3_seed0_rec_F33_obj_ow0.75_euler_sm_sky.mp4",
+  "role": "euler",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "video": "000000000265.2.003_vehicle/A0_seed0_rec_F33_coff.mp4",
+  "role": "coff",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "video": "000000000265.2.003_vehicle/A3_seed0_rec_F33_obj_ow0.75_sky.mp4",
+  "role": "hardmask",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "video": "000000000265.2.003_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm.mp4",
+  "role": "skyout",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "video": "000000000265.2.005_vehicle/A0_seed0_rec_F33.mp4",
+  "role": "backbone",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "video": "000000000265.2.005_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "role": "A3 of record",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "video": "000000000265.2.005_vehicle/A3_seed0_rec_F33_sm_sky.mp4",
+  "role": "noobj",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "video": "000000000265.2.005_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm_sky_g0.5.mp4",
+  "role": "gamma0.5",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "video": "000000000265.2.005_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm_sky_g0.25.mp4",
+  "role": "gamma0.25",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "video": "000000000265.2.005_vehicle/A3_seed0_rec_F33_obj_ow0.75_euler_sm_sky.mp4",
+  "role": "euler",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "video": "000000000265.2.005_vehicle/A0_seed0_rec_F33_coff.mp4",
+  "role": "coff",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "video": "000000000265.2.005_vehicle/A3_seed0_rec_F33_obj_ow0.75_sky.mp4",
+  "role": "hardmask",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "video": "000000000265.2.005_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm.mp4",
+  "role": "skyout",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "video": "000000000265.2.005_human/A0_seed0_rec_F33.mp4",
+  "role": "backbone",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "video": "000000000265.2.005_human/A3_seed0_rec_F33_sm_sky.mp4",
+  "role": "A3 of record",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "video": "000000000265.2.005_human/A3_seed0_rec_F33_sm_sky_g0.5.mp4",
+  "role": "gamma0.5",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "video": "000000000265.2.005_human/A3_seed0_rec_F33_sm_sky_g0.25.mp4",
+  "role": "gamma0.25",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "video": "000000000265.2.005_human/A3_seed0_rec_F33_euler_sm_sky.mp4",
+  "role": "euler",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "video": "000000000265.2.005_human/A0_seed0_rec_F33_coff.mp4",
+  "role": "coff",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "video": "000000000265.2.005_human/A3_seed0_rec_F33_sky.mp4",
+  "role": "hardmask",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "video": "000000000265.2.005_human/A3_seed0_rec_F33_sm.mp4",
+  "role": "skyout",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "video": "000000000370.1.008_human/A0_seed0_rec_F33.mp4",
+  "role": "backbone",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "video": "000000000370.1.008_human/A3_seed0_rec_F33_sm_sky.mp4",
+  "role": "A3 of record",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "video": "000000000370.1.008_human/A3_seed0_rec_F33_sm_sky_g0.5.mp4",
+  "role": "gamma0.5",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "video": "000000000370.1.008_human/A3_seed0_rec_F33_sm_sky_g0.25.mp4",
+  "role": "gamma0.25",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "video": "000000000370.1.008_human/A3_seed0_rec_F33_euler_sm_sky.mp4",
+  "role": "euler",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "video": "000000000370.1.008_human/A0_seed0_rec_F33_coff.mp4",
+  "role": "coff",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "video": "000000000370.1.008_human/A3_seed0_rec_F33_sky.mp4",
+  "role": "hardmask",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "video": "000000000370.1.008_human/A3_seed0_rec_F33_sm.mp4",
+  "role": "skyout",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "video": "000000000404.1.004_vehicle/A0_seed0_rec_F33.mp4",
+  "role": "backbone",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "video": "000000000404.1.004_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "role": "A3 of record",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "video": "000000000404.1.004_vehicle/A3_seed0_rec_F33_sm_sky.mp4",
+  "role": "noobj",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "video": "000000000404.1.004_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm_sky_g0.5.mp4",
+  "role": "gamma0.5",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "video": "000000000404.1.004_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm_sky_g0.25.mp4",
+  "role": "gamma0.25",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "video": "000000000404.1.004_vehicle/A3_seed0_rec_F33_obj_ow0.75_euler_sm_sky.mp4",
+  "role": "euler",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "video": "000000000404.1.004_vehicle/A0_seed0_rec_F33_coff.mp4",
+  "role": "coff",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "video": "000000000404.1.004_vehicle/A3_seed0_rec_F33_obj_ow0.75_sky.mp4",
+  "role": "hardmask",
+  "seed": 0,
+  "frames": 33
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "video": "000000000404.1.004_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm.mp4",
+  "role": "skyout",
+  "seed": 0,
+  "frames": 33
+ }
+]

@@ -1,0 +1,480 @@
+{
+ "pair": "horsejump-high/human",
+ "batch": "m3_batch_exp_v1",
+ "frames": 21,
+ "note": null,
+ "camera_gate_failed": false,
+ "geometry_status": "ok",
+ "geometry_keys_absent": [],
+ "label_source": "horse",
+ "label_target": "person",
+ "source_clip": "/content/data/videos/horsejump-high.mp4",
+ "t_a": 0,
+ "src_frames": [
+  0,
+  4,
+  8,
+  12,
+  16,
+  20
+ ],
+ "reference_window": "frames t_a .. t_a + 21 - 1 of the source clip (the generated video's frame k is source frame t_a + k)",
+ "caches": {
+  "m3": "/content/drive/MyDrive/motion_transfer_exp/cache/m3/horsejump-high/human",
+  "stage_c_mask": "/content/drive/MyDrive/motion_transfer_exp/cache/stage_c/horsejump-high",
+  "stage_c5_tracks": "/content/drive/MyDrive/motion_transfer_exp/cache/stage_c5/horsejump-high.npz",
+  "stage_a_bundle": "/content/drive/MyDrive/motion_transfer_exp/cache/stage_a/horsejump-high",
+  "handoff": "/content/drive/MyDrive/motion_transfer_exp/cache/m2_e/horsejump-high/human"
+ },
+ "geometry_eval": "/content/drive/MyDrive/motion_transfer_exp/reports/m3_batch/eval_pack/horsejump-high_human/geometry_eval.npz",
+ "geometry_eval_semantics": {
+  "E_full": "[F_pair, 4, 4] the TARGET camera per source frame (the reference camera bridged by beta, rebased to t_a, cam2world in the anchor's frame = the expected camera of a generated video; rotation is bridge-invariant, translation is in the target's units)",
+  "E_l": "[T_l, 4, 4] the same at the latent frames (every 4th)",
+  "c_tar": "[T_l, 3] the retargeted object centroid path in the same frame",
+  "K_wan": "[3, 3] intrinsics at 832x480",
+  "beta": "the bridge scale of record",
+  "s_delta": "the object displacement scale"
+ },
+ "gates": {
+  "contact_decision.json": {
+   "pair": "horsejump-high/human",
+   "gate_column": "B: ground at the painted object's bottom edge",
+   "r_c_B": 0.860272123148536,
+   "r_c_A": 0.8482843066389607,
+   "edge_offset_rows": -3.0,
+   "edge_offset_exceeds_half_patch": false,
+   "contact_tol": 0.05,
+   "s_c": 1.1624228811926043,
+   "outcome": "contact_fails_regauge",
+   "reading": "contact fails: object re-gauged to the ground, s_c = 1.1624 (displacement scaled alike; D-M3-03 for this pair)",
+   "decided_by": "pre-registered rule (reviewer 2026-10-06c-e); applied on John's decision 2026-10-06",
+   "unregauged_variant": "run as a sub-row (s_c forced to 1)"
+  },
+  "sint_step2.json": {
+   "pair": "horsejump-high/human",
+   "disposition": "experiment",
+   "F_pair": 21,
+   "T_l": 6,
+   "t_a": 0,
+   "contact": {
+    "outcome": "contact_fails_regauge",
+    "s_c_rule": 1.1624228811926043,
+    "s_c_applied": 1.1624228811926043,
+    "edge_offset_rows": -3.0
+   },
+   "bridge": {
+    "run": "rec",
+    "beta": 1.0,
+    "camera": "camera_c_ba",
+    "s_delta": 1.0,
+    "contact_undefined": null,
+    "note": "camera C + BA is in the source gauge by the lift prior at t_a: no bridge; s_delta = 1 (depth-preserving); s_c applied below as on every pair"
+   },
+   "camera": {
+    "source": "camera_c_ba",
+    "sigma_ta": null,
+    "record_degenerate": null,
+    "cam_path_len": 0.33883755748412514,
+    "cam_rot_total_deg": 29.099011915202116
+   },
+   "object_path_c5": {
+    "source": "same-frame C.5 lift median, G = I (reviewer 2026-10-11 decision 1)",
+    "n_tracks_visible_min": 4297,
+    "boundaries_in_window": [],
+    "static_pair_ratio_log_at_boundaries": {},
+    "median_abs_log_step": 0.001455233836695186,
+    "per_window_scale_applied_at": [],
+    "scale_corr_last": 1.0,
+    "registered_a_no_boundary_step_over_3x_median": {
+     "held": true,
+     "latent_step_at_boundaries": {},
+     "median_latent_step": 0.416656542072377
+    },
+    "registered_b_boundary_frames_do_not_exceed_rest": {
+     "held": true,
+     "statistic": "per-track reprojection residual (lift through K_t vs own 2-D track), median over tracks per frame",
+     "median_patch_frames_44_52": null,
+     "median_patch_other_frames": 6.415308581734959e-07,
+     "mad_other_frames": 3.5380959491609394e-08,
+     "per_frame_44_52": [],
+     "max_err_patch": 6.724226137665589e-07
+    },
+    "b5_cross_check": {
+     "max_dev_from_c5_world": 0.5284379782006113,
+     "b5_max_latent_step_over_median": 1.128440349303799,
+     "c5_max_latent_step_over_median": 1.3370918227672008
+    }
+   },
+   "path_smoothing": {
+    "method": "savgol",
+    "sg_window": 13,
+    "heading_vs_d_src_deg_12f": {
+     "raw": 8.444761873692531,
+     "smoothed": 7.2205400206640675
+    },
+    "invariant": "residual bias at the ends (reviewer 2026-10-06i)",
+    "tolerance_source": "lock m3.object_path",
+    "net_disp_tol_patch": 0.25,
+    "bias_first_window_patch": 0.036630780817346074,
+    "bias_last_window_patch": 0.04029802520861935,
+    "heading_tol_deg": 2.0919190533809062,
+    "sigma_theta_deg": 2.0919190533809062,
+    "resid_max_patch": 1.1417701993072282,
+    "resid_lag1_autocorr": -0.20721237546708748,
+    "sg_window_source": "configs/m3.yaml",
+    "delta_c0_is_zero": true,
+    "applied": false,
+    "invariant_net_disp_patch": 0.04029802520861935,
+    "invariant_heading_deg": 1.8341427947090525,
+    "invariant_heading_perp_patch": 0.9504202501845934,
+    "invariant_window_frames": 16,
+    "heading_reference": "smoothed vs raw of the same path over 16 frames, in position units (reviewer 2026-10-11 round 4); d_src agreement reported, not gated",
+    "path_over_net_raw": 1.0380563894513615,
+    "path_over_net_smooth": 1.0502542493371132,
+    "max_dev_smooth_vs_raw_patch": 1.1417701993072282
+   },
+   "object_path": {
+    "channel": "x0",
+    "drift_model": "stage_b",
+    "drift_note": "x0: B.5's track as delivered (Stage B drift fit upstream); g_t not applied",
+    "path_len": 2.2904824041053877,
+    "net_displacement": 2.2065105782123884,
+    "vipe_vs_d4rt_disp_diff_over_path": 0.10012446580348963,
+    "heading_vs_d_src_deg_first_window": 12.664019541188361,
+    "heading_window_latent_steps": 4
+   },
+   "occupancy": {
+    "source": "painted_mask_warped",
+    "affine_warp_residual_patches_median": [
+     0.0,
+     0.043,
+     0.104,
+     0.15,
+     0.125,
+     0.165
+    ],
+    "painted_vs_gtar_patches_t0": [
+     52,
+     52
+    ],
+    "iou_painted_vs_gtar_t0": 0.9259259259259259,
+    "centroid_target_patches": [
+     [
+      7.4697696645840646,
+      15.891901214128035
+     ],
+     [
+      9.623678647002764,
+      14.04972782868919
+     ],
+     [
+      10.710109274080153,
+      12.557357444714087
+     ],
+     [
+      12.733268863187511,
+      12.559283158284181
+     ],
+     [
+      12.950488815162974,
+      13.879748476278136
+     ],
+     [
+      13.588753392435743,
+      14.60298913048793
+     ]
+    ]
+   },
+   "coverage": {
+    "cov_curve": [
+     0.9959,
+     0.9035,
+     0.7139,
+     0.6127,
+     0.5206,
+     0.4332
+    ],
+    "cov_curve_sky_excluded": [
+     1.0,
+     0.9048,
+     0.7142,
+     0.6089,
+     0.5162,
+     0.429
+    ],
+    "anchors_of_record": [
+     0,
+     5
+    ],
+    "schedule_excludes_sky": true,
+    "anchors": [
+     0,
+     5
+    ],
+    "anchors_sky_excluded": [
+     0,
+     5
+    ],
+    "sky_patch_frac": 0.01282051282051282,
+    "bg_flow_median_patches_last": 26.392537595066113,
+    "bg_flow_p95_patches_last": 30.949093284187672,
+    "bg_flow_median_patches_step1": 3.3656033375532797,
+    "obj_patches_t0": 52,
+    "obj_patches_last": 39,
+    "obj_centre_shift_patches": 6.253259647661138
+   }
+  },
+  "sint_step1.json": {
+   "pair": "horsejump-high/human",
+   "disposition": "experiment",
+   "label": null,
+   "gates": {
+    "g_handoff": {
+     "disposition": "experiment",
+     "label": null,
+     "hash_checked": false,
+     "verdict_source": "automatic: gate outcomes of qc_m2e.json"
+    },
+    "g_frame0": {
+     "t_a": 0,
+     "fx_over_fy_1024": 0.5900665408483966
+    },
+    "g_envelope": {
+     "F_pair": 21,
+     "T_l": 6,
+     "lost_frames_before_t_a": 0,
+     "min_frames": 21
+    },
+    "g_mode": {
+     "mode": "depth_preserving",
+     "s": 1.0
+    },
+    "g_gauge_scalar": {
+     "k_bg": 0.5049258143037749,
+     "ci95": [
+      0.471983452909803,
+      0.545266611544333
+     ],
+     "ci_rel_width": 0.1451364865065924,
+     "n_pixels": 118863,
+     "n_blocks": 48,
+     "mad_rel": 0.1923348401580323,
+     "band_n_pixels_1024": 323002,
+     "alpha_bridged_over_kbg_depth_band_median": 1.0094953187696067,
+     "alpha_bridged_over_kbg_depth_object_median": 0.8418256206619298,
+     "threshold": null,
+     "outcome": "ungated",
+     "grid": "480x813 square-pixel, FOV imposed (k_bg is valid on this grid only)"
+    },
+    "g_obj_footprint": {
+     "iou": 0.8538647965760842,
+     "handoff_R2_iou": 0.8538647965760842,
+     "threshold": 0.7,
+     "outcome": "pass"
+    },
+    "g_obj_depth": {
+     "z_gtar_visible_median": 2.292368325010699,
+     "z_image_kbg_median": 2.7296729615159627,
+     "rel_diff": 0.16020404007020694,
+     "signed_gtar_over_image": 0.8397959599297931,
+     "threshold": 0.15,
+     "outcome": "fail"
+    }
+   },
+   "grid": {
+    "W_sq": 813,
+    "H": 480,
+    "fov_x_deg": 70.67372520682056,
+    "fx_sq": 573.3380320072174,
+    "fy_sq": 573.6677742004395,
+    "fx_over_fy_wan": 1.0227820041372206,
+    "moge_valid_frac": 0.9881918819188192
+   },
+   "lift": {
+    "n_bg": 23625,
+    "n_obj_vertices": 18439,
+    "lattice_roundtrip_max_patch": 1.4210854715202004e-14,
+    "sky_patch_frac_gt_half": 0.01282051282051282,
+    "c_tar_0": [
+     -1.1348555730541134,
+     0.0039048930458126323,
+     2.3223472415667126
+    ]
+   }
+  }
+ },
+ "runs": [
+  {
+   "arm": "A0",
+   "arm_key": "A0",
+   "seed": 0,
+   "video": "/content/drive/MyDrive/motion_transfer_exp/cache/m3/horsejump-high/human/A0_seed0_rec_F21.mp4",
+   "exists": true,
+   "flags": [],
+   "run_config": {
+    "pair": "horsejump-high/human",
+    "arm": "A0",
+    "seed": 0,
+    "frames": 21,
+    "T_run": 6,
+    "bridge": "rec",
+    "beta": 1.0,
+    "s_delta": 1.0,
+    "object_render": false,
+    "gamma_obj": null,
+    "obj_lowpass_sigma_latent": null,
+    "obj_window_sigma": null,
+    "correct_from_sigma": null,
+    "prompt_anchor": "a man in a grey jacket and dark trousers walking, on a sandy show-jumping course, side profile, moving left to right, wide shot",
+    "motion_clause": null,
+    "prompt_used": "a man in a grey jacket and dark trousers walking, on a sandy show-jumping course, side profile, moving left to right, wide shot",
+    "anchor_override": null,
+    "no_processor": false,
+    "scheduler": "UniPCMultistepScheduler",
+    "scheduler_lock": "UniPCMultistep",
+    "keep_corrector": false,
+    "corrector_policy": "correction_steps",
+    "corrector_policy_source": "lock",
+    "corrector_off_control": false,
+    "latent_dtype": "float32 (from 2026-10-13; earlier runs bf16)",
+    "text_tokens": 512,
+    "clause_cfg": null,
+    "image_cfg": null,
+    "bg_window_override": null,
+    "negative_prompt_used": "\u8272\u8c03\u8273\u4e3d\uff0c\u8fc7\u66dd\uff0c\u9759\u6001\uff0c\u7ec6\u8282\u6a21\u7cca\u4e0d\u6e05\uff0c\u5b57\u5e55\uff0c\u98ce\u683c\uff0c\u4f5c\u54c1\uff0c\u753b\u4f5c\uff0c\u753b\u9762\uff0c\u9759\u6b62\uff0c\u6574\u4f53\u53d1\u7070\uff0c\u6700\u5dee\u8d28\u91cf\uff0c\u4f4e\u8d28\u91cf\uff0cJPEG\u538b\u7f29\u6b8b\u7559\uff0c\u4e11\u964b\u7684\uff0c\u6b8b\u7f3a\u7684\uff0c\u591a\u4f59\u7684\u624b\u6307\uff0c\u753b\u5f97\u4e0d\u597d\u7684\u624b\u90e8\uff0c\u753b\u5f97\u4e0d\u597d\u7684\u8138\u90e8\uff0c\u7578\u5f62\u7684\uff0c\u6bc1\u5bb9\u7684\uff0c\u5f62\u6001\u7578\u5f62\u7684\u80a2\u4f53\uff0c\u624b\u6307\u878d\u5408\uff0c\u9759\u6b62\u4e0d\u52a8\u7684\u753b\u9762\uff0c\u6742\u4e71\u7684\u80cc\u666f\uff0c\u4e09\u6761\u817f\uff0c\u80cc\u666f\u4eba\u5f88\u591a\uff0c\u5012\u7740\u8d70",
+    "soft_mask": false,
+    "sky_mask": false,
+    "nodyn_mask": false,
+    "obj_taper_steps": null,
+    "T_g_effective": [
+     0.85,
+     0.6
+    ],
+    "block": 20,
+    "r_w": 3.0,
+    "T_g": [
+     0.85,
+     0.6
+    ],
+    "lambdas": {
+     "bg": 1.0,
+     "obj": 1.0,
+     "perp": 0.1,
+     "mass": null
+    },
+    "eta": 0.05,
+    "steps": 50,
+    "shift": 3.0,
+    "cfg": 5.0,
+    "weights": "fp8",
+    "checkpointing": true,
+    "anchors": [
+     0,
+     5
+    ],
+    "smoke": false,
+    "wall_s": 208.52704119682312,
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "corrector_off_steps": []
+   }
+  },
+  {
+   "arm": "A3",
+   "arm_key": "A3_human",
+   "seed": 0,
+   "video": "/content/drive/MyDrive/motion_transfer_exp/cache/m3/horsejump-high/human/A3_seed0_rec_F21_sm_sky.mp4",
+   "exists": true,
+   "flags": [
+    "--soft-mask",
+    "--sky-mask"
+   ],
+   "run_config": {
+    "pair": "horsejump-high/human",
+    "arm": "A3",
+    "seed": 0,
+    "frames": 21,
+    "T_run": 6,
+    "bridge": "rec",
+    "beta": 1.0,
+    "s_delta": 1.0,
+    "object_render": false,
+    "gamma_obj": null,
+    "obj_lowpass_sigma_latent": null,
+    "obj_window_sigma": null,
+    "correct_from_sigma": null,
+    "prompt_anchor": "a man in a grey jacket and dark trousers walking, on a sandy show-jumping course, side profile, moving left to right, wide shot",
+    "motion_clause": null,
+    "prompt_used": "a man in a grey jacket and dark trousers walking, on a sandy show-jumping course, side profile, moving left to right, wide shot",
+    "anchor_override": null,
+    "no_processor": false,
+    "scheduler": "UniPCMultistepScheduler",
+    "scheduler_lock": "UniPCMultistep",
+    "keep_corrector": false,
+    "corrector_policy": "correction_steps",
+    "corrector_policy_source": "lock",
+    "corrector_off_control": false,
+    "latent_dtype": "float32 (from 2026-10-13; earlier runs bf16)",
+    "text_tokens": 512,
+    "clause_cfg": null,
+    "image_cfg": null,
+    "bg_window_override": null,
+    "negative_prompt_used": "\u8272\u8c03\u8273\u4e3d\uff0c\u8fc7\u66dd\uff0c\u9759\u6001\uff0c\u7ec6\u8282\u6a21\u7cca\u4e0d\u6e05\uff0c\u5b57\u5e55\uff0c\u98ce\u683c\uff0c\u4f5c\u54c1\uff0c\u753b\u4f5c\uff0c\u753b\u9762\uff0c\u9759\u6b62\uff0c\u6574\u4f53\u53d1\u7070\uff0c\u6700\u5dee\u8d28\u91cf\uff0c\u4f4e\u8d28\u91cf\uff0cJPEG\u538b\u7f29\u6b8b\u7559\uff0c\u4e11\u964b\u7684\uff0c\u6b8b\u7f3a\u7684\uff0c\u591a\u4f59\u7684\u624b\u6307\uff0c\u753b\u5f97\u4e0d\u597d\u7684\u624b\u90e8\uff0c\u753b\u5f97\u4e0d\u597d\u7684\u8138\u90e8\uff0c\u7578\u5f62\u7684\uff0c\u6bc1\u5bb9\u7684\uff0c\u5f62\u6001\u7578\u5f62\u7684\u80a2\u4f53\uff0c\u624b\u6307\u878d\u5408\uff0c\u9759\u6b62\u4e0d\u52a8\u7684\u753b\u9762\uff0c\u6742\u4e71\u7684\u80cc\u666f\uff0c\u4e09\u6761\u817f\uff0c\u80cc\u666f\u4eba\u5f88\u591a\uff0c\u5012\u7740\u8d70",
+    "soft_mask": true,
+    "sky_mask": true,
+    "nodyn_mask": false,
+    "obj_taper_steps": null,
+    "T_g_effective": [
+     0.85,
+     0.6
+    ],
+    "block": 20,
+    "r_w": 3.0,
+    "T_g": [
+     0.85,
+     0.6
+    ],
+    "lambdas": {
+     "bg": 1.0,
+     "obj": 1.0,
+     "perp": 0.1,
+     "mass": null
+    },
+    "eta": 0.05,
+    "steps": 50,
+    "shift": 3.0,
+    "cfg": 5.0,
+    "weights": "fp8",
+    "checkpointing": true,
+    "anchors": [
+     0,
+     5
+    ],
+    "smoke": false,
+    "wall_s": 225.6333749294281,
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "corrector_off_steps": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33
+    ]
+   }
+  }
+ ],
+ "grader_records": {
+  "a0_motion": "/content/drive/MyDrive/motion_transfer_exp/reports/m3_s4/a0_motion.json",
+  "mask_centroid": "/content/drive/MyDrive/motion_transfer_exp/reports/m3_s4/mask_centroid_horsejump-high_human.json"
+ }
+}

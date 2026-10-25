@@ -1,0 +1,434 @@
+[
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "window": [
+   0.85,
+   0.75
+  ],
+  "lock_window": [
+   0.85,
+   0.6
+  ],
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_bw0.75.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "flags": [
+   "--object",
+   "--soft-mask",
+   "--sky-mask"
+  ],
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 1,
+  "time": "2026-10-20 09:27"
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "window": [
+   0.85,
+   0.45
+  ],
+  "lock_window": [
+   0.85,
+   0.6
+  ],
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_bw0.45.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "flags": [
+   "--object",
+   "--soft-mask",
+   "--sky-mask"
+  ],
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 1,
+  "time": "2026-10-20 09:39"
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "window": [
+   0.85,
+   0.75
+  ],
+  "lock_window": [
+   0.85,
+   0.6
+  ],
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_bw0.75.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "flags": [
+   "--object",
+   "--soft-mask",
+   "--sky-mask"
+  ],
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 1,
+  "time": "2026-10-20 09:51"
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "window": [
+   0.85,
+   0.45
+  ],
+  "lock_window": [
+   0.85,
+   0.6
+  ],
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_bw0.45.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "flags": [
+   "--object",
+   "--soft-mask",
+   "--sky-mask"
+  ],
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 1,
+  "time": "2026-10-20 10:03"
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "window": [
+   0.85,
+   0.75
+  ],
+  "lock_window": [
+   0.85,
+   0.6
+  ],
+  "video": "A3_seed0_rec_F33_sm_sky_bw0.75.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "flags": [
+   "--soft-mask",
+   "--sky-mask"
+  ],
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 1,
+  "time": "2026-10-20 10:14"
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "window": [
+   0.85,
+   0.45
+  ],
+  "lock_window": [
+   0.85,
+   0.6
+  ],
+  "video": "A3_seed0_rec_F33_sm_sky_bw0.45.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "flags": [
+   "--soft-mask",
+   "--sky-mask"
+  ],
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 1,
+  "time": "2026-10-20 10:26"
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "window": [
+   0.85,
+   0.75
+  ],
+  "lock_window": [
+   0.85,
+   0.6
+  ],
+  "video": "A3_seed0_rec_F33_sm_sky_bw0.75.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "flags": [
+   "--soft-mask",
+   "--sky-mask"
+  ],
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 1,
+  "time": "2026-10-20 10:38"
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "window": [
+   0.85,
+   0.45
+  ],
+  "lock_window": [
+   0.85,
+   0.6
+  ],
+  "video": "A3_seed0_rec_F33_sm_sky_bw0.45.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "flags": [
+   "--soft-mask",
+   "--sky-mask"
+  ],
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 1,
+  "time": "2026-10-20 10:50"
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "window": [
+   0.85,
+   0.75
+  ],
+  "lock_window": [
+   0.85,
+   0.6
+  ],
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_bw0.75.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "flags": [
+   "--object",
+   "--soft-mask",
+   "--sky-mask"
+  ],
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-20 11:03"
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "window": [
+   0.85,
+   0.45
+  ],
+  "lock_window": [
+   0.85,
+   0.6
+  ],
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_bw0.45.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "flags": [
+   "--object",
+   "--soft-mask",
+   "--sky-mask"
+  ],
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-20 11:15"
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "window": [
+   0.85,
+   0.75
+  ],
+  "lock_window": [
+   0.85,
+   0.6
+  ],
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_bw0.75.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "flags": [
+   "--object",
+   "--soft-mask",
+   "--sky-mask"
+  ],
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-20 12:43"
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "window": [
+   0.85,
+   0.45
+  ],
+  "lock_window": [
+   0.85,
+   0.6
+  ],
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_bw0.45.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "flags": [
+   "--object",
+   "--soft-mask",
+   "--sky-mask"
+  ],
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-20 12:43"
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "window": [
+   0.85,
+   0.75
+  ],
+  "lock_window": [
+   0.85,
+   0.6
+  ],
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_bw0.75.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "flags": [
+   "--object",
+   "--soft-mask",
+   "--sky-mask"
+  ],
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-20 12:44"
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "window": [
+   0.85,
+   0.45
+  ],
+  "lock_window": [
+   0.85,
+   0.6
+  ],
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_bw0.45.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "flags": [
+   "--object",
+   "--soft-mask",
+   "--sky-mask"
+  ],
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-20 12:44"
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "window": [
+   0.85,
+   0.75
+  ],
+  "lock_window": [
+   0.85,
+   0.6
+  ],
+  "video": "A3_seed0_rec_F33_sm_sky_bw0.75.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "flags": [
+   "--soft-mask",
+   "--sky-mask"
+  ],
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-20 12:44"
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "window": [
+   0.85,
+   0.45
+  ],
+  "lock_window": [
+   0.85,
+   0.6
+  ],
+  "video": "A3_seed0_rec_F33_sm_sky_bw0.45.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "flags": [
+   "--soft-mask",
+   "--sky-mask"
+  ],
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-20 12:45"
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "window": [
+   0.85,
+   0.75
+  ],
+  "lock_window": [
+   0.85,
+   0.6
+  ],
+  "video": "A3_seed0_rec_F33_sm_sky_bw0.75.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "flags": [
+   "--soft-mask",
+   "--sky-mask"
+  ],
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-20 12:45"
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "window": [
+   0.85,
+   0.45
+  ],
+  "lock_window": [
+   0.85,
+   0.6
+  ],
+  "video": "A3_seed0_rec_F33_sm_sky_bw0.45.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "flags": [
+   "--soft-mask",
+   "--sky-mask"
+  ],
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-20 12:45"
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "window": [
+   0.85,
+   0.75
+  ],
+  "lock_window": [
+   0.85,
+   0.6
+  ],
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_bw0.75.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "flags": [
+   "--object",
+   "--soft-mask",
+   "--sky-mask"
+  ],
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-20 12:46"
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "window": [
+   0.85,
+   0.45
+  ],
+  "lock_window": [
+   0.85,
+   0.6
+  ],
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_bw0.45.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "flags": [
+   "--object",
+   "--soft-mask",
+   "--sky-mask"
+  ],
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-20 12:46"
+ }
+]

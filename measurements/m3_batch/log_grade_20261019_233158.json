@@ -1,0 +1,20 @@
+[
+ {
+  "cmd": "/usr/bin/python3 scripts/measure_m3_a0.py --drive-root /content/drive/MyDrive/motion_transfer_exp --videos-dir /content/data/videos --pairs camel/human --force --source-frames 21 --videos A0_seed0_rec_F21.mp4 A3_seed0_rec_F21_sm_sky.mp4 source",
+  "rc": 1,
+  "wall_s": 4.1,
+  "tail": "Using cache found in /root/.cache/torch/hub/facebookresearch_co-tracker_main\nTraceback (most recent call last):\n  File \"/content/repo/scripts/measure_m3_a0.py\", line 431, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/content/repo/scripts/measure_m3_a0.py\", line 285, in main\n    video = read_video(source_video_path(args.videos_dir, clip), t_a + n_src, WAN_W, WAN_H)[t_a: t_a + n_src]; vp = Path(\"source\")\n                       ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/content/repo/scripts/measure_m3_a0.py\", line 40, in source_video_path\n    assert len(hits) == 1, f\"source video {clip}.mp4 not found under {videos_dir} (flat or one pool subfolder); found {hits}\"\n           ^^^^^^^^^^^^^^\nAssertionError: source video camel.mp4 not found under /content/data/videos (flat or one pool subfolder); found []\n"
+ },
+ {
+  "cmd": "/usr/bin/python3 scripts/check_m3_mask_centroid.py --drive-root /content/drive/MyDrive/motion_transfer_exp --videos-dir /content/data/videos --pair camel/human --label person --frames 21 --force --videos A0_seed0_rec_F21.mp4 A3_seed0_rec_F21_sm_sky.mp4",
+  "rc": 0,
+  "wall_s": 52.6,
+  "tail": "\nLoading weights:   0%|          | 0/380 [00:00<?, ?it/s]\nLoading weights: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 380/380 [00:00<00:00, 16882.96it/s]\n[mask centroid] A0_seed0_rec_F21.mp4: person centroid moved 1.11 patch by the last frame (expected 0.63; path 4.63); area first/median/last 0.055/0.060/0.056; IoU median 0.87 min 0.75; frames without mask 0\n[mask centroid] A3_seed0_rec_F21_sm_sky.mp4: person centroid moved 2.50 patch by the last frame (expected 0.63; path 7.22); area first/median/last 0.055/0.051/0.023; IoU median 0.85 min 0.72; frames without mask 0\n[mask centroid] wrote /content/drive/MyDrive/motion_transfer_exp/reports/m3_s4/mask_centroid_camel_human.json\n"
+ },
+ {
+  "cmd": "/usr/bin/python3 scripts/check_m3_mask_centroid.py --drive-root /content/drive/MyDrive/motion_transfer_exp --videos-dir /content/data/videos --pair camel/human --label animal --frames 21 --force --videos source",
+  "rc": 1,
+  "wall_s": 11.0,
+  "tail": "\nLoading weights:   0%|          | 0/380 [00:00<?, ?it/s]\nLoading weights: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 380/380 [00:00<00:00, 16007.35it/s]\nTraceback (most recent call last):\n  File \"/content/repo/scripts/check_m3_mask_centroid.py\", line 136, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/content/repo/scripts/check_m3_mask_centroid.py\", line 82, in main\n    video = read_video(source_video_path(args.videos_dir, clip), t_a + args.frames, WAN_W, WAN_H)[t_a:]\n                       ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/content/repo/scripts/check_m3_mask_centroid.py\", line 37, in source_video_path\n    assert len(hits) == 1, f\"source video {clip}.mp4 not found under {videos_dir} (flat or one pool subfolder); found {hits}\"\n           ^^^^^^^^^^^^^^\nAssertionError: source video camel.mp4 not found under /content/data/videos (flat or one pool subfolder); found []\n"
+ }
+]

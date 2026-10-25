@@ -1,0 +1,202 @@
+{
+ "000000000265.2.003/vehicle": {
+  "stem": "abl__000000000265.2.003__vehicle__ref21",
+  "video": "/content/abl21/abl__000000000265.2.003__vehicle__ref21.mp4",
+  "fps": 30.0,
+  "source": "ditflow_transfer/pairs/refs/000000000265.2.003__vehicle__ref21.mp4",
+  "sha256": "75305a4c1d296f0b7545313ad5d10ecbf20d5141b2a09f4646eb2ba41d5549c2",
+  "source_frames": [
+   47,
+   48,
+   49,
+   50,
+   51,
+   52,
+   53,
+   54,
+   55,
+   56,
+   57,
+   58,
+   59,
+   60,
+   61,
+   62,
+   63,
+   64,
+   65,
+   66,
+   67
+  ],
+  "native_hw": [
+   720,
+   1280
+  ],
+  "crop_ltrb": [
+   100,
+   0,
+   1180,
+   720
+  ]
+ },
+ "000000000265.2.005/vehicle": {
+  "stem": "abl__000000000265.2.005__vehicle__ref21",
+  "video": "/content/abl21/abl__000000000265.2.005__vehicle__ref21.mp4",
+  "fps": 30.0,
+  "source": "ditflow_transfer/pairs/refs/000000000265.2.005__vehicle__ref21.mp4",
+  "sha256": "6b3127c3b1031871fd5a5385aa806ae0aa698bc40d1d5b93d42ec1562504dade",
+  "source_frames": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20
+  ],
+  "native_hw": [
+   720,
+   1280
+  ],
+  "crop_ltrb": [
+   100,
+   0,
+   1180,
+   720
+  ]
+ },
+ "000000000265.2.005/human": {
+  "stem": "abl__000000000265.2.005__human__ref21",
+  "video": "/content/abl21/abl__000000000265.2.005__human__ref21.mp4",
+  "fps": 30.0,
+  "source": "ditflow_transfer/pairs/refs/000000000265.2.005__human__ref21.mp4",
+  "sha256": "6b3127c3b1031871fd5a5385aa806ae0aa698bc40d1d5b93d42ec1562504dade",
+  "source_frames": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20
+  ],
+  "native_hw": [
+   720,
+   1280
+  ],
+  "crop_ltrb": [
+   100,
+   0,
+   1180,
+   720
+  ]
+ },
+ "000000000370.1.008/human": {
+  "stem": "abl__000000000370.1.008__human__ref21",
+  "video": "/content/abl21/abl__000000000370.1.008__human__ref21.mp4",
+  "fps": 30.0,
+  "source": "ditflow_transfer/pairs/refs/000000000370.1.008__human__ref21.mp4",
+  "sha256": "0c92da0c4fefcadf84925db9fac4639c1a5ea4025763aab27183bea9e53496e5",
+  "source_frames": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20
+  ],
+  "native_hw": [
+   720,
+   1280
+  ],
+  "crop_ltrb": [
+   100,
+   0,
+   1180,
+   720
+  ]
+ },
+ "000000000404.1.004/vehicle": {
+  "stem": "abl__000000000404.1.004__vehicle__ref21",
+  "video": "/content/abl21/abl__000000000404.1.004__vehicle__ref21.mp4",
+  "fps": 30.0,
+  "source": "ditflow_transfer/pairs/refs/000000000404.1.004__vehicle__ref21.mp4",
+  "sha256": "96a90b268f00495cedde8b3fbd72a469ae458bc109da4ca1313153e7d8048660",
+  "source_frames": [
+   47,
+   48,
+   49,
+   50,
+   51,
+   52,
+   53,
+   54,
+   55,
+   56,
+   57,
+   58,
+   59,
+   60,
+   61,
+   62,
+   63,
+   64,
+   65,
+   66,
+   67
+  ],
+  "native_hw": [
+   720,
+   1280
+  ],
+  "crop_ltrb": [
+   100,
+   0,
+   1180,
+   720
+  ]
+ }
+}

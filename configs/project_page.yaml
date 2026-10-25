@@ -1,0 +1,173 @@
+# The project page (GitHub Pages), second design (2026-10-25): bands in the art direction of John's crit2 site (ink ground,
+# cream text, gold hairlines; Cinzel / Josefin Sans / IBM Plex Mono). scripts/make_project_page.py renders it from the batch
+# export, the sealed tables (experiment_tables_v2.md, ablation_guidance_tables.md) and the thesis figures. Numbers are parsed,
+# never typed here; the prose is in the thesis's register.
+paths:
+  thesis_root: "D:/6528/Literature review paper list"
+  export: measurements/m3_batch/export                       # ours: index.json, A0/A3 21-frame videos, anchor.png, source cut
+  ablation_export: measurements/m3_ablation/export_guidance   # the guidance-ablation clips (33 frames)
+  tables_md: experiment/experiment_tables_v2.md               # relative to thesis_root
+  ablation_md: experiment/results/ablation_guidance_tables.md # relative to thesis_root
+  method_figure: methodology_pipeline/figures/method-overview.png   # relative to thesis_root
+  out: "D:/6528/camera-object-motion-transfer"                # the public repository's root (index.html, assets/, videos/, figures/)
+  dev_videos: videos                                          # existing encoded development-set videos in `out` (kept as they are)
+  davis_frames: "D:/6528/ditflow/DAVIS/JPEGImages/480p"       # the DAVIS references (camel, horsejump-high) as frame folders
+video: {crf: 28, max_height: 360, fps: 16}
+
+site:
+  eyebrow: "Honours thesis · Australian National University · 2026"
+  title: "Recover, Retarget, Guide"
+  subtitle: "Camera and object motion transfer with a frozen video model"
+  author: "John Zeng · supervisor Dr Jing Zhang"
+  lead: >
+    A reference video supplies a camera motion and a subject motion; a text prompt supplies a new subject in a new scene.
+    The motion visible in the image mixes the two with the scene's depth, so copying image-plane displacement cannot separate
+    the camera from the subject, and a displacement measured in the source scene need not fit the geometry of the new one.
+    This work builds the motion target in the target scene before any video is generated, and corrects a frozen video
+    generator toward it. Nothing is trained.
+  links:
+    - {label: "Code", href: "https://github.com/jnheinrich451-eng/Recover-Retarget-Guide"}
+  teaser: {pair: "000000000265.2.005/vehicle", note: "The running example: the reference clip and our result, seed 0."}
+
+stages:
+  - name: Recover
+    text: >
+      The reference video is lifted to a camera trajectory, a subject path and a ground plane in one frame and one scale, with
+      a frozen 3D tracker. Static background and moving subject are told apart by a drift model, the subject is masked
+      without a human prompt, and a clip whose camera, subject or support surface cannot be recovered is refused.
+  - name: Retarget
+    text: >
+      A proxy of the target category is placed where the source subject stood, facing its heading on its ground; a depth
+      control built from that placement drives a depth-conditioned image generator; the anchor image is selected
+      automatically and reconstructed in three dimensions.
+  - name: Guide
+    text: >
+      The anchor's own content is rendered along the recovered camera path, and for rigid targets the object along the
+      subject's path. Inside a window of noise levels, the frozen generator's clean estimate is corrected toward that render
+      wherever a mask marks it reliable. One encode, no gradient, sixteen of fifty steps.
+
+results:
+  intro: >
+    Fifteen pairs passed a screening fixed before any video was generated: thirteen MiraData clips and two DAVIS clips, each
+    with a human or vehicle target set by its caption. Every pair was generated once (seed 0, 21 frames) by the backbone,
+    Wan2.1 image-to-video, and by the same backbone with our correction. The two primary metrics were fixed before scoring:
+    the camera's rotation error against the reference camera (degrees) and the subject's on-screen path error relative to
+    its own first frame (pixels). Lower is better for both.
+  reading: >
+    The camera result holds on every pair. The subject's path is not transferred on the human pairs, whose arm renders no
+    object: once the camera is held, the model's own subject motion is carried along with it. The three vehicle pairs, whose
+    arm renders the object along its path, win both.
+
+other_methods:
+  intro: >
+    The development set, six pairs from three source clips, is where the other methods were run for comparison: DiTFlow,
+    SMM and MOFT on CogVideoX-5B, with the clip's caption as prompt. The rows are descriptive. The methods differ in backbone
+    and in prompt subject, so the controlled comparison of this work is the one above, against the same generator without
+    guidance.
+  pairs:
+    - {pair: 000000000265.2.005/human,  title: "a man in a grey jacket and dark trousers walking, on a rocky riverbank, side profile, moving right to left, wide shot"}
+    - {pair: 000000000265.2.005/vehicle, title: "a red car driving, on open scrubland, side profile, moving right to left, medium shot"}
+    - {pair: 000000000265.2.003/vehicle, title: "a red car driving, on a desert highway, side profile, moving right to left, medium shot"}
+    - {pair: 000000000404.1.004/vehicle, title: "a red car driving, on a desert highway, front three-quarter view, approaching the camera, medium shot"}
+    - {pair: 000000000370.1.008/human,  title: "a man in a grey jacket and dark trousers walking, in a misty pine forest, rear three-quarter view, moving away from the camera, medium-wide shot"}
+    - {pair: 000000000035.1.003/vehicle, title: "a red car driving, on a coastal cliff road, rear three-quarter view, moving away from the camera, medium-wide shot", flag: "camera failed its check; no guided run"}
+  methods:
+    - {key: reference, label: "Reference"}
+    - {key: cogvideox, label: "No guidance (CogVideoX)"}
+    - {key: ditflow,   label: "DiTFlow (CogVideoX)"}
+    - {key: smm,       label: "SMM (re-impl., CogVideoX)"}
+    - {key: moft,      label: "MOFT (re-impl., CogVideoX)"}
+    - {key: wan_a0,    label: "No guidance (Wan 2.1 I2V)"}
+    - {key: ours,      label: "Ours (Wan 2.1 I2V + guidance)"}
+  cross_table_columns: ["Method", "n videos", "CamRotErr (deg) (lower)", "ObjMC motion-only (px) (lower)", "MF (higher)", "CLIP-IQA (higher)"]
+  cross_table_note: >
+    On the thirteen MiraData test pairs, medians per method, seed 0; every other method ran with the clip's caption as the
+    prompt, so the subject differs from ours. Follow-Your-Motion is fine-tuned on each clip and produced a video on nine of the
+    thirteen. Descriptive; no test.
+
+process:
+  intro: >
+    How the method got here, in order, including what was tried and set aside. Each step says what the evidence was.
+  steps:
+    - title: "Lift the reference to three dimensions"
+      status: kept
+      text: "A frozen 3D tracker gives tracks, depth and a camera that is consistent inside one of its encoding windows; an external camera estimate is archived beside it with the scale ratio that ties the two. A drift model fitted on the static background tells static from moving."
+      evidence: "The tracker's camera degrades across window boundaries by about four times; measured on the calibration clips, and the reason a third camera is solved later."
+    - title: "A branch for clips where the camera follows the subject"
+      status: kept
+      text: "When the camera travels with the subject, the subject is nearly still in the shared frame and the ordinary proposal degenerates. A detector finds the quiet, compact blob of the subject and a separate branch composes its path with the camera."
+      evidence: "The degeneracy was measured on the follow-camera calibration clip before the branch was designed."
+    - title: "Per-frame drift correction of the camera"
+      status: rejected
+      text: "A per-frame scale correction of the camera was considered as a default."
+      evidence: "On the calibration clips the drift it would remove is present on some and absent on others, so applying it throughout would introduce the error it is meant to remove."
+    - title: "The anchor by depth-conditioned generation"
+      status: kept
+      text: "A category proxy is placed where the source subject stood, facing its heading on the recovered ground; a hybrid control depth drives a depth-conditioned image generator; the anchor is selected by a fixed rule with a facing test."
+      evidence: "Automatic selection delivered all fifteen test anchors with one unclear subject, read by eye before any score."
+    - title: "Road-layout conditioning of the anchor"
+      status: tried, not adopted
+      text: "On the camera-following clip the anchors placed the car on roads that did not afford its turn. The road's boundaries were added as a second spatial condition beside the depth."
+      evidence: "The road's shape was kept on inspected examples, at the cost of appearance and generalisation, and the best inputs were traced by hand; the line was closed and Stage II left unchanged."
+    - title: "Attention-readout guidance"
+      status: built, set aside
+      text: "The first guidance read a displacement field from one transformer block's attention and optimised the latent toward the displacement the geometry predicts, with an epipolar term where coverage was low."
+      evidence: "On generated video the loss was satisfied by content rather than by motion. The readout stayed as an instrument: it was gated against CoTracker3 tracks on the source clips."
+    - title: "The render-target correction"
+      status: kept
+      text: "The anchor's own content is rendered along the recovered camera, and the object along its path for rigid targets. Inside a window of noise levels the clean estimate is pulled toward the render where a mask holds; no gradient, one encode."
+      evidence: "Camera rotation error falls on 15 of 15 test pairs (median 3.59 to 1.08 degrees), significant after Holm correction."
+    - title: "A geometry refresh from the denoised estimate"
+      status: designed, not built
+      text: "Newly revealed background would be re-lifted from the decoded estimate at an anchor frame, so coverage would not decay over the video."
+      evidence: "The rule that chooses the noise levels from the estimate's depth error returned an empty set: where the depth is usable the content has already changed. So coverage decays, and the late-frame distortion the review saw is left as future work."
+    - title: "Which camera the generator consumes"
+      status: changed
+      text: "The development set ran on the external camera, bridged into the source gauge by a depth ratio at one frame and a second scalar read at the object. The final configuration solves the camera from the static tracks: perspective-n-point per frame, then a bundle adjustment, in the gauge of the lifted scene, so no bridge is needed."
+      evidence: "Held-out static points reproject within a fraction of a patch through the refined cameras; the same test is the camera check every test pair passed."
+    - title: "The sampler's details"
+      status: kept, tested
+      text: "The multistep scheduler's corrector is disabled at the corrected steps; the mask is soft at its edges; the sky at infinity is inside the mask with a rotation-only target."
+      evidence: "In the guidance ablations the hard mask is worse on the subject's path on 5 of 5 pairs, the sky out is worse on the camera on 4 of 5, gamma between 0.25 and 1 is indistinguishable on five pairs, and a first-order sampler keeps the camera but hurts the subject."
+
+ablations:
+  intro: >
+    Six settings of the guidance, each one change from the fixed configuration, on the five development pairs with
+    registered predictions. The clips below are one pair; the table counts all five.
+  clip_pair: "000000000265.2.003/vehicle"
+  clips:
+    - {key: fixed,   label: "fixed configuration",     suffix: "_obj_ow0.75_sm_sky"}
+    - {key: noobj,   label: "no object render",        suffix: "_sm_sky", prefix_noobj: true}
+    - {key: hard,    label: "hard mask",               suffix: "_obj_ow0.75_sky"}
+    - {key: skyout,  label: "sky out of the mask",     suffix: "_obj_ow0.75_sm"}
+    - {key: euler,   label: "first-order sampler",     suffix: "_obj_ow0.75_euler_sm_sky"}
+    - {key: g025,    label: "gamma 0.25",              suffix: "_obj_ow0.75_sm_sky_g0.25"}
+  settings:   # row label in ablation_guidance_tables.md -> short name
+    - {row: "A3 without the object render (vehicles)", name: "no object render (vehicles)"}
+    - {row: "A3 gamma 0.5", name: "gamma 0.5"}
+    - {row: "A3 gamma 0.25", name: "gamma 0.25"}
+    - {row: "A3 Euler scheduler", name: "first-order sampler"}
+    - {row: "A3 hard mask", name: "hard mask"}
+    - {row: "A3 sky out of the mask", name: "sky out of the mask"}
+  fixed_row: "A3 of record (gamma 1, UniPC, soft mask, sky in)"
+
+limitations:
+  - "How an articulated subject moves its own body is not transferred: the human arm renders no object, so once the camera is held the model's own gait is carried along with it, and the subject's path error rises on 9 of 12 human pairs."
+  - "The correction costs appearance: both CLIP scores fall under guidance on nearly every pair, and the cost does not scale with how much the correction has to do."
+  - "Frame-zero coverage decays over the video and is not replenished, so later frames can distort where the render no longer covers them."
+  - "A reference whose camera fails the check is refused rather than guessed; the test set is fifteen pairs at one seed."
+
+credits:
+  models: "Wan2.1 I2V (frozen generator); OpenD4RT (tracks, depth, camera); SAM 2.1 (masks); ViPE (external camera); MoGe-2 (anchor depth); FLUX.1 Depth (anchor generation); SAM 3D Body and Objects (reconstruction); CoTracker3 (in-pipeline check); SegFormer (dynamic textures); CLIP (appearance scores)."
+  note: "Every number on this page is read from the sealed records of the thesis's experiment; the videos are the ones scored."
+
+baselines:                   # the other methods' 21-frame videos on the test pairs (the grader's pairs folder, downloaded from Drive)
+  root: "D:/6528/ditflow/pairs"
+  note: "other methods on this pair, run on the clip's caption (different prompt subject), seed 0"
+  methods:
+    - {key: no_guidance, label: "No guidance (CogVideoX-5B)"}
+    - {key: ditflow,     label: "DiTFlow (CogVideoX-5B)"}
+    - {key: smm,         label: "SMM (re-impl., CogVideoX-5B)"}
+    - {key: moft,        label: "MOFT (re-impl., CogVideoX-5B)"}
+    - {key: fym_noguide, label: "No guidance (Wan2.1 T2V 1.3B)"}
+    - {key: fym,         label: "Follow-Your-Motion (Wan2.1 T2V 1.3B)"}

@@ -1,0 +1,224 @@
+{
+ "stock": {
+  "timesteps_ours": [
+   999.0,
+   954.0,
+   900.0,
+   833.0,
+   750.0,
+   643.0,
+   500.0,
+   301.0
+  ],
+  "per_step": [
+   {
+    "step": 0,
+    "max_abs_diff": 0.014189004898071289,
+    "mean_abs_diff": 0.0012758361408486962,
+    "rel_rms": 0.00177960772998631
+   },
+   {
+    "step": 1,
+    "max_abs_diff": 0.10420644283294678,
+    "mean_abs_diff": 0.005486105103045702,
+    "rel_rms": 0.008177555166184902
+   },
+   {
+    "step": 2,
+    "max_abs_diff": 0.2256963551044464,
+    "mean_abs_diff": 0.013094918802380562,
+    "rel_rms": 0.02118079550564289
+   },
+   {
+    "step": 3,
+    "max_abs_diff": 0.3553694486618042,
+    "mean_abs_diff": 0.02266991324722767,
+    "rel_rms": 0.03960563987493515
+   },
+   {
+    "step": 4,
+    "max_abs_diff": 0.472545862197876,
+    "mean_abs_diff": 0.03441300243139267,
+    "rel_rms": 0.06605120748281479
+   },
+   {
+    "step": 5,
+    "max_abs_diff": 0.7110620737075806,
+    "mean_abs_diff": 0.05337614566087723,
+    "rel_rms": 0.11279138922691345
+   },
+   {
+    "step": 6,
+    "max_abs_diff": 1.3563411235809326,
+    "mean_abs_diff": 0.08109156042337418,
+    "rel_rms": 0.17066603899002075
+   },
+   {
+    "step": 7,
+    "max_abs_diff": 2.0311522483825684,
+    "mean_abs_diff": 0.11479523777961731,
+    "rel_rms": 0.1959468424320221
+   }
+  ]
+ },
+ "euler": {
+  "timesteps_ours": [
+   1000.0,
+   947.5425415039062,
+   882.7877807617188,
+   800.8373413085938,
+   693.7930908203125,
+   548.0455932617188,
+   337.97216796875,
+   8.928571701049805
+  ],
+  "per_step": [
+   {
+    "step": 0,
+    "max_abs_diff": 0.07123005390167236,
+    "mean_abs_diff": 0.008499020710587502,
+    "rel_rms": 0.01131532620638609
+   },
+   {
+    "step": 1,
+    "max_abs_diff": 0.49249619245529175,
+    "mean_abs_diff": 0.037316661328077316,
+    "rel_rms": 0.054853249341249466
+   },
+   {
+    "step": 2,
+    "max_abs_diff": 0.4545770287513733,
+    "mean_abs_diff": 0.053222883492708206,
+    "rel_rms": 0.08097133785486221
+   },
+   {
+    "step": 3,
+    "max_abs_diff": 0.7985458374023438,
+    "mean_abs_diff": 0.08459565043449402,
+    "rel_rms": 0.1392633318901062
+   },
+   {
+    "step": 4,
+    "max_abs_diff": 1.0861366987228394,
+    "mean_abs_diff": 0.13456085324287415,
+    "rel_rms": 0.24307216703891754
+   },
+   {
+    "step": 5,
+    "max_abs_diff": 1.6720328330993652,
+    "mean_abs_diff": 0.21815966069698334,
+    "rel_rms": 0.42892980575561523
+   },
+   {
+    "step": 6,
+    "max_abs_diff": 2.7137420177459717,
+    "mean_abs_diff": 0.3688068985939026,
+    "rel_rms": 0.7208116054534912
+   },
+   {
+    "step": 7,
+    "max_abs_diff": 2.9256591796875,
+    "mean_abs_diff": 0.21590976417064667,
+    "rel_rms": 0.36365005373954773
+   }
+  ]
+ },
+ "noise_repeatable": true,
+ "condition_repeatable": true,
+ "step0_inputs": {
+  "call0": {
+   "timestep": [
+    999.0,
+    999.0
+   ],
+   "dtype": [
+    "torch.bfloat16",
+    "torch.bfloat16"
+   ],
+   "kwargs": [
+    [
+     "attention_kwargs",
+     "encoder_hidden_states",
+     "encoder_hidden_states_image",
+     "hidden_states",
+     "return_dict",
+     "timestep"
+    ],
+    [
+     "encoder_hidden_states_image",
+     "return_dict"
+    ]
+   ],
+   "latent_channels_rel": 0.0,
+   "condition_channels_rel": 0.0,
+   "text_rel": 0.0230423416942358,
+   "image_rel": 0.0,
+   "output_rel": 0.005128201097249985,
+   "text_positions_differing": [
+    0,
+    29,
+    30
+   ],
+   "pipeline_text_norm_first_last_nonzero": [
+    0,
+    29
+   ]
+  },
+  "call1": {
+   "timestep": [
+    999.0,
+    999.0
+   ],
+   "dtype": [
+    "torch.bfloat16",
+    "torch.bfloat16"
+   ],
+   "kwargs": [
+    [
+     "attention_kwargs",
+     "encoder_hidden_states",
+     "encoder_hidden_states_image",
+     "hidden_states",
+     "return_dict",
+     "timestep"
+    ],
+    [
+     "encoder_hidden_states_image",
+     "return_dict"
+    ]
+   ],
+   "latent_channels_rel": 0.0,
+   "condition_channels_rel": 0.0,
+   "text_rel": 0.018133826553821564,
+   "image_rel": 0.0,
+   "output_rel": 0.00535224424675107,
+   "text_positions_differing": [
+    0,
+    125,
+    126
+   ],
+   "pipeline_text_norm_first_last_nonzero": [
+    0,
+    125
+   ]
+  }
+ },
+ "pipeline_timesteps": [
+  999.0,
+  954.0,
+  900.0,
+  833.0,
+  750.0,
+  643.0,
+  500.0,
+  301.0
+ ],
+ "settings": {
+  "steps": 8,
+  "frames": 33,
+  "cfg": 5.0,
+  "weights": "fp8",
+  "shift": 3.0,
+  "neg_chars": 137
+ }
+}

@@ -1,0 +1,19 @@
+# Phase-2 ONLY (Wan generation). CLAUDE.md §1: Phase 1 and Phase 2 are
+# memory-disjoint — do not install these into a Phase-1 preprocessing env and
+# do not import them from Phase-1 code.
+#
+# torch/torchvision come from Colab, as in requirements.txt — not pinned here.
+
+diffusers>=0.33          # Wan support landed in 0.33; 0.36 is what the probe ran
+transformers>=4.44,<5    # MEASURED: transformers 5.x breaks diffusers 0.36's
+                         # lazy model imports (AutoImageProcessor). Not theory.
+accelerate>=0.33.0
+ftfy>=6.1.0              # umT5 tokenisation
+
+# 2026-10-07 (measured on Colab, python 3.13, torch 2.6.0+cu124): bootstrap's requirements.txt pins huggingface_hub==0.36.2 for
+# ViPE, and Colab now ships transformers 5.18 / diffusers 0.40, which import `ResolvedRevision` from huggingface_hub >= 1.x ->
+# every diffusers/transformers import fails after bootstrap. Phase-2 sessions (Wan, FLUX, MoGe) therefore run, AFTER bootstrap:
+#     pip install -q -U "huggingface_hub>=1.0" "transformers>=4.57" "diffusers>=0.40"
+# and never run ViPE in the same VM. The `transformers<5` line above is from diffusers 0.36 and is superseded by this note
+# until re-measured; torchaudio must not be installed (its ABI breaks against torch 2.6 here).
+huggingface_hub>=1.0

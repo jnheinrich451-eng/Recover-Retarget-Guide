@@ -1,0 +1,263 @@
+{
+ "pair": "000000000035.1.003/vehicle",
+ "t_a": 4,
+ "F_pair": 77,
+ "n_points": 918,
+ "split_median_px": 4.15844166366619,
+ "gate_px": 1.4769230769230768,
+ "residual_vs_radius": {
+  "spearman": 0.2866852201235399,
+  "by_radius_tercile": {
+   "inner": {
+    "median_px": 2.5592184310218222,
+    "n": 306
+   },
+   "mid": {
+    "median_px": 4.615786504696948,
+    "n": 306
+   },
+   "outer": {
+    "median_px": 4.814914684807184,
+    "n": 306
+   }
+  },
+  "radial_alignment": {
+   "median_cos": 0.7677950627320131,
+   "frac_abs_cos_gt_0.7": 0.630718954248366
+  },
+  "principal_point": [
+   127.40837097167969,
+   125.06456756591797
+  ]
+ },
+ "residual_by_region": {
+  "top/left": {
+   "median_px": null,
+   "n": 1
+  },
+  "top/centre": {
+   "median_px": 2.506419714798346,
+   "n": 12
+  },
+  "top/right": {
+   "median_px": 1.9875385212001024,
+   "n": 96
+  },
+  "middle/left": {
+   "median_px": null,
+   "n": 1
+  },
+  "middle/centre": {
+   "median_px": 1.431232665552544,
+   "n": 12
+  },
+  "middle/right": {
+   "median_px": 4.340485744130403,
+   "n": 484
+  },
+  "bottom/left": {
+   "median_px": null,
+   "n": 0
+  },
+  "bottom/centre": {
+   "median_px": null,
+   "n": 1
+  },
+  "bottom/right": {
+   "median_px": 5.080290793901621,
+   "n": 311
+  }
+ },
+ "residual_vs_depth_spearman": -0.17397945776731752,
+ "gauge_ratio_depth_x_radius": {
+  "table": {
+   "near/inner": {
+    "median": 0.9686755986117512,
+    "n": 6
+   },
+   "near/mid": {
+    "median": 0.9788720504743164,
+    "n": 18
+   },
+   "near/outer": {
+    "median": 0.9586915955393613,
+    "n": 49
+   },
+   "mid/inner": {
+    "median": 0.9822653856275602,
+    "n": 20
+   },
+   "mid/mid": {
+    "median": 1.0902770535302557,
+    "n": 30
+   },
+   "mid/outer": {
+    "median": 1.2041074232559024,
+    "n": 23
+   },
+   "far/inner": {
+    "median": 1.1941417468247653,
+    "n": 47
+   },
+   "far/mid": {
+    "median": 1.2427908935247436,
+    "n": 25
+   },
+   "far/outer": {
+    "median": null,
+    "n": 1
+   }
+  },
+  "depth_tercile_bounds": [
+   4.459871610005696,
+   5.87467892964681
+  ],
+  "radius_tercile_bounds": [
+   82.8025701761574,
+   119.53673086052973
+  ],
+  "overall": {
+   "median_Ztri_over_Zlift": 1.0446730617054827,
+   "ci95": [
+    1.0254397314356531,
+    1.078839862373023
+   ],
+   "n": 219,
+   "tol": 0.05,
+   "outcome": "pass",
+   "read_on": "near",
+   "terciles": {
+    "near": {
+     "median": 0.9668212374515976,
+     "n": 73,
+     "z_lift_range": [
+      1.0848212242126465,
+      4.458513259887695
+     ]
+    },
+    "mid": {
+     "median": 1.080407183915955,
+     "n": 73,
+     "z_lift_range": [
+      4.460550785064697,
+      5.871318340301514
+     ]
+    },
+    "far": {
+     "median": 1.1941417468247653,
+     "n": 73,
+     "z_lift_range": [
+      5.881400108337402,
+      8.963502883911133
+     ]
+    }
+   },
+   "depth_dependent": true,
+   "near": {
+    "median_Ztri_over_Zlift": 0.9668212374515976,
+    "ci95": [
+     0.9577976203735172,
+     0.9804631667821287
+    ],
+    "n": 73
+   }
+  }
+ },
+ "rebin": {
+  "by_lift_depth": {
+   "near": {
+    "median": 0.9668212374515976,
+    "n": 73,
+    "range": [
+     1.0848212242126465,
+     4.458513259887695
+    ]
+   },
+   "mid": {
+    "median": 1.080407183915955,
+    "n": 73,
+    "range": [
+     4.460550785064697,
+     5.871318340301514
+    ]
+   },
+   "far": {
+    "median": 1.1941417468247653,
+    "n": 73,
+    "range": [
+     5.881400108337402,
+     8.963502883911133
+    ]
+   }
+  },
+  "by_triangulated_depth": {
+   "near": {
+    "median": 0.9584049767296662,
+    "n": 73,
+    "range": [
+     1.0529761779975393,
+     4.367406263428753
+    ]
+   },
+   "mid": {
+    "median": 1.0446730617054827,
+    "n": 73,
+    "range": [
+     4.375161509286437,
+     6.838003173140483
+    ]
+   },
+   "far": {
+    "median": 1.3319658265450502,
+    "n": 73,
+    "range": [
+     6.842369531246563,
+     19.185003019332772
+    ]
+   }
+  },
+  "by_image_row": {
+   "top": {
+    "median": 1.175786494677738,
+    "n": 73,
+    "range": [
+     48.29206466674805,
+     105.80260467529297
+    ]
+   },
+   "middle": {
+    "median": 1.0543888905282102,
+    "n": 73,
+    "range": [
+     106.78994750976562,
+     142.11083984375
+    ]
+   },
+   "bottom": {
+    "median": 0.9788245509576704,
+    "n": 73,
+    "range": [
+     142.47723388671875,
+     230.35296630859375
+    ]
+   }
+  }
+ },
+ "band_gauge": {
+  "n_band_points": 16,
+  "min_points": 30,
+  "tol": 0.05,
+  "band_pixels": 18776,
+  "ratio": null,
+  "ci95": null,
+  "half_fit": null,
+  "half_verify": null,
+  "verify_rel_diff": null,
+  "band_reproj_median_px": 1.6505318022996687,
+  "outcome": "undetermined (n=16<30)"
+ },
+ "gauge_n_points_of_scored": [
+  219,
+  918
+ ]
+}

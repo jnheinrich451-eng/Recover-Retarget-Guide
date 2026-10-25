@@ -1,0 +1,82 @@
+{
+ "candidate": "p4_human_proxy_s2",
+ "facing": "left",
+ "rows": [
+  {
+   "case": "baseline (vendor camera, K=None)",
+   "delta_deg": 0.5677496775095882,
+   "facing_az_deg": -179.4322503224904,
+   "shoulder_hip_twist_deg": 4.8727543937027225,
+   "K": null
+  },
+  {
+   "case": "square pixels, K isotropic",
+   "delta_deg": 0.538643913180115,
+   "facing_az_deg": -179.46135608681988,
+   "shoulder_hip_twist_deg": 4.296578441533236,
+   "K": [
+    [
+     1228.8,
+     0.0,
+     512.0
+    ],
+    [
+     0.0,
+     1228.8,
+     512.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "case": "squashed as 65.2.005 (fy/fx 1.77)",
+   "delta_deg": 1.829792222282097,
+   "facing_az_deg": -178.1702077777179,
+   "shoulder_hip_twist_deg": 4.845649186984213,
+   "K": [
+    [
+     1228.8,
+     0.0,
+     512.0
+    ],
+    [
+     0.0,
+     2173.786180315882,
+     905.5
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ]
+  },
+  {
+   "case": "squashed as 70.1.008 (fy/fx 1.93)",
+   "delta_deg": 1.7931879090106353,
+   "facing_az_deg": -178.2068120909894,
+   "shoulder_hip_twist_deg": 4.76226028607199,
+   "K": [
+    [
+     1228.8,
+     0.0,
+     512.0
+    ],
+    [
+     0.0,
+     2374.146606389369,
+     989.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0
+    ]
+   ]
+  }
+ ]
+}

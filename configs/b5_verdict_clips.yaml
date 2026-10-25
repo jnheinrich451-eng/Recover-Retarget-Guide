@@ -1,0 +1,18 @@
+# B.5 heading/scene-up verdict set — FROZEN 2026-09-09 (human arrow/horizon verdicts on
+# Drive viz/stage_b5/verdicts.csv; table in docs/report_b5_v1_review.md).
+# Selection: the three original verdict clips + every x0-channel clip whose Stage C mask
+# verdict is "good" or "partial/part" (mask on the subject). x0 clips with ground/shell/sky
+# in the mask are excluded — their centroid would average background.
+# Consumers: CC-TASK-b5-v1.2-measurement §2 (clip set), theta_max calibration. Do not add
+# clips to make a variant pass; a variant failure on a listed clip is a result.
+branch:
+  - "000000000035.1.003"   # car, follow-cam
+  - "000000000284.0.006"   # jeep, follow-cam, t_c = 0
+x0:
+  - "000000000265.2.003"   # horse, lateral — v1.1 heading WRONG (support churn)
+  - "000000000122.1.001"   # rider, side slope
+  - "000000000265.2.005"
+  - "000000000326.4.017"
+  - "000000000370.1.008"   # same source video as .009
+  - "000000000370.1.009"   # third-person follow camera on x0 — v1.1 heading WRONG
+  - "000000000404.1.004"   # correct heading at the largest sigma_theta (27 deg)

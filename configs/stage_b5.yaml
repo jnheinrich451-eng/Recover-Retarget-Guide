@@ -1,0 +1,19 @@
+# Stage B.5 estimator settings (SKILL v1.1; NO lock entries — §0: producer
+# measures, Module 2 gates with its own thresholds).
+b5:
+  traj_source: G            # branch composition: G (bundle, default) | vipe
+                            # (A.5 archive) — both measured, decision owned
+                            # by the retargeting SKILL (v1.1 delta 1)
+  heading_estimator: v1.2   # x0 channel: v1.2 = common support (valid + in-mask at
+                            # every window frame), UNWEIGHTED centroid, plain WLS —
+                            # blind Gate A 2026-09-10 (8/9 vs v1.1 6/9), mechanism
+                            # measured (support churn). v1.1 kept as the foil.
+  irls_passes: 3            # sigma_spec nuisance variant V1cr only
+  heading_L: 12             # WLS window length (frames past t_c)
+  heading_L_min: 5          # below this within-segment -> de-gauge full L
+  eta_min_quantile: 0.5     # plane pool: statics with eta above clip median
+  ransac_iters: 200
+  ransac_tol_frac: 0.02     # inlier tol = frac x median scene depth
+  min_plane_points: 200
+paths:
+  out_dir: ${paths.drive_root}/cache/stage_b5

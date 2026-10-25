@@ -1,0 +1,36 @@
+{
+ "clip": "000000000284.0.006",
+ "category": "vehicle",
+ "fx_over_fy": 0.5451763157342416,
+ "alpha": 0.36319843972951865,
+ "b": -0.1820228271364341,
+ "object_depth_p02_p50_p98": [
+  0.6128468846215401,
+  0.6580387638788637,
+  0.8404031663988301
+ ],
+ "probes": {
+  "vendor_default": {
+   "ok": true,
+   "n_vertices": 207764,
+   "iou_aligned": 0.6069441780164972,
+   "centroid_z": 0.5951045207179828,
+   "extent": [
+    0.1628123241381017,
+    0.28453928196525896,
+    0.34080941787791097
+   ],
+   "seconds": 20.5
+  },
+  "stretch_x1.54": {
+   "ok": false,
+   "error": "IndexError: min(): Expected reduction dim 0 to have non-zero size.",
+   "seconds": 6.3
+  },
+  "stretch_x2": {
+   "ok": false,
+   "error": "IndexError: min(): Expected reduction dim 0 to have non-zero size.",
+   "seconds": 6.2
+  }
+ }
+}

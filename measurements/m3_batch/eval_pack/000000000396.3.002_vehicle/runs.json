@@ -1,0 +1,396 @@
+{
+ "pair": "000000000396.3.002/vehicle",
+ "batch": "m3_batch_exp_v1",
+ "frames": 21,
+ "note": null,
+ "camera_gate_failed": false,
+ "geometry_status": "ok",
+ "geometry_keys_absent": [],
+ "label_source": "car",
+ "label_target": "car",
+ "source_clip": "/content/data/videos/000000000396.3.002.mp4",
+ "t_a": 0,
+ "src_frames": [
+  0,
+  4,
+  8,
+  12,
+  16,
+  20
+ ],
+ "reference_window": "frames t_a .. t_a + 21 - 1 of the source clip (the generated video's frame k is source frame t_a + k)",
+ "caches": {
+  "m3": "/content/drive/MyDrive/motion_transfer_exp/cache/m3/000000000396.3.002/vehicle",
+  "stage_c_mask": "/content/drive/MyDrive/motion_transfer_exp/cache/stage_c/000000000396.3.002",
+  "stage_c5_tracks": "/content/drive/MyDrive/motion_transfer_exp/cache/stage_c5/000000000396.3.002.npz",
+  "stage_a_bundle": "/content/drive/MyDrive/motion_transfer_exp/cache/stage_a/000000000396.3.002",
+  "handoff": "/content/drive/MyDrive/motion_transfer_exp/cache/m2_e/000000000396.3.002/vehicle"
+ },
+ "geometry_eval": "/content/drive/MyDrive/motion_transfer_exp/reports/m3_batch/eval_pack/000000000396.3.002_vehicle/geometry_eval.npz",
+ "geometry_eval_semantics": {
+  "E_full": "[F_pair, 4, 4] the TARGET camera per source frame (the reference camera bridged by beta, rebased to t_a, cam2world in the anchor's frame = the expected camera of a generated video; rotation is bridge-invariant, translation is in the target's units)",
+  "E_l": "[T_l, 4, 4] the same at the latent frames (every 4th)",
+  "c_tar": "[T_l, 3] the retargeted object centroid path in the same frame",
+  "K_wan": "[3, 3] intrinsics at 832x480",
+  "beta": "the bridge scale of record",
+  "s_delta": "the object displacement scale"
+ },
+ "gates": {
+  "contact_decision.json": {
+   "pair": "000000000396.3.002/vehicle",
+   "gate_column": "B: ground at the painted object's bottom edge",
+   "r_c_B": 0.8142146407221225,
+   "r_c_A": 0.8365723262204185,
+   "edge_offset_rows": 17.0,
+   "edge_offset_exceeds_half_patch": true,
+   "contact_tol": 0.05,
+   "s_c": 1.2281773748419773,
+   "outcome": "contact_fails_regauge",
+   "reading": "contact fails: object re-gauged to the ground, s_c = 1.2282 (displacement scaled alike; D-M3-03 for this pair)",
+   "decided_by": "pre-registered rule (reviewer 2026-10-06c-e); applied on John's decision 2026-10-06",
+   "unregauged_variant": "run as a sub-row (s_c forced to 1)"
+  },
+  "sint_step2.json": {
+   "pair": "000000000396.3.002/vehicle",
+   "disposition": "experiment",
+   "F_pair": 21,
+   "T_l": 6,
+   "t_a": 0,
+   "contact": {
+    "outcome": "contact_fails_regauge",
+    "s_c_rule": 1.2281773748419773,
+    "s_c_applied": 1.2281773748419773,
+    "edge_offset_rows": 17.0
+   },
+   "bridge": {
+    "run": "rec",
+    "beta": 1.0,
+    "camera": "camera_c_ba",
+    "s_delta": 1.0,
+    "contact_undefined": null,
+    "note": "camera C + BA is in the source gauge by the lift prior at t_a: no bridge; s_delta = 1 (depth-preserving); s_c applied below as on every pair"
+   },
+   "camera": {
+    "source": "camera_c_ba",
+    "sigma_ta": null,
+    "record_degenerate": null,
+    "cam_path_len": 1.0396961503596034,
+    "cam_rot_total_deg": 7.168971987524299
+   },
+   "object_path_c5": {
+    "source": "same-frame C.5 lift median, G = I (reviewer 2026-10-11 decision 1)",
+    "n_tracks_visible_min": 227,
+    "boundaries_in_window": [],
+    "static_pair_ratio_log_at_boundaries": {},
+    "median_abs_log_step": 0.01740025996318345,
+    "per_window_scale_applied_at": [],
+    "scale_corr_last": 1.0,
+    "registered_a_no_boundary_step_over_3x_median": {
+     "held": true,
+     "latent_step_at_boundaries": {},
+     "median_latent_step": 0.1671163005899507
+    },
+    "registered_b_boundary_frames_do_not_exceed_rest": {
+     "held": true,
+     "statistic": "per-track reprojection residual (lift through K_t vs own 2-D track), median over tracks per frame",
+     "median_patch_frames_44_52": null,
+     "median_patch_other_frames": 1.0647192622187943e-06,
+     "mad_other_frames": 4.0034356453425234e-08,
+     "per_frame_44_52": [],
+     "max_err_patch": 1.1379346896810148e-06
+    },
+    "b5_cross_check": {
+     "max_dev_from_c5_world": 0.08753219690009637,
+     "b5_max_latent_step_over_median": 1.1307856581834546,
+     "c5_max_latent_step_over_median": 1.279067647768485
+    }
+   },
+   "path_smoothing": {
+    "method": "savgol",
+    "sg_window": 13,
+    "heading_vs_d_src_deg_12f": {
+     "raw": 4.188203994613869,
+     "smoothed": 3.5422261296683857
+    },
+    "invariant": "residual bias at the ends (reviewer 2026-10-06i)",
+    "tolerance_source": "lock m3.object_path",
+    "net_disp_tol_patch": 0.25,
+    "bias_first_window_patch": 0.02168901241331346,
+    "bias_last_window_patch": 0.010588601599721801,
+    "heading_tol_deg": 2.0,
+    "sigma_theta_deg": 1.0481893129587423,
+    "resid_max_patch": 0.2975176152964056,
+    "resid_lag1_autocorr": 0.16805943164767,
+    "sg_window_source": "configs/m3.yaml",
+    "delta_c0_is_zero": true,
+    "applied": true,
+    "invariant_net_disp_patch": 0.02168901241331346,
+    "invariant_heading_deg": 0.5361437990450704,
+    "invariant_heading_perp_patch": 0.045949111672107024,
+    "invariant_window_frames": 16,
+    "heading_reference": "smoothed vs raw of the same path over 16 frames, in position units (reviewer 2026-10-11 round 4); d_src agreement reported, not gated",
+    "path_over_net_raw": 1.004423427245222,
+    "path_over_net_smooth": 1.0031847171844872,
+    "max_dev_smooth_vs_raw_patch": 0.2975176152964056
+   },
+   "object_path": {
+    "channel": "branch",
+    "drift_model": "none",
+    "drift_note": "x0: B.5's track as delivered (Stage B drift fit upstream); g_t not applied",
+    "path_len": 0.9011672205365205,
+    "net_displacement": 0.898306368806847,
+    "vipe_vs_d4rt_disp_diff_over_path": 0.3490361014918289,
+    "heading_vs_d_src_deg_first_window": 1.5361583947001805,
+    "heading_window_latent_steps": 4
+   },
+   "occupancy": {
+    "source": "painted_mask_warped",
+    "affine_warp_residual_patches_median": [
+     0.0,
+     0.019,
+     0.011,
+     0.046,
+     0.063,
+     0.084
+    ],
+    "painted_vs_gtar_patches_t0": [
+     46,
+     57
+    ],
+    "iou_painted_vs_gtar_t0": 0.6885245901639344,
+    "centroid_target_patches": [
+     [
+      25.991955315396975,
+      21.27827925045704
+     ],
+     [
+      26.107438263396006,
+      21.95883539657112
+     ],
+     [
+      26.358898897076198,
+      22.894576011651335
+     ],
+     [
+      26.857486739347905,
+      24.09891686689341
+     ],
+     [
+      27.3852760275092,
+      23.75471258206423
+     ],
+     [
+      27.852240627306678,
+      24.096803143957132
+     ]
+    ]
+   },
+   "coverage": {
+    "cov_curve": [
+     0.8698,
+     0.8331,
+     0.7986,
+     0.7195,
+     0.6214,
+     0.4685
+    ],
+    "cov_curve_sky_excluded": [
+     0.9997,
+     0.9634,
+     0.9057,
+     0.8112,
+     0.7102,
+     0.5557
+    ],
+    "anchors_of_record": [
+     0
+    ],
+    "schedule_excludes_sky": true,
+    "anchors": [
+     0,
+     5
+    ],
+    "anchors_sky_excluded": [
+     0
+    ],
+    "sky_patch_frac": 0.1955128205128205,
+    "bg_flow_median_patches_last": 10.932311191789866,
+    "bg_flow_p95_patches_last": 18.84118578959659,
+    "bg_flow_median_patches_step1": 2.828906381870521,
+    "obj_patches_t0": 46,
+    "obj_patches_last": 66,
+    "obj_centre_shift_patches": 3.3770902238373646
+   }
+  },
+  "sint_step1.json": {
+   "pair": "000000000396.3.002/vehicle",
+   "disposition": "experiment",
+   "label": null,
+   "gates": {
+    "g_handoff": {
+     "disposition": "experiment",
+     "label": null,
+     "hash_checked": false,
+     "verdict_source": "automatic: gate outcomes of qc_m2e.json"
+    },
+    "g_frame0": {
+     "t_a": 0,
+     "fx_over_fy_1024": 0.5310159912908736
+    },
+    "g_envelope": {
+     "F_pair": 21,
+     "T_l": 6,
+     "lost_frames_before_t_a": 0,
+     "min_frames": 21
+    },
+    "g_mode": {
+     "mode": "depth_preserving",
+     "s": 1.0
+    },
+    "g_gauge_scalar": {
+     "k_bg": 0.07217153341360576,
+     "ci95": [
+      0.06628697779791448,
+      0.08470042517949412
+     ],
+     "ci_rel_width": 0.2551344901604702,
+     "n_pixels": 129156,
+     "n_blocks": 57,
+     "mad_rel": 0.19503603120256707,
+     "band_n_pixels_1024": 314882,
+     "alpha_bridged_over_kbg_depth_band_median": 1.0288451494549444,
+     "alpha_bridged_over_kbg_depth_object_median": 0.8449992851210482,
+     "threshold": null,
+     "outcome": "ungated",
+     "grid": "480x904 square-pixel, FOV imposed (k_bg is valid on this grid only)"
+    },
+    "g_obj_footprint": {
+     "iou": 0.6549981419546637,
+     "handoff_R2_iou": 0.6549981419546637,
+     "threshold": 0.7,
+     "outcome": "fail"
+    },
+    "g_obj_depth": {
+     "z_gtar_visible_median": 0.739502082829545,
+     "z_image_kbg_median": 0.8745264988261894,
+     "rel_diff": 0.15439716941439444,
+     "signed_gtar_over_image": 0.8456028305856056,
+     "threshold": 0.15,
+     "outcome": "fail"
+    }
+   },
+   "grid": {
+    "W_sq": 904,
+    "H": 480,
+    "fov_x_deg": 84.3827733142419,
+    "fx_sq": 498.63716745376587,
+    "fy_sq": 498.5972213745117,
+    "fx_over_fy_wan": 0.9204277182375143,
+    "moge_valid_frac": 0.8042957227138643
+   },
+   "lift": {
+    "n_bg": 21300,
+    "n_obj_vertices": 175136,
+    "lattice_roundtrip_max_patch": 1.4210854715202004e-14,
+    "sky_patch_frac_gt_half": 0.1955128205128205,
+    "c_tar_0": [
+     0.009212919388162788,
+     0.13990737018436203,
+     0.8027983935243215
+    ]
+   }
+  }
+ },
+ "runs": [
+  {
+   "arm": "A0",
+   "arm_key": "A0",
+   "seed": 0,
+   "video": "/content/drive/MyDrive/motion_transfer_exp/cache/m3/000000000396.3.002/vehicle/A0_seed0_rec_F21.mp4",
+   "exists": true,
+   "flags": [],
+   "run_config": {
+    "pair": "000000000396.3.002/vehicle",
+    "arm": "A0",
+    "seed": 0,
+    "frames": 21,
+    "T_run": 6,
+    "bridge": "rec",
+    "beta": 1.0,
+    "s_delta": 1.0,
+    "object_render": false,
+    "gamma_obj": null,
+    "obj_lowpass_sigma_latent": null,
+    "obj_window_sigma": null,
+    "correct_from_sigma": null,
+    "prompt_anchor": "a red car driving, along a dirt track surrounded by palm trees and mountains under a clear blue sky, rear three-quarter view, moving away from the camera, medium-wide shot",
+    "motion_clause": null,
+    "prompt_used": "a red car driving, along a dirt track surrounded by palm trees and mountains under a clear blue sky, rear three-quarter view, moving away from the camera, medium-wide shot",
+    "anchor_override": null,
+    "no_processor": false,
+    "scheduler": "UniPCMultistepScheduler",
+    "scheduler_lock": "UniPCMultistep",
+    "keep_corrector": false,
+    "corrector_policy": "correction_steps",
+    "corrector_policy_source": "lock",
+    "corrector_off_control": false,
+    "latent_dtype": "float32 (from 2026-10-13; earlier runs bf16)",
+    "text_tokens": 512,
+    "clause_cfg": null,
+    "image_cfg": null,
+    "bg_window_override": null,
+    "negative_prompt_used": "\u8272\u8c03\u8273\u4e3d\uff0c\u8fc7\u66dd\uff0c\u9759\u6001\uff0c\u7ec6\u8282\u6a21\u7cca\u4e0d\u6e05\uff0c\u5b57\u5e55\uff0c\u98ce\u683c\uff0c\u4f5c\u54c1\uff0c\u753b\u4f5c\uff0c\u753b\u9762\uff0c\u9759\u6b62\uff0c\u6574\u4f53\u53d1\u7070\uff0c\u6700\u5dee\u8d28\u91cf\uff0c\u4f4e\u8d28\u91cf\uff0cJPEG\u538b\u7f29\u6b8b\u7559\uff0c\u4e11\u964b\u7684\uff0c\u6b8b\u7f3a\u7684\uff0c\u591a\u4f59\u7684\u624b\u6307\uff0c\u753b\u5f97\u4e0d\u597d\u7684\u624b\u90e8\uff0c\u753b\u5f97\u4e0d\u597d\u7684\u8138\u90e8\uff0c\u7578\u5f62\u7684\uff0c\u6bc1\u5bb9\u7684\uff0c\u5f62\u6001\u7578\u5f62\u7684\u80a2\u4f53\uff0c\u624b\u6307\u878d\u5408\uff0c\u9759\u6b62\u4e0d\u52a8\u7684\u753b\u9762\uff0c\u6742\u4e71\u7684\u80cc\u666f\uff0c\u4e09\u6761\u817f\uff0c\u80cc\u666f\u4eba\u5f88\u591a\uff0c\u5012\u7740\u8d70",
+    "soft_mask": false,
+    "sky_mask": false,
+    "nodyn_mask": false,
+    "obj_taper_steps": null,
+    "T_g_effective": [
+     0.85,
+     0.6
+    ],
+    "block": 20,
+    "r_w": 3.0,
+    "T_g": [
+     0.85,
+     0.6
+    ],
+    "lambdas": {
+     "bg": 1.0,
+     "obj": 1.0,
+     "perp": 0.1,
+     "mass": null
+    },
+    "eta": 0.05,
+    "steps": 50,
+    "shift": 3.0,
+    "cfg": 5.0,
+    "weights": "fp8",
+    "checkpointing": true,
+    "anchors": [
+     0
+    ],
+    "smoke": false,
+    "wall_s": 208.37817668914795,
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "corrector_off_steps": []
+   }
+  },
+  {
+   "arm": "A3",
+   "arm_key": "A3_vehicle",
+   "seed": 0,
+   "video": "/content/drive/MyDrive/motion_transfer_exp/cache/m3/000000000396.3.002/vehicle/A3_seed0_rec_F21_obj_ow0.75_sm_sky.mp4",
+   "exists": false,
+   "flags": [
+    "--object",
+    "--soft-mask",
+    "--sky-mask"
+   ],
+   "run_config": null
+  }
+ ],
+ "grader_records": {
+  "a0_motion": "/content/drive/MyDrive/motion_transfer_exp/reports/m3_s4/a0_motion.json",
+  "mask_centroid": "/content/drive/MyDrive/motion_transfer_exp/reports/m3_s4/mask_centroid_000000000396.3.002_vehicle.json"
+ }
+}

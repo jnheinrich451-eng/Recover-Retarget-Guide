@@ -1,0 +1,64 @@
+# m2_d — anchor generation and selection (SKILL_m2_d_anchor_generation.md v1.1).
+# Generation PARAMETERS live here (hash-tracked); gate thresholds and the locked polarity bit live in
+# calibration.lock.yaml (m2d_polarity), which is the human's file.
+m2d:
+  generator:
+    hf_repo: black-forest-labs/FLUX.1-Depth-dev      # separately gated from FLUX.1-dev
+    steps: 30
+    guidance: 10.0
+    size: 1024
+    cpu_offload: false                               # set true on < 40 GB GPUs
+  estimator:
+    hf_repo: depth-anything/Depth-Anything-V2-Small-hf   # its SIGN is measured per frame by probe_depth_estimator.py, never assumed
+  polarity_probe:
+    seeds: 3                                         # 4 stimuli x 2 polarities x 3 seeds = 24 generations
+    prompt: "a photograph, natural lighting, highly detailed"   # geometry-neutral: names no depth relation
+    rho_min: 0.5                                     # falsification clause: both polarities below this on S1-S3 AND the human cannot tell -> stop
+    real_composite: {clip: "000000000035.1.003", category: vehicle}   # S4, ecological check
+  generation:
+    seeds: 4                                         # K' (SKILL §4); ALL retained; same parameters on every clip
+    resample_budget_total: 8                         # zero Phase-1 survivors -> resample up to this many seeds in total, then refuse (SKILL §5)
+  targets:                                           # the HUMAN's text. object = the cached proxy's own identity (the m2_b2 candidate
+                                                     # prompt): the control shows THAT geometry, so the words must match its morphology.
+                                                     # scene: FIRST RUN matches the source scene roughly (reviewer 2026-09-18), so a failure is
+                                                     # attributable to the control and not to a prompt/layout fight. PROVISIONAL wording
+                                                     # proposed by the reviewer without sight of the clips — check each against its source frame.
+    "000000000035.1.003/vehicle": {object: "a red car", action: "driving", scene: "on a coastal cliff road"}
+    "000000000284.0.006/vehicle": {object: "a red car", action: "driving", scene: "on a forest track"}
+    "000000000265.2.005/vehicle": {object: "a red car", action: "driving", scene: "on open scrubland"}
+    "000000000265.2.005/human":   {object: "a man in a grey jacket and dark trousers", action: "walking", scene: "on a rocky riverbank"}
+    "000000000370.1.008/human":   {object: "a man in a grey jacket and dark trousers", action: "walking", scene: "in a misty pine forest"}
+    # held-out (Module-2-untouched) clips, added 2026-09-21. object = the proxy identity, NOT the source subject:
+    # the only vehicle proxy is the red-car mesh, so "a black truck" would ask FLUX to paint a truck over a compact-car silhouette.
+    "000000000122.1.001/vehicle": {object: "a red car", action: "driving", scene: "on an empty city road"}
+    "000000000122.1.001/human":   {object: "a man in a grey jacket and dark trousers", action: "walking", scene: "on an empty city lane"}
+    "000000000404.1.004/vehicle": {object: "a red car", action: "driving", scene: "on a desert highway"}
+    "000000000265.2.003/vehicle": {object: "a red car", action: "driving", scene: "on a desert highway"}
+  prompt_dictionary:                 # spec v3 Table 1 (Stage VI). The spec gives the ROWS and no numbers; the
+                                     # class boundaries below are phrase-selection tunables, PROVISIONAL, not gate thresholds.
+    toward_away_half_width_deg: 45   # |azimuth - (+-90)| <= this -> away / toward; otherwise lateral (bins ~90 deg wide,
+                                     # so a heading error above ~15 deg near a boundary picks the wrong phrase — task §1)
+    phrases:
+      toward: "front three-quarter view, approaching the camera"
+      away: "rear three-quarter view, moving away from the camera"
+      lateral_left_to_right: "side profile, moving left to right"
+      lateral_right_to_left: "side profile, moving right to left"
+      small_area: "wide shot"
+      medium_area: "medium-wide shot"
+      large_area: "medium shot"          # reviewer 2026-09-18: the largest subjects must not get the least framing guidance.
+                                         # A close-up row exists in the vocabulary (~25-30 %); no clip reaches it, so it is not invented
+      camera_low: "low-angle shot"
+    small_area_max_frac: 0.02        # rendered proxy area / frame (measurements/m2c_control: 0.010 - 0.129 on the admitted five)
+    medium_area_max_frac: 0.10       # above this: large_area
+    band_edge_flag_rel: 0.10         # RECORDED flag, not a gate: a shot class within this relative margin of a band edge
+                                     # (370 at 2.1 % vs the 2 % edge) — the phrase flips discontinuously while the geometry does not
+    camera_low_max_height_ratio: 0.5 # |d_used| / (s x proxy extent along n)
+    # EVIDENCE STATUS (reviewer 2026-09-18): on the admitted five only the AREA bands are exercised (1 / 3 / 1). The
+    # half-width is untested (nearest heading to a boundary: 22.7 deg) and so is the low-angle ratio (no clip is low-angle).
+    # An untested threshold is weaker evidence than one that separated the data.
+    # ONE PHRASE, TWO SEMANTICS: the away sector spans 45-135 deg, so 'rear three-quarter view' is slightly wrong for a
+    # dead-on rear view (~90 deg). If anchors show rotation drift there, split the row into rear / rear-three-quarter.
+    # RETIRED 2026-09-18: 284 (+88.6 deg) gave dead-on rear views 4/4 under this phrase — the control won; no split needed.
+paths:
+  probe_root: ${paths.drive_root}/probe/m2d
+  cache_m2d: ${paths.drive_root}/cache/m2_d

@@ -1,0 +1,75 @@
+{
+ "schema": "m2d_generation_v1",
+ "clip": "000000000284.0.006",
+ "category": "vehicle",
+ "polarity": "near_bright",
+ "guidance": 10.0,
+ "steps": 30,
+ "seeds": 4,
+ "target": {
+  "object": "a red car",
+  "action": "driving",
+  "scene": "on a forest track"
+ },
+ "prompt": {
+  "prompt": "a red car driving, on a forest track, rear three-quarter view, moving away from the camera, medium-wide shot",
+  "dictionary_rows": [
+   "away",
+   "medium_area"
+  ],
+  "heading_class": "away",
+  "heading_azimuth_deg": 88.62939076875047,
+  "heading_frame": "camera_t_a",
+  "shot_class": "medium_area",
+  "obj_area_frac": 0.032466888427734375,
+  "camera_low": false,
+  "camera_height": 0.3694824938597296,
+  "object_height": 0.1736726517462089,
+  "camera_height_over_object_height": 2.1274650334680283
+ },
+ "control_checksum": "beabc762ad8100e2",
+ "calls": [
+  {
+   "seed": 0,
+   "control_checksum": "beabc762ad8100e2",
+   "tensor_max_dev": 0.0,
+   "png_sha256": "c0c54f3d8b98c59ebf96e4f1d42037874bdad88d49b51c0efed249398c3f22d0"
+  },
+  {
+   "seed": 1,
+   "control_checksum": "beabc762ad8100e2",
+   "tensor_max_dev": 0.0,
+   "png_sha256": "e9d69484501f448c638d320a20d2f6cc3815c963db5c36287ed21375d19ba122"
+  },
+  {
+   "seed": 2,
+   "control_checksum": "beabc762ad8100e2",
+   "tensor_max_dev": 0.0,
+   "png_sha256": "c17d39b85138017683d23ae37bd088fd0caad231359993f45c9d2c185a65eaad"
+  },
+  {
+   "seed": 3,
+   "control_checksum": "beabc762ad8100e2",
+   "tensor_max_dev": 0.0,
+   "png_sha256": "9b9af33810475d751e08711633cf31ceb8a697add65ab4a9d3420e3f733f7eb2"
+  }
+ ],
+ "pipeline": "FluxControlPipeline",
+ "diffusers": "0.40.0",
+ "gpu": "NVIDIA A100-SXM4-40GB",
+ "config_hash": "009c71d32375c705",
+ "upstream_hashes": {
+  "c3": "3aa0505a5ee1c07ba1e6d7acd10c5d48afe71014d74c7f4ae551be5591f8dceb",
+  "c1": "2c9b46d67b3d1f023ca2629450aa8e0df1e5e7eb76bf05f11a26c5d07b5a2501",
+  "m2a": "17f5734c062dfa3ca106d44c2f7eb7d362d6aa9798f3fbc94fceaed46dc81c93",
+  "proxy_cache_key": "5fbdb89abb315954",
+  "c2_params": {
+   "r": 4,
+   "w": 6,
+   "N": 32,
+   "sigma1": 2.0,
+   "sigma2": 0.5,
+   "fill_order": "fill_then_coarsen"
+  }
+ }
+}

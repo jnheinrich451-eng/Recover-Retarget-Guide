@@ -1,0 +1,174 @@
+{
+ "schema": "m2e_handoff_v1",
+ "clip": "000000000370.1.008",
+ "category": "human",
+ "disposition": "accepted",
+ "label": null,
+ "anchor_image": "/content/drive/MyDrive/motion_transfer/cache/m2_d/000000000370.1.008/human/candidates/seed_2.png",
+ "anchor_pixels": "non-square (fx/fy below)",
+ "K_1024": [
+  [
+   705.0342407226562,
+   0.0,
+   512.6447143554688
+  ],
+  [
+   0.0,
+   1362.1864013671875,
+   506.46942138671875
+  ],
+  [
+   0.0,
+   0.0,
+   1.0
+  ]
+ ],
+ "K_a": [
+  [
+   176.25856018066406,
+   0.0,
+   128.1611785888672
+  ],
+  [
+   0.0,
+   340.5466003417969,
+   126.61735534667969
+  ],
+  [
+   0.0,
+   0.0,
+   1.0
+  ]
+ ],
+ "fx_over_fy": 0.5175754507716664,
+ "t_a": 0,
+ "n_frames_source": 81,
+ "n_frames_after_t_a": 81,
+ "generated_frame0_is_source_frame": 0,
+ "g_tar_mesh": "/content/drive/MyDrive/motion_transfer/cache/m2_e/000000000370.1.008/human/g_tar_mesh.npz",
+ "g_tar_gauss": null,
+ "gaussians_available": false,
+ "pointmap_source": "n/a (Body estimates its own depth)",
+ "placement_variant": null,
+ "A_deg": -12.30182443525027,
+ "A_instrument": "keypoints",
+ "A_definition": "delta = yaw of the ANCHOR minus yaw of the POSED PROXY, positive about the UP plane normal (rot_about(n, +delta) turns the proxy onto the anchor); shared by the scan and the keypoint instrument",
+ "A_already_applied_in_g_tar": true,
+ "alpha": 0.2142922674477744,
+ "b": -0.0026768977348850635,
+ "alpha_ci_block32": [
+  0.21147300133398483,
+  0.2166410035751504
+ ],
+ "alpha_source": "ground_band",
+ "gauge_k": 4.417639875370227,
+ "placement_C1": {
+  "X": [
+   -0.23991467889743937,
+   0.16857950446306652,
+   0.8920817378544283
+  ],
+  "s": 0.1802076384692969,
+  "R_A": [
+   [
+    -0.047757049913023104,
+    -0.03401561407903707,
+    0.998279621239676
+   ],
+   [
+    0.03921754021735538,
+    0.9985855086605527,
+    0.0359021786587564
+   ],
+   [
+    -0.9980887980149387,
+    0.0408646533323258,
+    -0.046355489266360905
+   ]
+  ],
+  "z": 0.8920817378544283
+ },
+ "n_plane": [
+  0.03401561453938484,
+  -0.9985855221748352,
+  -0.04086465388536453
+ ],
+ "d_plane": 0.39289113879203796,
+ "d_used": 0.3914790311515035,
+ "contact_plane_note": "every contact computation uses d_used (C1's local contact-band offset when observed), never d_plane (contract v1 / v2.1 amendment)",
+ "d_src": [
+  0.04510219767689705,
+  0.03496552258729935,
+  0.9983702898025513
+ ],
+ "frame": "camera_t_a",
+ "gauge": "source (D4RT)",
+ "R2_iou": 0.8647833808284806,
+ "gtar_shape_yaw_deg": null,
+ "gtar_shape_extents": {
+  "g_tar": {
+   "extents": [
+    0.22057212917680769,
+    0.07540051851544426,
+    0.03701622278618297
+   ],
+   "ratios_to_largest": [
+    1.0,
+    0.34184064322561897,
+    0.16781912984351371
+   ],
+   "width_over_length": 0.34184064322561897,
+   "height_over_length": 0.16781912984351371
+  },
+  "proxy_posed": {
+   "extents": [
+    0.1951165808366983,
+    0.052630627826760944,
+    0.023030533605517784
+   ],
+   "ratios_to_largest": [
+    1.0,
+    0.2697393917065913,
+    0.11803473342326071
+   ],
+   "width_over_length": 0.2697393917065913,
+   "height_over_length": 0.11803473342326071
+  },
+  "g_tar_over_proxy_ratios": [
+   1.0,
+   1.2672996741886915,
+   1.4217775139266098
+  ]
+ },
+ "known_properties": {
+  "heading_accuracy_ungated": true,
+  "within_object_scale_error": "7-27 % in the point map; does NOT reach G_tar's shape (extents match the vendor-map reconstruction)",
+  "r2_orientation_error": "5-10 on all vehicles (human, full resolution); harmless under the centroid object term; confounds A5 and rotation transfer",
+  "human_facing_offset_deg": -12,
+  "contact_plane_replacement": null
+ },
+ "upstream_hashes": {
+  "c3": "77d27800e45d54428d6dd7c8308b3a6b7fcc137b55bb3698d2bba404a5799ff2",
+  "c1": "e3498223af72979455955a6f7d8980e200cef81a985998f8b72730f597a867ac",
+  "m2a": "e7701204f51c71281c2f42bb8fff64f9067561f350a9d3d333b7a3a96b500eff",
+  "proxy_cache_key": "3fc7ee649366f17e",
+  "c2_params": {
+   "r": 4,
+   "w": 6,
+   "N": 32,
+   "sigma1": 2.0,
+   "sigma2": 0.5,
+   "fill_order": "fill_then_coarsen"
+  },
+  "m2d_qc": "bc4d98a2d1d99cb5f7d0da835eeb1e8dc633af6d329222cf27d0634d0cd6276e",
+  "m2d_fidelity": "81ffcdd8cfe9dbcf42c5d37de8860f9dd7b46370e837e3c90f4815101215db77",
+  "alpha": "808106f8fc20c0313769bcb3f7251fe4a768ae44a0acbd9c8dfbeabbd0986774",
+  "delta": "a4a7903df89c6a0debbee14b979373488d3966cd9ceab852906b1f6df28433f7",
+  "r2": "2466348d19c02ffdaa048d0a391be65f39c59e7efe76514cc2faf16d51c72a1d",
+  "qc_m2e": "19ad30370f60898cb9f7335c907e2edc34087823b981d6262363e5947325f452"
+ },
+ "hard_stop": {
+  "verdict": "pass",
+  "declared": "2026-09-28"
+ }
+}

@@ -1,0 +1,39 @@
+# m2_e — anchor reconstruction, residual alignment, scale bridge (SKILL_m2_e_reconstruction_alignment_v2.md + review items).
+# Parameters only; gate thresholds (m2e_alpha_pixels_min, m2e_delta_width_max, m2e_alpha_ci_rel_max) live in calibration.lock.yaml.
+m2e:
+  dispositions:                                        # SKILL m2_e v2 §0 (human, 2026-09-22); labelled pairs run and are reported, never in accepted-set statistics
+    accepted: ["000000000035.1.003/vehicle", "000000000284.0.006/vehicle", "000000000265.2.005/vehicle", "000000000265.2.005/human", "000000000370.1.008/human"]
+    labelled:
+      "000000000404.1.004/vehicle": "upstream B.5 heading error ~30 deg (docs/investigation_404_heading.md)"
+      "000000000265.2.003/vehicle": "object-contact leak: unmasked rider torso rendered on the car roof (rejected from the accepted set)"
+  estimator:
+    hf_repo: depth-anything/Depth-Anything-V2-Small-hf   # the SAME estimator whose sign was measured (+1 on 9/9) in m2_d
+  alpha:
+    fit_direction: zeta_hat_on_zeta_ctrl               # exact variable on the regressor side (review item 3 / dilution finding)
+    band_inner_px: 16                                  # annulus inner margin around dilate(anchor_mask | M_obj), at 1024
+    band_outer_frac: 1.0                               # outer radius = this x object height
+    bootstrap_blocks: [32, 64]                         # block bootstrap sizes (the estimator's error is a smooth field); pixel CI reported too
+    n_boot: 300
+    mask_iou_tol: 1.0e-3                               # recomputed anchor mask must reproduce m2_d's obj_fidelity to this (review item 1)
+  r2:
+    seeds: 5                                           # medoid by centroid-aligned IoU against the anchor mask (m2b2 r2_anchor)
+  delta:
+    scan_deg: 45                                       # restricted yaw scan, +- this, about the plane normal through the placed centroid
+    scan_step_deg: 1.0
+    parabolic_refine: true                             # review item 6
+    curve_width_tol: 0.01                              # width = theta range with IoU >= peak - this
+  handoff:                                             # filled by the HUMAN after the hard stop (docs/report_m2e_hard_stop.md); --handoff refuses until then
+    hard_stop_declared: true                           # human, 2026-09-28 (docs/report_m2e_hard_stop.md, rounds 8-13)
+    declared_on: "2026-09-28"
+    pairs:                                             # "<clip>/<category>": pass | refused
+      "000000000035.1.003/vehicle": pass               # verdict 1 borderline (R2 orientation error 5-10 deg, crosses as recorded); verdict 2 yes
+      "000000000284.0.006/vehicle": refused            # verdict 3: fallback reconstruction's shape cannot pass Module 3's 0.7 footprint gate at any placement (contact-plane IoU 0.570)
+      "000000000265.2.005/vehicle": pass
+      "000000000265.2.005/human": pass                 # -12 deg facing accepted as generator content
+      "000000000370.1.008/human": pass
+      "000000000404.1.004/vehicle": pass               # labelled evaluation case (verdict 4)
+      "000000000265.2.003/vehicle": pass               # labelled evaluation case (verdict 4)
+    placement_variant: {}                              # fallback pairs only: "<clip>/<category>": vendor | contact_plane — none: the only fallback pair is refused
+    known_r2_orientation_error_deg: "5-10 on all vehicles (human, full resolution); harmless under the centroid object term; confounds A5 and rotation transfer"
+  paths:
+    cache_m2e: ${paths.drive_root}/cache/m2_e

@@ -1,0 +1,52 @@
+{
+ "backbone": "Wan2.1-I2V-14B-480P (diffusers WanImageToVideoPipeline), 832x480, 33 frames at 16 fps, UniPC multistep 50 steps flow_shift 3.0, CFG 5.0, text at max_sequence_length 512, fp8 weight-only on A100 40GB",
+ "seeds": [
+  0,
+  1
+ ],
+ "negative_prompt": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+ "pairs": {
+  "000000000035.1.003/vehicle": {
+   "source_clip": "000000000035.1.003.mp4 (/content/data/videos on Colab)",
+   "window": "source frames 4 .. 36 (33 frames); generated frame k = source frame 4 + k",
+   "anchor_image_drive": "/content/drive/MyDrive/motion_transfer/cache/m2_d/000000000035.1.003/vehicle/candidates/seed_2.png",
+   "anchor_image_local": "measurements/m2e/anchor_035.1.003_vehicle.png",
+   "prompt": "a red car driving, on a coastal cliff road, rear three-quarter view, moving away from the camera, medium-wide shot"
+  },
+  "000000000265.2.003/vehicle": {
+   "source_clip": "000000000265.2.003.mp4 (/content/data/videos on Colab)",
+   "window": "source frames 47 .. 79 (33 frames); generated frame k = source frame 47 + k",
+   "anchor_image_drive": "/content/drive/MyDrive/motion_transfer/cache/m2_d/000000000265.2.003/vehicle/candidates/seed_2.png",
+   "anchor_image_local": "measurements/m2d_anchors/000000000265.2.003_vehicle.png",
+   "prompt": "a red car driving, on a desert highway, side profile, moving right to left, medium shot"
+  },
+  "000000000265.2.005/vehicle": {
+   "source_clip": "000000000265.2.005.mp4 (/content/data/videos on Colab)",
+   "window": "source frames 0 .. 32 (33 frames); generated frame k = source frame 0 + k",
+   "anchor_image_drive": "/content/drive/MyDrive/motion_transfer/cache/m2_d/000000000265.2.005/vehicle/candidates/seed_1.png",
+   "anchor_image_local": "measurements/m2e/anchor_265.2.005_vehicle.png",
+   "prompt": "a red car driving, on open scrubland, side profile, moving right to left, medium shot"
+  },
+  "000000000265.2.005/human": {
+   "source_clip": "000000000265.2.005.mp4 (/content/data/videos on Colab)",
+   "window": "source frames 0 .. 32 (33 frames); generated frame k = source frame 0 + k",
+   "anchor_image_drive": "/content/drive/MyDrive/motion_transfer/cache/m2_d/000000000265.2.005/human/candidates/seed_0.png",
+   "anchor_image_local": "measurements/m2e/anchor_265.2.005_human.png",
+   "prompt": "a man in a grey jacket and dark trousers walking, on a rocky riverbank, side profile, moving right to left, wide shot"
+  },
+  "000000000370.1.008/human": {
+   "source_clip": "000000000370.1.008.mp4 (/content/data/videos on Colab)",
+   "window": "source frames 0 .. 32 (33 frames); generated frame k = source frame 0 + k",
+   "anchor_image_drive": "/content/drive/MyDrive/motion_transfer/cache/m2_d/000000000370.1.008/human/candidates/seed_2.png",
+   "anchor_image_local": "measurements/m2e/anchor_370.1.008_human.png",
+   "prompt": "a man in a grey jacket and dark trousers walking, in a misty pine forest, rear three-quarter view, moving away from the camera, medium-wide shot"
+  },
+  "000000000404.1.004/vehicle": {
+   "source_clip": "000000000404.1.004.mp4 (/content/data/videos on Colab)",
+   "window": "source frames 47 .. 79 (33 frames); generated frame k = source frame 47 + k",
+   "anchor_image_drive": "/content/drive/MyDrive/motion_transfer/cache/m2_d/000000000404.1.004/vehicle/candidates/seed_1.png",
+   "anchor_image_local": "measurements/m2d_anchors/000000000404.1.004_vehicle.png",
+   "prompt": "a red car driving, on a desert highway, front three-quarter view, approaching the camera, medium shot"
+  }
+ }
+}

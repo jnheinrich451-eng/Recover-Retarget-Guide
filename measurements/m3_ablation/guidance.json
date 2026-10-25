@@ -1,0 +1,977 @@
+[
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "setting": "noobj",
+  "video": "A3_seed0_rec_F33_sm_sky.mp4",
+  "rc": 1,
+  "tail": "Unable to import `torchao` Tensor objects. This may affect loading checkpoints serialized with `torchao`\nTraceback (most recent call last):\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 553, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 185, in main\n    assert rp.exists(), f\"{rp} missing: run scripts/render_m3_target.py --pairs {args.pair} --bridge {args.bridge}{' --object' if args.object else ''} first (Phase 1)\"\n           ~~~~~~~~~^^\nAssertionError: /content/drive/MyDrive/motion_transfer/cache/m3/000000000265.2.003/vehicle/render_sky.npz missing: run scripts/render_m3_target.py --pairs 000000000265.2.003/vehicle --bridge rec first (Phase 1)\n",
+  "time": "2026-10-23 16:13"
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "setting": "gamma0.5",
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_g0.5.mp4",
+  "rc": 1,
+  "tail": "id_first\": 1.0024545192718506,\n \"object_resid_last\": 0.18196363747119904,\n \"peak_gb\": 33.51513385772705,\n \"guided_step_wall_s\": 2.3934414237737656\n}\nTraceback (most recent call last):\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 553, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 545, in main\n    assert not dup or args.force, f\"rule 24: {sorted(dup)} already recorded; pass --force to replace\"\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: rule 24: [('000000000265.2.003/vehicle', 'A3', '0', 'rec', '33', 'fp8', 'True', 'None', '(0.85, 0.75)', 'None', 'True', 'True', 'None', 'None', 'None', 'False', 'UniPCMultistepScheduler', 'False', 'False', 'None', 'None', '()', 'False')] already recorded; pass --force to replace\n",
+  "time": "2026-10-23 16:25"
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "setting": "gamma0.25",
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_g0.25.mp4",
+  "rc": 1,
+  "tail": "sid_first\": 1.0024545192718506,\n \"object_resid_last\": 0.19937007129192352,\n \"peak_gb\": 33.51513385772705,\n \"guided_step_wall_s\": 2.394672304391861\n}\nTraceback (most recent call last):\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 553, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 545, in main\n    assert not dup or args.force, f\"rule 24: {sorted(dup)} already recorded; pass --force to replace\"\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: rule 24: [('000000000265.2.003/vehicle', 'A3', '0', 'rec', '33', 'fp8', 'True', 'None', '(0.85, 0.75)', 'None', 'True', 'True', 'None', 'None', 'None', 'False', 'UniPCMultistepScheduler', 'False', 'False', 'None', 'None', '()', 'False')] already recorded; pass --force to replace\n",
+  "time": "2026-10-23 16:33"
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "setting": "euler",
+  "arm": "A3",
+  "flags": [
+   "--object",
+   "--soft-mask",
+   "--sky-mask",
+   "--euler"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_euler.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 1,
+  "time": "2026-10-23 16:41"
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "setting": "coff",
+  "arm": "A0",
+  "flags": [
+   "--corrector-off-control"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A0_seed0_rec_F33_coff.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-23 16:48"
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "setting": "noobj",
+  "video": "A3_seed0_rec_F33_sm_sky.mp4",
+  "rc": 1,
+  "tail": "Unable to import `torchao` Tensor objects. This may affect loading checkpoints serialized with `torchao`\nTraceback (most recent call last):\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 553, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 185, in main\n    assert rp.exists(), f\"{rp} missing: run scripts/render_m3_target.py --pairs {args.pair} --bridge {args.bridge}{' --object' if args.object else ''} first (Phase 1)\"\n           ~~~~~~~~~^^\nAssertionError: /content/drive/MyDrive/motion_transfer/cache/m3/000000000265.2.003/vehicle/render_sky.npz missing: run scripts/render_m3_target.py --pairs 000000000265.2.003/vehicle --bridge rec first (Phase 1)\n",
+  "time": "2026-10-23 16:50"
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "setting": "noobj",
+  "arm": "A3",
+  "flags": [
+   "--soft-mask",
+   "--sky-mask"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_sm_sky.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-23 17:02"
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "setting": "gamma0.5",
+  "arm": "A3",
+  "flags": [
+   "--object",
+   "--soft-mask",
+   "--sky-mask",
+   "--gamma",
+   "0.5"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_g0.5.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-23 17:09"
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "setting": "gamma0.25",
+  "arm": "A3",
+  "flags": [
+   "--object",
+   "--soft-mask",
+   "--sky-mask",
+   "--gamma",
+   "0.25"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_g0.25.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-23 17:09"
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "setting": "euler",
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_euler.mp4",
+  "rc": 1,
+  "tail": "3854727745056,\n \"object_resid_last\": 0.14564910531044006,\n \"peak_gb\": 33.51513385772705,\n \"guided_step_wall_s\": 2.3884636720021564\n}\nTraceback (most recent call last):\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 553, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 545, in main\n    assert not dup or args.force, f\"rule 24: {sorted(dup)} already recorded; pass --force to replace\"\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: rule 24: [('000000000265.2.003/vehicle', 'A3', '0', 'rec', '33', 'fp8', 'True', 'None', '(0.85, 0.75)', 'None', 'True', 'True', 'None', 'None', 'None', 'False', 'FlowMatchEulerDiscreteScheduler', 'False', 'False', 'None', 'None', '()', 'False', 'None')] already recorded; pass --force to replace\n",
+  "time": "2026-10-23 17:17"
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "setting": "hardmask",
+  "arm": "A3",
+  "flags": [
+   "--object",
+   "--sky-mask"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sky.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-23 17:24"
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "setting": "skyout",
+  "arm": "A3",
+  "flags": [
+   "--object",
+   "--soft-mask"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-23 17:33"
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "setting": "noobj",
+  "arm": "A3",
+  "flags": [
+   "--soft-mask",
+   "--sky-mask"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_sm_sky.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-23 17:40"
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "setting": "gamma0.5",
+  "arm": "A3",
+  "flags": [
+   "--object",
+   "--soft-mask",
+   "--sky-mask",
+   "--gamma",
+   "0.5"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_g0.5.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-23 17:48"
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "setting": "gamma0.25",
+  "arm": "A3",
+  "flags": [
+   "--object",
+   "--soft-mask",
+   "--sky-mask",
+   "--gamma",
+   "0.25"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_g0.25.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-23 17:56"
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "setting": "euler",
+  "arm": "A3",
+  "flags": [
+   "--object",
+   "--soft-mask",
+   "--sky-mask",
+   "--euler"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_euler.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 1,
+  "time": "2026-10-23 18:03"
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "setting": "coff",
+  "arm": "A0",
+  "flags": [
+   "--corrector-off-control"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A0_seed0_rec_F33_coff.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-23 18:04"
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "setting": "hardmask",
+  "arm": "A3",
+  "flags": [
+   "--object",
+   "--sky-mask"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sky.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-23 18:11"
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "setting": "skyout",
+  "arm": "A3",
+  "flags": [
+   "--object",
+   "--soft-mask"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-23 18:19"
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "setting": "gamma0.5",
+  "arm": "A3",
+  "flags": [
+   "--soft-mask",
+   "--sky-mask",
+   "--gamma",
+   "0.5"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_sm_sky_g0.5.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-23 18:27"
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "setting": "gamma0.25",
+  "arm": "A3",
+  "flags": [
+   "--soft-mask",
+   "--sky-mask",
+   "--gamma",
+   "0.25"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_sm_sky_g0.25.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-23 18:35"
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "setting": "euler",
+  "arm": "A3",
+  "flags": [
+   "--soft-mask",
+   "--sky-mask",
+   "--euler"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_sm_sky_euler.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 1,
+  "time": "2026-10-23 18:42"
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "setting": "coff",
+  "arm": "A0",
+  "flags": [
+   "--corrector-off-control"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A0_seed0_rec_F33_coff.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-23 18:43"
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "setting": "hardmask",
+  "arm": "A3",
+  "flags": [
+   "--sky-mask"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_sky.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-23 18:50"
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "setting": "skyout",
+  "arm": "A3",
+  "flags": [
+   "--soft-mask"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_sm.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-23 18:58"
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "setting": "gamma0.5",
+  "arm": "A3",
+  "flags": [
+   "--soft-mask",
+   "--sky-mask",
+   "--gamma",
+   "0.5"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_sm_sky_g0.5.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-23 19:06"
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "setting": "gamma0.25",
+  "arm": "A3",
+  "flags": [
+   "--soft-mask",
+   "--sky-mask",
+   "--gamma",
+   "0.25"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_sm_sky_g0.25.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-23 19:13"
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "setting": "euler",
+  "arm": "A3",
+  "flags": [
+   "--soft-mask",
+   "--sky-mask",
+   "--euler"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_sm_sky_euler.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 1,
+  "time": "2026-10-23 19:21"
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "setting": "coff",
+  "arm": "A0",
+  "flags": [
+   "--corrector-off-control"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A0_seed0_rec_F33_coff.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-23 19:28"
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "setting": "hardmask",
+  "arm": "A3",
+  "flags": [
+   "--sky-mask"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_sky.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-23 19:36"
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "setting": "skyout",
+  "arm": "A3",
+  "flags": [
+   "--soft-mask"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_sm.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-23 19:44"
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "setting": "noobj",
+  "arm": "A3",
+  "flags": [
+   "--soft-mask",
+   "--sky-mask"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_sm_sky.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-23 19:52"
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "setting": "gamma0.5",
+  "arm": "A3",
+  "flags": [
+   "--object",
+   "--soft-mask",
+   "--sky-mask",
+   "--gamma",
+   "0.5"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_g0.5.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-23 20:00"
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "setting": "gamma0.25",
+  "arm": "A3",
+  "flags": [
+   "--object",
+   "--soft-mask",
+   "--sky-mask",
+   "--gamma",
+   "0.25"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_g0.25.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-23 20:08"
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "setting": "euler",
+  "arm": "A3",
+  "flags": [
+   "--object",
+   "--soft-mask",
+   "--sky-mask",
+   "--euler"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_euler.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 1,
+  "time": "2026-10-23 20:15"
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "setting": "coff",
+  "arm": "A0",
+  "flags": [
+   "--corrector-off-control"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A0_seed0_rec_F33_coff.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-23 20:22"
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "setting": "hardmask",
+  "arm": "A3",
+  "flags": [
+   "--object",
+   "--sky-mask"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sky.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-23 20:30"
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "setting": "skyout",
+  "arm": "A3",
+  "flags": [
+   "--object",
+   "--soft-mask"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-23 20:38"
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "setting": "euler",
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_euler.mp4",
+  "rc": 1,
+  "tail": "3854727745056,\n \"object_resid_last\": 0.14564910531044006,\n \"peak_gb\": 33.51513385772705,\n \"guided_step_wall_s\": 2.3973073800404867\n}\nTraceback (most recent call last):\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 553, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 545, in main\n    assert not dup or args.force, f\"rule 24: {sorted(dup)} already recorded; pass --force to replace\"\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: rule 24: [('000000000265.2.003/vehicle', 'A3', '0', 'rec', '33', 'fp8', 'True', 'None', '(0.85, 0.75)', 'None', 'True', 'True', 'None', 'None', 'None', 'False', 'FlowMatchEulerDiscreteScheduler', 'False', 'False', 'None', 'None', '()', 'False', 'None')] already recorded; pass --force to replace\n",
+  "time": "2026-10-23 21:59"
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "setting": "euler",
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_euler.mp4",
+  "rc": 1,
+  "tail": "47533798217773,\n \"object_resid_last\": 0.2920845150947571,\n \"peak_gb\": 33.51513385772705,\n \"guided_step_wall_s\": 2.3968329747517902\n}\nTraceback (most recent call last):\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 553, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 545, in main\n    assert not dup or args.force, f\"rule 24: {sorted(dup)} already recorded; pass --force to replace\"\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: rule 24: [('000000000265.2.005/vehicle', 'A3', '0', 'rec', '33', 'fp8', 'True', 'None', '(0.85, 0.75)', 'None', 'True', 'True', 'None', 'None', 'None', 'False', 'FlowMatchEulerDiscreteScheduler', 'False', 'False', 'None', 'None', '()', 'False', 'None')] already recorded; pass --force to replace\n",
+  "time": "2026-10-23 22:07"
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "setting": "euler",
+  "video": "A3_seed0_rec_F33_sm_sky_euler.mp4",
+  "rc": 1,
+  "tail": "d_steps\": 0,\n \"object_resid_first\": null,\n \"object_resid_last\": null,\n \"peak_gb\": 33.51513385772705,\n \"guided_step_wall_s\": 2.397489658991496\n}\nTraceback (most recent call last):\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 553, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 545, in main\n    assert not dup or args.force, f\"rule 24: {sorted(dup)} already recorded; pass --force to replace\"\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: rule 24: [('000000000265.2.005/human', 'A3', '0', 'rec', '33', 'fp8', 'False', 'None', '()', 'None', 'True', 'True', 'None', 'None', 'None', 'False', 'FlowMatchEulerDiscreteScheduler', 'False', 'False', 'None', 'None', '()', 'False', 'None')] already recorded; pass --force to replace\n",
+  "time": "2026-10-23 22:14"
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "setting": "euler",
+  "video": "A3_seed0_rec_F33_sm_sky_euler.mp4",
+  "rc": 1,
+  "tail": "_steps\": 0,\n \"object_resid_first\": null,\n \"object_resid_last\": null,\n \"peak_gb\": 33.51513385772705,\n \"guided_step_wall_s\": 2.3957936763763428\n}\nTraceback (most recent call last):\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 553, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 545, in main\n    assert not dup or args.force, f\"rule 24: {sorted(dup)} already recorded; pass --force to replace\"\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: rule 24: [('000000000370.1.008/human', 'A3', '0', 'rec', '33', 'fp8', 'False', 'None', '()', 'None', 'True', 'True', 'None', 'None', 'None', 'False', 'FlowMatchEulerDiscreteScheduler', 'False', 'False', 'None', 'None', '()', 'False', 'None')] already recorded; pass --force to replace\n",
+  "time": "2026-10-23 22:22"
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "setting": "euler",
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_euler.mp4",
+  "rc": 1,
+  "tail": "81290864944458,\n \"object_resid_last\": 0.2498619556427002,\n \"peak_gb\": 33.51513385772705,\n \"guided_step_wall_s\": 2.3959857781728107\n}\nTraceback (most recent call last):\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 553, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 545, in main\n    assert not dup or args.force, f\"rule 24: {sorted(dup)} already recorded; pass --force to replace\"\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: rule 24: [('000000000404.1.004/vehicle', 'A3', '0', 'rec', '33', 'fp8', 'True', 'None', '(0.85, 0.75)', 'None', 'True', 'True', 'None', 'None', 'None', 'False', 'FlowMatchEulerDiscreteScheduler', 'False', 'False', 'None', 'None', '()', 'False', 'None')] already recorded; pass --force to replace\n",
+  "time": "2026-10-23 22:29"
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "setting": "euler",
+  "arm": "A3",
+  "flags": [
+   "--object",
+   "--soft-mask",
+   "--sky-mask",
+   "--euler"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_euler.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 1,
+  "time": "2026-10-24 01:58"
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "setting": "euler",
+  "arm": "A3",
+  "flags": [
+   "--object",
+   "--soft-mask",
+   "--sky-mask",
+   "--euler"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_euler.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 1,
+  "time": "2026-10-24 02:05"
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "setting": "euler",
+  "arm": "A3",
+  "flags": [
+   "--soft-mask",
+   "--sky-mask",
+   "--euler"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_sm_sky_euler.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 1,
+  "time": "2026-10-24 02:13"
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "setting": "euler",
+  "arm": "A3",
+  "flags": [
+   "--soft-mask",
+   "--sky-mask",
+   "--euler"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_sm_sky_euler.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 1,
+  "time": "2026-10-24 02:20"
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "setting": "euler",
+  "arm": "A3",
+  "flags": [
+   "--object",
+   "--soft-mask",
+   "--sky-mask",
+   "--euler"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_euler.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 1,
+  "time": "2026-10-24 02:28"
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "setting": "euler",
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_euler.mp4",
+  "rc": 1,
+  "tail": "45056,\n \"object_resid_last\": 0.14564910531044006,\n \"peak_gb\": 33.51513385772705,\n \"guided_step_wall_s\": 2.393443457285563\n}\nTraceback (most recent call last):\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 554, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 546, in main\n    assert not dup or args.force, f\"rule 24: {sorted(dup)} already recorded; pass --force to replace\"\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: rule 24: [('000000000265.2.003/vehicle', 'A3', '0', 'rec', '33', 'fp8', 'True', 'None', '(0.85, 0.75)', 'None', 'True', 'True', 'None', 'None', 'None', 'False', 'FlowMatchEulerDiscreteScheduler', 'False', 'False', 'None', 'None', '()', 'False', 'None', 'euler')] already recorded; pass --force to replace\n",
+  "time": "2026-10-24 02:44"
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "setting": "euler",
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_euler.mp4",
+  "rc": 1,
+  "tail": "217773,\n \"object_resid_last\": 0.2920845150947571,\n \"peak_gb\": 33.51513385772705,\n \"guided_step_wall_s\": 2.393915383021037\n}\nTraceback (most recent call last):\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 554, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 546, in main\n    assert not dup or args.force, f\"rule 24: {sorted(dup)} already recorded; pass --force to replace\"\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: rule 24: [('000000000265.2.005/vehicle', 'A3', '0', 'rec', '33', 'fp8', 'True', 'None', '(0.85, 0.75)', 'None', 'True', 'True', 'None', 'None', 'None', 'False', 'FlowMatchEulerDiscreteScheduler', 'False', 'False', 'None', 'None', '()', 'False', 'None', 'euler')] already recorded; pass --force to replace\n",
+  "time": "2026-10-24 02:52"
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "setting": "euler",
+  "video": "A3_seed0_rec_F33_sm_sky_euler.mp4",
+  "rc": 1,
+  "tail": " 0,\n \"object_resid_first\": null,\n \"object_resid_last\": null,\n \"peak_gb\": 33.51513385772705,\n \"guided_step_wall_s\": 2.396823835372925\n}\nTraceback (most recent call last):\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 554, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 546, in main\n    assert not dup or args.force, f\"rule 24: {sorted(dup)} already recorded; pass --force to replace\"\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: rule 24: [('000000000265.2.005/human', 'A3', '0', 'rec', '33', 'fp8', 'False', 'None', '()', 'None', 'True', 'True', 'None', 'None', 'None', 'False', 'FlowMatchEulerDiscreteScheduler', 'False', 'False', 'None', 'None', '()', 'False', 'None', 'euler')] already recorded; pass --force to replace\n",
+  "time": "2026-10-24 02:59"
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "setting": "euler",
+  "video": "A3_seed0_rec_F33_sm_sky_euler.mp4",
+  "rc": 1,
+  "tail": " 0,\n \"object_resid_first\": null,\n \"object_resid_last\": null,\n \"peak_gb\": 33.51513385772705,\n \"guided_step_wall_s\": 2.394696346918742\n}\nTraceback (most recent call last):\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 554, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 546, in main\n    assert not dup or args.force, f\"rule 24: {sorted(dup)} already recorded; pass --force to replace\"\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: rule 24: [('000000000370.1.008/human', 'A3', '0', 'rec', '33', 'fp8', 'False', 'None', '()', 'None', 'True', 'True', 'None', 'None', 'None', 'False', 'FlowMatchEulerDiscreteScheduler', 'False', 'False', 'None', 'None', '()', 'False', 'None', 'euler')] already recorded; pass --force to replace\n",
+  "time": "2026-10-24 03:07"
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "setting": "euler",
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_euler.mp4",
+  "rc": 1,
+  "tail": "944458,\n \"object_resid_last\": 0.2498619556427002,\n \"peak_gb\": 33.51513385772705,\n \"guided_step_wall_s\": 2.396538432439168\n}\nTraceback (most recent call last):\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 554, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 546, in main\n    assert not dup or args.force, f\"rule 24: {sorted(dup)} already recorded; pass --force to replace\"\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: rule 24: [('000000000404.1.004/vehicle', 'A3', '0', 'rec', '33', 'fp8', 'True', 'None', '(0.85, 0.75)', 'None', 'True', 'True', 'None', 'None', 'None', 'False', 'FlowMatchEulerDiscreteScheduler', 'False', 'False', 'None', 'None', '()', 'False', 'None', 'euler')] already recorded; pass --force to replace\n",
+  "time": "2026-10-24 03:14"
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "setting": "euler",
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_euler.mp4",
+  "rc": 1,
+  "tail": "45056,\n \"object_resid_last\": 0.14564910531044006,\n \"peak_gb\": 33.51513385772705,\n \"guided_step_wall_s\": 2.395383278528849\n}\nTraceback (most recent call last):\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 554, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 546, in main\n    assert not dup or args.force, f\"rule 24: {sorted(dup)} already recorded; pass --force to replace\"\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: rule 24: [('000000000265.2.003/vehicle', 'A3', '0', 'rec', '33', 'fp8', 'True', 'None', '(0.85, 0.75)', 'None', 'True', 'True', 'None', 'None', 'None', 'False', 'FlowMatchEulerDiscreteScheduler', 'False', 'False', 'None', 'None', '()', 'False', 'None', 'euler')] already recorded; pass --force to replace\n",
+  "time": "2026-10-24 03:27"
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "setting": "euler",
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_euler.mp4",
+  "rc": 1,
+  "tail": "17773,\n \"object_resid_last\": 0.2920845150947571,\n \"peak_gb\": 33.51513385772705,\n \"guided_step_wall_s\": 2.3982741991678873\n}\nTraceback (most recent call last):\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 554, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 546, in main\n    assert not dup or args.force, f\"rule 24: {sorted(dup)} already recorded; pass --force to replace\"\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: rule 24: [('000000000265.2.005/vehicle', 'A3', '0', 'rec', '33', 'fp8', 'True', 'None', '(0.85, 0.75)', 'None', 'True', 'True', 'None', 'None', 'None', 'False', 'FlowMatchEulerDiscreteScheduler', 'False', 'False', 'None', 'None', '()', 'False', 'None', 'euler')] already recorded; pass --force to replace\n",
+  "time": "2026-10-24 03:35"
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "setting": "euler",
+  "video": "A3_seed0_rec_F33_sm_sky_euler.mp4",
+  "rc": 1,
+  "tail": " 0,\n \"object_resid_first\": null,\n \"object_resid_last\": null,\n \"peak_gb\": 33.51513385772705,\n \"guided_step_wall_s\": 2.396088647842407\n}\nTraceback (most recent call last):\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 554, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 546, in main\n    assert not dup or args.force, f\"rule 24: {sorted(dup)} already recorded; pass --force to replace\"\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: rule 24: [('000000000265.2.005/human', 'A3', '0', 'rec', '33', 'fp8', 'False', 'None', '()', 'None', 'True', 'True', 'None', 'None', 'None', 'False', 'FlowMatchEulerDiscreteScheduler', 'False', 'False', 'None', 'None', '()', 'False', 'None', 'euler')] already recorded; pass --force to replace\n",
+  "time": "2026-10-24 03:42"
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "setting": "euler",
+  "video": "A3_seed0_rec_F33_sm_sky_euler.mp4",
+  "rc": 1,
+  "tail": "0,\n \"object_resid_first\": null,\n \"object_resid_last\": null,\n \"peak_gb\": 33.51513385772705,\n \"guided_step_wall_s\": 2.3985495726267496\n}\nTraceback (most recent call last):\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 554, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 546, in main\n    assert not dup or args.force, f\"rule 24: {sorted(dup)} already recorded; pass --force to replace\"\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: rule 24: [('000000000370.1.008/human', 'A3', '0', 'rec', '33', 'fp8', 'False', 'None', '()', 'None', 'True', 'True', 'None', 'None', 'None', 'False', 'FlowMatchEulerDiscreteScheduler', 'False', 'False', 'None', 'None', '()', 'False', 'None', 'euler')] already recorded; pass --force to replace\n",
+  "time": "2026-10-24 03:50"
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "setting": "euler",
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky_euler.mp4",
+  "rc": 1,
+  "tail": "44458,\n \"object_resid_last\": 0.2498619556427002,\n \"peak_gb\": 33.51513385772705,\n \"guided_step_wall_s\": 2.3929863293965656\n}\nTraceback (most recent call last):\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 554, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 546, in main\n    assert not dup or args.force, f\"rule 24: {sorted(dup)} already recorded; pass --force to replace\"\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: rule 24: [('000000000404.1.004/vehicle', 'A3', '0', 'rec', '33', 'fp8', 'True', 'None', '(0.85, 0.75)', 'None', 'True', 'True', 'None', 'None', 'None', 'False', 'FlowMatchEulerDiscreteScheduler', 'False', 'False', 'None', 'None', '()', 'False', 'None', 'euler')] already recorded; pass --force to replace\n",
+  "time": "2026-10-24 03:57"
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "setting": "euler",
+  "arm": "A3",
+  "flags": [
+   "--object",
+   "--soft-mask",
+   "--sky-mask",
+   "--euler"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_obj_ow0.75_euler_sm_sky.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-24 04:03"
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "setting": "euler",
+  "arm": "A3",
+  "flags": [
+   "--object",
+   "--soft-mask",
+   "--sky-mask",
+   "--euler"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_obj_ow0.75_euler_sm_sky.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-24 04:04"
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "setting": "euler",
+  "arm": "A3",
+  "flags": [
+   "--soft-mask",
+   "--sky-mask",
+   "--euler"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_euler_sm_sky.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-24 04:04"
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "setting": "euler",
+  "arm": "A3",
+  "flags": [
+   "--soft-mask",
+   "--sky-mask",
+   "--euler"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_euler_sm_sky.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-24 04:04"
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "setting": "euler",
+  "arm": "A3",
+  "flags": [
+   "--object",
+   "--soft-mask",
+   "--sky-mask",
+   "--euler"
+  ],
+  "lock_gamma": 1.0,
+  "lock_gamma_obj": 1.0,
+  "video": "A3_seed0_rec_F33_obj_ow0.75_euler_sm_sky.mp4",
+  "a0": "A0_seed0_rec_F33.mp4",
+  "a3_record": "A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "seed": 0,
+  "frames": 33,
+  "graded_rc": 0,
+  "time": "2026-10-24 04:04"
+ }
+]

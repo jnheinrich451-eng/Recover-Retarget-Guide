@@ -1,0 +1,162 @@
+[
+ {
+  "pair": "000000000191.6.037/human",
+  "current": true,
+  "n_archived": 0,
+  "reading": "no comparison possible (no archived R2: the pair was never reconstructed before, or was refused)"
+ },
+ {
+  "pair": "000000000200.1.006/human",
+  "current": true,
+  "n_archived": 1,
+  "comparisons": [
+   {
+    "archive": "_archive/20261019T040845/r2/000000000200.1.006/anchor.npz",
+    "same_shape": true,
+    "rms_m": 4.479097397419524e-07,
+    "max_abs_m": 7.748603820800781e-07
+   }
+  ],
+  "last_archive_max_abs_m": 7.748603820800781e-07,
+  "equal_to_float_precision": true,
+  "reading": "regenerated R2 equals the last archived R2 (deterministic, D7 unchanged)"
+ },
+ {
+  "pair": "000000000221.7.011/human",
+  "current": true,
+  "n_archived": 0,
+  "reading": "no comparison possible (no archived R2: the pair was never reconstructed before, or was refused)"
+ },
+ {
+  "pair": "000000000252.2.007/human",
+  "current": true,
+  "n_archived": 0,
+  "reading": "no comparison possible (no archived R2: the pair was never reconstructed before, or was refused)"
+ },
+ {
+  "pair": "000000000256.3.010/human",
+  "current": true,
+  "n_archived": 0,
+  "reading": "no comparison possible (no archived R2: the pair was never reconstructed before, or was refused)"
+ },
+ {
+  "pair": "000000000265.4.002/human",
+  "current": true,
+  "n_archived": 1,
+  "comparisons": [
+   {
+    "archive": "_archive/20261019T041228/r2/000000000265.4.002/anchor.npz",
+    "same_shape": true,
+    "rms_m": 1.5051974314084045e-06,
+    "max_abs_m": 1.9073486328125e-06
+   }
+  ],
+  "last_archive_max_abs_m": 1.9073486328125e-06,
+  "equal_to_float_precision": true,
+  "reading": "regenerated R2 equals the last archived R2 (deterministic, D7 unchanged)"
+ },
+ {
+  "pair": "000000000362.2.005/human",
+  "current": true,
+  "n_archived": 2,
+  "comparisons": [
+   {
+    "archive": "_archive/20261019T041324/r2/000000000362.2.005/anchor.npz",
+    "same_shape": true,
+    "rms_m": 0.0036376773826041174,
+    "max_abs_m": 0.008705615997314453
+   },
+   {
+    "archive": "_archive/20261019T091829/r2/000000000362.2.005/anchor.npz",
+    "same_shape": true,
+    "rms_m": 6.598783715318504e-07,
+    "max_abs_m": 1.8477439880371094e-06
+   }
+  ],
+  "last_archive_max_abs_m": 1.8477439880371094e-06,
+  "equal_to_float_precision": true,
+  "reading": "regenerated R2 equals the last archived R2 (deterministic, D7 unchanged)"
+ },
+ {
+  "pair": "000000000391.0.016/human",
+  "current": true,
+  "n_archived": 1,
+  "comparisons": [
+   {
+    "archive": "_archive/20261019T041417/r2/000000000391.0.016/anchor.npz",
+    "same_shape": true,
+    "rms_m": 7.922629841813608e-07,
+    "max_abs_m": 1.430511474609375e-06
+   }
+  ],
+  "last_archive_max_abs_m": 1.430511474609375e-06,
+  "equal_to_float_precision": true,
+  "reading": "regenerated R2 equals the last archived R2 (deterministic, D7 unchanged)"
+ },
+ {
+  "pair": "000000000404.1.006/human",
+  "current": true,
+  "n_archived": 0,
+  "reading": "no comparison possible (no archived R2: the pair was never reconstructed before, or was refused)"
+ },
+ {
+  "pair": "000000000431.5.009/human",
+  "current": true,
+  "n_archived": 1,
+  "comparisons": [
+   {
+    "archive": "_archive/20261019T091849/r2/000000000431.5.009/anchor.npz",
+    "same_shape": true,
+    "rms_m": 2.8572742589275545e-07,
+    "max_abs_m": 5.960464477539062e-07
+   }
+  ],
+  "last_archive_max_abs_m": 5.960464477539062e-07,
+  "equal_to_float_precision": true,
+  "reading": "regenerated R2 equals the last archived R2 (deterministic, D7 unchanged)"
+ },
+ {
+  "pair": "bmx-bumps/human",
+  "current": true,
+  "n_archived": 0,
+  "reading": "no comparison possible (no archived R2: the pair was never reconstructed before, or was refused)"
+ },
+ {
+  "pair": "camel/human",
+  "current": true,
+  "n_archived": 1,
+  "comparisons": [
+   {
+    "archive": "_archive/20261019T091904/r2/camel/anchor.npz",
+    "same_shape": true,
+    "rms_m": 5.772043576420087e-07,
+    "max_abs_m": 9.5367431640625e-07
+   }
+  ],
+  "last_archive_max_abs_m": 9.5367431640625e-07,
+  "equal_to_float_precision": true,
+  "reading": "regenerated R2 equals the last archived R2 (deterministic, D7 unchanged)"
+ },
+ {
+  "pair": "horsejump-high/human",
+  "current": true,
+  "n_archived": 1,
+  "comparisons": [
+   {
+    "archive": "_archive/20261019T091927/r2/horsejump-high/anchor.npz",
+    "same_shape": true,
+    "rms_m": 1.5247687693672628e-06,
+    "max_abs_m": 1.9073486328125e-06
+   }
+  ],
+  "last_archive_max_abs_m": 1.9073486328125e-06,
+  "equal_to_float_precision": true,
+  "reading": "regenerated R2 equals the last archived R2 (deterministic, D7 unchanged)"
+ },
+ {
+  "pair": "hockey/human",
+  "current": true,
+  "n_archived": 0,
+  "reading": "no comparison possible (no archived R2: the pair was never reconstructed before, or was refused)"
+ }
+]

@@ -1,0 +1,80 @@
+[
+ {
+  "clip": "000000000035.1.003",
+  "t_a": 4,
+  "n_band": 23345,
+  "n_obj": 5971,
+  "alpha_band": 0.28249377023085287,
+  "alpha_object_real": 0.24177356925601193,
+  "band_over_object": 1.1684228805495387,
+  "corr_band": 0.9835060888841377,
+  "corr_object": 0.9184484468737045,
+  "object_span_src": 0.46643964599004195,
+  "object_span_hat_times_alpha_band": 0.6049013807863838
+ },
+ {
+  "clip": "000000000284.0.006",
+  "t_a": 0,
+  "n_band": 31481,
+  "n_obj": 5801,
+  "alpha_band": 0.4222883124671018,
+  "alpha_object_real": 0.26563018497864366,
+  "band_over_object": 1.589760262001298,
+  "corr_band": 0.9864915950442915,
+  "corr_object": 0.8936418510014019,
+  "object_span_src": 0.48914408992547864,
+  "object_span_hat_times_alpha_band": 0.8334998609321176
+ },
+ {
+  "clip": "000000000265.2.005",
+  "t_a": 0,
+  "n_band": 33676,
+  "n_obj": 5081,
+  "alpha_band": 0.09538099032333558,
+  "alpha_object_real": 0.1934451746825977,
+  "band_over_object": 0.4930647170695028,
+  "corr_band": 0.9854657496098463,
+  "corr_object": 0.7272759370099033,
+  "object_span_src": 0.28225115923806465,
+  "object_span_hat_times_alpha_band": 0.13553138468126846
+ },
+ {
+  "clip": "000000000370.1.008",
+  "t_a": 0,
+  "n_band": 28676,
+  "n_obj": 5776,
+  "alpha_band": 0.2389764742712068,
+  "alpha_object_real": 0.39128304570657807,
+  "band_over_object": 0.6107509049866028,
+  "corr_band": 0.9810635870864324,
+  "corr_object": 0.7942669892699626,
+  "object_span_src": 0.8726114708178837,
+  "object_span_hat_times_alpha_band": 0.24303524734087073
+ },
+ {
+  "clip": "000000000404.1.004",
+  "t_a": 47,
+  "n_band": 22750,
+  "n_obj": 10843,
+  "alpha_band": 0.13596645750158445,
+  "alpha_object_real": 0.25719854164650546,
+  "band_over_object": 0.5286439675402873,
+  "corr_band": 0.9902249576603467,
+  "corr_object": 0.9436255345014319,
+  "object_span_src": 0.8467424661465276,
+  "object_span_hat_times_alpha_band": 0.44304517480186095
+ },
+ {
+  "clip": "000000000265.2.003",
+  "t_a": 47,
+  "n_band": 34537,
+  "n_obj": 4809,
+  "alpha_band": 0.10593359869678463,
+  "alpha_object_real": 0.1532312526653014,
+  "band_over_object": 0.6913315453223653,
+  "corr_band": 0.9754651248313968,
+  "corr_object": 0.809550478251579,
+  "object_span_src": 0.30714194976511683,
+  "object_span_hat_times_alpha_band": 0.26791717347420385
+ }
+]

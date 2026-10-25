@@ -1,0 +1,61 @@
+{
+ "rule": "lowest Phase-1 surviving seed",
+ "rows": [
+  {
+   "clip": "000000000035.1.003",
+   "category": "vehicle",
+   "human_selected_seed": 2,
+   "auto_selected_seed": 0,
+   "n_survivors": 4,
+   "agrees_with_human": false
+  },
+  {
+   "clip": "000000000284.0.006",
+   "category": "vehicle",
+   "human_selected_seed": 3,
+   "auto_selected_seed": 0,
+   "n_survivors": 4,
+   "agrees_with_human": false
+  },
+  {
+   "clip": "000000000265.2.005",
+   "category": "vehicle",
+   "human_selected_seed": 1,
+   "auto_selected_seed": 0,
+   "n_survivors": 4,
+   "agrees_with_human": false
+  },
+  {
+   "clip": "000000000265.2.005",
+   "category": "human",
+   "human_selected_seed": 0,
+   "auto_selected_seed": 0,
+   "n_survivors": 4,
+   "agrees_with_human": true
+  },
+  {
+   "clip": "000000000370.1.008",
+   "category": "human",
+   "human_selected_seed": 2,
+   "auto_selected_seed": 0,
+   "n_survivors": 4,
+   "agrees_with_human": false
+  },
+  {
+   "clip": "000000000404.1.004",
+   "category": "vehicle",
+   "human_selected_seed": 1,
+   "auto_selected_seed": 0,
+   "n_survivors": 4,
+   "agrees_with_human": false
+  },
+  {
+   "clip": "000000000265.2.003",
+   "category": "vehicle",
+   "human_selected_seed": 2,
+   "auto_selected_seed": 0,
+   "n_survivors": 4,
+   "agrees_with_human": false
+  }
+ ]
+}

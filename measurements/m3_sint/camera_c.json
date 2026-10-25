@@ -1,0 +1,437 @@
+[
+ {
+  "pair": "000000000035.1.003/vehicle",
+  "t_a": 4,
+  "F_pair": 77,
+  "keyframes": [
+   4,
+   35,
+   47,
+   59
+  ],
+  "lift_log": [
+   {
+    "keyframe": 4,
+    "n_lifted": 715
+   },
+   {
+    "keyframe": 35,
+    "n_lifted": 1081
+   },
+   {
+    "keyframe": 47,
+    "n_lifted": 895
+   },
+   {
+    "keyframe": 59,
+    "n_lifted": 711
+   }
+  ],
+  "translation_observability": {
+   "median_static_depth_over_cam_path": 0.941855363206674,
+   "median_static_depth": 4.748264312744141,
+   "cam_path_len_C": 5.041394356536903,
+   "pnp_translation_cov_eigs_mid_window": [
+    1.087008915366066e-10,
+    2.8172149297368876e-08,
+    1.6316424857754454e-07
+   ],
+   "worst_axis_sigma_per_px": 0.00040393594613198825
+  },
+  "n_static_solve": 2318,
+  "n_static_held": 714,
+  "frames_solved": 77,
+  "frames_total": 77,
+  "heldout_reproj_px": {
+   "median_all": 7.233341121343106,
+   "median_first_window": 1.571849180455898,
+   "median_after_boundaries": 8.10257829647887,
+   "p90_all": 9.173184877533723,
+   "curve_every4": [
+    0.35,
+    0.87,
+    1.23,
+    1.6,
+    1.6,
+    1.76,
+    1.65,
+    2.35,
+    4.65,
+    6.68,
+    8.66,
+    8.9,
+    7.75,
+    7.8,
+    8.3,
+    8.04,
+    8.11,
+    9.18,
+    9.3
+   ]
+  },
+  "G_heldout_reproj_px": {
+   "median_first_window": 3.776768794138123,
+   "median_after_boundaries": 18.87834128131791
+  },
+  "rot_C_vs_G_deg": {
+   "median_first_window": 1.490853920442203,
+   "max": 15.684576874966929
+  },
+  "gate": {
+   "patch": 1.0,
+   "px_256": 4.923076923076923,
+   "outcome": "fail",
+   "reason": null
+  },
+  "object_heading_vs_d_src_deg_12f": 15.521095570118217,
+  "jerk_centres": {
+   "camera_C": 0.04689036318985773,
+   "vipe_bridged": 0.003996134686200812
+  },
+  "instrument": {
+   "pnp": "EPnP+RANSAC, LM refine",
+   "ransac_px": 4.0,
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "t_a": 47,
+  "F_pair": 33,
+  "keyframes": [
+   47,
+   59
+  ],
+  "lift_log": [
+   {
+    "keyframe": 47,
+    "n_lifted": 550
+   },
+   {
+    "keyframe": 59,
+    "n_lifted": 549
+   }
+  ],
+  "translation_observability": {
+   "median_static_depth_over_cam_path": 5.112065034665837,
+   "median_static_depth": 5.875125885009766,
+   "cam_path_len_C": 1.1492666554845206,
+   "pnp_translation_cov_eigs_mid_window": [
+    4.976358675667494e-07,
+    1.6279519726382584e-06,
+    3.918112641323693e-06
+   ],
+   "worst_axis_sigma_per_px": 0.0019794222998955257
+  },
+  "n_static_solve": 697,
+  "n_static_held": 546,
+  "frames_solved": 33,
+  "frames_total": 33,
+  "heldout_reproj_px": {
+   "median_all": 2.3478936351469075,
+   "median_first_window": 0.6379045289587202,
+   "median_after_boundaries": 2.5215140448829856,
+   "p90_all": 2.654403612697898,
+   "curve_every4": [
+    0.19,
+    0.49,
+    0.82,
+    2.34,
+    2.57,
+    2.35,
+    2.46,
+    2.85
+   ]
+  },
+  "G_heldout_reproj_px": {
+   "median_first_window": 0.9073392635275732,
+   "median_after_boundaries": 3.323811308068296
+  },
+  "rot_C_vs_G_deg": {
+   "median_first_window": 0.17166842759175327,
+   "max": 1.4416645058559845
+  },
+  "gate": {
+   "patch": 1.0,
+   "px_256": 4.923076923076923,
+   "outcome": "pass",
+   "reason": null
+  },
+  "object_heading_vs_d_src_deg_12f": 69.22489732433836,
+  "jerk_centres": {
+   "camera_C": 0.03477334293614047,
+   "vipe_bridged": 0.002609018499559978
+  },
+  "instrument": {
+   "pnp": "EPnP+RANSAC, LM refine",
+   "ransac_px": 4.0,
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "t_a": 0,
+  "F_pair": 81,
+  "keyframes": [
+   0,
+   35,
+   47,
+   59
+  ],
+  "lift_log": [
+   {
+    "keyframe": 0,
+    "n_lifted": 372
+   },
+   {
+    "keyframe": 35,
+    "n_lifted": 403
+   },
+   {
+    "keyframe": 47,
+    "n_lifted": 390
+   },
+   {
+    "keyframe": 59,
+    "n_lifted": 365
+   }
+  ],
+  "translation_observability": {
+   "median_static_depth_over_cam_path": 3.545599033996361,
+   "median_static_depth": 7.929713010787964,
+   "cam_path_len_C": 2.236494576728865,
+   "pnp_translation_cov_eigs_mid_window": [
+    1.0813379393294124e-06,
+    3.1184506015850975e-06,
+    1.0744363269094172e-05
+   ],
+   "worst_axis_sigma_per_px": 0.0032778595560356413
+  },
+  "n_static_solve": 408,
+  "n_static_held": 360,
+  "frames_solved": 81,
+  "frames_total": 81,
+  "heldout_reproj_px": {
+   "median_all": 1.9921704894115195,
+   "median_first_window": 0.6462053622227889,
+   "median_after_boundaries": 3.0549071754402783,
+   "p90_all": 3.561646535329036,
+   "curve_every4": [
+    0.32,
+    0.47,
+    0.56,
+    0.64,
+    0.64,
+    0.81,
+    0.67,
+    0.76,
+    0.91,
+    1.87,
+    2.01,
+    2.18,
+    2.84,
+    3.07,
+    3.22,
+    3.01,
+    3.15,
+    3.45,
+    3.6,
+    3.91
+   ]
+  },
+  "G_heldout_reproj_px": {
+   "median_first_window": 0.8229800386722113,
+   "median_after_boundaries": 12.098818875910318
+  },
+  "rot_C_vs_G_deg": {
+   "median_first_window": 0.19021903489272643,
+   "max": 3.036772016818314
+  },
+  "gate": {
+   "patch": 1.0,
+   "px_256": 4.923076923076923,
+   "outcome": "pass",
+   "reason": null
+  },
+  "object_heading_vs_d_src_deg_12f": 6.668636497438558,
+  "jerk_centres": {
+   "camera_C": 0.023559412109532628,
+   "vipe_bridged": 0.003036677534115493
+  },
+  "instrument": {
+   "pnp": "EPnP+RANSAC, LM refine",
+   "ransac_px": 4.0,
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "t_a": 0,
+  "F_pair": 81,
+  "keyframes": [
+   0,
+   35,
+   47,
+   59
+  ],
+  "lift_log": [
+   {
+    "keyframe": 0,
+    "n_lifted": 606
+   },
+   {
+    "keyframe": 35,
+    "n_lifted": 504
+   },
+   {
+    "keyframe": 47,
+    "n_lifted": 441
+   },
+   {
+    "keyframe": 59,
+    "n_lifted": 385
+   }
+  ],
+  "translation_observability": {
+   "median_static_depth_over_cam_path": 2.9294603246553597,
+   "median_static_depth": 2.6897051334381104,
+   "cam_path_len_C": 0.9181572151022541,
+   "pnp_translation_cov_eigs_mid_window": [
+    7.551615280400568e-08,
+    2.8338494172119854e-07,
+    9.932761874851712e-07
+   ],
+   "worst_axis_sigma_per_px": 0.000996632423456698
+  },
+  "n_static_solve": 606,
+  "n_static_held": 599,
+  "frames_solved": 81,
+  "frames_total": 81,
+  "heldout_reproj_px": {
+   "median_all": 1.6893013042992904,
+   "median_first_window": 0.6549008071570175,
+   "median_after_boundaries": 2.678804657359988,
+   "p90_all": 3.1164510254392614,
+   "curve_every4": [
+    0.39,
+    0.51,
+    0.38,
+    0.59,
+    0.69,
+    0.66,
+    0.79,
+    0.81,
+    0.96,
+    1.67,
+    1.76,
+    1.79,
+    2.52,
+    2.6,
+    2.68,
+    2.92,
+    3.05,
+    3.14,
+    3.16,
+    3.14
+   ]
+  },
+  "G_heldout_reproj_px": {
+   "median_first_window": 0.758183350320162,
+   "median_after_boundaries": 3.527139385345125
+  },
+  "rot_C_vs_G_deg": {
+   "median_first_window": 0.0858423044192198,
+   "max": 0.7802708097675907
+  },
+  "gate": {
+   "patch": 1.0,
+   "px_256": 4.923076923076923,
+   "outcome": "pass",
+   "reason": null
+  },
+  "object_heading_vs_d_src_deg_12f": 2.239697894997188,
+  "jerk_centres": {
+   "camera_C": 0.0062411655396019325,
+   "vipe_bridged": 0.017740899866018553
+  },
+  "instrument": {
+   "pnp": "EPnP+RANSAC, LM refine",
+   "ransac_px": 4.0,
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "t_a": 47,
+  "F_pair": 33,
+  "keyframes": [
+   47,
+   59
+  ],
+  "lift_log": [
+   {
+    "keyframe": 47,
+    "n_lifted": 475
+   },
+   {
+    "keyframe": 59,
+    "n_lifted": 438
+   }
+  ],
+  "translation_observability": {
+   "median_static_depth_over_cam_path": 4.209555161986344,
+   "median_static_depth": 5.188474178314209,
+   "cam_path_len_C": 1.2325469030950877,
+   "pnp_translation_cov_eigs_mid_window": [
+    3.23469431304891e-07,
+    1.0415908592251713e-06,
+    4.281581889149607e-06
+   ],
+   "worst_axis_sigma_per_px": 0.002069198368728723
+  },
+  "n_static_solve": 837,
+  "n_static_held": 476,
+  "frames_solved": 33,
+  "frames_total": 33,
+  "heldout_reproj_px": {
+   "median_all": 1.1003698421555859,
+   "median_first_window": 0.3822469618800157,
+   "median_after_boundaries": 1.1497730728317532,
+   "p90_all": 1.2717979380263247,
+   "curve_every4": [
+    0.15,
+    0.38,
+    0.54,
+    1.09,
+    1.1,
+    1.16,
+    1.15,
+    1.18
+   ]
+  },
+  "G_heldout_reproj_px": {
+   "median_first_window": 0.5071242817318198,
+   "median_after_boundaries": 2.82894621219464
+  },
+  "rot_C_vs_G_deg": {
+   "median_first_window": 0.19812455485516578,
+   "max": 1.1607450192584388
+  },
+  "gate": {
+   "patch": 1.0,
+   "px_256": 4.923076923076923,
+   "outcome": "pass",
+   "reason": null
+  },
+  "object_heading_vs_d_src_deg_12f": 17.248852630343926,
+  "jerk_centres": {
+   "camera_C": 0.025197893997844154,
+   "vipe_bridged": 0.017007828608159872
+  },
+  "instrument": {
+   "pnp": "EPnP+RANSAC, LM refine",
+   "ransac_px": 4.0,
+   "split": "track index parity"
+  }
+ }
+]

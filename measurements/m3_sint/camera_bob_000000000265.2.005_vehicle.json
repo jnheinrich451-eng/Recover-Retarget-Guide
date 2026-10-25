@@ -1,0 +1,22 @@
+{
+ "pair": "000000000265.2.005/vehicle",
+ "frames": 81,
+ "n_static_tracks": 1238,
+ "n_with_camera_flow": 1238,
+ "object_mask": "anchor mask (proxy)",
+ "source_bg_bob_peak_patch": {
+  "median": 0.24980282506337675,
+  "p25": 0.22935746879777805,
+  "p75": 0.27941777900558695
+ },
+ "camera_implied_bob_peak_patch": {
+  "median": 0.286610263272324,
+  "p25": 0.2589486310564004,
+  "p75": 0.3199483774856879
+ },
+ "gait_band_power_share": {
+  "source": 0.5927410976307061,
+  "camera": 0.6043234160849773
+ },
+ "reading_rule": "source bob ~ camera-implied bob -> the reference camera's real motion (transferred); source smooth (much below) -> ViPE jitter"
+}

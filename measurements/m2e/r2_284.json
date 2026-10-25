@@ -1,0 +1,154 @@
+{
+ "schema": "m2e_r2_v1",
+ "variant": "objects",
+ "pointmap": {
+  "pointmap_source": "vendor_internal + gauge_align",
+  "a": 0.36319843972951865,
+  "b": -0.1820228271364341,
+  "region_nonpositive_frac": 0.013281952001592767,
+  "far_field_nonpositive_frac": 0.17360210418701172,
+  "z_bg": 3.6502637635783026,
+  "primary_failed": "all seeds failed: IndexError: min(): Expected reduction dim 0 to have non-zero size.",
+  "primary_per_seed": [
+   {
+    "seed": 0,
+    "ok": false,
+    "error": "IndexError: min(): Expected reduction dim 0 to have non-zero size."
+   },
+   {
+    "seed": 1,
+    "ok": false,
+    "error": "IndexError: min(): Expected reduction dim 0 to have non-zero size."
+   },
+   {
+    "seed": 2,
+    "ok": false,
+    "error": "IndexError: min(): Expected reduction dim 0 to have non-zero size."
+   },
+   {
+    "seed": 3,
+    "ok": false,
+    "error": "IndexError: min(): Expected reduction dim 0 to have non-zero size."
+   },
+   {
+    "seed": 4,
+    "ok": false,
+    "error": "IndexError: min(): Expected reduction dim 0 to have non-zero size."
+   }
+  ]
+ },
+ "pointmap_tripwire": {
+  "checked": true,
+  "relative_residual": 0.12405722731201199
+ },
+ "r2_seeds": [
+  0,
+  1,
+  2,
+  3,
+  4
+ ],
+ "r2_medoid_seed": 0,
+ "r2_n_success": 5,
+ "object_depth": {
+  "n_mask": 31806,
+  "n_valid": 31806,
+  "p02": 0.6128468846215401,
+  "p50": 0.6580387638788637,
+  "p98": 0.8404031663988301,
+  "p98_over_p02": 1.3713101714106224,
+  "frac_invalid_in_mask": 0.0,
+  "z_bg": 3.6502637635783026,
+  "disparity_p02_in_mask": 1.189905083686665
+ },
+ "fallback": "vendor_internal + gauge_align",
+ "gauge_alignment": {
+  "mode": "median_ratio",
+  "scale_k": 1.0468794480774282,
+  "shift_t": 0.0,
+  "n_pixels": 18238,
+  "k_median_ratio": 1.0468794480774282,
+  "k_regression": 1.5747545007261476,
+  "t_regression": -0.3460372972531405,
+  "resid_rms_regression": 0.026367412027610174,
+  "resid_rms_used": 0.030183847749333293,
+  "median_depth_body": 0.6577186544946587,
+  "median_depth_anchor": 0.6282658960423237,
+  "projection_unchanged": {
+   "iou_pre": 0.40081754648147333,
+   "iou_post": 0.40081754648147333
+  }
+ },
+ "r2_iou_vs_anchor_mask": 0.40081754648147333,
+ "r2_mask_centroid_offset_px": [
+  -3.305611679862352,
+  -170.05068965422288
+ ],
+ "gaussians_available": true,
+ "alpha_used": 0.36319843972951865,
+ "b_used": -0.1820228271364341,
+ "alpha_source": "ground_band",
+ "per_seed": [
+  {
+   "seed": 0,
+   "ok": true,
+   "iou": 0.40081754648147333,
+   "iou_aligned": 0.606955821136028,
+   "mask_centroid_offset_px": [
+    -3.305611679862352,
+    -170.05068965422288
+   ],
+   "n_vertices": 207742,
+   "seconds": 16.090572118759155
+  },
+  {
+   "seed": 1,
+   "ok": true,
+   "iou": 0.4444419879731164,
+   "iou_aligned": 0.5839315040687911,
+   "mask_centroid_offset_px": [
+    -2.647276388743876,
+    -158.25703291969626
+   ],
+   "n_vertices": 208012,
+   "seconds": 12.13474440574646
+  },
+  {
+   "seed": 2,
+   "ok": true,
+   "iou": 0.4385718908424118,
+   "iou_aligned": 0.5759851948617462,
+   "mask_centroid_offset_px": [
+    -5.117349374147921,
+    -160.27409616845478
+   ],
+   "n_vertices": 214622,
+   "seconds": 12.119133234024048
+  },
+  {
+   "seed": 3,
+   "ok": true,
+   "iou": 0.3897150890758518,
+   "iou_aligned": 0.6033946791265377,
+   "mask_centroid_offset_px": [
+    -8.234548775013025,
+    -172.461840890615
+   ],
+   "n_vertices": 216486,
+   "seconds": 12.211456298828125
+  },
+  {
+   "seed": 4,
+   "ok": true,
+   "iou": 0.4130463723097404,
+   "iou_aligned": 0.593481699051062,
+   "mask_centroid_offset_px": [
+    -6.98503035475261,
+    -164.90231309679086
+   ],
+   "n_vertices": 182868,
+   "seconds": 12.056634902954102
+  }
+ ],
+ "model_version": "facebook/sam-3d-objects@hf+f91db411c50e"
+}

@@ -1,0 +1,343 @@
+{
+ "schema": "m2e_qc_v1",
+ "clip": "000000000265.2.005",
+ "category": "vehicle",
+ "disposition": "accepted",
+ "label": null,
+ "t_a": 0,
+ "K_1024": [
+  [
+   617.7791137695312,
+   0.0,
+   510.6439208984375
+  ],
+  [
+   0.0,
+   1092.870849609375,
+   509.0729064941406
+  ],
+  [
+   0.0,
+   0.0,
+   1.0
+  ]
+ ],
+ "fx_over_fy": 0.5652809881335422,
+ "object_depth_source_gauge": {
+  "z_obj_per_candidate": {
+   "1": 2.0433559630528384,
+   "0": 2.0638674136764332,
+   "2": 2.0574487457654063,
+   "3": 2.051189875330704
+  },
+  "z_obj_selected": 2.0433559630528384,
+  "z_placement_c1": 2.1027409078698214,
+  "z_obj_over_z_placement": 0.9717583157322303,
+  "z_proxy_visible_surface": 1.8484829787969124,
+  "z_obj_over_z_proxy_visible": 1.1054231964758254,
+  "z_obj_spread_rel": 0.009984548418679249,
+  "object_within_band_range": {
+   "object_zeta_hat_range": [
+    4.819051637649536,
+    6.1520631980896
+   ],
+   "band_zeta_hat_range": [
+    0.0,
+    6.285489044189453
+   ],
+   "inside": true,
+   "frac_object_inside_band_range": 1.0
+  },
+  "note": "alpha spread across seeds mixes the control's constraint with Depth-Anything's per-image gauge (reviewer 2026-09-27); z_obj is the quantity alpha produces"
+ },
+ "alpha": 0.07091094550200953,
+ "b": 0.09129512827744712,
+ "alpha_source": "ground_band",
+ "flag": "within_object_scale_error",
+ "alpha_band": 0.07091094550200953,
+ "alpha_object_corrected": 0.09393014157342021,
+ "band_vs_object_ratio": 0.7549328076609169,
+ "alpha_naive_over_reversed": 0.9911148168765496,
+ "alpha_boot_ci": {
+  "block_32": {
+   "block": 32,
+   "n_units": 557,
+   "ci": [
+    0.07035433162786756,
+    0.07145471962741527
+   ],
+   "unreliable": false
+  },
+  "block_64": {
+   "block": 64,
+   "n_units": 145,
+   "ci": [
+    0.06991955624981343,
+    0.07183541597831869
+   ],
+   "unreliable": false
+  },
+  "pixel": {
+   "block": 0,
+   "n_units": 517555,
+   "ci": [
+    0.07088880367972335,
+    0.0709248451998777
+   ],
+   "unreliable": false
+  }
+ },
+ "alpha_per_candidate": {
+  "1": 0.07091094550200953,
+  "0": 0.06915847770939307,
+  "2": 0.07577230182537723,
+  "3": 0.07192792973314378
+ },
+ "alpha_spread_rel": 0.09260537938423172,
+ "alpha_low_confidence": false,
+ "delta_deg": -0.046617970594704634,
+ "delta_deg_abs": 0.046617970594704634,
+ "delta_instrument": "silhouette_scan",
+ "delta_definition": "delta = yaw of the ANCHOR minus yaw of the POSED PROXY, positive about the UP plane normal (rot_about(n, +delta) turns the proxy onto the anchor); shared by the scan and the keypoint instrument",
+ "delta_vs_g_tar_deg": 24.326599200688307,
+ "front_back_margin": 0.10584957713917842,
+ "g_front_back": {
+  "human_label": "lateral_right_to_left",
+  "control_class": "lateral_right_to_left",
+  "outcome": "pass",
+  "front_back_margin": 0.10584957713917842
+ },
+ "gtar_shape_yaw": {
+  "delta_gtar_shape_deg": 2.7758819581362473,
+  "proxy_anisotropy": 5.4974577026605225,
+  "gtar_anisotropy": 3.7045976398227074,
+  "instrument": "major_axis_in_ground_plane"
+ },
+ "flatten_predicted_yaw": {
+  "f": 0.7549328076609169,
+  "dominant_face": "side",
+  "face_angle_from_axis_deg": 14.774937455583872,
+  "predicted_abs_deg": 3.514121688002094,
+  "predicted_signed_deg": -3.514121688002094,
+  "toward": "square side",
+  "heading_az_deg": -165.22506254441612
+ },
+ "r2_fallback": null,
+ "delta_curve_width_deg": 4.0,
+ "variant": "objects",
+ "r2_iou_vs_anchor_mask": 0.7382433093424638,
+ "gaussians_available": true,
+ "pointmap_source": "alpha_scaled_zeta_hat",
+ "gauge_alignment": null,
+ "r2_n_success": null,
+ "r2_per_seed": [
+  {
+   "seed": 0,
+   "iou": 0.723507674283827,
+   "iou_aligned": 0.7290132179524054,
+   "mask_centroid_offset_px": [
+    2.3485446104147627,
+    -15.312046463410297
+   ],
+   "watertight": true,
+   "boundary_edges": 0,
+   "scale_axes": [
+    1.5010522603988647,
+    1.5010522603988647,
+    1.5010522603988647
+   ],
+   "scale": 1.5010522603988647,
+   "seconds": 20.649481773376465,
+   "t_cv": [
+    -0.34744207853602327,
+    0.5218143774315753,
+    2.3727868138585944
+   ],
+   "n_vertices": 343974
+  },
+  {
+   "seed": 1,
+   "iou": 0.7168974713234585,
+   "iou_aligned": 0.7226895089300102,
+   "mask_centroid_offset_px": [
+    -3.3303510978256554,
+    -9.641048632021807
+   ],
+   "watertight": true,
+   "boundary_edges": 0,
+   "scale_axes": [
+    1.4598119258880615,
+    1.4598119258880615,
+    1.4598119258880615
+   ],
+   "scale": 1.4598119258880615,
+   "seconds": 12.030490636825562,
+   "t_cv": [
+    -0.33932676607362633,
+    0.5095122193583989,
+    2.389112507161898
+   ],
+   "n_vertices": 340080
+  },
+  {
+   "seed": 2,
+   "iou": 0.6283499513618677,
+   "iou_aligned": 0.7214363025273911,
+   "mask_centroid_offset_px": [
+    -4.866250265753649,
+    62.67626847040083
+   ],
+   "watertight": true,
+   "boundary_edges": 0,
+   "scale_axes": [
+    1.4923595190048218,
+    1.4923595190048218,
+    1.4923595190048218
+   ],
+   "scale": 1.4923595190048218,
+   "seconds": 12.133004188537598,
+   "t_cv": [
+    -0.3399342987889004,
+    0.3275912169542494,
+    2.4102065611008427
+   ],
+   "n_vertices": 410264
+  },
+  {
+   "seed": 3,
+   "iou": 0.7382433093424638,
+   "iou_aligned": 0.7324275534441805,
+   "mask_centroid_offset_px": [
+    6.6260613051869655,
+    -4.527712471336486
+   ],
+   "watertight": true,
+   "boundary_edges": 0,
+   "scale_axes": [
+    1.5479717254638672,
+    1.5479717254638672,
+    1.5479717254638672
+   ],
+   "scale": 1.5479717254638672,
+   "seconds": 12.142635822296143,
+   "t_cv": [
+    -0.3642177087638974,
+    0.4982187183754401,
+    2.375672066951567
+   ],
+   "n_vertices": 335906
+  },
+  {
+   "seed": 4,
+   "iou": 0.7274266587911006,
+   "iou_aligned": 0.7291954113612173,
+   "mask_centroid_offset_px": [
+    2.0931964322454633,
+    -2.3541982335791545
+   ],
+   "watertight": true,
+   "boundary_edges": 0,
+   "scale_axes": [
+    1.504650354385376,
+    1.504650354385376,
+    1.504650354385376
+   ],
+   "scale": 1.504650354385376,
+   "seconds": 11.989603757858276,
+   "t_cv": [
+    -0.38953864290907947,
+    0.5015430315368752,
+    2.504772502342532
+   ],
+   "n_vertices": 355098
+  }
+ ],
+ "r2_object_depth": null,
+ "gate_outcomes": {
+  "g_alpha_positive": {
+   "band": true,
+   "object": true,
+   "outcome": "pass"
+  },
+  "g_alpha_ci": {
+   "value": 0.015517886438512275,
+   "threshold": null,
+   "outcome": "ungated"
+  },
+  "g_alpha_pixels": {
+   "value": 517555,
+   "threshold": null,
+   "outcome": "ungated"
+  },
+  "g_delta_scan_peaked": {
+   "value": 4.0,
+   "threshold": null,
+   "outcome": "ungated"
+  },
+  "g_estimator_sign": {
+   "spearman_full_frame": 0.8580185180768886,
+   "outcome": "pass"
+  },
+  "g_front_back": {
+   "human_label": "lateral_right_to_left",
+   "control_class": "lateral_right_to_left",
+   "outcome": "pass",
+   "front_back_margin": 0.10584957713917842
+  }
+ },
+ "config_hash": "3c6581e849c5dbd0",
+ "upstream_hashes": {
+  "c3": "1fd70e54b6d431bedf5b039bfbadeaaac468c8d12f464c54cf9d49ae8dd145f9",
+  "c1": "8363134865701ad34dd0a87e36f1fd507227cc7487a35ce6e68468ac4ce3af4f",
+  "m2a": "96ee134e427a4035b575de1a9514fc37f7987862217d9485059a7f20cb8bd8b4",
+  "proxy_cache_key": "5fbdb89abb315954",
+  "c2_params": {
+   "r": 4,
+   "w": 6,
+   "N": 32,
+   "sigma1": 2.0,
+   "sigma2": 0.5,
+   "fill_order": "fill_then_coarsen"
+  },
+  "m2d_qc": "20bc9f46213c4608649531ac8c7c6a0108b1b6679b5cc7eaa9985d67d931be6f",
+  "m2d_fidelity": "89df7b3aa040dea031dae311ff32fcb3b389e656c5b63ab947126ce995f8df42",
+  "alpha": "0ff8d3b42c3139912ea8cf4227301024664047d9f78f401601b4d5da44714195",
+  "delta": "3a49f31e5111dfd6e56690eb49b79961225475a1a0c08e1160ffd8cd3dda5e50",
+  "r2": "bb0fe2b37e6bc9e834f05183f341000e079c30d9d1696900d8151c7a20c2cef2"
+ },
+ "gtar_shape_extents": {
+  "g_tar": {
+   "extents": [
+    0.8860245846358806,
+    0.45710660745525755,
+    0.39887486111032716
+   ],
+   "ratios_to_largest": [
+    1.0,
+    0.5159073634995235,
+    0.45018486848674544
+   ],
+   "width_over_length": 0.5159073634995235,
+   "height_over_length": 0.45018486848674544
+  },
+  "proxy_posed": {
+   "extents": [
+    0.9128868782439992,
+    0.38922606306228913,
+    0.2970415662783195
+   ],
+   "ratios_to_largest": [
+    1.0,
+    0.426368340194562,
+    0.32538704779030175
+   ],
+   "width_over_length": 0.426368340194562,
+   "height_over_length": 0.32538704779030175
+  },
+  "g_tar_over_proxy_ratios": [
+   1.0,
+   1.2100039211731872,
+   1.3835365345484514
+  ]
+ }
+}

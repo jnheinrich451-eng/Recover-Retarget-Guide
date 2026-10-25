@@ -1,0 +1,80 @@
+{
+ "schema": "m2d_generation_v1",
+ "clip": "000000000265.2.003",
+ "category": "vehicle",
+ "polarity": "near_bright",
+ "guidance": 10.0,
+ "steps": 30,
+ "size": 1024,
+ "generator_repo": "black-forest-labs/FLUX.1-Depth-dev",
+ "seeds": 4,
+ "target": {
+  "object": "a red car",
+  "action": "driving",
+  "scene": "on a desert highway"
+ },
+ "prompt": {
+  "prompt": "a red car driving, on a desert highway, side profile, moving right to left, medium shot",
+  "dictionary_rows": [
+   "lateral_right_to_left",
+   "large_area"
+  ],
+  "heading_class": "lateral_right_to_left",
+  "heading_azimuth_deg": -149.70687580743436,
+  "heading_frame": "camera_t_a",
+  "heading_margin_deg": 14.706875807434358,
+  "shot_class": "large_area",
+  "shot_band_margin_rel": 1.410459518432617,
+  "shot_class_near_band_edge": false,
+  "obj_area_frac": 0.24104595184326172,
+  "camera_low": false,
+  "camera_height": 1.1824560439356981,
+  "object_height": 0.8342778848746356,
+  "camera_height_over_object_height": 1.4173407510536877
+ },
+ "control_checksum": "8bcc6886a0ad21c7",
+ "calls": [
+  {
+   "seed": 0,
+   "control_checksum": "8bcc6886a0ad21c7",
+   "tensor_max_dev": 0.0,
+   "png_sha256": "e64fce57ebc884dc18481393ec402f54e5311fe7fd3e8e052e67217445f62a07"
+  },
+  {
+   "seed": 1,
+   "control_checksum": "8bcc6886a0ad21c7",
+   "tensor_max_dev": 0.0,
+   "png_sha256": "4649dd3cbe1f6df061228881a75d4f6ec9a0f8491e93b13221070a138a871f39"
+  },
+  {
+   "seed": 2,
+   "control_checksum": "8bcc6886a0ad21c7",
+   "tensor_max_dev": 0.0,
+   "png_sha256": "f94da584b01945435cae26febb2b80ebb9489110d6ec66254a96c80df2fd9379"
+  },
+  {
+   "seed": 3,
+   "control_checksum": "8bcc6886a0ad21c7",
+   "tensor_max_dev": 0.0,
+   "png_sha256": "6911bbe571ff5ffd0f677c896ccb45d3f085b3686ba24032807b1041ae6b23ec"
+  }
+ ],
+ "pipeline": "FluxControlPipeline",
+ "diffusers": "0.40.0",
+ "gpu": "NVIDIA A100-SXM4-40GB",
+ "config_hash": "48933f55cdd88b73",
+ "upstream_hashes": {
+  "c3": "4b4a84fc56c86032ad97971d86c997e7224e3d464b35dc43018786c8b7255121",
+  "c1": "e69bb365eca0ca1a01de7b60bbbca0ed55034fdd722d9f14f2290dd257705527",
+  "m2a": "b7f9de50271c88d5cc0912bacddb7b33d42bd2c56dca812c11534b602f77fd0e",
+  "proxy_cache_key": "5fbdb89abb315954",
+  "c2_params": {
+   "r": 4,
+   "w": 6,
+   "N": 32,
+   "sigma1": 2.0,
+   "sigma2": 0.5,
+   "fill_order": "fill_then_coarsen"
+  }
+ }
+}

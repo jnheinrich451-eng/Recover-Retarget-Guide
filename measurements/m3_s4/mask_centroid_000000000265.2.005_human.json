@@ -1,0 +1,335 @@
+[
+ {
+  "pair": "000000000265.2.005/human",
+  "video": "A0_seed0_rec_F33.mp4",
+  "label": "person",
+  "frames": 33,
+  "t_a": null,
+  "centroid_disp_patch_at_latent_frames": [
+   0.0,
+   0.8563722479257926,
+   0.6562560660837011,
+   0.541563722713304,
+   1.1424492789489331,
+   1.5998116979624137,
+   1.5687782152369738,
+   3.1372102455864304,
+   3.1461565824736812
+  ],
+  "centroid_disp_last_patch": 3.1461565824736812,
+  "expected_obj_disp_last_patch": 0.4468577410430542,
+  "centroid_disp_vector_last_patch": [
+   -1.0471992291398458,
+   -2.966761705282611
+  ],
+  "path_length_patch": 7.796862105561643,
+  "mask_area_share": {
+   "first": 0.016185897435897437,
+   "median": 0.017317708333333334,
+   "min": 0.014510717147435898,
+   "last": 0.015482271634615385
+  },
+  "mask_iou_prev": {
+   "median": 0.8398030826907308,
+   "min": 0.7136083451872925
+  },
+  "n_frames_without_mask": 0,
+  "instrument": "nvidia/segformer-b2-finetuned-ade-512-512"
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "video": "A0_seed0_rec_F33_coff.mp4",
+  "label": "person",
+  "frames": 33,
+  "t_a": null,
+  "centroid_disp_patch_at_latent_frames": [
+   0.0,
+   0.8643117436892825,
+   0.6800155693317806,
+   0.562778307743425,
+   1.2041194121604126,
+   1.6488369319773089,
+   1.54001322240134,
+   3.152076068019801,
+   3.2406408189537723
+  ],
+  "centroid_disp_last_patch": 3.2406408189537723,
+  "expected_obj_disp_last_patch": 0.4468577410430542,
+  "centroid_disp_vector_last_patch": [
+   -1.0663205977957233,
+   -3.0601819063882374
+  ],
+  "path_length_patch": 7.774960335528455,
+  "mask_area_share": {
+   "first": 0.01643379407051282,
+   "median": 0.01725010016025641,
+   "min": 0.01442558092948718,
+   "last": 0.015399639423076924
+  },
+  "mask_iou_prev": {
+   "median": 0.844952929470195,
+   "min": 0.7146440516005733
+  },
+  "n_frames_without_mask": 0,
+  "instrument": "nvidia/segformer-b2-finetuned-ade-512-512"
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "video": "A0_seed1_rec_F33.mp4",
+  "label": "person",
+  "frames": 33,
+  "t_a": null,
+  "centroid_disp_patch_at_latent_frames": [
+   0.0,
+   0.8264557790941908,
+   0.6289088390929082,
+   0.6712658881006495,
+   0.5661003641780656,
+   1.089683819019279,
+   1.7419974334272175,
+   0.8974148934037848,
+   0.7043871860775522
+  ],
+  "centroid_disp_last_patch": 0.7043871860775522,
+  "expected_obj_disp_last_patch": 0.4468577410430542,
+  "centroid_disp_vector_last_patch": [
+   0.032679834747316505,
+   -0.7036286920749752
+  ],
+  "path_length_patch": 8.075722193875146,
+  "mask_area_share": {
+   "first": 0.016175881410256412,
+   "median": 0.019468649839743588,
+   "min": 0.016175881410256412,
+   "last": 0.02381560496794872
+  },
+  "mask_iou_prev": {
+   "median": 0.8526444672724116,
+   "min": 0.7350692520775624
+  },
+  "n_frames_without_mask": 0,
+  "instrument": "nvidia/segformer-b2-finetuned-ade-512-512"
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "video": "A0_seed1_rec_F33_coff.mp4",
+  "label": "person",
+  "frames": 33,
+  "t_a": null,
+  "centroid_disp_patch_at_latent_frames": [
+   0.0,
+   0.7999179687092726,
+   0.6925399004197301,
+   0.5302885937117374,
+   0.48222068522890055,
+   1.057086539448297,
+   2.0691562763512623,
+   2.578960859304587,
+   2.6617937599416286
+  ],
+  "centroid_disp_last_patch": 2.6617937599416286,
+  "expected_obj_disp_last_patch": 0.4468577410430542,
+  "centroid_disp_vector_last_patch": [
+   -2.656005663763967,
+   0.17544211158647371
+  ],
+  "path_length_patch": 6.531376834621584,
+  "mask_area_share": {
+   "first": 0.016411258012820513,
+   "median": 0.017695813301282053,
+   "min": 0.015452223557692308,
+   "last": 0.017014723557692308
+  },
+  "mask_iou_prev": {
+   "median": 0.8713121132560331,
+   "min": 0.7394133089829928
+  },
+  "n_frames_without_mask": 0,
+  "instrument": "nvidia/segformer-b2-finetuned-ade-512-512"
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "video": "A3_seed0_rec_F33_sm_sky.mp4",
+  "label": "person",
+  "frames": 33,
+  "t_a": null,
+  "centroid_disp_patch_at_latent_frames": [
+   0.0,
+   0.33828025242120374,
+   0.5799475895052066,
+   1.6980159003304611,
+   1.6441296685996503,
+   2.075268053977307,
+   1.831351464585983,
+   2.3914633873163744,
+   2.649391681118835
+  ],
+  "centroid_disp_last_patch": 2.649391681118835,
+  "expected_obj_disp_last_patch": 0.4468577410430542,
+  "centroid_disp_vector_last_patch": [
+   -0.39954412746158496,
+   -2.619091592555069
+  ],
+  "path_length_patch": 13.089722883447358,
+  "mask_area_share": {
+   "first": 0.016528946314102563,
+   "median": 0.014841245993589743,
+   "min": 0.006830929487179487,
+   "last": 0.006830929487179487
+  },
+  "mask_iou_prev": {
+   "median": 0.8521926899685595,
+   "min": 0.48533126092869633
+  },
+  "n_frames_without_mask": 0,
+  "instrument": "nvidia/segformer-b2-finetuned-ade-512-512"
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "video": "A3_seed0_rec_F33_sm_sky_nodyn.mp4",
+  "label": "person",
+  "frames": 33,
+  "t_a": null,
+  "centroid_disp_patch_at_latent_frames": [
+   0.0,
+   0.48939051566736474,
+   0.7007350380511524,
+   0.4242239717224415,
+   1.2152766972794282,
+   1.6438123690556528,
+   1.6685699524253836,
+   3.0341548760659274,
+   3.0378231168023366
+  ],
+  "centroid_disp_last_patch": 3.0378231168023366,
+  "expected_obj_disp_last_patch": 0.4468577410430542,
+  "centroid_disp_vector_last_patch": [
+   -0.6013251031805389,
+   -2.977713453182421
+  ],
+  "path_length_patch": 8.620049942034623,
+  "mask_area_share": {
+   "first": 0.016326121794871796,
+   "median": 0.017838541666666666,
+   "min": 0.011398237179487179,
+   "last": 0.01388721955128205
+  },
+  "mask_iou_prev": {
+   "median": 0.8543919238264294,
+   "min": 0.7276756401838477
+  },
+  "n_frames_without_mask": 0,
+  "instrument": "nvidia/segformer-b2-finetuned-ade-512-512"
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "video": "A3_seed1_rec_F33_sm_sky.mp4",
+  "label": "person",
+  "frames": 33,
+  "t_a": null,
+  "centroid_disp_patch_at_latent_frames": [
+   0.0,
+   0.21980654699080115,
+   0.20708444751363486,
+   0.09537067805979654,
+   0.2134828575102743,
+   0.7026466237624088,
+   1.0868468825286395,
+   1.0638127076326787,
+   1.5159355769264666
+  ],
+  "centroid_disp_last_patch": 1.5159355769264666,
+  "expected_obj_disp_last_patch": 0.4468577410430542,
+  "centroid_disp_vector_last_patch": [
+   0.5592146976317984,
+   -1.4090207930843164
+  ],
+  "path_length_patch": 4.960393193550365,
+  "mask_area_share": {
+   "first": 0.016561498397435898,
+   "median": 0.016013120993589744,
+   "min": 0.01262520032051282,
+   "last": 0.01593299278846154
+  },
+  "mask_iou_prev": {
+   "median": 0.877062572796687,
+   "min": 0.7947184126057777
+  },
+  "n_frames_without_mask": 0,
+  "instrument": "nvidia/segformer-b2-finetuned-ade-512-512"
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "video": "A3_seed1_rec_F33_sm_sky_nodyn.mp4",
+  "label": "person",
+  "frames": 33,
+  "t_a": null,
+  "centroid_disp_patch_at_latent_frames": [
+   0.0,
+   0.5090128694318313,
+   0.6443929938313084,
+   0.2992749690854874,
+   0.11168997102385458,
+   0.6461450842350847,
+   1.077196394724658,
+   0.981156814625907,
+   1.5284819156619465
+  ],
+  "centroid_disp_last_patch": 1.5284819156619465,
+  "expected_obj_disp_last_patch": 0.4468577410430542,
+  "centroid_disp_vector_last_patch": [
+   0.7842227663370984,
+   -1.3119647934545355
+  ],
+  "path_length_patch": 6.496021838925202,
+  "mask_area_share": {
+   "first": 0.01641877003205128,
+   "median": 0.01770332532051282,
+   "min": 0.015159254807692308,
+   "last": 0.02407101362179487
+  },
+  "mask_iou_prev": {
+   "median": 0.865484642473966,
+   "min": 0.75555044288508
+  },
+  "n_frames_without_mask": 0,
+  "instrument": "nvidia/segformer-b2-finetuned-ade-512-512"
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "video": "source",
+  "label": "person",
+  "frames": 33,
+  "t_a": 0,
+  "centroid_disp_patch_at_latent_frames": [
+   0.0,
+   1.0290591618480514,
+   0.5983276781537419,
+   1.4408069651344664,
+   1.4963243906289259,
+   2.1150742539242082,
+   2.097865238534593,
+   1.6689313420951861,
+   1.6965418970475328
+  ],
+  "centroid_disp_last_patch": 1.6965418970475328,
+  "expected_obj_disp_last_patch": 0.4468577410430542,
+  "centroid_disp_vector_last_patch": [
+   -1.6646256171019616,
+   -0.3275300952974476
+  ],
+  "path_length_patch": 11.352098498157893,
+  "mask_area_share": {
+   "first": 0.12002453926282051,
+   "median": 0.09391526442307692,
+   "min": 0.07415114182692308,
+   "last": 0.0783954326923077
+  },
+  "mask_iou_prev": {
+   "median": 0.9056278797807122,
+   "min": 0.8340223549226765
+  },
+  "n_frames_without_mask": 0,
+  "instrument": "nvidia/segformer-b2-finetuned-ade-512-512"
+ }
+]

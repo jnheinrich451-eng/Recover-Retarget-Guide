@@ -1,0 +1,71 @@
+[
+ {
+  "pair": "000000000035.1.003/vehicle",
+  "t_a": 4,
+  "F_pair": 77,
+  "ba": {
+   "nfev": 215,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 15,
+     "status": 2
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.83747919036972,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 2.9963288573798073,
+   "reproj_rms_after": 1.3786522948216706,
+   "n_obs": 8200,
+   "n_points": 278,
+   "n_cams": 77,
+   "prior_rms_rel_after": 0.020830871062576077,
+   "dropped_observations": {
+    "behind": 0,
+    "outside": 265,
+    "far_from_init": 706
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 278,
+  "n_held": 714,
+  "heldout_px": {
+   "median_all": 5.028243333579427,
+   "p90": 6.480122263806782,
+   "curve_every8": [
+    0.86,
+    1.41,
+    1.6,
+    1.97,
+    5.16,
+    5.0,
+    6.4,
+    7.5,
+    5.27,
+    5.7
+   ],
+   "median_all_before_ba": 7.233341121343106
+  },
+  "anchor_depth_scale_change": 1.0000656413228333,
+  "rot_change_vs_init_deg_max": 6.9584052183437075,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "fail"
+  },
+  "x0_no_degradation": true,
+  "instrument": {
+   "prior_weight_px": 200.0,
+   "n_anchor": 278,
+   "init_px_max": 12.0,
+   "far_half": true,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ }
+]

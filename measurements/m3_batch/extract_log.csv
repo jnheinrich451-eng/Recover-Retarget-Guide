@@ -1,0 +1,80 @@
+split,clip_id,fps,status,elapsed_s,delta_parallax_px,rho,n_tracks,reason
+miradata,000000000001.5.002,15.0,ok,136.9,72.66617477270283,0.7578979246769165,835,
+miradata,000000000035.1.003,15.0,FAILED,60.0,,,,[extract] stage A produced no current output for 000000000035.1.003: [stage_a] GATES FAILED — no bundle written; report: /content/drive/MyDrive/ditflow_extract/viz/stage_a/000000000035.1.003/qc_failed
+miradata,000000000064.3.002,15.0,ok,101.8,72.6959308843241,1.0116484754785473,566,
+miradata,000000000100.0.003,15.0,FAILED,61.3,,,,[extract] stage A produced no current output for 000000000100.0.003: [stage_a] GATES FAILED — no bundle written; report: /content/drive/MyDrive/ditflow_extract/viz/stage_a/000000000100.0.003/qc_failed
+miradata,000000000119.5.007,15.0,ok,99.5,70.06172197262245,1.2802324326289782,763,
+miradata,000000000130.0.015,15.0,ok,114.7,104.27249739655717,0.6196228074824196,3529,
+miradata,000000000191.6.037,15.0,ok,101.2,67.57125410790916,0.606773645234403,638,
+miradata,000000000191.6.038,15.0,ok,104.7,21.24211400236577,1.0621249331426863,1894,
+miradata,000000000200.1.006,15.0,ok,118.1,49.26301919849448,0.8850493358361364,7009,
+miradata,000000000201.1.008,15.0,ok,103.5,118.95423581462288,1.0170949918903955,962,
+miradata,000000000217.0.006,15.0,ok,105.2,88.89935986355421,0.5727130395398484,662,
+miradata,000000000221.7.011,15.0,ok,113.5,123.13791337374971,0.9625275860133007,4013,
+miradata,000000000222.4.003,15.0,ok,111.8,22.862820048344965,0.7402209670367064,4824,
+miradata,000000000230.2.013,15.0,FAILED,63.1,,,,[extract] stage A produced no current output for 000000000230.2.013: [stage_a] GATES FAILED — no bundle written; report: /content/drive/MyDrive/ditflow_extract/viz/stage_a/000000000230.2.013/qc_failed
+miradata,000000000252.1.018,15.0,ok,117.6,38.56623799997396,0.48263271055417833,3254,
+miradata,000000000252.2.007,15.0,ok,106.1,33.17323095941798,0.7253386989629077,649,
+miradata,000000000256.3.010,15.0,ok,112.7,34.18495972442197,0.5622940125735294,4046,
+miradata,000000000265.2.005,15.0,ok,106.0,60.24414683129328,0.6827747572796004,1043,
+miradata,000000000265.4.002,15.0,ok,111.2,44.62455588727446,0.7842950655543461,2890,
+miradata,000000000284.0.006,15.0,FAILED,57.7,,,,[extract] stage A produced no current output for 000000000284.0.006: [stage_a] GATES FAILED — no bundle written; report: /content/drive/MyDrive/ditflow_extract/viz/stage_a/000000000284.0.006/qc_failed
+miradata,000000000299.1.005,15.0,ok,103.8,23.115055588646996,1.1312417256490739,1468,
+miradata,000000000362.2.005,15.0,ok,101.1,54.876836611404414,1.2834902772996548,832,
+miradata,000000000370.1.009,15.0,ok,100.1,19.70964346340316,0.5742180571384669,890,
+miradata,000000000391.0.016,15.0,ok,98.8,18.848767898690845,0.7255291201199197,839,
+miradata,000000000396.3.002,15.0,ok,103.3,35.32705429681168,0.7847626956667556,687,
+miradata,000000000404.1.006,15.0,ok,103.8,136.57728970844084,1.0713935740458675,1129,
+miradata,000000000418.0.005,15.0,FAILED,61.0,,,,[extract] stage A produced no current output for 000000000418.0.005: [stage_a] GATES FAILED — no bundle written; report: /content/drive/MyDrive/ditflow_extract/viz/stage_a/000000000418.0.005/qc_failed
+miradata,000000000431.5.009,15.0,ok,107.8,84.56806498503306,0.303693936870571,2475,
+miradata,000000002376.4.008,15.0,FAILED,62.2,,,,[extract] stage A produced no current output for 000000002376.4.008: [stage_a] GATES FAILED — no bundle written; report: /content/drive/MyDrive/ditflow_extract/viz/stage_a/000000002376.4.008/qc_failed
+davis,bike-packing,12.0,ok,106.0,14.752754600565979,1.0403002088216984,2308,
+davis,blackswan,12.0,FAILED,58.0,,,,[extract] stage A produced no current output for blackswan: [stage_a] GATES FAILED — no bundle written; report: /content/drive/MyDrive/ditflow_extract/viz/stage_a/blackswan/qc_failed.json (SKILL §7) —
+davis,bmx-trees,12.0,FAILED,61.9,,,,[extract] stage A produced no current output for bmx-trees: [stage_a] GATES FAILED — no bundle written; report: /content/drive/MyDrive/ditflow_extract/viz/stage_a/bmx-trees/qc_failed.json (SKILL §7) —
+davis,breakdance,12.0,ok,105.6,13.205909818821954,1.277503562546038,1715,
+davis,camel,12.0,ok,105.3,25.546189997201374,0.7803123344851244,1487,
+davis,car-roundabout,12.0,FAILED,58.3,,,,[extract] stage A produced no current output for car-roundabout: [stage_a] GATES FAILED — no bundle written; report: /content/drive/MyDrive/ditflow_extract/viz/stage_a/car-roundabout/qc_failed.json (S
+davis,cows,12.0,ok,111.6,20.88548675607655,0.834249943792221,3966,
+davis,dance-twirl,12.0,ok,116.7,34.84911547648412,0.9214398670459221,5856,
+davis,dog,12.0,ok,113.4,56.683651090582885,0.9430439159478002,3923,
+davis,dogs-jump,12.0,ok,101.5,84.37216556144588,1.082524502995002,622,
+davis,drift-chicane,12.0,ok,100.4,16.635434453689484,1.108809011825013,1764,
+davis,drift-straight,12.0,FAILED,69.0,,,,[extract] stage A produced no current output for drift-straight: [stage_a] GATES FAILED — no bundle written; report: /content/drive/MyDrive/ditflow_extract/viz/stage_a/drift-straight/qc_failed.json (S
+davis,goat,12.0,ok,103.4,84.60594353345508,1.1677947071090702,1842,
+davis,gold-fish,12.0,ok,105.4,7.8476143098358815,0.9050800742930717,2589,
+davis,horsejump-high,12.0,ok,118.3,46.017385972958664,0.8727931733125389,5762,
+davis,india,12.0,ok,107.6,106.81705690993563,1.1372622641732373,1635,
+davis,kite-surf,12.0,FAILED,59.9,,,,[extract] stage A produced no current output for kite-surf: [stage_a] GATES FAILED — no bundle written; report: /content/drive/MyDrive/ditflow_extract/viz/stage_a/kite-surf/qc_failed.json (SKILL §7) —
+davis,lab-coat,12.0,ok,109.2,147.54731804909486,0.5422376916610006,922,
+davis,libby,12.0,ok,120.6,65.57169025238967,0.9942643775587805,4945,
+davis,loading,12.0,ok,122.8,54.29288066152315,0.7988261098653949,6743,
+davis,mbike-trick,12.0,ok,104.7,17.191199045485213,0.9228492423703641,3168,
+davis,paragliding-launch,12.0,FAILED,59.2,,,,[extract] stage A produced no current output for paragliding-launch: [stage_a] GATES FAILED — no bundle written; report: /content/drive/MyDrive/ditflow_extract/viz/stage_a/paragliding-launch/qc_failed
+davis,parkour,12.0,ok,109.4,72.33267975507526,0.8272942383275246,2101,
+davis,pigs,12.0,ok,100.4,14.36715355708599,0.878248188113746,1120,
+davis,soapbox,12.0,ok,112.4,15.951860943655893,0.9726429452382749,4733,
+davis,bear,12.0,ok,105.8,16.994110401859075,0.6870583971885393,1706,
+davis,bmx-bumps,12.0,ok,103.4,55.38206930560411,1.010079926678715,855,
+davis,boat,12.0,FAILED,55.4,,,,[extract] stage A produced no current output for boat: [stage_a] GATES FAILED — no bundle written; report: /content/drive/MyDrive/ditflow_extract/viz/stage_a/boat/qc_failed.json (SKILL §7) — a failed 
+davis,boxing-fisheye,12.0,ok,108.1,26.819835965981078,1.0872606818073456,2503,
+davis,breakdance-flare,12.0,ok,105.6,12.706361506007072,0.9913142753755291,3254,
+davis,bus,12.0,FAILED,57.2,,,,[extract] stage A produced no current output for bus: [stage_a] GATES FAILED — no bundle written; report: /content/drive/MyDrive/ditflow_extract/viz/stage_a/bus/qc_failed.json (SKILL §7) — a failed ga
+davis,car-turn,12.0,ok,103.1,26.760047524823943,0.9926059740173728,567,
+davis,cat-girl,12.0,FAILED,59.2,,,,[extract] stage A produced no current output for cat-girl: [stage_a] GATES FAILED — no bundle written; report: /content/drive/MyDrive/ditflow_extract/viz/stage_a/cat-girl/qc_failed.json (SKILL §7) — a
+davis,classic-car,12.0,FAILED,65.6,,,,[extract] stage A produced no current output for classic-car: [stage_a] GATES FAILED — no bundle written; report: /content/drive/MyDrive/ditflow_extract/viz/stage_a/classic-car/qc_failed.json (SKILL §
+davis,color-run,12.0,FAILED,59.8,,,,[extract] stage A produced no current output for color-run: [stage_a] GATES FAILED — no bundle written; report: /content/drive/MyDrive/ditflow_extract/viz/stage_a/color-run/qc_failed.json (SKILL §7) —
+davis,crossing,12.0,ok,104.3,5.317831793050996,1.1470079885583446,1805,
+davis,dance-jump,12.0,ok,141.8,58.615086016208465,0.6717064801377796,3077,
+davis,dancing,12.0,ok,131.3,66.92132395942812,0.8086931487651388,8968,
+davis,disc-jockey,12.0,ok,117.2,125.55197146826323,1.0898733550785598,3170,
+davis,dog-gooses,12.0,ok,105.2,23.402288856214383,0.8903954316151453,1362,
+davis,dogs-scale,12.0,ok,108.7,114.31143838608594,0.9032024716125338,740,
+davis,drift-turn,12.0,FAILED,66.3,,,,[extract] stage A produced no current output for drift-turn: [stage_a] GATES FAILED — no bundle written; report: /content/drive/MyDrive/ditflow_extract/viz/stage_a/drift-turn/qc_failed.json (SKILL §7)
+davis,drone,12.0,FAILED,73.4,,,,[extract] stage C produced no current output for drone: ValueError: zero-size array to reduction operation minimum which has no identity — a failed gate is a finding; nothing packed (CLAUDE.md §3.4)
+davis,elephant,12.0,ok,103.0,21.706491280379208,0.8162619905342327,1609,
+davis,flamingo,12.0,ok,115.7,31.631207260736883,0.5325815170906274,4418,
+davis,hike,12.0,ok,116.4,21.357989216952802,0.7701322794236501,6092,
+davis,hockey,12.0,ok,104.5,27.411159477195326,0.852730677204767,2653,
+davis,horsejump-low,12.0,FAILED,60.6,,,,[extract] stage A produced no current output for horsejump-low: [stage_a] GATES FAILED — no bundle written; report: /content/drive/MyDrive/ditflow_extract/viz/stage_a/horsejump-low/qc_failed.json (SKI
+davis,kid-football,12.0,FAILED,60.0,,,,[extract] stage A produced no current output for kid-football: [stage_a] GATES FAILED — no bundle written; report: /content/drive/MyDrive/ditflow_extract/viz/stage_a/kid-football/qc_failed.json (SKILL
+davis,kite-walk,12.0,ok,112.9,19.4437583874494,1.7136141554676,5061,

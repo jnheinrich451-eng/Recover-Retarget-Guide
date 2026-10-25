@@ -1,0 +1,1970 @@
+[
+ {
+  "pair": "000000000035.1.003/vehicle",
+  "t_a": 4,
+  "F_pair": 77,
+  "ba": {
+   "nfev": 400,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 200,
+     "status": 0
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.514167758890772,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 2.7540935932556296,
+   "reproj_rms_after": 1.2560701266300376,
+   "n_obs": 14733,
+   "n_points": 555,
+   "n_cams": 77,
+   "prior_rms_rel_after": 0.03766878351093586,
+   "dropped_observations": {
+    "behind": 22,
+    "outside": 682,
+    "far_from_init": 1475
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 555,
+  "n_held": 714,
+  "heldout_px": {
+   "median_all": 5.861330852195552,
+   "p90": 8.58273484631338,
+   "curve_every8": [
+    0.31,
+    1.39,
+    1.82,
+    2.63,
+    4.47,
+    6.32,
+    7.62,
+    9.01,
+    8.47,
+    5.57
+   ],
+   "median_all_before_ba": 7.233341121343106
+  },
+  "anchor_depth_scale_change": 1.004062789477846,
+  "rot_change_vs_init_deg_max": 7.674075693052584,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "fail"
+  },
+  "x0_no_degradation": true,
+  "instrument": {
+   "prior_weight_px": 50.0,
+   "n_anchor": 40,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000035.1.003/vehicle",
+  "t_a": 4,
+  "F_pair": 77,
+  "ba": {
+   "nfev": 212,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 12,
+     "status": 2
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.610601406520609,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 2.7540935932556296,
+   "reproj_rms_after": 1.2999462684022314,
+   "n_obs": 14733,
+   "n_points": 555,
+   "n_cams": 77,
+   "prior_rms_rel_after": 0.05724786539329458,
+   "dropped_observations": {
+    "behind": 22,
+    "outside": 682,
+    "far_from_init": 1475
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 555,
+  "n_held": 714,
+  "heldout_px": {
+   "median_all": 5.334624591353669,
+   "p90": 7.390679931562419,
+   "curve_every8": [
+    0.31,
+    1.25,
+    1.68,
+    1.86,
+    4.27,
+    5.37,
+    6.47,
+    7.85,
+    6.68,
+    6.2
+   ],
+   "median_all_before_ba": 7.233341121343106
+  },
+  "anchor_depth_scale_change": 1.0005227659169929,
+  "rot_change_vs_init_deg_max": 6.66929101337653,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "fail"
+  },
+  "x0_no_degradation": true,
+  "instrument": {
+   "prior_weight_px": 50.0,
+   "n_anchor": 555,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000035.1.003/vehicle",
+  "t_a": 4,
+  "F_pair": 77,
+  "ba": {
+   "nfev": 400,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 200,
+     "status": 0
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.517861077439216,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 2.7540935932556296,
+   "reproj_rms_after": 1.2595496053176778,
+   "n_obs": 14733,
+   "n_points": 555,
+   "n_cams": 77,
+   "prior_rms_rel_after": 0.002911082626383514,
+   "dropped_observations": {
+    "behind": 22,
+    "outside": 682,
+    "far_from_init": 1475
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 555,
+  "n_held": 714,
+  "heldout_px": {
+   "median_all": 5.868779223988396,
+   "p90": 8.576815743532542,
+   "curve_every8": [
+    0.32,
+    1.38,
+    1.81,
+    2.63,
+    4.46,
+    6.33,
+    7.62,
+    8.99,
+    8.48,
+    5.56
+   ],
+   "median_all_before_ba": 7.233341121343106
+  },
+  "anchor_depth_scale_change": 1.0002857027873522,
+  "rot_change_vs_init_deg_max": 7.684441968668625,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "fail"
+  },
+  "x0_no_degradation": true,
+  "instrument": {
+   "prior_weight_px": 200.0,
+   "n_anchor": 40,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000035.1.003/vehicle",
+  "t_a": 4,
+  "F_pair": 77,
+  "ba": {
+   "nfev": 208,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 8,
+     "status": 2
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.982772427467696,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 2.7540935932556296,
+   "reproj_rms_after": 1.4312535917442928,
+   "n_obs": 14733,
+   "n_points": 555,
+   "n_cams": 77,
+   "prior_rms_rel_after": 0.016599414510690202,
+   "dropped_observations": {
+    "behind": 22,
+    "outside": 682,
+    "far_from_init": 1475
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 555,
+  "n_held": 714,
+  "heldout_px": {
+   "median_all": 5.093405446034928,
+   "p90": 7.2526115745279744,
+   "curve_every8": [
+    0.35,
+    1.26,
+    1.6,
+    1.94,
+    4.26,
+    5.14,
+    6.4,
+    7.63,
+    6.56,
+    6.78
+   ],
+   "median_all_before_ba": 7.233341121343106
+  },
+  "anchor_depth_scale_change": 1.0000554511264212,
+  "rot_change_vs_init_deg_max": 6.233273475363135,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "fail"
+  },
+  "x0_no_degradation": true,
+  "instrument": {
+   "prior_weight_px": 200.0,
+   "n_anchor": 555,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000035.1.003/vehicle",
+  "t_a": 4,
+  "F_pair": 77,
+  "ba": {
+   "nfev": 400,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 200,
+     "status": 0
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.5172179146557228,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 2.7540935932556296,
+   "reproj_rms_after": 1.2599235733347116,
+   "n_obs": 14733,
+   "n_points": 555,
+   "n_cams": 77,
+   "prior_rms_rel_after": 0.00018266971814253464,
+   "dropped_observations": {
+    "behind": 22,
+    "outside": 682,
+    "far_from_init": 1475
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 555,
+  "n_held": 714,
+  "heldout_px": {
+   "median_all": 5.892845402347234,
+   "p90": 8.526694484150394,
+   "curve_every8": [
+    0.31,
+    1.4,
+    1.82,
+    2.64,
+    4.45,
+    6.3,
+    7.6,
+    8.97,
+    8.41,
+    5.45
+   ],
+   "median_all_before_ba": 7.233341121343106
+  },
+  "anchor_depth_scale_change": 1.0000164259729458,
+  "rot_change_vs_init_deg_max": 7.686491850498616,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "fail"
+  },
+  "x0_no_degradation": true,
+  "instrument": {
+   "prior_weight_px": 800.0,
+   "n_anchor": 40,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000035.1.003/vehicle",
+  "t_a": 4,
+  "F_pair": 77,
+  "ba": {
+   "nfev": 207,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 7,
+     "status": 2
+    },
+    {
+     "loss": "huber",
+     "f_scale": 3.157622275632723,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 2.7540935932556296,
+   "reproj_rms_after": 1.51658030612123,
+   "n_obs": 14733,
+   "n_points": 555,
+   "n_cams": 77,
+   "prior_rms_rel_after": 0.0016364272410857776,
+   "dropped_observations": {
+    "behind": 22,
+    "outside": 682,
+    "far_from_init": 1475
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 555,
+  "n_held": 714,
+  "heldout_px": {
+   "median_all": 5.15148781982526,
+   "p90": 6.982587859403339,
+   "curve_every8": [
+    0.48,
+    1.31,
+    1.63,
+    2.03,
+    4.18,
+    5.3,
+    6.39,
+    7.52,
+    6.32,
+    6.27
+   ],
+   "median_all_before_ba": 7.233341121343106
+  },
+  "anchor_depth_scale_change": 1.0000052703885265,
+  "rot_change_vs_init_deg_max": 6.192455735831895,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "fail"
+  },
+  "x0_no_degradation": true,
+  "instrument": {
+   "prior_weight_px": 800.0,
+   "n_anchor": 555,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "t_a": 47,
+  "F_pair": 33,
+  "ba": {
+   "nfev": 305,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 105,
+     "status": 2
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.012481991496745,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 2.1839444590047217,
+   "reproj_rms_after": 0.973456022268192,
+   "n_obs": 16990,
+   "n_points": 547,
+   "n_cams": 33,
+   "prior_rms_rel_after": 0.10819479738623299,
+   "dropped_observations": {
+    "behind": 0,
+    "outside": 103,
+    "far_from_init": 437
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 547,
+  "n_held": 546,
+  "heldout_px": {
+   "median_all": 3.329470562220359,
+   "p90": 3.971284335207555,
+   "curve_every8": [
+    0.24,
+    1.41,
+    3.4,
+    3.68
+   ],
+   "median_all_before_ba": 2.3478936351469075
+  },
+  "anchor_depth_scale_change": 0.9936116122949776,
+  "rot_change_vs_init_deg_max": 1.6308398689093637,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "pass"
+  },
+  "x0_no_degradation": false,
+  "instrument": {
+   "prior_weight_px": 50.0,
+   "n_anchor": 40,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "t_a": 47,
+  "F_pair": 33,
+  "ba": {
+   "nfev": 212,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 12,
+     "status": 2
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.4691740539640317,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 2.1839444590047217,
+   "reproj_rms_after": 1.0833752293028363,
+   "n_obs": 16990,
+   "n_points": 547,
+   "n_cams": 33,
+   "prior_rms_rel_after": 0.08453274672286508,
+   "dropped_observations": {
+    "behind": 0,
+    "outside": 103,
+    "far_from_init": 437
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 547,
+  "n_held": 546,
+  "heldout_px": {
+   "median_all": 2.284418633862515,
+   "p90": 2.663346958129008,
+   "curve_every8": [
+    0.23,
+    0.82,
+    2.48,
+    2.49
+   ],
+   "median_all_before_ba": 2.3478936351469075
+  },
+  "anchor_depth_scale_change": 1.0002940474436433,
+  "rot_change_vs_init_deg_max": 0.38250137646264665,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "pass"
+  },
+  "x0_no_degradation": true,
+  "instrument": {
+   "prior_weight_px": 50.0,
+   "n_anchor": 547,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "t_a": 47,
+  "F_pair": 33,
+  "ba": {
+   "nfev": 303,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 103,
+     "status": 2
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.0253250840407317,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 2.1839444590047217,
+   "reproj_rms_after": 1.0042467174958345,
+   "n_obs": 16990,
+   "n_points": 547,
+   "n_cams": 33,
+   "prior_rms_rel_after": 0.01794869165281697,
+   "dropped_observations": {
+    "behind": 0,
+    "outside": 103,
+    "far_from_init": 437
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 547,
+  "n_held": 546,
+  "heldout_px": {
+   "median_all": 3.4103695400174283,
+   "p90": 4.065824775001948,
+   "curve_every8": [
+    0.25,
+    1.5,
+    3.47,
+    3.77
+   ],
+   "median_all_before_ba": 2.3478936351469075
+  },
+  "anchor_depth_scale_change": 0.9995542690892409,
+  "rot_change_vs_init_deg_max": 1.6669545761338693,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "pass"
+  },
+  "x0_no_degradation": false,
+  "instrument": {
+   "prior_weight_px": 200.0,
+   "n_anchor": 40,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "t_a": 47,
+  "F_pair": 33,
+  "ba": {
+   "nfev": 206,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 6,
+     "status": 2
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.7270800788384033,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 2.1839444590047217,
+   "reproj_rms_after": 1.3230488051299536,
+   "n_obs": 16990,
+   "n_points": 547,
+   "n_cams": 33,
+   "prior_rms_rel_after": 0.00845016172340383,
+   "dropped_observations": {
+    "behind": 0,
+    "outside": 103,
+    "far_from_init": 437
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 547,
+  "n_held": 546,
+  "heldout_px": {
+   "median_all": 2.3371336727561296,
+   "p90": 2.7569149162908255,
+   "curve_every8": [
+    0.31,
+    0.88,
+    2.53,
+    2.53
+   ],
+   "median_all_before_ba": 2.3478936351469075
+  },
+  "anchor_depth_scale_change": 0.9998212551427494,
+  "rot_change_vs_init_deg_max": 0.43206470758203624,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "pass"
+  },
+  "x0_no_degradation": true,
+  "instrument": {
+   "prior_weight_px": 200.0,
+   "n_anchor": 547,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "t_a": 47,
+  "F_pair": 33,
+  "ba": {
+   "nfev": 304,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 104,
+     "status": 2
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.025655251786184,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 2.1839444590047217,
+   "reproj_rms_after": 1.0105344157607128,
+   "n_obs": 16990,
+   "n_points": 547,
+   "n_cams": 33,
+   "prior_rms_rel_after": 0.00043033963084741225,
+   "dropped_observations": {
+    "behind": 0,
+    "outside": 103,
+    "far_from_init": 437
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 547,
+  "n_held": 546,
+  "heldout_px": {
+   "median_all": 3.392367290940623,
+   "p90": 4.033692262769428,
+   "curve_every8": [
+    0.26,
+    1.48,
+    3.46,
+    3.76
+   ],
+   "median_all_before_ba": 2.3478936351469075
+  },
+  "anchor_depth_scale_change": 0.9999705974202426,
+  "rot_change_vs_init_deg_max": 1.6367214149578588,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "pass"
+  },
+  "x0_no_degradation": false,
+  "instrument": {
+   "prior_weight_px": 800.0,
+   "n_anchor": 40,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "t_a": 47,
+  "F_pair": 33,
+  "ba": {
+   "nfev": 205,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 5,
+     "status": 2
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.7506035261769632,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 2.1839444590047217,
+   "reproj_rms_after": 1.3520882863260362,
+   "n_obs": 16990,
+   "n_points": 547,
+   "n_cams": 33,
+   "prior_rms_rel_after": 0.00034583468080111535,
+   "dropped_observations": {
+    "behind": 0,
+    "outside": 103,
+    "far_from_init": 437
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 547,
+  "n_held": 546,
+  "heldout_px": {
+   "median_all": 2.3425425121593957,
+   "p90": 2.753820725605391,
+   "curve_every8": [
+    0.31,
+    0.88,
+    2.55,
+    2.54
+   ],
+   "median_all_before_ba": 2.3478936351469075
+  },
+  "anchor_depth_scale_change": 0.9999882788764309,
+  "rot_change_vs_init_deg_max": 0.46541583091443445,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "pass"
+  },
+  "x0_no_degradation": true,
+  "instrument": {
+   "prior_weight_px": 800.0,
+   "n_anchor": 547,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "t_a": 0,
+  "F_pair": 81,
+  "ba": {
+   "nfev": 212,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 12,
+     "status": 2
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.0,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 2.20784451093006,
+   "reproj_rms_after": 0.732758922086845,
+   "n_obs": 28426,
+   "n_points": 372,
+   "n_cams": 81,
+   "prior_rms_rel_after": 0.14447284454849177,
+   "dropped_observations": {
+    "behind": 0,
+    "outside": 16,
+    "far_from_init": 314
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 372,
+  "n_held": 360,
+  "heldout_px": {
+   "median_all": 2.29164740371251,
+   "p90": 3.4474786488552693,
+   "curve_every8": [
+    0.33,
+    0.66,
+    0.9,
+    1.02,
+    1.01,
+    2.35,
+    3.13,
+    3.38,
+    3.12,
+    3.46
+   ],
+   "median_all_before_ba": 1.9921704894115195
+  },
+  "anchor_depth_scale_change": 0.9207832174274984,
+  "rot_change_vs_init_deg_max": 1.980127595813049,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "pass"
+  },
+  "x0_no_degradation": false,
+  "instrument": {
+   "prior_weight_px": 50.0,
+   "n_anchor": 40,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "t_a": 0,
+  "F_pair": 81,
+  "ba": {
+   "nfev": 210,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 10,
+     "status": 2
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.0,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 2.20784451093006,
+   "reproj_rms_after": 0.772000712477757,
+   "n_obs": 28426,
+   "n_points": 372,
+   "n_cams": 81,
+   "prior_rms_rel_after": 0.14539898524351225,
+   "dropped_observations": {
+    "behind": 0,
+    "outside": 16,
+    "far_from_init": 314
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 372,
+  "n_held": 360,
+  "heldout_px": {
+   "median_all": 2.5642111017521803,
+   "p90": 4.13617500798885,
+   "curve_every8": [
+    0.59,
+    0.81,
+    1.01,
+    1.1,
+    1.55,
+    2.62,
+    3.44,
+    3.78,
+    3.88,
+    4.1
+   ],
+   "median_all_before_ba": 1.9921704894115195
+  },
+  "anchor_depth_scale_change": 0.9749808166972194,
+  "rot_change_vs_init_deg_max": 2.154782557630694,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "pass"
+  },
+  "x0_no_degradation": false,
+  "instrument": {
+   "prior_weight_px": 50.0,
+   "n_anchor": 372,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "t_a": 0,
+  "F_pair": 81,
+  "ba": {
+   "nfev": 215,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 15,
+     "status": 2
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.0,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 2.20784451093006,
+   "reproj_rms_after": 0.7854529889668532,
+   "n_obs": 28426,
+   "n_points": 372,
+   "n_cams": 81,
+   "prior_rms_rel_after": 0.04190158374381242,
+   "dropped_observations": {
+    "behind": 0,
+    "outside": 16,
+    "far_from_init": 314
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 372,
+  "n_held": 360,
+  "heldout_px": {
+   "median_all": 2.053469015579192,
+   "p90": 2.8059189087225644,
+   "curve_every8": [
+    0.5,
+    0.77,
+    1.23,
+    1.32,
+    1.27,
+    2.06,
+    2.66,
+    2.8,
+    2.72,
+    2.74
+   ],
+   "median_all_before_ba": 1.9921704894115195
+  },
+  "anchor_depth_scale_change": 0.9900046895732828,
+  "rot_change_vs_init_deg_max": 2.7398554649299554,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "pass"
+  },
+  "x0_no_degradation": true,
+  "instrument": {
+   "prior_weight_px": 200.0,
+   "n_anchor": 40,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "t_a": 0,
+  "F_pair": 81,
+  "ba": {
+   "nfev": 208,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 8,
+     "status": 2
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.3172900015559357,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 2.20784451093006,
+   "reproj_rms_after": 1.093797423069351,
+   "n_obs": 28426,
+   "n_points": 372,
+   "n_cams": 81,
+   "prior_rms_rel_after": 0.0628366567595772,
+   "dropped_observations": {
+    "behind": 0,
+    "outside": 16,
+    "far_from_init": 314
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 372,
+  "n_held": 360,
+  "heldout_px": {
+   "median_all": 2.0255196940664697,
+   "p90": 3.1194422881458794,
+   "curve_every8": [
+    0.75,
+    0.89,
+    0.97,
+    1.01,
+    1.16,
+    2.03,
+    2.73,
+    2.95,
+    2.98,
+    3.15
+   ],
+   "median_all_before_ba": 1.9921704894115195
+  },
+  "anchor_depth_scale_change": 0.9964254410087946,
+  "rot_change_vs_init_deg_max": 1.048229403755668,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "pass"
+  },
+  "x0_no_degradation": true,
+  "instrument": {
+   "prior_weight_px": 200.0,
+   "n_anchor": 372,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "t_a": 0,
+  "F_pair": 81,
+  "ba": {
+   "nfev": 213,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 13,
+     "status": 2
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.0,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 2.20784451093006,
+   "reproj_rms_after": 0.8207105342671529,
+   "n_obs": 28426,
+   "n_points": 372,
+   "n_cams": 81,
+   "prior_rms_rel_after": 0.0011525002836947872,
+   "dropped_observations": {
+    "behind": 0,
+    "outside": 16,
+    "far_from_init": 314
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 372,
+  "n_held": 360,
+  "heldout_px": {
+   "median_all": 2.010420634929652,
+   "p90": 2.8390257465003526,
+   "curve_every8": [
+    0.58,
+    0.8,
+    1.3,
+    1.4,
+    1.38,
+    2.06,
+    2.69,
+    2.78,
+    2.78,
+    2.8
+   ],
+   "median_all_before_ba": 1.9921704894115195
+  },
+  "anchor_depth_scale_change": 0.9993275208109877,
+  "rot_change_vs_init_deg_max": 2.840799321633173,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "pass"
+  },
+  "x0_no_degradation": true,
+  "instrument": {
+   "prior_weight_px": 800.0,
+   "n_anchor": 40,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "t_a": 0,
+  "F_pair": 81,
+  "ba": {
+   "nfev": 206,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 6,
+     "status": 2
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.441899431456379,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 2.20784451093006,
+   "reproj_rms_after": 1.334383974507682,
+   "n_obs": 28426,
+   "n_points": 372,
+   "n_cams": 81,
+   "prior_rms_rel_after": 0.010096801072477658,
+   "dropped_observations": {
+    "behind": 0,
+    "outside": 16,
+    "far_from_init": 314
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 372,
+  "n_held": 360,
+  "heldout_px": {
+   "median_all": 2.0322638547202536,
+   "p90": 3.0954927630307028,
+   "curve_every8": [
+    0.77,
+    0.84,
+    0.92,
+    0.95,
+    1.08,
+    2.05,
+    2.69,
+    2.96,
+    2.96,
+    3.12
+   ],
+   "median_all_before_ba": 1.9921704894115195
+  },
+  "anchor_depth_scale_change": 0.9997578557990512,
+  "rot_change_vs_init_deg_max": 0.7212023587184458,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "pass"
+  },
+  "x0_no_degradation": true,
+  "instrument": {
+   "prior_weight_px": 800.0,
+   "n_anchor": 372,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "t_a": 0,
+  "F_pair": 81,
+  "ba": {
+   "nfev": 400,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 200,
+     "status": 0
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.0,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 1.9141648483825215,
+   "reproj_rms_after": 0.6706702929747492,
+   "n_obs": 37566,
+   "n_points": 584,
+   "n_cams": 81,
+   "prior_rms_rel_after": 0.09736223051766665,
+   "dropped_observations": {
+    "behind": 0,
+    "outside": 270,
+    "far_from_init": 165
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 584,
+  "n_held": 599,
+  "heldout_px": {
+   "median_all": 1.9681647760414078,
+   "p90": 3.576408694770565,
+   "curve_every8": [
+    0.37,
+    0.44,
+    0.81,
+    0.96,
+    1.17,
+    2.0,
+    2.88,
+    2.99,
+    3.63,
+    3.55
+   ],
+   "median_all_before_ba": 1.6893013042992904
+  },
+  "anchor_depth_scale_change": 1.0003905950951402,
+  "rot_change_vs_init_deg_max": 0.1762735842582621,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "pass"
+  },
+  "x0_no_degradation": false,
+  "instrument": {
+   "prior_weight_px": 50.0,
+   "n_anchor": 40,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "t_a": 0,
+  "F_pair": 81,
+  "ba": {
+   "nfev": 209,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 9,
+     "status": 2
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.0,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 1.9141648483825215,
+   "reproj_rms_after": 0.7091583826162066,
+   "n_obs": 37566,
+   "n_points": 584,
+   "n_cams": 81,
+   "prior_rms_rel_after": 0.08988379818197291,
+   "dropped_observations": {
+    "behind": 0,
+    "outside": 270,
+    "far_from_init": 165
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 584,
+  "n_held": 599,
+  "heldout_px": {
+   "median_all": 1.758606043309788,
+   "p90": 3.3206930226153566,
+   "curve_every8": [
+    0.36,
+    0.41,
+    0.74,
+    0.79,
+    0.99,
+    1.83,
+    2.49,
+    2.63,
+    3.4,
+    3.24
+   ],
+   "median_all_before_ba": 1.6893013042992904
+  },
+  "anchor_depth_scale_change": 0.9960489703452046,
+  "rot_change_vs_init_deg_max": 0.14705833579286864,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "pass"
+  },
+  "x0_no_degradation": true,
+  "instrument": {
+   "prior_weight_px": 50.0,
+   "n_anchor": 584,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "t_a": 0,
+  "F_pair": 81,
+  "ba": {
+   "nfev": 400,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 200,
+     "status": 0
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.0,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 1.9141648483825215,
+   "reproj_rms_after": 0.6808875516666684,
+   "n_obs": 37566,
+   "n_points": 584,
+   "n_cams": 81,
+   "prior_rms_rel_after": 0.06026856547405377,
+   "dropped_observations": {
+    "behind": 0,
+    "outside": 270,
+    "far_from_init": 165
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 584,
+  "n_held": 599,
+  "heldout_px": {
+   "median_all": 2.062000399628955,
+   "p90": 3.7342575330101027,
+   "curve_every8": [
+    0.36,
+    0.46,
+    0.85,
+    1.04,
+    1.33,
+    2.1,
+    2.88,
+    3.04,
+    3.6,
+    3.68
+   ],
+   "median_all_before_ba": 1.6893013042992904
+  },
+  "anchor_depth_scale_change": 1.0007448062060573,
+  "rot_change_vs_init_deg_max": 0.20553651419994234,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "pass"
+  },
+  "x0_no_degradation": false,
+  "instrument": {
+   "prior_weight_px": 200.0,
+   "n_anchor": 40,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "t_a": 0,
+  "F_pair": 81,
+  "ba": {
+   "nfev": 207,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 7,
+     "status": 2
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.273824646912792,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 1.9141648483825215,
+   "reproj_rms_after": 0.8681278251414524,
+   "n_obs": 37566,
+   "n_points": 584,
+   "n_cams": 81,
+   "prior_rms_rel_after": 0.043459452342832335,
+   "dropped_observations": {
+    "behind": 0,
+    "outside": 270,
+    "far_from_init": 165
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 584,
+  "n_held": 599,
+  "heldout_px": {
+   "median_all": 1.7508256896686856,
+   "p90": 3.3876783722549493,
+   "curve_every8": [
+    0.47,
+    0.47,
+    0.77,
+    0.81,
+    1.04,
+    1.84,
+    2.57,
+    2.66,
+    3.47,
+    3.31
+   ],
+   "median_all_before_ba": 1.6893013042992904
+  },
+  "anchor_depth_scale_change": 0.999725296050354,
+  "rot_change_vs_init_deg_max": 0.1766416957675236,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "pass"
+  },
+  "x0_no_degradation": true,
+  "instrument": {
+   "prior_weight_px": 200.0,
+   "n_anchor": 584,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "t_a": 0,
+  "F_pair": 81,
+  "ba": {
+   "nfev": 400,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 200,
+     "status": 0
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.0,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 1.9141648483825215,
+   "reproj_rms_after": 0.7079894201990761,
+   "n_obs": 37566,
+   "n_points": 584,
+   "n_cams": 81,
+   "prior_rms_rel_after": 0.010750040878820406,
+   "dropped_observations": {
+    "behind": 0,
+    "outside": 270,
+    "far_from_init": 165
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 584,
+  "n_held": 599,
+  "heldout_px": {
+   "median_all": 2.0455919881154347,
+   "p90": 3.717364590597354,
+   "curve_every8": [
+    0.36,
+    0.46,
+    0.86,
+    1.04,
+    1.31,
+    2.09,
+    2.92,
+    3.05,
+    3.6,
+    3.72
+   ],
+   "median_all_before_ba": 1.6893013042992904
+  },
+  "anchor_depth_scale_change": 1.0000557756534998,
+  "rot_change_vs_init_deg_max": 0.23058623394849015,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "pass"
+  },
+  "x0_no_degradation": false,
+  "instrument": {
+   "prior_weight_px": 800.0,
+   "n_anchor": 40,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "t_a": 0,
+  "F_pair": 81,
+  "ba": {
+   "nfev": 206,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 6,
+     "status": 2
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.479124226905858,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 1.9141648483825215,
+   "reproj_rms_after": 1.0867197759496985,
+   "n_obs": 37566,
+   "n_points": 584,
+   "n_cams": 81,
+   "prior_rms_rel_after": 0.010741458239834523,
+   "dropped_observations": {
+    "behind": 0,
+    "outside": 270,
+    "far_from_init": 165
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 584,
+  "n_held": 599,
+  "heldout_px": {
+   "median_all": 1.8261570799052975,
+   "p90": 3.338612917930635,
+   "curve_every8": [
+    0.61,
+    0.6,
+    0.84,
+    0.92,
+    1.11,
+    1.9,
+    2.6,
+    2.66,
+    3.3,
+    3.36
+   ],
+   "median_all_before_ba": 1.6893013042992904
+  },
+  "anchor_depth_scale_change": 0.9999655143024466,
+  "rot_change_vs_init_deg_max": 0.2206845329110417,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "pass"
+  },
+  "x0_no_degradation": false,
+  "instrument": {
+   "prior_weight_px": 800.0,
+   "n_anchor": 584,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "t_a": 47,
+  "F_pair": 33,
+  "ba": {
+   "nfev": 400,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 200,
+     "status": 0
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.0,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 1.3882263972262245,
+   "reproj_rms_after": 0.72875904953209,
+   "n_obs": 12996,
+   "n_points": 474,
+   "n_cams": 33,
+   "prior_rms_rel_after": 0.023975464813021014,
+   "dropped_observations": {
+    "behind": 0,
+    "outside": 4,
+    "far_from_init": 25
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 474,
+  "n_held": 476,
+  "heldout_px": {
+   "median_all": 1.3313418230925445,
+   "p90": 1.7715349005087222,
+   "curve_every8": [
+    0.15,
+    0.66,
+    1.3,
+    1.41
+   ],
+   "median_all_before_ba": 1.1003698421555859
+  },
+  "anchor_depth_scale_change": 0.9965714292185719,
+  "rot_change_vs_init_deg_max": 2.736706867418328,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "pass"
+  },
+  "x0_no_degradation": false,
+  "instrument": {
+   "prior_weight_px": 50.0,
+   "n_anchor": 40,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "t_a": 47,
+  "F_pair": 33,
+  "ba": {
+   "nfev": 207,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 7,
+     "status": 2
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.0,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 1.3882263972262245,
+   "reproj_rms_after": 0.8038685036490762,
+   "n_obs": 12996,
+   "n_points": 474,
+   "n_cams": 33,
+   "prior_rms_rel_after": 0.034656889075669745,
+   "dropped_observations": {
+    "behind": 0,
+    "outside": 4,
+    "far_from_init": 25
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 474,
+  "n_held": 476,
+  "heldout_px": {
+   "median_all": 1.1542971262720734,
+   "p90": 1.3697424865181214,
+   "curve_every8": [
+    0.24,
+    0.59,
+    1.13,
+    1.33
+   ],
+   "median_all_before_ba": 1.1003698421555859
+  },
+  "anchor_depth_scale_change": 0.997139468943548,
+  "rot_change_vs_init_deg_max": 0.36075309709554576,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "pass"
+  },
+  "x0_no_degradation": true,
+  "instrument": {
+   "prior_weight_px": 50.0,
+   "n_anchor": 474,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "t_a": 47,
+  "F_pair": 33,
+  "ba": {
+   "nfev": 400,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 200,
+     "status": 0
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.0,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 1.3882263972262245,
+   "reproj_rms_after": 0.7328249879737808,
+   "n_obs": 12996,
+   "n_points": 474,
+   "n_cams": 33,
+   "prior_rms_rel_after": 0.0026672987379398505,
+   "dropped_observations": {
+    "behind": 0,
+    "outside": 4,
+    "far_from_init": 25
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 474,
+  "n_held": 476,
+  "heldout_px": {
+   "median_all": 1.3001820275833351,
+   "p90": 1.7506150550441828,
+   "curve_every8": [
+    0.15,
+    0.65,
+    1.28,
+    1.41
+   ],
+   "median_all_before_ba": 1.1003698421555859
+  },
+  "anchor_depth_scale_change": 0.9997326275265899,
+  "rot_change_vs_init_deg_max": 2.5609617752856924,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "pass"
+  },
+  "x0_no_degradation": false,
+  "instrument": {
+   "prior_weight_px": 200.0,
+   "n_anchor": 40,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "t_a": 47,
+  "F_pair": 33,
+  "ba": {
+   "nfev": 206,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 6,
+     "status": 2
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.0,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 1.3882263972262245,
+   "reproj_rms_after": 0.8691829743098959,
+   "n_obs": 12996,
+   "n_points": 474,
+   "n_cams": 33,
+   "prior_rms_rel_after": 0.00912902473010441,
+   "dropped_observations": {
+    "behind": 0,
+    "outside": 4,
+    "far_from_init": 25
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 474,
+  "n_held": 476,
+  "heldout_px": {
+   "median_all": 1.1867470016270314,
+   "p90": 1.357528799484411,
+   "curve_every8": [
+    0.37,
+    0.65,
+    1.19,
+    1.36
+   ],
+   "median_all_before_ba": 1.1003698421555859
+  },
+  "anchor_depth_scale_change": 0.9998940931787066,
+  "rot_change_vs_init_deg_max": 0.44783785756989425,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "pass"
+  },
+  "x0_no_degradation": true,
+  "instrument": {
+   "prior_weight_px": 200.0,
+   "n_anchor": 474,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "t_a": 47,
+  "F_pair": 33,
+  "ba": {
+   "nfev": 400,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 200,
+     "status": 0
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.0,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 1.3882263972262245,
+   "reproj_rms_after": 0.7334810732668812,
+   "n_obs": 12996,
+   "n_points": 474,
+   "n_cams": 33,
+   "prior_rms_rel_after": 0.00017840233781320864,
+   "dropped_observations": {
+    "behind": 0,
+    "outside": 4,
+    "far_from_init": 25
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 474,
+  "n_held": 476,
+  "heldout_px": {
+   "median_all": 1.2935616351460753,
+   "p90": 1.763058011623292,
+   "curve_every8": [
+    0.15,
+    0.65,
+    1.27,
+    1.41
+   ],
+   "median_all_before_ba": 1.1003698421555859
+  },
+  "anchor_depth_scale_change": 0.9999821533766258,
+  "rot_change_vs_init_deg_max": 2.5291145133454176,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "pass"
+  },
+  "x0_no_degradation": false,
+  "instrument": {
+   "prior_weight_px": 800.0,
+   "n_anchor": 40,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "t_a": 47,
+  "F_pair": 33,
+  "ba": {
+   "nfev": 206,
+   "status": 0,
+   "stages": [
+    {
+     "loss": "linear",
+     "nfev": 6,
+     "status": 2
+    },
+    {
+     "loss": "huber",
+     "f_scale": 2.0,
+     "nfev": 200,
+     "status": 0,
+     "kept": true
+    }
+   ],
+   "reproj_rms_before": 1.3882263972262245,
+   "reproj_rms_after": 0.9027529963066689,
+   "n_obs": 12996,
+   "n_points": 474,
+   "n_cams": 33,
+   "prior_rms_rel_after": 0.00027751210950964343,
+   "dropped_observations": {
+    "behind": 0,
+    "outside": 4,
+    "far_from_init": 25
+   },
+   "init_consistent_with_camera_c": true
+  },
+  "n_solve_points": 474,
+  "n_held": 476,
+  "heldout_px": {
+   "median_all": 1.1968539177500643,
+   "p90": 1.3745192170440466,
+   "curve_every8": [
+    0.43,
+    0.67,
+    1.19,
+    1.36
+   ],
+   "median_all_before_ba": 1.1003698421555859
+  },
+  "anchor_depth_scale_change": 0.9999946438170797,
+  "rot_change_vs_init_deg_max": 0.4840548672660334,
+  "gate": {
+   "px_256": 4.923076923076923,
+   "outcome": "pass"
+  },
+  "x0_no_degradation": true,
+  "instrument": {
+   "prior_weight_px": 800.0,
+   "n_anchor": 474,
+   "init_px_max": 12.0,
+   "loss": "linear then huber (3xMAD)",
+   "split": "track index parity"
+  }
+ }
+]

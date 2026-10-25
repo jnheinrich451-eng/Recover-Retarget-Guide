@@ -1,0 +1,1686 @@
+[
+ {
+  "pair": "000000000035.1.003/vehicle",
+  "t_a": 4,
+  "T_l": 20,
+  "n_near_band_points": 16,
+  "dist_near_px": 128.2058820744203,
+  "Z_tri_c": 1.2526315393855576,
+  "Z_L_gnd_c": 1.2949035167694092,
+  "rho_c": 0.9673551142332876,
+  "strip": {
+   "band_px_256": 4,
+   "n_points": 0,
+   "Z_tri_strip": null,
+   "of_record": false
+  },
+  "rho_band_median": null,
+  "tracker_factor_r": 2.4646253893170087,
+  "tracker_factor_source": "near third (fallback: in-band matches 0 < 30)",
+  "record": {
+   "recipe": "carried",
+   "beta": null,
+   "interval": [
+    null,
+    null
+   ],
+   "ablations_at": null,
+   "full_method_repeat_at": null
+  },
+  "Z_L_gnd_base": null,
+  "Z_M_c": 1.1016058939118947,
+  "beta_via_rho_c_and_lift_plane": null,
+  "placement_offset": null,
+  "column_B_source": {
+   "Z_base_gtar": 1.1104571912963985,
+   "r_c_B": 1.0080349038012788
+  },
+  "s_c": 1.0,
+  "Z_L_base": null,
+  "kappa": null,
+  "beta_lo": 1.137095894555682,
+  "near_third_ratio_cot_over_d4rt": 2.4646253893170087,
+  "beta_hi": null,
+  "identity_checks": {
+   "Z_M_c_over_Z_L_gnd_base": null,
+   "s_c_times_kappa": null,
+   "s_c_times_placement_over_kappa_identity": null,
+   "placement_Zbase_gtar_over_Z_L_base": null,
+   "beta_direct_condition_1": 1.137095894555682,
+   "beta_via_rho_c_and_lift_plane": null,
+   "rho_o_direct_Ztri_c_over_Z_L_base": null,
+   "s_c_times_beta_direct": 1.137095894555682,
+   "dist_of_nearest_band_points_px": 128.2058820744203
+  },
+  "pre_check": null
+ },
+ {
+  "pair": "000000000035.1.003/vehicle",
+  "camera": "vipe_over_sigma",
+  "t_a": 4,
+  "T_l": 20,
+  "n_near_band_points": 12,
+  "dist_near_px": 129.47547667800828,
+  "Z_tri_c": 2.792530347359729,
+  "Z_L_gnd_c": 1.2608218789100647,
+  "rho_c": 2.2148492138903646,
+  "strip": {
+   "band_px_256": 4,
+   "n_points": 0,
+   "Z_tri_strip": null,
+   "of_record": false
+  },
+  "band_gauge_under_camera": {
+   "n_band_points": 12,
+   "min_points": 30,
+   "tol": 0.05,
+   "band_pixels": 18776,
+   "ratio": null,
+   "ci95": null,
+   "half_fit": null,
+   "half_verify": null,
+   "verify_rel_diff": null,
+   "band_reproj_median_px": 15.506689078718633,
+   "outcome": "undetermined (n=12<30)"
+  },
+  "rho_band_median": null,
+  "rho_band_any": null,
+  "tracker_factor_r": 1.6527427068378724,
+  "tracker_factor_source": "near third (fallback: in-band matches 0 < 30)",
+  "s_delta": null,
+  "contact_undefined": false,
+  "record": {
+   "recipe": "carried",
+   "beta_rec": null,
+   "beta_mid": null,
+   "beta_far": null,
+   "interval": [
+    null,
+    null
+   ],
+   "runs": {
+    "rec": null,
+    "mid": null,
+    "far": null
+   },
+   "determined": false,
+   "note": "rho not determined under this camera: the pair does not enter S4 (v2.6 \u00a72.3)"
+  },
+  "Z_L_gnd_base": null,
+  "Z_M_c": 1.1016058939118947,
+  "beta_via_rho_c_and_lift_plane": null,
+  "placement_offset": null,
+  "column_B_source": {
+   "Z_base_gtar": 1.1104571912963985,
+   "r_c_B": 1.0080349038012788
+  },
+  "s_c": 1.0,
+  "Z_L_base": null,
+  "kappa": null,
+  "beta_lo": 2.534963150426892,
+  "near_third_ratio_cot_over_d4rt": 1.6527427068378724,
+  "beta_hi": null,
+  "identity_checks": {
+   "Z_M_c_over_Z_L_gnd_base": null,
+   "s_c_times_kappa": null,
+   "s_c_times_placement_over_kappa_identity": null,
+   "placement_Zbase_gtar_over_Z_L_base": null,
+   "beta_direct_condition_1": 2.534963150426892,
+   "beta_via_rho_c_and_lift_plane": null,
+   "rho_o_direct_Ztri_c_over_Z_L_base": null,
+   "s_c_times_beta_direct": 2.534963150426892,
+   "dist_of_nearest_band_points_px": 129.47547667800828
+  },
+  "pre_check": null
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "t_a": 47,
+  "T_l": 9,
+  "n_near_band_points": 30,
+  "dist_near_px": 54.223649444603765,
+  "Z_tri_c": 3.27896943946989,
+  "Z_L_gnd_c": 2.6411027908325195,
+  "rho_c": 1.2415152681112818,
+  "strip": {
+   "band_px_256": 4,
+   "n_points": 0,
+   "Z_tri_strip": null,
+   "of_record": false
+  },
+  "rho_band_median": 1.148954869444884,
+  "tracker_factor_r": 1.1264643379946109,
+  "tracker_factor_source": "in-band matched points (n=414)",
+  "record": {
+   "recipe": "carried",
+   "beta": 1.4927854918492183,
+   "interval": [
+    1.4927854918492183,
+    1.8170377394183068
+   ],
+   "ablations_at": 1.4927854918492183,
+   "full_method_repeat_at": 1.8170377394183068
+  },
+  "Z_L_gnd_base": 2.01737774980139,
+  "Z_M_c": 1.5527187273723795,
+  "beta_via_rho_c_and_lift_plane": 1.6130450633289375,
+  "placement_offset": 0.7340825330980612,
+  "column_B_source": {
+   "Z_base_gtar": 1.4615039338202989,
+   "r_c_B": 0.9412547862377877
+  },
+  "s_c": 1.0,
+  "Z_L_base": 1.990925908088684,
+  "kappa": 0.9868880076052637,
+  "beta_lo": 2.111760090005995,
+  "near_third_ratio_cot_over_d4rt": 0.9633410797895912,
+  "beta_hi": 1.8170377394183068,
+  "identity_checks": {
+   "Z_M_c_over_Z_L_gnd_base": 0.7696717818590216,
+   "s_c_times_kappa": 0.9868880076052637,
+   "s_c_times_placement_over_kappa_identity": 0.7244572485069707,
+   "placement_Zbase_gtar_over_Z_L_base": 0.7340825330980612,
+   "beta_direct_condition_1": 2.111760090005995,
+   "beta_via_rho_c_and_lift_plane": 1.6130450633289375,
+   "rho_o_direct_Ztri_c_over_Z_L_base": 1.6469570395101971,
+   "s_c_times_beta_direct": 2.111760090005995,
+   "dist_of_nearest_band_points_px": 54.223649444603765
+  },
+  "pre_check": {
+   "beta_lo": 1.4927854918492183,
+   "beta_hi": 1.8170377394183068,
+   "median_patch": 0.5101313388238169,
+   "p90_patch": 1.590420963929935,
+   "share_above_half_patch": 0.5077160493827161,
+   "n_gated_patch_frames": 4536,
+   "per_frame": [
+    {
+     "latent_frame": 1,
+     "median_patch": 0.18680326358613344,
+     "n_gated": 567
+    },
+    {
+     "latent_frame": 2,
+     "median_patch": 0.3148119112704099,
+     "n_gated": 567
+    },
+    {
+     "latent_frame": 3,
+     "median_patch": 0.42479396578707174,
+     "n_gated": 567
+    },
+    {
+     "latent_frame": 4,
+     "median_patch": 0.5922775695521574,
+     "n_gated": 567
+    },
+    {
+     "latent_frame": 5,
+     "median_patch": 0.7080277868785306,
+     "n_gated": 567
+    },
+    {
+     "latent_frame": 6,
+     "median_patch": 0.8021871060772683,
+     "n_gated": 567
+    },
+    {
+     "latent_frame": 7,
+     "median_patch": 0.9747408961511259,
+     "n_gated": 567
+    },
+    {
+     "latent_frame": 8,
+     "median_patch": 1.0646730054108566,
+     "n_gated": 567
+    }
+   ],
+   "reading": "informative: the two bridges differ by more than the readout error on part of the lattice"
+  }
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "camera": "vipe_over_sigma",
+  "t_a": 47,
+  "T_l": 9,
+  "n_near_band_points": 30,
+  "dist_near_px": 54.223649444603765,
+  "Z_tri_c": 3.329140806200333,
+  "Z_L_gnd_c": 2.6411027908325195,
+  "rho_c": 1.260511638454985,
+  "strip": {
+   "band_px_256": 4,
+   "n_points": 0,
+   "Z_tri_strip": null,
+   "of_record": false
+  },
+  "band_gauge_under_camera": {
+   "n_band_points": 262,
+   "min_points": 30,
+   "tol": 0.05,
+   "band_pixels": 26323,
+   "ratio": 1.146690853916651,
+   "ci95": [
+    1.1086214953433702,
+    1.174698754853583
+   ],
+   "ci_half_width": 0.03303862975510641,
+   "half_fit": 1.1673339438535293,
+   "half_verify": 1.1419808929241573,
+   "verify_rel_diff": 0.021718764422867798,
+   "band_reproj_median_px": 1.2317070755897972,
+   "outcome": "determined"
+  },
+  "rho_band_median": 1.146690853916651,
+  "rho_band_any": 1.146690853916651,
+  "tracker_factor_r": 1.1334154122151079,
+  "tracker_factor_source": "in-band matched points (n=414)",
+  "s_delta": 0.7696717818590216,
+  "contact_undefined": true,
+  "record": {
+   "recipe": "carried",
+   "beta_rec": 1.4898439580921088,
+   "beta_mid": 1.637726194677966,
+   "beta_far": 1.8562241100364067,
+   "interval": [
+    1.4898439580921088,
+    1.8562241100364067
+   ],
+   "runs": {
+    "rec": 1.4898439580921088,
+    "mid": 1.637726194677966,
+    "far": 1.8562241100364067
+   },
+   "determined": true,
+   "note": null
+  },
+  "Z_L_gnd_base": 2.01737774980139,
+  "Z_M_c": 1.5527187273723795,
+  "beta_via_rho_c_and_lift_plane": 1.637726194677966,
+  "placement_offset": 0.7340825330980612,
+  "column_B_source": {
+   "Z_base_gtar": 1.4615039338202989,
+   "r_c_B": 0.9412547862377877
+  },
+  "s_c": 1.0,
+  "Z_L_base": 1.990925908088684,
+  "kappa": 0.9868880076052637,
+  "beta_lo": 2.1440720379757,
+  "near_third_ratio_cot_over_d4rt": 0.9588725989535705,
+  "beta_hi": 1.8562241100364067,
+  "identity_checks": {
+   "Z_M_c_over_Z_L_gnd_base": 0.7696717818590216,
+   "s_c_times_kappa": 0.9868880076052637,
+   "s_c_times_placement_over_kappa_identity": 0.7244572485069707,
+   "placement_Zbase_gtar_over_Z_L_base": 0.7340825330980612,
+   "beta_direct_condition_1": 2.1440720379757,
+   "beta_via_rho_c_and_lift_plane": 1.637726194677966,
+   "rho_o_direct_Ztri_c_over_Z_L_base": 1.672157056510633,
+   "s_c_times_beta_direct": 2.1440720379757,
+   "dist_of_nearest_band_points_px": 54.223649444603765
+  },
+  "pre_check": {
+   "beta_lo": 1.4898439580921088,
+   "beta_hi": 1.8562241100364067,
+   "median_patch": 0.5468718773967365,
+   "p90_patch": 1.7539728540213806,
+   "share_above_half_patch": 0.5207231040564374,
+   "n_gated_patch_frames": 4536,
+   "per_frame": [
+    {
+     "latent_frame": 1,
+     "median_patch": 0.15554627383443473,
+     "n_gated": 567
+    },
+    {
+     "latent_frame": 2,
+     "median_patch": 0.32396594688888347,
+     "n_gated": 567
+    },
+    {
+     "latent_frame": 3,
+     "median_patch": 0.4838244489726508,
+     "n_gated": 567
+    },
+    {
+     "latent_frame": 4,
+     "median_patch": 0.6399642424905687,
+     "n_gated": 567
+    },
+    {
+     "latent_frame": 5,
+     "median_patch": 0.7867618049634846,
+     "n_gated": 567
+    },
+    {
+     "latent_frame": 6,
+     "median_patch": 0.9197532779010045,
+     "n_gated": 567
+    },
+    {
+     "latent_frame": 7,
+     "median_patch": 1.0544220748480209,
+     "n_gated": 567
+    },
+    {
+     "latent_frame": 8,
+     "median_patch": 1.1449435616262666,
+     "n_gated": 567
+    }
+   ],
+   "reading": "informative: the two bridges differ by more than the readout error on part of the lattice"
+  }
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "t_a": 0,
+  "T_l": 21,
+  "n_near_band_points": 30,
+  "dist_near_px": 51.083221582509424,
+  "Z_tri_c": 3.678148647647765,
+  "Z_L_gnd_c": 2.8009963035583496,
+  "rho_c": 1.313157265853972,
+  "strip": {
+   "band_px_256": 4,
+   "n_points": 0,
+   "Z_tri_strip": null,
+   "of_record": false
+  },
+  "rho_band_median": 1.1668649581794057,
+  "tracker_factor_r": 1.3168270508046256,
+  "tracker_factor_source": "in-band matched points (n=352)",
+  "record": {
+   "recipe": "carried",
+   "beta": 1.2205357731460469,
+   "interval": [
+    1.2205357731460469,
+    1.8087368863277735
+   ],
+   "ablations_at": 1.2205357731460469,
+   "full_method_repeat_at": 1.8087368863277735
+  },
+  "Z_L_gnd_base": 1.9887746301806661,
+  "Z_M_c": 1.9013219249546272,
+  "beta_via_rho_c_and_lift_plane": 1.3735569034844588,
+  "placement_offset": 1.1533615742817274,
+  "column_B_source": {
+   "Z_base_gtar": 2.226152698818443,
+   "r_c_B": 1.17084469999554
+  },
+  "s_c": 0.8540842350858395,
+  "Z_L_base": 1.9301429390907288,
+  "kappa": 0.9705186851239092,
+  "beta_lo": 1.9345217658159282,
+  "near_third_ratio_cot_over_d4rt": 1.1456310052027243,
+  "beta_hi": 1.8087368863277735,
+  "identity_checks": {
+   "Z_M_c_over_Z_L_gnd_base": 0.9560268398948278,
+   "s_c_times_kappa": 0.8289047088205687,
+   "s_c_times_placement_over_kappa_identity": 0.956026839894828,
+   "placement_Zbase_gtar_over_Z_L_base": 1.1533615742817274,
+   "beta_direct_condition_1": 1.9345217658159282,
+   "beta_via_rho_c_and_lift_plane": 1.3735569034844588,
+   "rho_o_direct_Ztri_c_over_Z_L_base": 1.9056353667674502,
+   "s_c_times_beta_direct": 1.6522445426138046,
+   "dist_of_nearest_band_points_px": 51.083221582509424
+  },
+  "pre_check": {
+   "beta_lo": 1.2205357731460469,
+   "beta_hi": 1.8087368863277735,
+   "median_patch": 0.9275782261987533,
+   "p90_patch": 4.256205146892122,
+   "share_above_half_patch": 0.7467898832684825,
+   "n_gated_patch_frames": 30840,
+   "per_frame": [
+    {
+     "latent_frame": 1,
+     "median_patch": 0.14749364153765854,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 2,
+     "median_patch": 0.3038893198579687,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 3,
+     "median_patch": 0.4204570078849733,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 4,
+     "median_patch": 0.5287748465160449,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 5,
+     "median_patch": 0.6026209623570176,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 6,
+     "median_patch": 0.674956257561909,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 7,
+     "median_patch": 0.765956322439475,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 8,
+     "median_patch": 0.8367371189677262,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 9,
+     "median_patch": 0.9835605283853406,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 10,
+     "median_patch": 1.1226408653738102,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 11,
+     "median_patch": 1.2359455238332462,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 12,
+     "median_patch": 1.3229814170444758,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 13,
+     "median_patch": 1.475359471346535,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 14,
+     "median_patch": 1.5933619495473674,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 15,
+     "median_patch": 1.6637789584608145,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 16,
+     "median_patch": 1.7167521218316981,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 17,
+     "median_patch": 1.8044111308589699,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 18,
+     "median_patch": 1.8937208876650207,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 19,
+     "median_patch": 2.0057855710621673,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 20,
+     "median_patch": 2.024319155019433,
+     "n_gated": 1542
+    }
+   ],
+   "reading": "informative: the two bridges differ by more than the readout error on part of the lattice"
+  }
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "camera": "vipe_over_sigma",
+  "t_a": 0,
+  "T_l": 21,
+  "n_near_band_points": 30,
+  "dist_near_px": 51.083221582509424,
+  "Z_tri_c": 3.3403998817975618,
+  "Z_L_gnd_c": 2.8009963035583496,
+  "rho_c": 1.1925756123112197,
+  "strip": {
+   "band_px_256": 4,
+   "n_points": 0,
+   "Z_tri_strip": null,
+   "of_record": false
+  },
+  "band_gauge_under_camera": {
+   "n_band_points": 105,
+   "min_points": 30,
+   "tol": 0.05,
+   "band_pixels": 25015,
+   "ratio": 1.0936613169823495,
+   "ci95": [
+    1.0551410937514498,
+    1.1211272301500121
+   ],
+   "ci_half_width": 0.03299306819928116,
+   "half_fit": 1.057489649151258,
+   "half_verify": 1.1021782956039394,
+   "verify_rel_diff": 0.04225918096555237,
+   "band_reproj_median_px": 0.9694656261208792,
+   "outcome": "determined"
+  },
+  "rho_band_median": 1.0936613169823495,
+  "rho_band_any": 1.0936613169823495,
+  "tracker_factor_r": 1.3309919280245213,
+  "tracker_factor_source": "in-band matched points (n=352)",
+  "s_delta": 0.9560268398948278,
+  "contact_undefined": false,
+  "record": {
+   "recipe": "carried",
+   "beta_rec": 1.143965076443526,
+   "beta_mid": 1.2474290077906331,
+   "beta_far": 1.6603179401529704,
+   "interval": [
+    1.143965076443526,
+    1.6603179401529704
+   ],
+   "runs": {
+    "rec": 1.143965076443526,
+    "mid": 1.2474290077906331,
+    "far": 1.6603179401529704
+   },
+   "determined": true,
+   "note": null
+  },
+  "Z_L_gnd_base": 1.9887746301806661,
+  "Z_M_c": 1.9013219249546272,
+  "beta_via_rho_c_and_lift_plane": 1.2474290077906331,
+  "placement_offset": 1.1533615742817274,
+  "column_B_source": {
+   "Z_base_gtar": 2.226152698818443,
+   "r_c_B": 1.17084469999554
+  },
+  "s_c": 0.8540842350858395,
+  "Z_L_base": 1.9301429390907288,
+  "kappa": 0.9705186851239092,
+  "beta_lo": 1.75688284974533,
+  "near_third_ratio_cot_over_d4rt": 1.11974818295085,
+  "beta_hi": 1.6603179401529704,
+  "identity_checks": {
+   "Z_M_c_over_Z_L_gnd_base": 0.9560268398948278,
+   "s_c_times_kappa": 0.8289047088205687,
+   "s_c_times_placement_over_kappa_identity": 0.956026839894828,
+   "placement_Zbase_gtar_over_Z_L_base": 1.1533615742817274,
+   "beta_direct_condition_1": 1.75688284974533,
+   "beta_via_rho_c_and_lift_plane": 1.2474290077906331,
+   "rho_o_direct_Ztri_c_over_Z_L_base": 1.7306489660145021,
+   "s_c_times_beta_direct": 1.50052594486017,
+   "dist_of_nearest_band_points_px": 51.083221582509424
+  },
+  "pre_check": {
+   "beta_lo": 1.143965076443526,
+   "beta_hi": 1.6603179401529704,
+   "median_patch": 0.9156437194674101,
+   "p90_patch": 4.036784334276448,
+   "share_above_half_patch": 0.7444228274967575,
+   "n_gated_patch_frames": 30840,
+   "per_frame": [
+    {
+     "latent_frame": 1,
+     "median_patch": 0.1459661124626826,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 2,
+     "median_patch": 0.31773333864684966,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 3,
+     "median_patch": 0.46174698746429443,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 4,
+     "median_patch": 0.5582235493660487,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 5,
+     "median_patch": 0.6315434721996132,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 6,
+     "median_patch": 0.695101603402028,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 7,
+     "median_patch": 0.7685347313401109,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 8,
+     "median_patch": 0.8592660870863735,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 9,
+     "median_patch": 0.9562965704097766,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 10,
+     "median_patch": 1.089377848205265,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 11,
+     "median_patch": 1.195011484323731,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 12,
+     "median_patch": 1.2960117608632384,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 13,
+     "median_patch": 1.3979878679382756,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 14,
+     "median_patch": 1.5008581578411722,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 15,
+     "median_patch": 1.5990678196519648,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 16,
+     "median_patch": 1.667779017992625,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 17,
+     "median_patch": 1.7168404205359356,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 18,
+     "median_patch": 1.7721611718213335,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 19,
+     "median_patch": 1.8475592008854256,
+     "n_gated": 1542
+    },
+    {
+     "latent_frame": 20,
+     "median_patch": 1.924406015333826,
+     "n_gated": 1542
+    }
+   ],
+   "reading": "informative: the two bridges differ by more than the readout error on part of the lattice"
+  }
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "t_a": 0,
+  "T_l": 21,
+  "n_near_band_points": 30,
+  "dist_near_px": 51.083221582509424,
+  "Z_tri_c": 3.678148647647765,
+  "Z_L_gnd_c": 2.8009963035583496,
+  "rho_c": 1.313157265853972,
+  "strip": {
+   "band_px_256": 4,
+   "n_points": 0,
+   "Z_tri_strip": null,
+   "of_record": false
+  },
+  "rho_band_median": 1.1668649581794057,
+  "tracker_factor_r": 1.3168270508046256,
+  "tracker_factor_source": "in-band matched points (n=352)",
+  "record": {
+   "recipe": "carried",
+   "beta": 1.1797910769346305,
+   "interval": [
+    1.1797910769346305,
+    1.7483564889799363
+   ],
+   "ablations_at": 1.1797910769346305,
+   "full_method_repeat_at": 1.7483564889799363
+  },
+  "Z_L_gnd_base": 1.9887746301806661,
+  "Z_M_c": 1.9669850629007652,
+  "beta_via_rho_c_and_lift_plane": 1.3277039592341544,
+  "placement_offset": 1.0258320401509777,
+  "column_B_source": {
+   "Z_base_gtar": 1.9800024689904467,
+   "r_c_B": 1.006617948623608
+  },
+  "s_c": 1.0,
+  "Z_L_base": 1.9301429390907288,
+  "kappa": 0.9705186851239092,
+  "beta_lo": 1.8699423381606677,
+  "near_third_ratio_cot_over_d4rt": 1.1456310052027243,
+  "beta_hi": 1.7483564889799363,
+  "identity_checks": {
+   "Z_M_c_over_Z_L_gnd_base": 0.9890437222251164,
+   "s_c_times_kappa": 0.9705186851239092,
+   "s_c_times_placement_over_kappa_identity": 0.9955891627653041,
+   "placement_Zbase_gtar_over_Z_L_base": 1.0258320401509777,
+   "beta_direct_condition_1": 1.8699423381606677,
+   "beta_via_rho_c_and_lift_plane": 1.3277039592341544,
+   "rho_o_direct_Ztri_c_over_Z_L_base": 1.9056353667674502,
+   "s_c_times_beta_direct": 1.8699423381606677,
+   "dist_of_nearest_band_points_px": 51.083221582509424
+  },
+  "pre_check": {
+   "beta_lo": 1.1797910769346305,
+   "beta_hi": 1.7483564889799363,
+   "median_patch": 1.723031384057325,
+   "p90_patch": 5.092884699408599,
+   "share_above_half_patch": 0.8409959072305594,
+   "n_gated_patch_frames": 14660,
+   "per_frame": [
+    {
+     "latent_frame": 1,
+     "median_patch": 0.2898640076979362,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 2,
+     "median_patch": 0.5853149895327403,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 3,
+     "median_patch": 0.7926291896889748,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 4,
+     "median_patch": 0.9838273165624916,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 5,
+     "median_patch": 1.0923724173238856,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 6,
+     "median_patch": 1.1915093516045592,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 7,
+     "median_patch": 1.2794772222391035,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 8,
+     "median_patch": 1.4023962647040709,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 9,
+     "median_patch": 1.6114879978531735,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 10,
+     "median_patch": 1.844567341813086,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 11,
+     "median_patch": 2.0749252407906873,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 12,
+     "median_patch": 2.375114401494177,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 13,
+     "median_patch": 2.73731998189433,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 14,
+     "median_patch": 3.010535647733264,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 15,
+     "median_patch": 3.255971052826931,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 16,
+     "median_patch": 3.472129078419684,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 17,
+     "median_patch": 3.714636626277834,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 18,
+     "median_patch": 3.927183374869347,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 19,
+     "median_patch": 4.149277483446586,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 20,
+     "median_patch": 4.272062394215148,
+     "n_gated": 733
+    }
+   ],
+   "reading": "informative: the two bridges differ by more than the readout error on part of the lattice"
+  }
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "camera": "vipe_over_sigma",
+  "t_a": 0,
+  "T_l": 21,
+  "n_near_band_points": 30,
+  "dist_near_px": 51.083221582509424,
+  "Z_tri_c": 3.3403998817975618,
+  "Z_L_gnd_c": 2.8009963035583496,
+  "rho_c": 1.1925756123112197,
+  "strip": {
+   "band_px_256": 4,
+   "n_points": 0,
+   "Z_tri_strip": null,
+   "of_record": false
+  },
+  "band_gauge_under_camera": {
+   "n_band_points": 105,
+   "min_points": 30,
+   "tol": 0.05,
+   "band_pixels": 25015,
+   "ratio": 1.0936613169823495,
+   "ci95": [
+    1.0551410937514498,
+    1.1211272301500121
+   ],
+   "ci_half_width": 0.03299306819928116,
+   "half_fit": 1.057489649151258,
+   "half_verify": 1.1021782956039394,
+   "verify_rel_diff": 0.04225918096555237,
+   "band_reproj_median_px": 0.9694656261208792,
+   "outcome": "determined"
+  },
+  "rho_band_median": 1.0936613169823495,
+  "rho_band_any": 1.0936613169823495,
+  "tracker_factor_r": 1.3309919280245213,
+  "tracker_factor_source": "in-band matched points (n=352)",
+  "s_delta": 0.9890437222251164,
+  "contact_undefined": false,
+  "record": {
+   "recipe": "carried",
+   "beta_rec": 1.1057765116003853,
+   "beta_mid": 1.2057865446314184,
+   "beta_far": 1.604892157824997,
+   "interval": [
+    1.1057765116003853,
+    1.604892157824997
+   ],
+   "runs": {
+    "rec": 1.1057765116003853,
+    "mid": 1.2057865446314184,
+    "far": 1.604892157824997
+   },
+   "determined": true,
+   "note": null
+  },
+  "Z_L_gnd_base": 1.9887746301806661,
+  "Z_M_c": 1.9669850629007652,
+  "beta_via_rho_c_and_lift_plane": 1.2057865446314184,
+  "placement_offset": 1.0258320401509777,
+  "column_B_source": {
+   "Z_base_gtar": 1.9800024689904467,
+   "r_c_B": 1.006617948623608
+  },
+  "s_c": 1.0,
+  "Z_L_base": 1.9301429390907288,
+  "kappa": 0.9705186851239092,
+  "beta_lo": 1.6982334766037241,
+  "near_third_ratio_cot_over_d4rt": 1.11974818295085,
+  "beta_hi": 1.604892157824997,
+  "identity_checks": {
+   "Z_M_c_over_Z_L_gnd_base": 0.9890437222251164,
+   "s_c_times_kappa": 0.9705186851239092,
+   "s_c_times_placement_over_kappa_identity": 0.9955891627653041,
+   "placement_Zbase_gtar_over_Z_L_base": 1.0258320401509777,
+   "beta_direct_condition_1": 1.6982334766037241,
+   "beta_via_rho_c_and_lift_plane": 1.2057865446314184,
+   "rho_o_direct_Ztri_c_over_Z_L_base": 1.7306489660145021,
+   "s_c_times_beta_direct": 1.6982334766037241,
+   "dist_of_nearest_band_points_px": 51.083221582509424
+  },
+  "pre_check": {
+   "beta_lo": 1.1057765116003853,
+   "beta_hi": 1.604892157824997,
+   "median_patch": 1.7268117058619024,
+   "p90_patch": 4.7796067913006475,
+   "share_above_half_patch": 0.8454297407912688,
+   "n_gated_patch_frames": 14660,
+   "per_frame": [
+    {
+     "latent_frame": 1,
+     "median_patch": 0.30064027892496425,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 2,
+     "median_patch": 0.6354610134882694,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 3,
+     "median_patch": 0.9091828698615856,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 4,
+     "median_patch": 1.0902642573742953,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 5,
+     "median_patch": 1.1950075786149152,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 6,
+     "median_patch": 1.2626475880602275,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 7,
+     "median_patch": 1.363087494418692,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 8,
+     "median_patch": 1.4890477575164198,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 9,
+     "median_patch": 1.6437719325965943,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 10,
+     "median_patch": 1.884149815032457,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 11,
+     "median_patch": 2.1064537436761928,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 12,
+     "median_patch": 2.347732484791173,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 13,
+     "median_patch": 2.5905134390764712,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 14,
+     "median_patch": 2.8425039863376753,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 15,
+     "median_patch": 3.056729354039483,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 16,
+     "median_patch": 3.2830082437927275,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 17,
+     "median_patch": 3.4848957524415427,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 18,
+     "median_patch": 3.65999793596432,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 19,
+     "median_patch": 3.8175855584168046,
+     "n_gated": 733
+    },
+    {
+     "latent_frame": 20,
+     "median_patch": 3.947679057667144,
+     "n_gated": 733
+    }
+   ],
+   "reading": "informative: the two bridges differ by more than the readout error on part of the lattice"
+  }
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "t_a": 0,
+  "T_l": 21,
+  "n_near_band_points": 30,
+  "dist_near_px": 61.35872583370278,
+  "Z_tri_c": 1.8727805964233282,
+  "Z_L_gnd_c": 1.5636411309242249,
+  "rho_c": 1.197704869349644,
+  "strip": {
+   "band_px_256": 4,
+   "n_points": 0,
+   "Z_tri_strip": null,
+   "of_record": false
+  },
+  "rho_band_median": 1.0665964097519405,
+  "tracker_factor_r": 0.9531886841729552,
+  "tracker_factor_source": "in-band matched points (n=607)",
+  "record": {
+   "recipe": "carried",
+   "beta": 0.7890187671921076,
+   "interval": [
+    0.7890187671921076,
+    0.8445316090125399
+   ],
+   "ablations_at": 0.7890187671921076,
+   "full_method_repeat_at": 0.8445316090125399
+  },
+  "Z_L_gnd_base": 1.000804309878736,
+  "Z_M_c": 1.3528883318956952,
+  "beta_via_rho_c_and_lift_plane": 0.8860067508515455,
+  "placement_offset": 1.2586374135379426,
+  "column_B_source": {
+   "Z_base_gtar": 1.0496824362683388,
+   "r_c_B": 0.7758825407249259
+  },
+  "s_c": 1.2888548813918093,
+  "Z_L_base": 0.8339831829071045,
+  "kappa": 0.8333129410765181,
+  "beta_lo": 1.3842832052510565,
+  "near_third_ratio_cot_over_d4rt": 0.9959158049337862,
+  "beta_hi": 0.8445316090125399,
+  "identity_checks": {
+   "Z_M_c_over_Z_L_gnd_base": 1.351801064945074,
+   "s_c_times_kappa": 1.0740194518334354,
+   "s_c_times_placement_over_kappa_identity": 1.3518010649450742,
+   "placement_Zbase_gtar_over_Z_L_base": 1.2586374135379426,
+   "beta_direct_condition_1": 1.3842832052510565,
+   "beta_via_rho_c_and_lift_plane": 0.8860067508515455,
+   "rho_o_direct_Ztri_c_over_Z_L_base": 2.2455855643217846,
+   "s_c_times_beta_direct": 1.784140166316524,
+   "dist_of_nearest_band_points_px": 61.35872583370278
+  },
+  "pre_check": {
+   "beta_lo": 0.7890187671921076,
+   "beta_hi": 0.8445316090125399,
+   "median_patch": 0.3787167941305755,
+   "p90_patch": 4.239689446084765,
+   "share_above_half_patch": 0.4415388153355892,
+   "n_gated_patch_frames": 30439,
+   "per_frame": [
+    {
+     "latent_frame": 1,
+     "median_patch": 0.023340970767601426,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 2,
+     "median_patch": 0.05317278087182255,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 3,
+     "median_patch": 0.07319034650674576,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 4,
+     "median_patch": 0.10034655718324813,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 5,
+     "median_patch": 0.13343636936987777,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 6,
+     "median_patch": 0.190060575920239,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 7,
+     "median_patch": 0.24005058255758954,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 8,
+     "median_patch": 0.29031918096196097,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 9,
+     "median_patch": 0.3698660684668933,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 10,
+     "median_patch": 0.4441701519353576,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 11,
+     "median_patch": 0.5081823050106883,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 12,
+     "median_patch": 0.7842937265775174,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 13,
+     "median_patch": 0.9315372684718097,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 14,
+     "median_patch": 1.0674247513991768,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 15,
+     "median_patch": 1.2035763882376762,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 16,
+     "median_patch": 1.4084359406426117,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 17,
+     "median_patch": 1.5940922396383146,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 18,
+     "median_patch": 1.792463343856715,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 19,
+     "median_patch": 2.1381329396088073,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 20,
+     "median_patch": 2.464456235325918,
+     "n_gated": 1521
+    }
+   ],
+   "reading": "informative: the two bridges differ by more than the readout error on part of the lattice"
+  }
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "camera": "vipe_over_sigma",
+  "t_a": 0,
+  "T_l": 21,
+  "n_near_band_points": 30,
+  "dist_near_px": 61.35872583370278,
+  "Z_tri_c": 2.0134588973455636,
+  "Z_L_gnd_c": 1.5636411309242249,
+  "rho_c": 1.2876732758721074,
+  "strip": {
+   "band_px_256": 4,
+   "n_points": 0,
+   "Z_tri_strip": null,
+   "of_record": false
+  },
+  "band_gauge_under_camera": {
+   "n_band_points": 229,
+   "min_points": 30,
+   "tol": 0.05,
+   "band_pixels": 24268,
+   "ratio": 1.1101020884924,
+   "ci95": [
+    1.0931472485858598,
+    1.1341559986738698
+   ],
+   "ci_half_width": 0.02050437504400504,
+   "half_fit": 1.0944204527615167,
+   "half_verify": 1.1261711161243886,
+   "verify_rel_diff": 0.029011394371109,
+   "band_reproj_median_px": 1.05343602558096,
+   "outcome": "determined"
+  },
+  "rho_band_median": 1.1101020884924,
+  "rho_band_any": 1.1101020884924,
+  "tracker_factor_r": 0.9569825176604998,
+  "tracker_factor_source": "in-band matched points (n=606)",
+  "s_delta": 1.351801064945074,
+  "contact_undefined": false,
+  "record": {
+   "recipe": "carried",
+   "beta_rec": 0.8212022591782063,
+   "beta_mid": 0.9525612231444925,
+   "beta_far": 0.9525612231444925,
+   "interval": [
+    0.7858762054968502,
+    0.9525612231444925
+   ],
+   "runs": {
+    "rec": 0.8212022591782063,
+    "mid": 0.9525612231444925,
+    "far": 0.9525612231444925
+   },
+   "determined": true,
+   "note": null
+  },
+  "Z_L_gnd_base": 1.000804309878736,
+  "Z_M_c": 1.3528883318956952,
+  "beta_via_rho_c_and_lift_plane": 0.9525612231444925,
+  "placement_offset": 1.2586374135379426,
+  "column_B_source": {
+   "Z_base_gtar": 1.0496824362683388,
+   "r_c_B": 0.7758825407249259
+  },
+  "s_c": 1.2888548813918093,
+  "Z_L_base": 0.8339831829071045,
+  "kappa": 0.8333129410765181,
+  "beta_lo": 1.4882668804780532,
+  "near_third_ratio_cot_over_d4rt": 0.9977459428924165,
+  "beta_hi": 0.9525612231444925,
+  "identity_checks": {
+   "Z_M_c_over_Z_L_gnd_base": 1.351801064945074,
+   "s_c_times_kappa": 1.0740194518334354,
+   "s_c_times_placement_over_kappa_identity": 1.3518010649450742,
+   "placement_Zbase_gtar_over_Z_L_base": 1.2586374135379426,
+   "beta_direct_condition_1": 1.4882668804780532,
+   "beta_via_rho_c_and_lift_plane": 0.9525612231444925,
+   "rho_o_direct_Ztri_c_over_Z_L_base": 2.4142679835905496,
+   "s_c_times_beta_direct": 1.9181600337178992,
+   "dist_of_nearest_band_points_px": 61.35872583370278
+  },
+  "pre_check": {
+   "beta_lo": 0.8212022591782063,
+   "beta_hi": 0.9525612231444925,
+   "median_patch": 0.8946876495104703,
+   "p90_patch": 8.033162235007337,
+   "share_above_half_patch": 0.6306140552616881,
+   "n_gated_patch_frames": 30437,
+   "per_frame": [
+    {
+     "latent_frame": 1,
+     "median_patch": 0.05614328210365654,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 2,
+     "median_patch": 0.12747604389862352,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 3,
+     "median_patch": 0.1946723395764678,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 4,
+     "median_patch": 0.28753863478924097,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 5,
+     "median_patch": 0.36728006476828845,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 6,
+     "median_patch": 0.4845873233813269,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 7,
+     "median_patch": 0.6177004734433565,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 8,
+     "median_patch": 0.7366666414949978,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 9,
+     "median_patch": 0.8951552670295069,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 10,
+     "median_patch": 1.0436150150424308,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 11,
+     "median_patch": 1.2442469469087385,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 12,
+     "median_patch": 1.4833466417702579,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 13,
+     "median_patch": 1.715916624577802,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 14,
+     "median_patch": 2.0055092866586848,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 15,
+     "median_patch": 2.35696782093229,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 16,
+     "median_patch": 2.700820193538583,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 17,
+     "median_patch": 3.169437070803961,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 18,
+     "median_patch": 3.7199200026887134,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 19,
+     "median_patch": 4.260716376147815,
+     "n_gated": 1522
+    },
+    {
+     "latent_frame": 20,
+     "median_patch": 5.018333846917629,
+     "n_gated": 1519
+    }
+   ],
+   "reading": "informative: the two bridges differ by more than the readout error on part of the lattice"
+  }
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "t_a": 47,
+  "T_l": 9,
+  "n_near_band_points": 30,
+  "dist_near_px": 40.157642603801975,
+  "Z_tri_c": 1.7063626751566265,
+  "Z_L_gnd_c": 1.2684541940689087,
+  "rho_c": 1.3452300312737415,
+  "strip": {
+   "band_px_256": 4,
+   "n_points": 0,
+   "Z_tri_strip": null,
+   "of_record": false
+  },
+  "rho_band_median": 1.0998833474690148,
+  "tracker_factor_r": 1.091518060121295,
+  "tracker_factor_source": "in-band matched points (n=574)",
+  "record": {
+   "recipe": "carried",
+   "beta": 1.1251830719295721,
+   "interval": [
+    1.1251830719295721,
+    1.502117974226093
+   ],
+   "ablations_at": 1.1251830719295721,
+   "full_method_repeat_at": 1.502117974226093
+  },
+  "Z_L_gnd_base": 1.0285432729379345,
+  "Z_M_c": 1.0054164929051843,
+  "beta_via_rho_c_and_lift_plane": 1.3761732664864657,
+  "placement_offset": 0.8405266079873462,
+  "column_B_source": {
+   "Z_base_gtar": 0.853902517197392,
+   "r_c_B": 0.8493022774372959
+  },
+  "s_c": 1.0,
+  "Z_L_base": 1.015913724899292,
+  "kappa": 0.9877209366188674,
+  "beta_lo": 1.6971699660764814,
+  "near_third_ratio_cot_over_d4rt": 1.0743550596244198,
+  "beta_hi": 1.502117974226093,
+  "identity_checks": {
+   "Z_M_c_over_Z_L_gnd_base": 0.9775150150302468,
+   "s_c_times_kappa": 0.9877209366188674,
+   "s_c_times_placement_over_kappa_identity": 0.8302057284943413,
+   "placement_Zbase_gtar_over_Z_L_base": 0.8405266079873462,
+   "beta_direct_condition_1": 1.6971699660764814,
+   "beta_via_rho_c_and_lift_plane": 1.3761732664864657,
+   "rho_o_direct_Ztri_c_over_Z_L_base": 1.6796334504938193,
+   "s_c_times_beta_direct": 1.6971699660764814,
+   "dist_of_nearest_band_points_px": 40.157642603801975
+  },
+  "pre_check": {
+   "beta_lo": 1.1251830719295721,
+   "beta_hi": 1.502117974226093,
+   "median_patch": 0.5141183347231273,
+   "p90_patch": 4.3383412601031655,
+   "share_above_half_patch": 0.5072463768115942,
+   "n_gated_patch_frames": 4968,
+   "per_frame": [
+    {
+     "latent_frame": 1,
+     "median_patch": 0.11864331896824701,
+     "n_gated": 621
+    },
+    {
+     "latent_frame": 2,
+     "median_patch": 0.1786650751312464,
+     "n_gated": 621
+    },
+    {
+     "latent_frame": 3,
+     "median_patch": 0.4334906156060063,
+     "n_gated": 621
+    },
+    {
+     "latent_frame": 4,
+     "median_patch": 0.43344817073634767,
+     "n_gated": 621
+    },
+    {
+     "latent_frame": 5,
+     "median_patch": 0.5470240483961113,
+     "n_gated": 621
+    },
+    {
+     "latent_frame": 6,
+     "median_patch": 1.0514013974381577,
+     "n_gated": 621
+    },
+    {
+     "latent_frame": 7,
+     "median_patch": 2.6707811665180032,
+     "n_gated": 621
+    },
+    {
+     "latent_frame": 8,
+     "median_patch": 5.051418508880159,
+     "n_gated": 621
+    }
+   ],
+   "reading": "informative: the two bridges differ by more than the readout error on part of the lattice"
+  }
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "camera": "vipe_over_sigma",
+  "t_a": 47,
+  "T_l": 9,
+  "n_near_band_points": 30,
+  "dist_near_px": 40.157642603801975,
+  "Z_tri_c": 1.3592213744922654,
+  "Z_L_gnd_c": 1.2684541940689087,
+  "rho_c": 1.0715573182285727,
+  "strip": {
+   "band_px_256": 4,
+   "n_points": 0,
+   "Z_tri_strip": null,
+   "of_record": false
+  },
+  "band_gauge_under_camera": {
+   "n_band_points": 157,
+   "min_points": 30,
+   "tol": 0.05,
+   "band_pixels": 21403,
+   "ratio": 0.9441216563292861,
+   "ci95": [
+    0.92352613177186,
+    0.9719025650612565
+   ],
+   "ci_half_width": 0.024188216644698224,
+   "half_fit": 0.9457083879915993,
+   "half_verify": 0.9441216563292861,
+   "verify_rel_diff": 0.0016778233993280933,
+   "band_reproj_median_px": 1.4567031491651172,
+   "outcome": "determined"
+  },
+  "rho_band_median": 0.9441216563292861,
+  "rho_band_any": 0.9441216563292861,
+  "tracker_factor_r": 1.1240893996762094,
+  "tracker_factor_source": "in-band matched points (n=573)",
+  "s_delta": 0.9775150150302468,
+  "contact_undefined": true,
+  "record": {
+   "recipe": "carried",
+   "beta_rec": 0.9658385209561948,
+   "beta_mid": 1.0962054820154512,
+   "beta_far": 1.2322329622005181,
+   "interval": [
+    0.9658385209561948,
+    1.2322329622005181
+   ],
+   "runs": {
+    "rec": 0.9658385209561948,
+    "mid": 1.0962054820154512,
+    "far": 1.2322329622005181
+   },
+   "determined": true,
+   "note": null
+  },
+  "Z_L_gnd_base": 1.0285432729379345,
+  "Z_M_c": 1.0054164929051843,
+  "beta_via_rho_c_and_lift_plane": 1.0962054820154512,
+  "placement_offset": 0.8405266079873462,
+  "column_B_source": {
+   "Z_base_gtar": 0.853902517197392,
+   "r_c_B": 0.8493022774372959
+  },
+  "s_c": 1.0,
+  "Z_L_base": 1.015913724899292,
+  "kappa": 0.9877209366188674,
+  "beta_lo": 1.3518988241029846,
+  "near_third_ratio_cot_over_d4rt": 1.0872179302097849,
+  "beta_hi": 1.2322329622005181,
+  "identity_checks": {
+   "Z_M_c_over_Z_L_gnd_base": 0.9775150150302468,
+   "s_c_times_kappa": 0.9877209366188674,
+   "s_c_times_placement_over_kappa_identity": 0.8302057284943413,
+   "placement_Zbase_gtar_over_Z_L_base": 0.8405266079873462,
+   "beta_direct_condition_1": 1.3518988241029846,
+   "beta_via_rho_c_and_lift_plane": 1.0962054820154512,
+   "rho_o_direct_Ztri_c_over_Z_L_base": 1.3379299257198298,
+   "s_c_times_beta_direct": 1.3518988241029846,
+   "dist_of_nearest_band_points_px": 40.157642603801975
+  },
+  "pre_check": {
+   "beta_lo": 0.9658385209561948,
+   "beta_hi": 1.2322329622005181,
+   "median_patch": 0.31283644864518423,
+   "p90_patch": 3.248493343244121,
+   "share_above_half_patch": 0.36574074074074076,
+   "n_gated_patch_frames": 4968,
+   "per_frame": [
+    {
+     "latent_frame": 1,
+     "median_patch": 0.05986618885191576,
+     "n_gated": 621
+    },
+    {
+     "latent_frame": 2,
+     "median_patch": 0.17274331515384775,
+     "n_gated": 621
+    },
+    {
+     "latent_frame": 3,
+     "median_patch": 0.24090482355835502,
+     "n_gated": 621
+    },
+    {
+     "latent_frame": 4,
+     "median_patch": 0.2571356485415379,
+     "n_gated": 621
+    },
+    {
+     "latent_frame": 5,
+     "median_patch": 0.253530399340712,
+     "n_gated": 621
+    },
+    {
+     "latent_frame": 6,
+     "median_patch": 0.6884336886069976,
+     "n_gated": 621
+    },
+    {
+     "latent_frame": 7,
+     "median_patch": 1.9397642305156935,
+     "n_gated": 621
+    },
+    {
+     "latent_frame": 8,
+     "median_patch": 3.976262353406943,
+     "n_gated": 621
+    }
+   ],
+   "reading": "informative: the two bridges differ by more than the readout error on part of the lattice"
+  }
+ }
+]

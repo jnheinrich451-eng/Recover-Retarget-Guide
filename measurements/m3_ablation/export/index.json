@@ -1,0 +1,242 @@
+[
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "video": "000000000265.2.003_vehicle/A0_seed0_rec_F33.mp4",
+  "arm": "A0",
+  "window": [
+   0.85,
+   0.6
+  ],
+  "seed": 0,
+  "frames": 33,
+  "role": "backbone"
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "video": "000000000265.2.003_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "arm": "A3",
+  "window": [
+   0.85,
+   0.6
+  ],
+  "seed": 0,
+  "frames": 33,
+  "role": "lock window (of record)"
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "video": "000000000265.2.003_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm_sky_bw0.75.mp4",
+  "arm": "A3",
+  "window": [
+   0.85,
+   0.75
+  ],
+  "seed": 0,
+  "frames": 33,
+  "role": "ablation"
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "video": "000000000265.2.003_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm_sky_bw0.45.mp4",
+  "arm": "A3",
+  "window": [
+   0.85,
+   0.45
+  ],
+  "seed": 0,
+  "frames": 33,
+  "role": "ablation"
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "video": "000000000265.2.005_vehicle/A0_seed0_rec_F33.mp4",
+  "arm": "A0",
+  "window": [
+   0.85,
+   0.6
+  ],
+  "seed": 0,
+  "frames": 33,
+  "role": "backbone"
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "video": "000000000265.2.005_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "arm": "A3",
+  "window": [
+   0.85,
+   0.6
+  ],
+  "seed": 0,
+  "frames": 33,
+  "role": "lock window (of record)"
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "video": "000000000265.2.005_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm_sky_bw0.75.mp4",
+  "arm": "A3",
+  "window": [
+   0.85,
+   0.75
+  ],
+  "seed": 0,
+  "frames": 33,
+  "role": "ablation"
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "video": "000000000265.2.005_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm_sky_bw0.45.mp4",
+  "arm": "A3",
+  "window": [
+   0.85,
+   0.45
+  ],
+  "seed": 0,
+  "frames": 33,
+  "role": "ablation"
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "video": "000000000265.2.005_human/A0_seed0_rec_F33.mp4",
+  "arm": "A0",
+  "window": [
+   0.85,
+   0.6
+  ],
+  "seed": 0,
+  "frames": 33,
+  "role": "backbone"
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "video": "000000000265.2.005_human/A3_seed0_rec_F33_sm_sky.mp4",
+  "arm": "A3",
+  "window": [
+   0.85,
+   0.6
+  ],
+  "seed": 0,
+  "frames": 33,
+  "role": "lock window (of record)"
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "video": "000000000265.2.005_human/A3_seed0_rec_F33_sm_sky_bw0.75.mp4",
+  "arm": "A3",
+  "window": [
+   0.85,
+   0.75
+  ],
+  "seed": 0,
+  "frames": 33,
+  "role": "ablation"
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "video": "000000000265.2.005_human/A3_seed0_rec_F33_sm_sky_bw0.45.mp4",
+  "arm": "A3",
+  "window": [
+   0.85,
+   0.45
+  ],
+  "seed": 0,
+  "frames": 33,
+  "role": "ablation"
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "video": "000000000370.1.008_human/A0_seed0_rec_F33.mp4",
+  "arm": "A0",
+  "window": [
+   0.85,
+   0.6
+  ],
+  "seed": 0,
+  "frames": 33,
+  "role": "backbone"
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "video": "000000000370.1.008_human/A3_seed0_rec_F33_sm_sky.mp4",
+  "arm": "A3",
+  "window": [
+   0.85,
+   0.6
+  ],
+  "seed": 0,
+  "frames": 33,
+  "role": "lock window (of record)"
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "video": "000000000370.1.008_human/A3_seed0_rec_F33_sm_sky_bw0.75.mp4",
+  "arm": "A3",
+  "window": [
+   0.85,
+   0.75
+  ],
+  "seed": 0,
+  "frames": 33,
+  "role": "ablation"
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "video": "000000000370.1.008_human/A3_seed0_rec_F33_sm_sky_bw0.45.mp4",
+  "arm": "A3",
+  "window": [
+   0.85,
+   0.45
+  ],
+  "seed": 0,
+  "frames": 33,
+  "role": "ablation"
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "video": "000000000404.1.004_vehicle/A0_seed0_rec_F33.mp4",
+  "arm": "A0",
+  "window": [
+   0.85,
+   0.6
+  ],
+  "seed": 0,
+  "frames": 33,
+  "role": "backbone"
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "video": "000000000404.1.004_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "arm": "A3",
+  "window": [
+   0.85,
+   0.6
+  ],
+  "seed": 0,
+  "frames": 33,
+  "role": "lock window (of record)"
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "video": "000000000404.1.004_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm_sky_bw0.75.mp4",
+  "arm": "A3",
+  "window": [
+   0.85,
+   0.75
+  ],
+  "seed": 0,
+  "frames": 33,
+  "role": "ablation"
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "video": "000000000404.1.004_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm_sky_bw0.45.mp4",
+  "arm": "A3",
+  "window": [
+   0.85,
+   0.45
+  ],
+  "seed": 0,
+  "frames": 33,
+  "role": "ablation"
+ }
+]

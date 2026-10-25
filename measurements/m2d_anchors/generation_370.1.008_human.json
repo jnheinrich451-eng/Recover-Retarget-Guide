@@ -1,0 +1,75 @@
+{
+ "schema": "m2d_generation_v1",
+ "clip": "000000000370.1.008",
+ "category": "human",
+ "polarity": "near_bright",
+ "guidance": 10.0,
+ "steps": 30,
+ "seeds": 4,
+ "target": {
+  "object": "a man in a grey jacket and dark trousers",
+  "action": "walking",
+  "scene": "in a misty pine forest"
+ },
+ "prompt": {
+  "prompt": "a man in a grey jacket and dark trousers walking, in a misty pine forest, rear three-quarter view, moving away from the camera, medium-wide shot",
+  "dictionary_rows": [
+   "away",
+   "medium_area"
+  ],
+  "heading_class": "away",
+  "heading_azimuth_deg": 87.26057235089073,
+  "heading_frame": "camera_t_a",
+  "shot_class": "medium_area",
+  "obj_area_frac": 0.02099895477294922,
+  "camera_low": false,
+  "camera_height": 0.3914790311515035,
+  "object_height": 0.31533628872511976,
+  "camera_height_over_object_height": 1.2414652076176294
+ },
+ "control_checksum": "992b36b9ff688ad6",
+ "calls": [
+  {
+   "seed": 0,
+   "control_checksum": "992b36b9ff688ad6",
+   "tensor_max_dev": 0.0,
+   "png_sha256": "1274634ac0f9811e6fffb248fe7b20a783fe332c04580d49bfefaac2aa983772"
+  },
+  {
+   "seed": 1,
+   "control_checksum": "992b36b9ff688ad6",
+   "tensor_max_dev": 0.0,
+   "png_sha256": "856044e7a652810f2c929802cfc4cf6fcccab8d2c2c1277687e701c6d2354267"
+  },
+  {
+   "seed": 2,
+   "control_checksum": "992b36b9ff688ad6",
+   "tensor_max_dev": 0.0,
+   "png_sha256": "cfe00414bca43d6216f5568a6c7da4fece2fe14acc8cf09e1e406198b359d8d2"
+  },
+  {
+   "seed": 3,
+   "control_checksum": "992b36b9ff688ad6",
+   "tensor_max_dev": 0.0,
+   "png_sha256": "2ac18e9041321f70221831c4daef5edc0af47d76d17f15a6d850bfed98320172"
+  }
+ ],
+ "pipeline": "FluxControlPipeline",
+ "diffusers": "0.40.0",
+ "gpu": "NVIDIA A100-SXM4-40GB",
+ "config_hash": "009c71d32375c705",
+ "upstream_hashes": {
+  "c3": "77d27800e45d54428d6dd7c8308b3a6b7fcc137b55bb3698d2bba404a5799ff2",
+  "c1": "e3498223af72979455955a6f7d8980e200cef81a985998f8b72730f597a867ac",
+  "m2a": "e7701204f51c71281c2f42bb8fff64f9067561f350a9d3d333b7a3a96b500eff",
+  "proxy_cache_key": "3fc7ee649366f17e",
+  "c2_params": {
+   "r": 4,
+   "w": 6,
+   "N": 32,
+   "sigma1": 2.0,
+   "sigma2": 0.5,
+   "fill_order": "fill_then_coarsen"
+  }
+ }
+}

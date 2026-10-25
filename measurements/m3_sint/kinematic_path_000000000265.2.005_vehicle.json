@@ -1,0 +1,28 @@
+{
+ "pair": "000000000265.2.005/vehicle",
+ "rate": "latent (4-frame): step 2 predates the full-rate save; the stride (8 frames) is aliased at this rate",
+ "n_frames": 21,
+ "sigma_noise_world": 0.013400517882260777,
+ "residual_rms_world": 0.04270511572185995,
+ "target_rms": 0.013400517882260777,
+ "model_order": {
+  "deg_v": 3,
+  "deg_k": 2
+ },
+ "speed_per_frame": {
+  "median": 0.09302318395190254,
+  "min": 0.011277630996089664,
+  "max": 0.10324207446638875
+ },
+ "curvature": {
+  "median": -2.73587234006137,
+  "min": -6.346160471408877,
+  "max": 1.2207902239026314,
+  "net_heading_change_deg": -181.92171054346238,
+  "turn_sign": "right",
+  "max_abs_heading_change_deg": 181.92171054346238
+ },
+ "path_length_raw": 1.692883110357695,
+ "path_length_fit": 1.5862526554327674,
+ "note": "in-plane unicycle fit; height = raw height Savitzky-Golay smoothed; R_t = yaw about the handoff's ground normal n_plane by psi_t - psi_0; the _kin geometry is written beside the geometry of record and is not consumed until the render and the sampler are pointed at it"
+}

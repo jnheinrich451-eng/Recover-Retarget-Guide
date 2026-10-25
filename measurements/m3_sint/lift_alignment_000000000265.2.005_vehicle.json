@@ -1,0 +1,41 @@
+{
+ "pair": "000000000265.2.005/vehicle",
+ "n_points": 137,
+ "n_inliers": 110,
+ "a": 0.4392908540985874,
+ "b": -0.009402534852674069,
+ "resid_mad_disparity": 0.013163205795308379,
+ "k_bg_was": 0.34426623224999864,
+ "equivalent_scale_1_over_a": 2.2763961295118973,
+ "b_over_median_disparity": -0.09443459002368453,
+ "band_gauge_rho": 1.1668649581794057,
+ "ratios_at_points": {
+  "overall": {
+   "before_kbg_over_Ztri": 0.8647323534477863,
+   "after_over_Ztri": 1.020939413546793,
+   "n": 137
+  },
+  "near": {
+   "before_kbg_over_Ztri": 0.8604603373331929,
+   "after_over_Ztri": 1.0261358628555308,
+   "n": 46
+  },
+  "mid": {
+   "before_kbg_over_Ztri": 0.7995583478145237,
+   "after_over_Ztri": 0.9387936099145023,
+   "n": 45
+  },
+  "far": {
+   "before_kbg_over_Ztri": 1.0462447024269343,
+   "after_over_Ztri": 1.103970297714326,
+   "n": 46
+  }
+ },
+ "tercile_level_spread_after": 0.1759456882273267,
+ "registered_tercile_levels_within_5pct": false,
+ "valid_frac_before": 0.5881429132312525,
+ "valid_frac_after": 0.5881429132312525,
+ "n_bg_before": 11913,
+ "n_bg_after": 11913,
+ "note": "regressor = triangulated disparity (camera-C BA, source gauge); response = MoGe disparity (5x5 median at the point); Huber IRLS. After alignment the background is in the camera's own gauge: beta applies to the object only, through the contact; s_delta / s_c / contact gate must be recomputed before use."
+}

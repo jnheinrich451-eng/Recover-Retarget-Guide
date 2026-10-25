@@ -1,0 +1,20 @@
+[
+ {
+  "cmd": "/usr/bin/python3 scripts/measure_m3_a0.py --drive-root /content/drive/MyDrive/motion_transfer_exp --videos-dir /content/data/videos --pairs 000000000391.0.016/human --force --source-frames 21 --videos A0_seed0_rec_F21.mp4 A3_seed0_rec_F21_sm_sky.mp4 source",
+  "rc": 0,
+  "wall_s": 10.8,
+  "tail": "inst the same expectation, so it is not a self-test of the source: the source's own agreement with that expectation at the same pixels is the pixel-bridge record (scripts/check_m3_pixel_bridge.py), and the source's object screen motion is the mask-centroid arbiter (scripts/check_m3_mask_centroid.py).\n\nOutside-mask criterion (reviewer 2026-10-11): a guided run's outside-mask magnitude lies between the paired A0's and the source's, and the median cosine between its outside tracks and the source's outside tracks (same grid, both visible, source displacement >= 0.25 patch) is >= 0.8; grade 'source' in the same invocation.\n\nPaired criteria (reviewer 2026-10-10): a guided run is read against the A0 of the SAME seed and length: its object track survival must not be below the paired A0's (an A0 that loses every track says nothing about guidance); its tile peak must lie within the A0-to-source range (grade 'source' alongside); its background displacement must move more than 0.5 patch from the A0 value toward the expected one.\n\nReading: background displacement is the camera the model chose (expected = the source camera through the bridge of record on the lifted background); the object centroid is where it moved the object (expected = the retargeted path); deformation is the median spread of object tracks about their centroid in object sizes, which separates 'the model moved the object' from 'the model distorted it'. A guided run is graded with the same columns; the claim rule applies.\n"
+ },
+ {
+  "cmd": "/usr/bin/python3 scripts/check_m3_mask_centroid.py --drive-root /content/drive/MyDrive/motion_transfer_exp --videos-dir /content/data/videos --pair 000000000391.0.016/human --label person --frames 21 --force --videos A0_seed0_rec_F21.mp4 A3_seed0_rec_F21_sm_sky.mp4",
+  "rc": 0,
+  "wall_s": 52.2,
+  "tail": "\nLoading weights:   0%|          | 0/380 [00:00<?, ?it/s]\nLoading weights: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 380/380 [00:00<00:00, 16944.70it/s]\n[mask centroid] A0_seed0_rec_F21.mp4: person centroid moved 1.11 patch by the last frame (expected 1.31; path 1.45); area first/median/last 0.030/0.030/0.032; IoU median 0.96 min 0.93; frames without mask 0\n[mask centroid] A3_seed0_rec_F21_sm_sky.mp4: person centroid moved 0.89 patch by the last frame (expected 1.31; path 1.63); area first/median/last 0.031/0.031/0.027; IoU median 0.96 min 0.91; frames without mask 0\n[mask centroid] wrote /content/drive/MyDrive/motion_transfer_exp/reports/m3_s4/mask_centroid_000000000391.0.016_human.json\n"
+ },
+ {
+  "cmd": "/usr/bin/python3 scripts/check_m3_mask_centroid.py --drive-root /content/drive/MyDrive/motion_transfer_exp --videos-dir /content/data/videos --pair 000000000391.0.016/human --label person --frames 21 --force --videos source",
+  "rc": 0,
+  "wall_s": 31.4,
+  "tail": "\nLoading weights:   0%|          | 0/380 [00:00<?, ?it/s]\nLoading weights: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 380/380 [00:00<00:00, 15750.30it/s]\n[mask centroid] source: person centroid moved 0.20 patch by the last frame (expected 1.31; path 1.48); area first/median/last 0.088/0.083/0.080; IoU median 0.97 min 0.94; frames without mask 0\n[mask centroid] wrote /content/drive/MyDrive/motion_transfer_exp/reports/m3_s4/mask_centroid_000000000391.0.016_human.json\n"
+ }
+]

@@ -1,0 +1,220 @@
+{
+ "schema": "m2d_qc_v1",
+ "clip": "000000000370.1.008",
+ "category": "human",
+ "polarity": "near_bright",
+ "guidance": 10.0,
+ "steps": 30,
+ "seeds": [
+  0,
+  1,
+  2,
+  3
+ ],
+ "selected_seed": 2,
+ "outcome": "selected",
+ "n_survivors": 4,
+ "candidates": [
+  {
+   "seed": 0,
+   "heading_class": "away",
+   "obj_fidelity": 0.8620344011868009,
+   "bg_fidelity": 0.9580314259728572,
+   "E_loc": 0.002246528448244609,
+   "E_loc_rel": 0.021924418390950832,
+   "E_area": 0.10357864840818169,
+   "log_area_ratio": 0.10357864840818169,
+   "gates": {
+    "g_object_found": {
+     "value": true,
+     "outcome": "pass"
+    },
+    "g_heading": {
+     "value": "away",
+     "control_class": "away",
+     "instrument": "human",
+     "outcome": "pass"
+    },
+    "g_eps_shape": {
+     "value": 0.8483122994984391,
+     "threshold": null,
+     "outcome": "ungated"
+    },
+    "g_e_loc_rel": {
+     "value": 0.021924418390950832,
+     "threshold": 0.5,
+     "outcome": "pass"
+    },
+    "g_e_area": {
+     "value": 0.10357864840818169,
+     "threshold": 0.693,
+     "outcome": "pass"
+    }
+   },
+   "phase1_pass": true,
+   "phase2_rank": 2
+  },
+  {
+   "seed": 1,
+   "heading_class": "away",
+   "obj_fidelity": 0.8425505248315839,
+   "bg_fidelity": 0.9629134000402699,
+   "E_loc": 0.005279891169852251,
+   "E_loc_rel": 0.051527744132053584,
+   "E_area": 0.12796960819863584,
+   "log_area_ratio": 0.12796960819863584,
+   "gates": {
+    "g_object_found": {
+     "value": true,
+     "outcome": "pass"
+    },
+    "g_heading": {
+     "value": "away",
+     "control_class": "away",
+     "instrument": "human",
+     "outcome": "pass"
+    },
+    "g_eps_shape": {
+     "value": 0.8483122994984391,
+     "threshold": null,
+     "outcome": "ungated"
+    },
+    "g_e_loc_rel": {
+     "value": 0.051527744132053584,
+     "threshold": 0.5,
+     "outcome": "pass"
+    },
+    "g_e_area": {
+     "value": 0.12796960819863584,
+     "threshold": 0.693,
+     "outcome": "pass"
+    }
+   },
+   "phase1_pass": true,
+   "phase2_rank": 4
+  },
+  {
+   "seed": 2,
+   "heading_class": "away",
+   "obj_fidelity": 0.8569231391913223,
+   "bg_fidelity": 0.9735107135425886,
+   "E_loc": 0.0032563796581850037,
+   "E_loc_rel": 0.03177980235309971,
+   "E_area": 0.08029769966712151,
+   "log_area_ratio": 0.08029769966712151,
+   "gates": {
+    "g_object_found": {
+     "value": true,
+     "outcome": "pass"
+    },
+    "g_heading": {
+     "value": "away",
+     "control_class": "away",
+     "instrument": "human",
+     "outcome": "pass"
+    },
+    "g_eps_shape": {
+     "value": 0.8483122994984391,
+     "threshold": null,
+     "outcome": "ungated"
+    },
+    "g_e_loc_rel": {
+     "value": 0.03177980235309971,
+     "threshold": 0.5,
+     "outcome": "pass"
+    },
+    "g_e_area": {
+     "value": 0.08029769966712151,
+     "threshold": 0.693,
+     "outcome": "pass"
+    }
+   },
+   "phase1_pass": true,
+   "phase2_rank": 1
+  },
+  {
+   "seed": 3,
+   "heading_class": "away",
+   "obj_fidelity": 0.8568787741855975,
+   "bg_fidelity": 0.9659536569509278,
+   "E_loc": 0.005777748622938252,
+   "E_loc_rel": 0.056386456297056256,
+   "E_area": 0.05151353445010796,
+   "log_area_ratio": 0.05151353445010796,
+   "gates": {
+    "g_object_found": {
+     "value": true,
+     "outcome": "pass"
+    },
+    "g_heading": {
+     "value": "away",
+     "control_class": "away",
+     "instrument": "human",
+     "outcome": "pass"
+    },
+    "g_eps_shape": {
+     "value": 0.8483122994984391,
+     "threshold": null,
+     "outcome": "ungated"
+    },
+    "g_e_loc_rel": {
+     "value": 0.056386456297056256,
+     "threshold": 0.5,
+     "outcome": "pass"
+    },
+    "g_e_area": {
+     "value": 0.05151353445010796,
+     "threshold": 0.693,
+     "outcome": "pass"
+    }
+   },
+   "phase1_pass": true,
+   "phase2_rank": 3
+  }
+ ],
+ "gate_outcomes": {
+  "g_phase1_survivors": {
+   "value": 4,
+   "outcome": "pass"
+  }
+ },
+ "prompt": "a man in a grey jacket and dark trousers walking, in a misty pine forest, rear three-quarter view, moving away from the camera, medium-wide shot",
+ "dictionary_row": [
+  "away",
+  "medium_area"
+ ],
+ "heading_anchor_frame": {
+  "class": "away",
+  "azimuth_deg": 87.26057235089073,
+  "frame": "camera_t_a"
+ },
+ "shot_class_near_band_edge": true,
+ "eps_shape": 0.8483122994984391,
+ "heading_instrument": "human label (heading_labels.csv); NOT blind on the first run: the control's class was printed beside the label",
+ "phase2_instrument": "human rank (phase2_ranks.csv), spec \u00a74.2",
+ "resample_count": 0,
+ "thresholds": {
+  "m2d_e_loc_rel_max": 0.5,
+  "m2d_e_area_max": 0.693,
+  "m2d_heading": "human",
+  "m2d_eps_shape_max": null
+ },
+ "config_hash": "48933f55cdd88b73",
+ "upstream_hashes": {
+  "c3": "77d27800e45d54428d6dd7c8308b3a6b7fcc137b55bb3698d2bba404a5799ff2",
+  "c1": "e3498223af72979455955a6f7d8980e200cef81a985998f8b72730f597a867ac",
+  "m2a": "e7701204f51c71281c2f42bb8fff64f9067561f350a9d3d333b7a3a96b500eff",
+  "proxy_cache_key": "3fc7ee649366f17e",
+  "c2_params": {
+   "r": 4,
+   "w": 6,
+   "N": 32,
+   "sigma1": 2.0,
+   "sigma2": 0.5,
+   "fill_order": "fill_then_coarsen"
+  },
+  "m2b2": "34d35bf642a92152f73d8d5ffad0bf4eb0a70b281817683f3f195ca9b27713df",
+  "generation": "9590bd250adaa70e0e341a5eee9aed330f3069c9a9030eb667348691b8384695",
+  "fidelity": "81ffcdd8cfe9dbcf42c5d37de8860f9dd7b46370e837e3c90f4815101215db77"
+ }
+}

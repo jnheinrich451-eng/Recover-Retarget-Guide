@@ -1,0 +1,34 @@
+# SKILL §1.3 — secrets, weights, videos, and caches never enter git
+secrets/
+*.env
+/tmp
+__pycache__/
+*.pt
+*.pth
+*.safetensors
+*.npz
+*.mp4
+data/
+cache/
+viz/
+.ipynb_checkpoints/
+*.pyc
+
+# batch exports (videos zipped for external graders): never committed
+*.zip
+
+# probe image sets (thousands of PNGs, ~2 GB): records (json/md/csv) are committed, the images are not
+measurements/m2d/**/*.png
+measurements/m2d/**/*.jpg
+# local copies of Drive caches and raw tracks: never committed
+measurements/m3/
+measurements/000000000265.2.005/
+b5_v12/
+setup_sam3d_*.log/
+measurements/poster/_nav_*
+
+# reference thesis provided by the supervisor (not ours to publish)
+docs/2026S1-paper77_For_reference_STAR_STAR_STAR.pdf
+
+# the bundled example caches (release asset), never committed
+DATA/

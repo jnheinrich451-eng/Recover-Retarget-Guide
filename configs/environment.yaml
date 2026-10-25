@@ -1,0 +1,28 @@
+# Where the pipeline runs (2026-10-15). One root for every module: `root` holds cache/, reports/, viz/, probe/; `data` holds videos/.
+# Selected by `scripts/run_all.py --env colab|local`, which exports MT_ROOT / MT_DATA for every runner it calls (src/preprocess/config.py
+# re-roots paths.* for Modules 1 and 2; the Module 3 scripts take MT_ROOT as their --drive-root default). Paths are outside every config
+# hash, so a machine change never invalidates a cache. Thresholds stay in calibration.lock.yaml.
+#
+# `python` names the interpreter per module step: Module 2's reconstructor (SAM 3D Objects) lives in its own environment (scripts/setup_sam3d.sh);
+# Module 3's generation needs requirements-phase2.txt and must never be installed into the Phase-1 environment (CLAUDE.md §1).
+colab:
+  root: /content/drive/MyDrive/motion_transfer
+  data: /content/data
+  python:
+    default: python
+    sam3d_objects: /content/micromamba/envs/sam3d-objects/bin/python
+    phase2: python          # the Phase-2 runtime (scripts/bootstrap_phase2.sh); a different Colab session, same path
+colab_exp:                  # the EXPERIMENT SET (census pools, 24-frame canonical videos): its own root, so the six pairs' record under
+  root: /content/drive/MyDrive/motion_transfer_exp         # motion_transfer (81-frame originals) is never overwritten by a clip of the same id
+  data: /content/data
+  python:
+    default: python
+    sam3d_objects: /content/micromamba/envs/sam3d-objects/bin/python
+    phase2: python
+local:
+  root: ${MT_ROOT}          # set MT_ROOT and MT_DATA in the shell, or edit these two lines
+  data: ${MT_DATA}
+  python:
+    default: python
+    sam3d_objects: python   # edit to the SAM 3D Objects environment's interpreter if Module 2 runs here
+    phase2: python          # the interpreter with requirements-phase2.txt (a separate venv)

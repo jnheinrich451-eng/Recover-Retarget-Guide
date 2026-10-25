@@ -1,0 +1,11 @@
+{
+ "csv_sha256": "875efed9eacef1abe987ca4ce534b3420b56f57d7f0941a526936f80077917f7",
+ "n_rows": 150,
+ "n_scored": 144,
+ "n_unalignable": 25,
+ "written_at": "2026-10-20T08:24:26",
+ "ditflow_commit": "5e20bf6",
+ "v1_csv_sha256": "8dd54f6f81bf389ce195f7af8ef2e4b6adfccdac9468693bc8a84407e3996c0b",
+ "selftest_csv_sha256": "4a26bbb963c1e9ae2055c5400645fa09ff099d48a63763067069fab0642f9303",
+ "rule": "scale-only fit must have s > 0, sim(3) must be proper; otherwise no valid alignment (grader brief v2)"
+}

@@ -1,0 +1,18 @@
+# torch / torchvision ship preinstalled on Colab — do not pin here, the D4RT
+# repo's own requirements govern them. Everything below is Stage A's.
+# numpy matches Open-d4rt's own pin (bootstrap installs theirs after ours, so
+# 2.2.5 is what sessions actually run); huggingface_hub satisfies ViPE's
+# transformers (>=0.34,<1.0) so re-running bootstrap after a ViPE install no
+# longer downgrades it into an ImportError (2026-08-06 chain-error fix).
+numpy==2.2.5
+pyyaml==6.0.2
+python-dotenv==1.0.1
+huggingface_hub==0.36.2
+opencv-python-headless==4.10.0.84
+matplotlib==3.9.2
+imageio==2.36.0
+imageio-ffmpeg==0.5.1
+einops==0.8.0
+tqdm==4.66.5
+scipy>=1.10            # m2_c C2: sparse Laplacian solve, ndimage (Colab ships it; pinned for explicitness)
+OpenEXR==3.5.2         # ViPE depth EXR reader (src/preprocess/exr.py); 3.x has no Imath module and none is needed (2026-10-05)

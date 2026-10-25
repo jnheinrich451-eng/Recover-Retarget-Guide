@@ -1,0 +1,288 @@
+census: census_v1 (2026-10-17)
+category_rule: 'default: a vehicle word (car, bus, truck, jeep, rover, van, motorcycle, vehicle, carriage, cart, boat) as a whole word among the first five words of the caption -> vehicle (the red car);
+  otherwise human (the man). Fixed before the census ran.'
+set_rule: 'from the PASS rows, in clip-id order: the first 10 MiraData passes; every DAVIS pass. Fixed before the census ran; nothing added by hand afterwards.'
+pools:
+  miradata: the 29 clips with prompts in measurements/davis/miradata.csv
+  davis: the 41 DAVIS clips the baselines ran on (canonical 24-frame, 12 fps videos)
+clips:
+- id: 000000000001.5.002
+  pool: miradata
+  caption: A warrior walks through a rustic village at sunset, surrounded by wooden huts and lush greenery.
+  category: human
+- id: 000000000035.1.003
+  pool: miradata
+  caption: A red sports car speeds through a scenic cityscape, navigating sharp turns and winding roads.
+  category: vehicle
+- id: 000000000064.3.002
+  pool: miradata
+  caption: A warrior in armor walks through a serene village by a river, surrounded by lush greenery and rustic buildings.
+  category: human
+- id: 000000000100.0.003
+  pool: miradata
+  caption: A sleek black sports car navigates through a vibrant cityscape with palm trees and modern buildings under a clear blue sky.
+  category: vehicle
+- id: 000000000119.5.007
+  pool: miradata
+  caption: A man in a blue robe walks through a grand, ornate greenhouse filled with lush plants and intricate architecture.
+  category: human
+- id: 000000000130.0.015
+  pool: miradata
+  caption: A character runs through a futuristic, dimly lit corridor with industrial elements and glowing lights.
+  category: human
+- id: 000000000191.6.037
+  pool: miradata
+  caption: A man in a brown coat walks through a vibrant chinatown street, surrounded by colorful buildings and bustling activity.
+  category: human
+- id: 000000000191.6.038
+  pool: miradata
+  caption: A man in a brown coat walks through a bustling, sunlit chinatown street with traditional architecture and pedestrians.
+  category: human
+- id: 000000000200.1.006
+  pool: miradata
+  caption: A character walks through a bustling medieval town, surrounded by carts and people, under a bright sky.
+  category: human
+- id: 000000000201.1.008
+  pool: miradata
+  caption: A lone warrior in dark armor stands amidst the ruins of an ancient city, ready for battle.
+  category: human
+- id: 000000000217.0.006
+  pool: miradata
+  caption: A sleek blue sports car drives through a sunny cityscape with palm trees and modern architecture.
+  category: vehicle
+- id: 000000000221.7.011
+  pool: miradata
+  caption: A warrior with a shield and spear walks through an autumnal forest, surrounded by fallen leaves and ancient ruins.
+  category: human
+- id: 000000000222.4.003
+  pool: miradata
+  caption: A character rides a horse through a cobblestone street lined with old buildings and debris under a cloudy sky.
+  category: human
+- id: 000000000230.2.013
+  pool: miradata
+  caption: A group of people on a safari jeep navigate through a scenic african landscape with rocky terrain and lush vegetation.
+  category: human
+- id: 000000000252.1.018
+  pool: miradata
+  caption: A horse-drawn carriage travels through a cobblestone street at night, illuminated by streetlights and surrounded by historic buildings.
+  category: vehicle
+- id: 000000000252.2.007
+  pool: miradata
+  caption: A lone rider on horseback traverses a lush green field under a partly cloudy sky, heading towards a distant campsite.
+  category: human
+- id: 000000000256.3.010
+  pool: miradata
+  caption: A character runs through a bustling, historical cityscape with horse-drawn carriages and vintage architecture.
+  category: human
+- id: 000000000265.2.005
+  pool: miradata
+  caption: A lone rider on horseback gazes at a serene geothermal pool amidst a rugged, volcanic landscape.
+  category: human
+- id: 000000000265.4.002
+  pool: miradata
+  caption: A rider gallops through a lush forest, surrounded by tall trees and rocky terrain, under a bright sky.
+  category: human
+- id: 000000000284.0.006
+  pool: miradata
+  caption: A green vehicle drives along a dirt road through a scenic mountain landscape, guided by an on-screen navigation prompt.
+  category: vehicle
+- id: 000000000299.1.005
+  pool: miradata
+  caption: A sleek white sports car speeds through a futuristic cityscape, navigating tight turns and high-speed chases.
+  category: vehicle
+- id: 000000000362.2.005
+  pool: miradata
+  caption: A warrior in armor walks through a field of wildflowers, with a distant city and lighthouse in the background.
+  category: human
+- id: 000000000370.1.009
+  pool: miradata
+  caption: A warrior and his son navigate a misty forest path, preparing for an unseen challenge ahead.
+  category: human
+- id: 000000000391.0.016
+  pool: miradata
+  caption: A man in a suit walks down a cobblestone street lined with vintage buildings and pedestrians under a clear blue sky.
+  category: human
+- id: 000000000396.3.002
+  pool: miradata
+  caption: A sleek silver sports car speeds along a dirt track surrounded by palm trees and mountains under a clear blue sky.
+  category: vehicle
+- id: 000000000404.1.006
+  pool: miradata
+  caption: A character exits a yellow car and walks down a city street, passing modern buildings and greenery.
+  category: human
+- id: 000000000418.0.005
+  pool: miradata
+  caption: A range rover navigates through dense jungle terrain, surrounded by lush greenery and misty atmosphere.
+  category: vehicle
+- id: 000000000431.5.009
+  pool: miradata
+  caption: A lone figure runs along a cobblestone path through a misty forest, with mountains in the distance.
+  category: human
+- id: 000000002376.4.008
+  pool: miradata
+  caption: A character explores a snowy landscape with a pickaxe, surrounded by icy terrain and evergreen trees.
+  category: human
+- id: bear
+  pool: davis
+  caption: A brown bear walks across rocks in front of a stone cliff
+  category: human
+- id: bike-packing
+  pool: davis
+  caption: A man lifts a bicycle onto a rack on a cobbled city street
+  category: human
+- id: blackswan
+  pool: davis
+  caption: A black swan glides across a calm river past leafy green banks
+  category: human
+- id: bmx-bumps
+  pool: davis
+  caption: A rider on a BMX bike launches over dirt jumps on a track
+  category: human
+- id: bmx-trees
+  pool: davis
+  caption: A rider on a BMX bike speeds past a graffiti wall and trees
+  category: human
+- id: boat
+  pool: davis
+  caption: A small boat motors across calm water past a low rocky shore
+  category: vehicle
+- id: boxing-fisheye
+  pool: davis
+  caption: Two boxers trade punches in a ring under evening floodlights
+  category: human
+- id: breakdance
+  pool: davis
+  caption: A breakdancer spins on a city street in front of a watching crowd
+  category: human
+- id: breakdance-flare
+  pool: davis
+  caption: A breakdancer performs a flare on paving beside a stone wall
+  category: human
+- id: bus
+  pool: davis
+  caption: A white and blue bus drives along a tree-lined city street
+  category: vehicle
+- id: camel
+  pool: davis
+  caption: A camel walks slowly across a sandy enclosure beside a wooden fence
+  category: human
+- id: car-roundabout
+  pool: davis
+  caption: A dark car drives around a roundabout past tall stone buildings
+  category: vehicle
+- id: car-turn
+  pool: davis
+  caption: A silver car rounds a bend on a road through a mountain meadow
+  category: vehicle
+- id: cat-girl
+  pool: davis
+  caption: A girl and a kitten play together in front of a garden fence
+  category: human
+- id: classic-car
+  pool: davis
+  caption: A vintage racing car and its driver pass a crowd along a street
+  category: vehicle
+- id: color-run
+  pool: davis
+  caption: Runners covered in orange powder move through a cloud of colour
+  category: human
+- id: cows
+  pool: davis
+  caption: A brown and white cow walks across a grassy field beside a fence
+  category: human
+- id: crossing
+  pool: davis
+  caption: Two people cross a road as a white truck waits at the crossing
+  category: human
+- id: dance-jump
+  pool: davis
+  caption: A girl in a pink dress dances beside a stone fountain in a square
+  category: human
+- id: dance-twirl
+  pool: davis
+  caption: A woman twirls in a summer dress before a seated outdoor audience
+  category: human
+- id: dancing
+  pool: davis
+  caption: A crowd of people dance together at a lively evening street party
+  category: human
+- id: disc-jockey
+  pool: davis
+  caption: A DJ and a dancer move under warm orange light in a dark club
+  category: human
+- id: dog
+  pool: davis
+  caption: A golden retriever runs across a grassy bank in a sunlit park
+  category: human
+- id: dog-gooses
+  pool: davis
+  caption: A dog runs across a wide green field past a line of geese
+  category: human
+- id: dogs-jump
+  pool: davis
+  caption: A man and two dogs leap across an open field under a cloudy sky
+  category: human
+- id: dogs-scale
+  pool: davis
+  caption: Several dachshund puppies clamber around a scale on a wooden floor
+  category: human
+- id: drift-chicane
+  pool: davis
+  caption: A drift car slides through a chicane trailing thick white smoke
+  category: vehicle
+- id: drift-straight
+  pool: davis
+  caption: A red rally car drifts along a track lined with striped barriers
+  category: vehicle
+- id: drift-turn
+  pool: davis
+  caption: A race car drifts through a turn trailing smoke past track barriers
+  category: vehicle
+- id: drone
+  pool: davis
+  caption: A man and a small drone move across the floor of a bright shop
+  category: human
+- id: elephant
+  pool: davis
+  caption: An elephant walks slowly across a rocky enclosure past pale boulders
+  category: human
+- id: flamingo
+  pool: davis
+  caption: A flamingo dips its head into shallow water beside mossy rocks
+  category: human
+- id: goat
+  pool: davis
+  caption: A goat picks its way across a rocky sunlit hillside
+  category: human
+- id: gold-fish
+  pool: davis
+  caption: Several goldfish swim among green plants in a blue aquarium
+  category: human
+- id: hike
+  pool: davis
+  caption: A hiker with a backpack walks a trail below a rocky mountain ridge
+  category: human
+- id: hockey
+  pool: davis
+  caption: A hockey player skates with a stick past a small goal on a rink
+  category: human
+- id: horsejump-high
+  pool: davis
+  caption: A horse and rider clear a jump on a sandy show-jumping course
+  category: human
+- id: horsejump-low
+  pool: davis
+  caption: A white horse and rider clear a low jump in a sandy arena
+  category: human
+- id: kid-football
+  pool: davis
+  caption: A boy in an orange shirt juggles a football on a grassy field
+  category: human
+- id: kite-walk
+  pool: davis
+  caption: A kitesurfer carries a board and kite along a sunlit sandy beach
+  category: human
+- id: soapbox
+  pool: davis
+  caption: A soapbox cart and its riders roll over a wooden ramp on a street
+  category: vehicle

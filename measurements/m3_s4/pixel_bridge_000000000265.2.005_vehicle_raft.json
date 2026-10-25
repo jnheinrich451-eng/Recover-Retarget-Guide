@@ -1,0 +1,895 @@
+{
+ "pair": "000000000265.2.005/vehicle",
+ "frames": 33,
+ "tracks": "raft_F33_q4.npz",
+ "lift": "lift.npz",
+ "beta_pix_per_frame": [
+  {
+   "j": 1,
+   "n": 2272,
+   "beta_pix": 1.0653493704245645,
+   "beta_pix_over_beta_rec": 0.9634400434882535,
+   "residual_at_beta_pix": 0.1754788349217396,
+   "residual_at_beta_rec": 0.1761324926452011
+  },
+  {
+   "j": 2,
+   "n": 2272,
+   "beta_pix": 1.1198861214281335,
+   "beta_pix_over_beta_rec": 1.0127599109582528,
+   "residual_at_beta_pix": 0.33610617833819345,
+   "residual_at_beta_rec": 0.3420778868647034
+  },
+  {
+   "j": 3,
+   "n": 2272,
+   "beta_pix": 1.1772146863592217,
+   "beta_pix_over_beta_rec": 1.0646045326604416,
+   "residual_at_beta_pix": 0.4659730815605731,
+   "residual_at_beta_rec": 0.5035319737551968
+  },
+  {
+   "j": 4,
+   "n": 2272,
+   "beta_pix": 1.2069702790997687,
+   "beta_pix_over_beta_rec": 1.0915137610880576,
+   "residual_at_beta_pix": 0.5802213103086387,
+   "residual_at_beta_rec": 0.6580476603825388
+  },
+  {
+   "j": 5,
+   "n": 2268,
+   "beta_pix": 1.2374779821474677,
+   "beta_pix_over_beta_rec": 1.119103154358444,
+   "residual_at_beta_pix": 0.6675711115707341,
+   "residual_at_beta_rec": 0.7919243952442782
+  },
+  {
+   "j": 6,
+   "n": 2268,
+   "beta_pix": 1.268756806043263,
+   "beta_pix_over_beta_rec": 1.1473899044997773,
+   "residual_at_beta_pix": 0.7468864990749438,
+   "residual_at_beta_rec": 0.9280683004099984
+  },
+  {
+   "j": 7,
+   "n": 2268,
+   "beta_pix": 1.3008262418436083,
+   "beta_pix_over_beta_rec": 1.1763916380905293,
+   "residual_at_beta_pix": 0.8010781375809707,
+   "residual_at_beta_rec": 1.0609641228857707
+  },
+  {
+   "j": 8,
+   "n": 2268,
+   "beta_pix": 1.3337062732661042,
+   "beta_pix_over_beta_rec": 1.2061264272432748,
+   "residual_at_beta_pix": 0.8657302585533938,
+   "residual_at_beta_rec": 1.241037913187186
+  }
+ ],
+ "beta_pix_over_beta_rec_frame_x_tercile": {
+  "near": [
+   0.9396882328095735,
+   0.9634400434882535,
+   0.9877922112756199,
+   1.0127599109582528,
+   1.0383587008846902,
+   1.0646045326604416,
+   1.0915137610880576,
+   1.1473899044997773
+  ],
+  "mid": [
+   1.119103154358444,
+   1.1473899044997773,
+   1.1763916380905293,
+   1.2061264272432748,
+   1.2061264272432748,
+   1.236612800866132,
+   1.236612800866132,
+   1.2678697562088483
+  ],
+  "far": [
+   0.9165219785589542,
+   1.0127599109582528,
+   1.0646045326604416,
+   1.0646045326604416,
+   1.0915137610880576,
+   1.119103154358444,
+   1.1473899044997773,
+   1.1473899044997773
+  ]
+ },
+ "rotation_refit_per_frame": [
+  {
+   "j": 1,
+   "n": 2272,
+   "s_scale_only": 0.9988365797978757,
+   "s_with_rotation": 0.9593183784180279,
+   "dtheta_deg": 0.18608184978487416,
+   "drotvec_deg": [
+    0.15037945738794978,
+    0.019999848528925883,
+    -0.10776121600040658
+   ],
+   "resid_scale_only": 0.14568660782100176,
+   "resid_with_rotation": 0.10986789715296921,
+   "s_by_tercile_after_rotation": {
+    "near": 1.0028986879598325,
+    "mid": 0.8394347185977552,
+    "far": 0.9925170414173529
+   }
+  },
+  {
+   "j": 2,
+   "n": 2272,
+   "s_scale_only": 0.9686378868591723,
+   "s_with_rotation": 0.9600484189306553,
+   "dtheta_deg": 0.2888764434680492,
+   "drotvec_deg": [
+    0.24235377219354412,
+    -0.05068758612910383,
+    -0.14881202003438235
+   ],
+   "resid_scale_only": 0.27934804756890264,
+   "resid_with_rotation": 0.19928610089040272,
+   "s_by_tercile_after_rotation": {
+    "near": 1.0018425327834837,
+    "mid": 0.8461915617006839,
+    "far": 0.958222860479561
+   }
+  },
+  {
+   "j": 3,
+   "n": 2272,
+   "s_scale_only": 0.9466883041841522,
+   "s_with_rotation": 0.9525232609091355,
+   "dtheta_deg": 0.3507726688495793,
+   "drotvec_deg": [
+    0.30128463799710403,
+    -0.12542125491846012,
+    -0.12860225866402686
+   ],
+   "resid_scale_only": 0.3855875812062769,
+   "resid_with_rotation": 0.2759488923154565,
+   "s_by_tercile_after_rotation": {
+    "near": 0.9947697783875505,
+    "mid": 0.8503112006868437,
+    "far": 0.9420711432988925
+   }
+  },
+  {
+   "j": 4,
+   "n": 2272,
+   "s_scale_only": 0.9232107483299578,
+   "s_with_rotation": 0.92582706582871,
+   "dtheta_deg": 0.42292045402946843,
+   "drotvec_deg": [
+    0.3673353433391426,
+    -0.12192489494743367,
+    -0.17047221463471185
+   ],
+   "resid_scale_only": 0.4811924740654357,
+   "resid_with_rotation": 0.3714493632455624,
+   "s_by_tercile_after_rotation": {
+    "near": 0.9743583584136527,
+    "mid": 0.8302931424426111,
+    "far": 0.9192512667649757
+   }
+  },
+  {
+   "j": 5,
+   "n": 2268,
+   "s_scale_only": 0.8984623153944974,
+   "s_with_rotation": 0.9001379977425601,
+   "dtheta_deg": 0.4948481069821358,
+   "drotvec_deg": [
+    0.4138671271191077,
+    -0.13109909477429463,
+    -0.23749037332772074
+   ],
+   "resid_scale_only": 0.5239556574193964,
+   "resid_with_rotation": 0.4292233494519225,
+   "s_by_tercile_after_rotation": {
+    "near": 0.9496184145020233,
+    "mid": 0.8175656251328371,
+    "far": 0.8922460475537161
+   }
+  },
+  {
+   "j": 6,
+   "n": 2268,
+   "s_scale_only": 0.8743408027433017,
+   "s_with_rotation": 0.8748220438013213,
+   "dtheta_deg": 0.5623764147420468,
+   "drotvec_deg": [
+    0.44646270945216515,
+    -0.1386102982852498,
+    -0.3126107262011723
+   ],
+   "resid_scale_only": 0.5617036997187559,
+   "resid_with_rotation": 0.4681090224779205,
+   "s_by_tercile_after_rotation": {
+    "near": 0.9224386494848443,
+    "mid": 0.8056417897561152,
+    "far": 0.8781121626247221
+   }
+  },
+  {
+   "j": 7,
+   "n": 2268,
+   "s_scale_only": 0.8517677468802565,
+   "s_with_rotation": 0.8490046909901893,
+   "dtheta_deg": 0.6371865751968065,
+   "drotvec_deg": [
+    0.4603551516930869,
+    -0.12948843583349923,
+    -0.42108503999318747
+   ],
+   "resid_scale_only": 0.5922132286462188,
+   "resid_with_rotation": 0.50374050068746,
+   "s_by_tercile_after_rotation": {
+    "near": 0.8896596314581864,
+    "mid": 0.7937626594249821,
+    "far": 0.8668717593745926
+   }
+  },
+  {
+   "j": 8,
+   "n": 2268,
+   "s_scale_only": 0.8312258709649549,
+   "s_with_rotation": 0.8185303892623677,
+   "dtheta_deg": 0.6860578621626676,
+   "drotvec_deg": [
+    0.5165727079356076,
+    -0.025803319485212344,
+    -0.45073519538064394
+   ],
+   "resid_scale_only": 0.6376479630588503,
+   "resid_with_rotation": 0.5405241001385912,
+   "s_by_tercile_after_rotation": {
+    "near": 0.8520638446130423,
+    "mid": 0.7742797583932476,
+    "far": 0.8390181019021783
+   }
+  }
+ ],
+ "rot_d4rt_vs_vipe_deg_interp": [
+  0.14500000000000002,
+  0.24,
+  0.29000000000000004,
+  0.34,
+  0.37,
+  0.4,
+  0.42500000000000004,
+  0.45
+ ],
+ "sigma_hat_t_over_sigma_hat_ta": [
+  0.9983713841740377,
+  0.9950842696629213,
+  0.9895708821420034,
+  0.9934033588333733,
+  0.985290162562754,
+  0.9729410710016735,
+  0.9738973224958164,
+  0.9746668061200097
+ ],
+ "sigma_record": "/content/drive/MyDrive/motion_transfer/bakeoff/stage_a5/calibration_record.json",
+ "bridge_of_geometry": "rec",
+ "beta_rec": 1.1057765116003853,
+ "t_a": 0,
+ "n_queries": 2272,
+ "beta_grid": [
+  0.6,
+  4.0,
+  77
+ ],
+ "overall": {
+  "n": 2272,
+  "beta_pix": 1.2374779821474677,
+  "beta_pix_over_beta_rec": 1.119103154358444,
+  "residual_at_beta_pix_patch": 0.6013029345347717,
+  "mean_disp_src_patch": 1.4701648527605229,
+  "mean_disp_target_at_beta_rec_patch": 2.2137187321059986,
+  "target_over_src_at_same_pixels": 1.1950596550271002,
+  "residual_at_beta_rec_patch": 0.7122708252679332,
+  "per_query_beta_quartiles": [
+   1.1198861214281335,
+   1.2374779821474677,
+   1.3337062732661042
+  ],
+  "at_grid_edge": false,
+  "curve": [
+   [
+    0.6,
+    3.143
+   ],
+   [
+    0.663,
+    2.631
+   ],
+   [
+    0.733,
+    2.158
+   ],
+   [
+    0.81,
+    1.723
+   ],
+   [
+    0.895,
+    1.328
+   ],
+   [
+    0.988,
+    0.976
+   ],
+   [
+    1.092,
+    0.712
+   ],
+   [
+    1.207,
+    0.607
+   ],
+   [
+    1.334,
+    0.628
+   ],
+   [
+    1.474,
+    0.752
+   ],
+   [
+    1.628,
+    0.919
+   ],
+   [
+    1.799,
+    1.103
+   ],
+   [
+    1.988,
+    1.291
+   ],
+   [
+    2.197,
+    1.472
+   ],
+   [
+    2.428,
+    1.642
+   ],
+   [
+    2.683,
+    1.799
+   ],
+   [
+    2.965,
+    1.944
+   ],
+   [
+    3.276,
+    2.078
+   ],
+   [
+    3.62,
+    2.2
+   ],
+   [
+    4.0,
+    2.312
+   ]
+  ]
+ },
+ "by_target_depth_tercile": {
+  "near": {
+   "n": 757,
+   "beta_pix": 1.1481926620541805,
+   "beta_pix_over_beta_rec": 1.0383587008846902,
+   "residual_at_beta_pix_patch": 0.8271623168021588,
+   "mean_disp_src_patch": 3.9124314567575738,
+   "mean_disp_target_at_beta_rec_patch": 4.4728468258573955,
+   "target_over_src_at_same_pixels": 1.0760203557548695,
+   "residual_at_beta_rec_patch": 0.8704070987841401,
+   "per_query_beta_quartiles": [
+    1.1481926620541805,
+    1.2069702790997687,
+    1.268756806043263
+   ],
+   "at_grid_edge": false,
+   "curve": [
+    [
+     0.6,
+     4.555
+    ],
+    [
+     0.663,
+     3.79
+    ],
+    [
+     0.733,
+     3.073
+    ],
+    [
+     0.81,
+     2.406
+    ],
+    [
+     0.895,
+     1.792
+    ],
+    [
+     0.988,
+     1.241
+    ],
+    [
+     1.092,
+     0.87
+    ],
+    [
+     1.207,
+     0.846
+    ],
+    [
+     1.334,
+     1.013
+    ],
+    [
+     1.474,
+     1.281
+    ],
+    [
+     1.628,
+     1.585
+    ],
+    [
+     1.799,
+     1.895
+    ],
+    [
+     1.988,
+     2.195
+    ],
+    [
+     2.197,
+     2.479
+    ],
+    [
+     2.428,
+     2.745
+    ],
+    [
+     2.683,
+     2.992
+    ],
+    [
+     2.965,
+     3.221
+    ],
+    [
+     3.276,
+     3.433
+    ],
+    [
+     3.62,
+     3.627
+    ],
+    [
+     4.0,
+     3.805
+    ]
+   ]
+  },
+  "mid": {
+   "n": 755,
+   "beta_pix": 1.3337062732661042,
+   "beta_pix_over_beta_rec": 1.2061264272432748,
+   "residual_at_beta_pix_patch": 0.45857240342898636,
+   "mean_disp_src_patch": 1.489397174520605,
+   "mean_disp_target_at_beta_rec_patch": 2.2028895231708594,
+   "target_over_src_at_same_pixels": 1.264325963512182,
+   "residual_at_beta_rec_patch": 0.8399000674945122,
+   "per_query_beta_quartiles": [
+    1.268756806043263,
+    1.3008262418436083,
+    1.4019805961842513
+   ],
+   "at_grid_edge": false,
+   "curve": [
+    [
+     0.6,
+     3.514
+    ],
+    [
+     0.663,
+     2.973
+    ],
+    [
+     0.733,
+     2.471
+    ],
+    [
+     0.81,
+     2.006
+    ],
+    [
+     0.895,
+     1.578
+    ],
+    [
+     0.988,
+     1.187
+    ],
+    [
+     1.092,
+     0.84
+    ],
+    [
+     1.207,
+     0.577
+    ],
+    [
+     1.334,
+     0.459
+    ],
+    [
+     1.474,
+     0.52
+    ],
+    [
+     1.628,
+     0.643
+    ],
+    [
+     1.799,
+     0.801
+    ],
+    [
+     1.988,
+     0.981
+    ],
+    [
+     2.197,
+     1.165
+    ],
+    [
+     2.428,
+     1.337
+    ],
+    [
+     2.683,
+     1.496
+    ],
+    [
+     2.965,
+     1.642
+    ],
+    [
+     3.276,
+     1.777
+    ],
+    [
+     3.62,
+     1.9
+    ],
+    [
+     4.0,
+     2.013
+    ]
+   ]
+  },
+  "far": {
+   "n": 760,
+   "beta_pix": 1.2374779821474677,
+   "beta_pix_over_beta_rec": 1.119103154358444,
+   "residual_at_beta_pix_patch": 0.400234561562222,
+   "mean_disp_src_patch": 0.5502957687087624,
+   "mean_disp_target_at_beta_rec_patch": 0.743793464965992,
+   "target_over_src_at_same_pixels": 1.366988352673145,
+   "residual_at_beta_rec_patch": 0.42796919772472997,
+   "per_query_beta_quartiles": [
+    0.7895892005599244,
+    1.0653493704245645,
+    1.268756806043263
+   ],
+   "at_grid_edge": false,
+   "curve": [
+    [
+     0.6,
+     1.369
+    ],
+    [
+     0.663,
+     1.137
+    ],
+    [
+     0.733,
+     0.936
+    ],
+    [
+     0.81,
+     0.762
+    ],
+    [
+     0.895,
+     0.617
+    ],
+    [
+     0.988,
+     0.502
+    ],
+    [
+     1.092,
+     0.428
+    ],
+    [
+     1.207,
+     0.4
+    ],
+    [
+     1.334,
+     0.413
+    ],
+    [
+     1.474,
+     0.456
+    ],
+    [
+     1.628,
+     0.529
+    ],
+    [
+     1.799,
+     0.615
+    ],
+    [
+     1.988,
+     0.698
+    ],
+    [
+     2.197,
+     0.775
+    ],
+    [
+     2.428,
+     0.846
+    ],
+    [
+     2.683,
+     0.912
+    ],
+    [
+     2.965,
+     0.972
+    ],
+    [
+     3.276,
+     1.027
+    ],
+    [
+     3.62,
+     1.077
+    ],
+    [
+     4.0,
+     1.122
+    ]
+   ]
+  }
+ },
+ "contact_strip": {
+  "n": 102,
+  "beta_pix": 1.2069702790997687,
+  "beta_pix_over_beta_rec": 1.0915137610880576,
+  "residual_at_beta_pix_patch": 1.1037304719421046,
+  "mean_disp_src_patch": 5.736568531185348,
+  "mean_disp_target_at_beta_rec_patch": 6.554937397336289,
+  "target_over_src_at_same_pixels": 1.1436769682534544,
+  "residual_at_beta_rec_patch": 1.2235129658382793,
+  "per_query_beta_quartiles": [
+   1.1481926620541805,
+   1.2374779821474677,
+   1.3008262418436083
+  ],
+  "at_grid_edge": false,
+  "curve": [
+   [
+    0.6,
+    6.342
+   ],
+   [
+    0.663,
+    5.306
+   ],
+   [
+    0.733,
+    4.332
+   ],
+   [
+    0.81,
+    3.419
+   ],
+   [
+    0.895,
+    2.568
+   ],
+   [
+    0.988,
+    1.783
+   ],
+   [
+    1.092,
+    1.224
+   ],
+   [
+    1.207,
+    1.104
+   ],
+   [
+    1.334,
+    1.201
+   ],
+   [
+    1.474,
+    1.475
+   ],
+   [
+    1.628,
+    1.866
+   ],
+   [
+    1.799,
+    2.294
+   ],
+   [
+    1.988,
+    2.716
+   ],
+   [
+    2.197,
+    3.115
+   ],
+   [
+    2.428,
+    3.484
+   ],
+   [
+    2.683,
+    3.824
+   ],
+   [
+    2.965,
+    4.136
+   ],
+   [
+    3.276,
+    4.422
+   ],
+   [
+    3.62,
+    4.683
+   ],
+   [
+    4.0,
+    4.923
+   ]
+  ]
+ },
+ "target_depth_tercile_bounds": [
+  2.4254621267318726,
+  4.815006494522095
+ ],
+ "grader_expected_retaken": {
+  "note": "per latent frame j: the source's own tracked displacement (CoTracker, grader-equivalent selection: render mask, not object (17 px dilated), not sky, visible at j), the target's rendered flow at the SAME queries at beta_rec, and the grader's expected column (median over the sparse X_bg points inside the mask) reproduced",
+  "rows": [
+   {
+    "j": 0,
+    "n": 2323,
+    "source_median_patch": 0.0,
+    "target_at_same_queries_median_patch": 0.0,
+    "grader_expected_sparse_Xbg_patch": 0.0
+   },
+   {
+    "j": 1,
+    "n": 2304,
+    "source_median_patch": 0.6212556351158047,
+    "target_at_same_queries_median_patch": 0.6162645854609818,
+    "grader_expected_sparse_Xbg_patch": 0.6193541659197106
+   },
+   {
+    "j": 2,
+    "n": 2301,
+    "source_median_patch": 0.7889375785573852,
+    "target_at_same_queries_median_patch": 0.9873483855538769,
+    "grader_expected_sparse_Xbg_patch": 0.9949639390854846
+   },
+   {
+    "j": 3,
+    "n": 2287,
+    "source_median_patch": 1.0567341635193364,
+    "target_at_same_queries_median_patch": 1.5715699933111988,
+    "grader_expected_sparse_Xbg_patch": 1.5853982435928666
+   },
+   {
+    "j": 4,
+    "n": 2272,
+    "source_median_patch": 1.3996463338540912,
+    "target_at_same_queries_median_patch": 2.104146139741592,
+    "grader_expected_sparse_Xbg_patch": 2.1585087842531308
+   },
+   {
+    "j": 5,
+    "n": 2268,
+    "source_median_patch": 1.6549011127092323,
+    "target_at_same_queries_median_patch": 2.5676591108201885,
+    "grader_expected_sparse_Xbg_patch": 2.558310126752524
+   },
+   {
+    "j": 6,
+    "n": 2268,
+    "source_median_patch": 1.898034385027846,
+    "target_at_same_queries_median_patch": 2.8669533408894345,
+    "grader_expected_sparse_Xbg_patch": 2.8633166722194363
+   },
+   {
+    "j": 7,
+    "n": 2268,
+    "source_median_patch": 2.254216365388615,
+    "target_at_same_queries_median_patch": 3.2218143820297835,
+    "grader_expected_sparse_Xbg_patch": 3.248714167061294
+   },
+   {
+    "j": 8,
+    "n": 2268,
+    "source_median_patch": 2.655924640544651,
+    "target_at_same_queries_median_patch": 3.7383266865398554,
+    "grader_expected_sparse_Xbg_patch": 3.7561402648050817
+   }
+  ]
+ },
+ "depth_check": {
+  "rho_band_median_vipe": 1.0936613169823495,
+  "band_gauge": {
+   "n_band_points": 105,
+   "min_points": 30,
+   "tol": 0.05,
+   "band_pixels": 25015,
+   "ratio": 1.1668649581794057,
+   "ci95": [
+    1.147147396499216,
+    1.2050345801456253
+   ],
+   "ci_half_width": 0.028943591823204606,
+   "half_fit": 1.161669737572311,
+   "half_verify": 1.1762711800528294,
+   "verify_rel_diff": 0.012569357716964102,
+   "band_reproj_median_px": 0.5498836150583397,
+   "outcome": "determined"
+  },
+  "n_matched": 372,
+  "n_heldout_points": 355,
+  "moge_kbg_over_Ztri_median": 0.863421293080912,
+  "moge_kbg_over_lift_median": 1.0090125033059745,
+  "lift_over_Ztri_median_at_matched": 0.8640905785376687,
+  "by_target_depth_tercile": {
+   "near": {
+    "n": 97,
+    "over_Ztri": 0.8422304229030653,
+    "over_lift": 0.9936014823605089
+   },
+   "mid": {
+    "n": 165,
+    "over_Ztri": 0.8479279831876275,
+    "over_lift": 0.9907210034306532
+   },
+   "far": {
+    "n": 110,
+    "over_Ztri": 1.0400789516510618,
+    "over_lift": 1.1674829617405167
+   }
+  },
+  "note": "Z_tri: camera-C bundle adjustment (prior 200), the source's gauge; lift: D4RT at t_a, the source's gauge; MoGe x k_bg: the target's depth as the render lifts it (camera t_a, target gauge). The bridge beta divides the camera's translations, so a constant MoGe/Z_tri ratio across depth is the bridge's premise and a ratio that trends with depth is the target's depth shape."
+ }
+}

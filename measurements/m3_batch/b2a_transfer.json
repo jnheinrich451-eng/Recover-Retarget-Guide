@@ -1,0 +1,110 @@
+[
+ {
+  "clip": "000000000001.5.002",
+  "stage": "A",
+  "flips": [],
+  "largest_rel_change_key": "gates.A-G2.median_rel",
+  "old": 0.02278025448322296,
+  "new": 0.02278025448322296,
+  "rel_change": 0.0
+ },
+ {
+  "clip": "000000000001.5.002",
+  "stage": "B",
+  "flips": [],
+  "largest_rel_change_key": "follow_cam.n_quiet",
+  "old": 153,
+  "new": 153,
+  "rel_change": 0.0
+ },
+ {
+  "clip": "000000000001.5.002",
+  "stage": "C",
+  "flips": [],
+  "largest_rel_change_key": "prompts.anchor_n",
+  "old": 153,
+  "new": 153,
+  "rel_change": 0.0
+ },
+ {
+  "clip": "000000000001.5.002",
+  "stage": "C5",
+  "flips": [],
+  "largest_rel_change_key": "n_dense",
+  "old": 4637,
+  "new": 4637,
+  "rel_change": 0.0
+ },
+ {
+  "clip": "000000000265.2.005",
+  "stage": "A",
+  "flips": [],
+  "largest_rel_change_key": "gates.A-G2.median_rel",
+  "old": 0.04860524833202362,
+  "new": 0.04860524833202362,
+  "rel_change": 0.0
+ },
+ {
+  "clip": "000000000265.2.005",
+  "stage": "B",
+  "flips": [],
+  "largest_rel_change_key": "follow_cam.n_quiet",
+  "old": 74,
+  "new": 74,
+  "rel_change": 0.0
+ },
+ {
+  "clip": "000000000265.2.005",
+  "stage": "C",
+  "flips": [],
+  "largest_rel_change_key": "prompts.anchor_n",
+  "old": 37,
+  "new": 37,
+  "rel_change": 0.0
+ },
+ {
+  "clip": "000000000265.2.005",
+  "stage": "C5",
+  "flips": [],
+  "largest_rel_change_key": "n_dense",
+  "old": 613,
+  "new": 613,
+  "rel_change": 0.0
+ },
+ {
+  "clip": "000000000035.1.003",
+  "stage": "A",
+  "flips": [],
+  "largest_rel_change_key": "gates.A-G2.median_rel",
+  "old": 0.08222095668315887,
+  "new": 0.08222095668315887,
+  "rel_change": 0.0
+ },
+ {
+  "clip": "000000000035.1.003",
+  "stage": "B",
+  "flips": [],
+  "largest_rel_change_key": "follow_cam.n_quiet",
+  "old": 1734,
+  "new": 1734,
+  "rel_change": 0.0
+ },
+ {
+  "clip": "000000000035.1.003",
+  "stage": "C",
+  "flips": [],
+  "largest_rel_change_key": "t_c",
+  "old": 4,
+  "new": 4,
+  "rel_change": 0.0
+ },
+ {
+  "clip": "000000000035.1.003",
+  "stage": "C5",
+  "flips": [],
+  "largest_rel_change_key": "n_dense",
+  "old": 112,
+  "new": 112,
+  "rel_change": 0.0
+ }
+]

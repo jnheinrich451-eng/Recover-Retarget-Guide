@@ -1,0 +1,25 @@
+# m2_c — placement (C1), background (C2), composition (C3). NO gate thresholds here (lock file).
+m2c:
+  contact:                       # review 2026-09-15 (a): robust contact row
+    row_quantile: 0.995          # v_contact = p99.5 of the mask rows (a max dies to one stray pixel)
+    band_rows: 2                 # rows above v_contact that form the "contact band" (feet column / depth)
+    depth_quantile: 0.9          # contour depth of the band (far quantile), not its median — see placement.py
+    local_plane_offset: true     # review 2026-09-15 (b): d_local = -n.X_feet when contact is observed
+    run_width_frac: 0.5          # border touch counts as truncation only if the last-row run >= this x object width near it (restored 2026-09-18)
+  c2_border_band_px_256: 26      # C2 T4 (docs/report_m2c_c2_tests.md): affine round trip degrades within 26 px of the edge at 256
+  c2:                            # C2 sanitisation parameters (harness values, NOT lock thresholds)
+    r: 4
+    w: 6
+    N: 32
+    sigma1: 2.0
+    sigma2: 0.5
+    fill_order: fill_then_coarsen
+  c3:
+    p_low: 0.02                  # D_ctrl normalisation percentiles over valid pixels (object included; exclusion = open question)
+    p_high: 0.98
+    percentile_domain: background_floor_object_ceiling   # revised 2026-09-15: q_low = background p_low, q_high = max(background, object) p_high; all variants recorded
+    render_px: 1024
+    coarse_n: 32
+    contact_band_rows: 8         # object rows over which contact_step is measured at 1024
+paths:
+  cache_m2c: ${paths.drive_root}/cache/m2_c        # <clip>/<category>/placement.json (C1), control.* + qc_c3.json (C3)

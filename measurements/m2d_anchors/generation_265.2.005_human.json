@@ -1,0 +1,75 @@
+{
+ "schema": "m2d_generation_v1",
+ "clip": "000000000265.2.005",
+ "category": "human",
+ "polarity": "near_bright",
+ "guidance": 10.0,
+ "steps": 30,
+ "seeds": 4,
+ "target": {
+  "object": "a man in a grey jacket and dark trousers",
+  "action": "walking",
+  "scene": "on a rocky riverbank"
+ },
+ "prompt": {
+  "prompt": "a man in a grey jacket and dark trousers walking, on a rocky riverbank, side profile, moving right to left, wide shot",
+  "dictionary_rows": [
+   "lateral_right_to_left",
+   "small_area"
+  ],
+  "heading_class": "lateral_right_to_left",
+  "heading_azimuth_deg": -165.22506254441612,
+  "heading_frame": "camera_t_a",
+  "shot_class": "small_area",
+  "obj_area_frac": 0.007079124450683594,
+  "camera_low": false,
+  "camera_height": 1.0272523974214989,
+  "object_height": 0.585446717967408,
+  "camera_height_over_object_height": 1.7546471197037035
+ },
+ "control_checksum": "1191bc8b09a854d4",
+ "calls": [
+  {
+   "seed": 0,
+   "control_checksum": "1191bc8b09a854d4",
+   "tensor_max_dev": 0.0,
+   "png_sha256": "c73294d35db5af41728de0360b92f92910d4b01b7c46ca34210fe3a2d226a175"
+  },
+  {
+   "seed": 1,
+   "control_checksum": "1191bc8b09a854d4",
+   "tensor_max_dev": 0.0,
+   "png_sha256": "7eee15e20b806c209483d32463ebd2ebd3a89f543d0989854b8f1f0ec619d128"
+  },
+  {
+   "seed": 2,
+   "control_checksum": "1191bc8b09a854d4",
+   "tensor_max_dev": 0.0,
+   "png_sha256": "5a57f03b00832c474261e96b634cb04e0a9cb3a7d2191e2381d95729f826f131"
+  },
+  {
+   "seed": 3,
+   "control_checksum": "1191bc8b09a854d4",
+   "tensor_max_dev": 0.0,
+   "png_sha256": "d6dabb82330bce1c8a71beac8878f2e2b9d35ffe2e9a92ea16f2c545cd4a9dd4"
+  }
+ ],
+ "pipeline": "FluxControlPipeline",
+ "diffusers": "0.40.0",
+ "gpu": "NVIDIA A100-SXM4-40GB",
+ "config_hash": "009c71d32375c705",
+ "upstream_hashes": {
+  "c3": "3840d84573fb208adada55d0f4fd6f28bdbe6e3435d7082f699b7e671fdaa585",
+  "c1": "903b2b88e7edac8648fadef06f3ec4ab64c9e99c4e5fe0acfb8f7d507fee5815",
+  "m2a": "96ee134e427a4035b575de1a9514fc37f7987862217d9485059a7f20cb8bd8b4",
+  "proxy_cache_key": "3fc7ee649366f17e",
+  "c2_params": {
+   "r": 4,
+   "w": 6,
+   "N": 32,
+   "sigma1": 2.0,
+   "sigma2": 0.5,
+   "fill_order": "fill_then_coarsen"
+  }
+ }
+}

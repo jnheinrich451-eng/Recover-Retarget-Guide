@@ -1,0 +1,258 @@
+[
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "video": "A0_seed0_rec_F33.mp4",
+  "label": "car",
+  "frames": 33,
+  "t_a": null,
+  "centroid_disp_patch_at_latent_frames": [
+   0.0,
+   0.7428304141984488,
+   1.6866802027324281,
+   2.6362773284965995,
+   3.3553215695341274,
+   4.261682584436826,
+   5.167446936025834,
+   6.372081756712475,
+   7.76642849284421
+  ],
+  "centroid_disp_last_patch": 7.76642849284421,
+  "expected_obj_disp_last_patch": 0.29244489268636675,
+  "centroid_disp_vector_last_patch": [
+   7.744942652899489,
+   0.57729960831497
+  ],
+  "path_length_patch": 7.816829952069394,
+  "mask_area_share": {
+   "first": 0.138671875,
+   "median": 0.160752203525641,
+   "min": 0.138671875,
+   "last": 0.160752203525641
+  },
+  "mask_iou_prev": {
+   "median": 0.96764081377558,
+   "min": 0.9393472768317661
+  },
+  "n_frames_without_mask": 0,
+  "instrument": "nvidia/segformer-b2-finetuned-ade-512-512"
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "video": "A0_seed0_rec_F33_coff.mp4",
+  "label": "car",
+  "frames": 33,
+  "t_a": null,
+  "centroid_disp_patch_at_latent_frames": [
+   0.0,
+   0.8049124550157278,
+   1.7022819541691505,
+   2.629983114808412,
+   3.3890327251402534,
+   4.270219758824738,
+   5.272979339711723,
+   6.2192326693978375,
+   7.144270384946062
+  ],
+  "centroid_disp_last_patch": 7.144270384946062,
+  "expected_obj_disp_last_patch": 0.29244489268636675,
+  "centroid_disp_vector_last_patch": [
+   7.122020429224214,
+   0.5634042411362259
+  ],
+  "path_length_patch": 7.187036274478101,
+  "mask_area_share": {
+   "first": 0.1371369190705128,
+   "median": 0.16217197516025642,
+   "min": 0.1371369190705128,
+   "last": 0.16983673878205127
+  },
+  "mask_iou_prev": {
+   "median": 0.9662469377487841,
+   "min": 0.939912151252626
+  },
+  "n_frames_without_mask": 0,
+  "instrument": "nvidia/segformer-b2-finetuned-ade-512-512"
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "video": "A0_seed1_rec_F33.mp4",
+  "label": "car",
+  "frames": 33,
+  "t_a": null,
+  "centroid_disp_patch_at_latent_frames": [
+   0.0,
+   0.5372749736845309,
+   1.3853343397211262,
+   2.2037606462908523,
+   3.1391216670349658,
+   3.984987580327236,
+   4.895098082324812,
+   6.025440711283612,
+   6.9900774621473465
+  ],
+  "centroid_disp_last_patch": 6.9900774621473465,
+  "expected_obj_disp_last_patch": 0.29244489268636675,
+  "centroid_disp_vector_last_patch": [
+   6.566852954114275,
+   -2.395334048908609
+  ],
+  "path_length_patch": 7.333195890288257,
+  "mask_area_share": {
+   "first": 0.13903495592948717,
+   "median": 0.1297100360576923,
+   "min": 0.12174729567307692,
+   "last": 0.12174729567307692
+  },
+  "mask_iou_prev": {
+   "median": 0.9599472737878341,
+   "min": 0.9477545654799971
+  },
+  "n_frames_without_mask": 0,
+  "instrument": "nvidia/segformer-b2-finetuned-ade-512-512"
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "video": "A0_seed1_rec_F33_coff.mp4",
+  "label": "car",
+  "frames": 33,
+  "t_a": null,
+  "centroid_disp_patch_at_latent_frames": [
+   0.0,
+   0.612121365964614,
+   1.40081660573362,
+   2.198954995383311,
+   3.1263511435654445,
+   3.994481369737196,
+   4.944066545048168,
+   6.062345434224986,
+   7.013766024124593
+  ],
+  "centroid_disp_last_patch": 7.013766024124593,
+  "expected_obj_disp_last_patch": 0.29244489268636675,
+  "centroid_disp_vector_last_patch": [
+   6.573752848185347,
+   -2.4451354424938394
+  ],
+  "path_length_patch": 7.231306119145664,
+  "mask_area_share": {
+   "first": 0.1397160456730769,
+   "median": 0.12982271634615383,
+   "min": 0.12137670272435898,
+   "last": 0.12137670272435898
+  },
+  "mask_iou_prev": {
+   "median": 0.9620548218449605,
+   "min": 0.9473537936236948
+  },
+  "n_frames_without_mask": 0,
+  "instrument": "nvidia/segformer-b2-finetuned-ade-512-512"
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "video": "A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "label": "car",
+  "frames": 33,
+  "t_a": null,
+  "centroid_disp_patch_at_latent_frames": [
+   0.0,
+   0.386286702988904,
+   5.140892151786732,
+   2.003509781634364,
+   3.0225849381399468,
+   9.907754445952913,
+   2.408367358450567,
+   3.189679367963029,
+   1.9871285778326095
+  ],
+  "centroid_disp_last_patch": 1.9871285778326095,
+  "expected_obj_disp_last_patch": 0.29244489268636675,
+  "centroid_disp_vector_last_patch": [
+   1.9868431524782721,
+   0.03367895914737673
+  ],
+  "path_length_patch": 88.13212032478472,
+  "mask_area_share": {
+   "first": 0.1384590344551282,
+   "median": 0.09591596554487179,
+   "min": 0.0002178485576923077,
+   "last": 0.14421824919871795
+  },
+  "mask_iou_prev": {
+   "median": 0.7481130514170138,
+   "min": 0.0
+  },
+  "n_frames_without_mask": 0,
+  "instrument": "nvidia/segformer-b2-finetuned-ade-512-512"
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "video": "A3_seed1_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "label": "car",
+  "frames": 33,
+  "t_a": null,
+  "centroid_disp_patch_at_latent_frames": [
+   0.0,
+   0.7333857951481957,
+   0.6616475294353371,
+   9.087792102768875,
+   1.2819549339572955,
+   9.760430893336135,
+   10.060337891204618,
+   7.833121804410025,
+   13.524724430344714
+  ],
+  "centroid_disp_last_patch": 13.524724430344714,
+  "expected_obj_disp_last_patch": 0.29244489268636675,
+  "centroid_disp_vector_last_patch": [
+   13.09742114295559,
+   -3.372792659032431
+  ],
+  "path_length_patch": 159.04295299176312,
+  "mask_area_share": {
+   "first": 0.13953074919871794,
+   "median": 0.06288561698717948,
+   "min": 0.004151642628205128,
+   "last": 0.004151642628205128
+  },
+  "mask_iou_prev": {
+   "median": 0.6618120579925463,
+   "min": 0.0
+  },
+  "n_frames_without_mask": 0,
+  "instrument": "nvidia/segformer-b2-finetuned-ade-512-512"
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "video": "source",
+  "label": "car",
+  "frames": 33,
+  "t_a": 0,
+  "centroid_disp_patch_at_latent_frames": [
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null
+  ],
+  "centroid_disp_last_patch": null,
+  "expected_obj_disp_last_patch": 0.29244489268636675,
+  "centroid_disp_vector_last_patch": null,
+  "path_length_patch": 0.0,
+  "mask_area_share": {
+   "first": 0.0,
+   "median": 0.0,
+   "min": 0.0,
+   "last": 0.0
+  },
+  "mask_iou_prev": {
+   "median": NaN,
+   "min": null
+  },
+  "n_frames_without_mask": 33,
+  "instrument": "nvidia/segformer-b2-finetuned-ade-512-512"
+ }
+]

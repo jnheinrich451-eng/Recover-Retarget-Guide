@@ -1,0 +1,220 @@
+{
+ "schema": "m2d_qc_v1",
+ "clip": "000000000265.2.005",
+ "category": "vehicle",
+ "polarity": "near_bright",
+ "guidance": 10.0,
+ "steps": 30,
+ "seeds": [
+  0,
+  1,
+  2,
+  3
+ ],
+ "selected_seed": 1,
+ "outcome": "selected",
+ "n_survivors": 4,
+ "candidates": [
+  {
+   "seed": 0,
+   "heading_class": "lateral_right_to_left",
+   "obj_fidelity": 0.9707448542676433,
+   "bg_fidelity": 0.8391495029690238,
+   "E_loc": 0.0016645459148119188,
+   "E_loc_rel": 0.0065493830124496635,
+   "E_area": 0.008014277352033411,
+   "log_area_ratio": 0.008014277352033411,
+   "gates": {
+    "g_object_found": {
+     "value": true,
+     "outcome": "pass"
+    },
+    "g_heading": {
+     "value": "lateral_right_to_left",
+     "control_class": "lateral_right_to_left",
+     "instrument": "human",
+     "outcome": "pass"
+    },
+    "g_eps_shape": {
+     "value": 0.5531850788764087,
+     "threshold": null,
+     "outcome": "ungated"
+    },
+    "g_e_loc_rel": {
+     "value": 0.0065493830124496635,
+     "threshold": 0.5,
+     "outcome": "pass"
+    },
+    "g_e_area": {
+     "value": 0.008014277352033411,
+     "threshold": 0.693,
+     "outcome": "pass"
+    }
+   },
+   "phase1_pass": true,
+   "phase2_rank": 3
+  },
+  {
+   "seed": 1,
+   "heading_class": "lateral_right_to_left",
+   "obj_fidelity": 0.9218496345539354,
+   "bg_fidelity": 0.8569505136992311,
+   "E_loc": 0.008337639709754183,
+   "E_loc_rel": 0.032805581025477384,
+   "E_area": 0.07108418811545597,
+   "log_area_ratio": -0.07108418811545597,
+   "gates": {
+    "g_object_found": {
+     "value": true,
+     "outcome": "pass"
+    },
+    "g_heading": {
+     "value": "lateral_right_to_left",
+     "control_class": "lateral_right_to_left",
+     "instrument": "human",
+     "outcome": "pass"
+    },
+    "g_eps_shape": {
+     "value": 0.5531850788764087,
+     "threshold": null,
+     "outcome": "ungated"
+    },
+    "g_e_loc_rel": {
+     "value": 0.032805581025477384,
+     "threshold": 0.5,
+     "outcome": "pass"
+    },
+    "g_e_area": {
+     "value": 0.07108418811545597,
+     "threshold": 0.693,
+     "outcome": "pass"
+    }
+   },
+   "phase1_pass": true,
+   "phase2_rank": 1
+  },
+  {
+   "seed": 2,
+   "heading_class": "lateral_right_to_left",
+   "obj_fidelity": 0.9627062127062127,
+   "bg_fidelity": 0.8618497548205091,
+   "E_loc": 0.0008148584749391768,
+   "E_loc_rel": 0.003206171848927522,
+   "E_area": 0.018793119525106566,
+   "log_area_ratio": -0.018793119525106566,
+   "gates": {
+    "g_object_found": {
+     "value": true,
+     "outcome": "pass"
+    },
+    "g_heading": {
+     "value": "lateral_right_to_left",
+     "control_class": "lateral_right_to_left",
+     "instrument": "human",
+     "outcome": "pass"
+    },
+    "g_eps_shape": {
+     "value": 0.5531850788764087,
+     "threshold": null,
+     "outcome": "ungated"
+    },
+    "g_e_loc_rel": {
+     "value": 0.003206171848927522,
+     "threshold": 0.5,
+     "outcome": "pass"
+    },
+    "g_e_area": {
+     "value": 0.018793119525106566,
+     "threshold": 0.693,
+     "outcome": "pass"
+    }
+   },
+   "phase1_pass": true,
+   "phase2_rank": 2
+  },
+  {
+   "seed": 3,
+   "heading_class": "lateral_right_to_left",
+   "obj_fidelity": 0.9080122815995322,
+   "bg_fidelity": 0.8861424602849385,
+   "E_loc": 0.009498898591288234,
+   "E_loc_rel": 0.037374712537019246,
+   "E_area": 0.07612190208541622,
+   "log_area_ratio": -0.07612190208541622,
+   "gates": {
+    "g_object_found": {
+     "value": true,
+     "outcome": "pass"
+    },
+    "g_heading": {
+     "value": "lateral_right_to_left",
+     "control_class": "lateral_right_to_left",
+     "instrument": "human",
+     "outcome": "pass"
+    },
+    "g_eps_shape": {
+     "value": 0.5531850788764087,
+     "threshold": null,
+     "outcome": "ungated"
+    },
+    "g_e_loc_rel": {
+     "value": 0.037374712537019246,
+     "threshold": 0.5,
+     "outcome": "pass"
+    },
+    "g_e_area": {
+     "value": 0.07612190208541622,
+     "threshold": 0.693,
+     "outcome": "pass"
+    }
+   },
+   "phase1_pass": true,
+   "phase2_rank": 4
+  }
+ ],
+ "gate_outcomes": {
+  "g_phase1_survivors": {
+   "value": 4,
+   "outcome": "pass"
+  }
+ },
+ "prompt": "a red car driving, on open scrubland, side profile, moving right to left, medium shot",
+ "dictionary_row": [
+  "lateral_right_to_left",
+  "large_area"
+ ],
+ "heading_anchor_frame": {
+  "class": "lateral_right_to_left",
+  "azimuth_deg": -165.22506254441612,
+  "frame": "camera_t_a"
+ },
+ "shot_class_near_band_edge": false,
+ "eps_shape": 0.5531850788764087,
+ "heading_instrument": "human label (heading_labels.csv); NOT blind on the first run: the control's class was printed beside the label",
+ "phase2_instrument": "human rank (phase2_ranks.csv), spec \u00a74.2",
+ "resample_count": 0,
+ "thresholds": {
+  "m2d_e_loc_rel_max": 0.5,
+  "m2d_e_area_max": 0.693,
+  "m2d_heading": "human",
+  "m2d_eps_shape_max": null
+ },
+ "config_hash": "48933f55cdd88b73",
+ "upstream_hashes": {
+  "c3": "1fd70e54b6d431bedf5b039bfbadeaaac468c8d12f464c54cf9d49ae8dd145f9",
+  "c1": "8363134865701ad34dd0a87e36f1fd507227cc7487a35ce6e68468ac4ce3af4f",
+  "m2a": "96ee134e427a4035b575de1a9514fc37f7987862217d9485059a7f20cb8bd8b4",
+  "proxy_cache_key": "5fbdb89abb315954",
+  "c2_params": {
+   "r": 4,
+   "w": 6,
+   "N": 32,
+   "sigma1": 2.0,
+   "sigma2": 0.5,
+   "fill_order": "fill_then_coarsen"
+  },
+  "m2b2": "116add80e192e515335b760e92ae13ae35a5fddee7aae48deb66767f7f062ec6",
+  "generation": "fd7a2b9c46568eba93ea03afec82431e8340cc4331854ee3219c51529528befa",
+  "fidelity": "89df7b3aa040dea031dae311ff32fcb3b389e656c5b63ab947126ce995f8df42"
+ }
+}

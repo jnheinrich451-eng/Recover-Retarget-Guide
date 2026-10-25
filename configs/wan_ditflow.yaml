@@ -1,0 +1,64 @@
+# DiTFlow-on-Wan2.1 guidance settings — PHASE-2 PROBE, not a frozen stage config.
+#
+# Every value below is TRANSPLANTED from the CogVideoX reference implementation
+# (https://github.com/ditflow/ditflow), NOT measured on Wan. None of it has been
+# calibrated on the review clips, so nothing here belongs in
+# calibration.lock.yaml yet (CLAUDE.md §4 — thresholds are proposed from
+# measured distributions, never carried over on faith). Treat as starting
+# points for the probe sweep; see docs/probe_wan_report.md §6.
+
+# --- Optimisation ---------------------------------------------------------
+lr: [0.002, 0.001]          # LR range annealed across guidance_timestep_range
+optimization_steps: 5       # Optimisation steps per denoising step
+guidance_timestep_range: [50, 40]   # Index window into the timestep list.
+                            # UNMEASURED ON WAN: rectified-flow models resolve
+                            # structure at different trajectory points than the
+                            # DDPM schedule this window was tuned for.
+
+# --- Guidance placement ---------------------------------------------------
+# CogVideoX used ~50% depth (20/42 for 5B, 15/30 for 2B); these mirror that
+# ratio. Which block encodes motion is an empirical property of each backbone
+# and has NOT been measured for Wan.
+guidance_blocks_1_3b: [15]   # Wan2.1-T2V-1.3B: 30 blocks
+guidance_blocks_14b: [20]    # Wan2.1-T2V-14B: 40 blocks
+injection_blocks: [0]
+
+# --- AMF ------------------------------------------------------------------
+motion_temp: 2              # Softmax sharpening on attention logits.
+                            # HIGHEST-LEVERAGE UNKNOWN: Wan applies RMSNorm to
+                            # q/k (qk_norm=rms_norm_across_heads), so raw logits
+                            # sit on a different scale than CogVideoX's. Measure
+                            # this first.
+threshloss: True            # Score only where the reference target is non-zero.
+                            # Maps directly onto M_src if a geometric target
+                            # replaces the attention-derived one.
+argmax_motion_flow: True    # Argmax the reference motion flow
+checkpoint_amf: auto        # auto | true | false — recompute frame-pair blocks
+                            # in backward. 'auto' enables above 7 latent frames,
+                            # so F=81 (the O_pre clip length -> 21 latent
+                            # frames) turns it on.
+softmax_fp32: True          # Softmax AMF in f32 (CLAUDE.md §5: never bf16 for
+                            # numerics that feed an optimisation)
+
+# --- Sampling -------------------------------------------------------------
+num_inference_steps: 50
+guidance_scale: 5.0         # Wan2.1 reference default (CogVideoX used 7)
+scheduler: unipc            # unipc | flowmatch. flowmatch is first-order, so
+                            # latent-mode edits between steps cannot corrupt
+                            # multistep solver history — try it if latent mode
+                            # drifts.
+flow_shift: 3.0             # 3.0 for 480P, 5.0 for 720P (Wan reference)
+height: 480
+width: 832                  # Wan2.1 480P native aspect. NOTE: preprocessing
+                            # runs at 256x256 PROCESS resolution — the O_pre ->
+                            # generation resampling is an open question for the
+                            # retargeting SKILL, not settled here.
+num_frames: 33              # Must be 4k+1 (causal VAE). 33 -> 9 latent frames.
+                            # Set 81 to match the O_pre contract's F.
+
+# --- Runtime --------------------------------------------------------------
+enable_gradient_checkpointing: True
+enable_model_cpu_offload: False   # True for <24GB VRAM
+prop_motion: 0.04                 # MOFT % channels (baseline loss only)
+source_prompt: ""
+device: 'cuda'

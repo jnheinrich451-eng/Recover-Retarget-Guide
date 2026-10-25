@@ -1,0 +1,3244 @@
+[
+ {
+  "clip": "000000000064.3.002",
+  "pool": "miradata",
+  "category": "human",
+  "caption": "A warrior in armor walks through a serene village by a river, surrounded by lush greenery and rustic buildings.",
+  "time": "2026-10-17 20:47",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| 000000000064.3.002 | ok | x0 | V1_pts/True/True | 533 / 3.54px / 0.167 | undef / nan / plane / nan | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\n000000000064.3.002: t_a=6 admitted=True heading=False up=True(plane) kappa=nan area=3876 trunc=0.063 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:n/a, g_up:ungated, g_basis:n/a}\n"
+   },
+   "source_handoff": {
+    "t_a": 6,
+    "n_frames": 24,
+    "heading_defined": false,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 35257,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 784,
+      "object_height_px": 784,
+      "n_pixels": 564582,
+      "frac_below_horizon": 0.6740932464599609
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.2342149358349445,
+   "n_points": 350,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 285,
+   "half_split_rel": 0.005967386326360069,
+   "ratio": 1.0005627257490688,
+   "ci95": [
+    0.9950556335514955,
+    1.0065885248095472
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "000000000119.5.007",
+  "pool": "miradata",
+  "category": "human",
+  "caption": "A man in a blue robe walks through a grand, ornate greenhouse filled with lush plants and intricate architecture.",
+  "time": "2026-10-17 20:49",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| 000000000119.5.007 | ok | branch | V3_negs_box/True/True | 445 / 5.09px / 0.917 | def / 0.038 / plane / 1.00 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\n000000000119.5.007: t_a=2 admitted=True heading=True up=True(plane) kappa=1.000 area=5461 trunc=0.044 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 2,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 26767,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 636,
+      "object_height_px": 636,
+      "n_pixels": 428722,
+      "frac_below_horizon": 0.5343799591064453
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.227084398880025,
+   "n_points": 312,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 161,
+   "half_split_rel": 0.0009151533969921077,
+   "ratio": 0.8484444483574163,
+   "ci95": [
+    0.8446025519205049,
+    0.8545453823251408
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "000000000130.0.015",
+  "pool": "miradata",
+  "category": "human",
+  "caption": "A character runs through a futuristic, dimly lit corridor with industrial elements and glowing lights.",
+  "time": "2026-10-17 20:49",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| 000000000130.0.015 | ok | x0 | V1_pts/True/True | 3470 / 1.3px / 0.0 | def / 0.769 / plane / 0.99 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\n000000000130.0.015: t_a=0 admitted=True heading=True up=True(plane) kappa=0.987 area=1644 trunc=0.000 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 20849,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 256,
+      "object_height_px": 256,
+      "n_pixels": 333811,
+      "frac_below_horizon": 0.6943511962890625
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.42088290381441623,
+   "n_points": 778,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 602,
+   "half_split_rel": 0.0035827234439804734,
+   "ratio": 0.9977049581224664,
+   "ci95": [
+    0.9925028628961682,
+    1.0047250188302659
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "000000000191.6.037",
+  "pool": "miradata",
+  "category": "human",
+  "caption": "A man in a brown coat walks through a vibrant chinatown street, surrounded by colorful buildings and bustling activity.",
+  "time": "2026-10-17 20:50",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| 000000000191.6.037 | ok | branch | V1_pts/True/True | 428 / 6.64px / 0.792 | def / 0.026 / plane / 1.00 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\n000000000191.6.037: t_a=0 admitted=True heading=True up=True(plane) kappa=1.000 area=5238 trunc=0.043 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 29759,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 600,
+      "object_height_px": 600,
+      "n_pixels": 476687,
+      "frac_below_horizon": 0.5627813339233398
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.34111027456443055,
+   "n_points": 427,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 212,
+   "half_split_rel": 0.002767117050370027,
+   "ratio": 0.967866887701393,
+   "ci95": [
+    0.965712367501271,
+    0.9703181571839316
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "000000000200.1.006",
+  "pool": "miradata",
+  "category": "human",
+  "caption": "A character walks through a bustling medieval town, surrounded by carts and people, under a bright sky.",
+  "time": "2026-10-17 20:51",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| 000000000200.1.006 | ok | branch | V3_negs_box/True/True | 6848 / 1.75px / 0.292 | def / 0.102 / plane / 1.00 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\n000000000200.1.006: t_a=0 admitted=True heading=True up=True(plane) kappa=0.999 area=2691 trunc=0.000 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 33529,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 856,
+      "object_height_px": 856,
+      "n_pixels": 537035,
+      "frac_below_horizon": 0.6281299591064453
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.27610534235777195,
+   "n_points": 483,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 309,
+   "half_split_rel": 0.0035108779096826304,
+   "ratio": 1.0349343426370283,
+   "ci95": [
+    1.028022232245152,
+    1.0400243017035489
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "000000000217.0.006",
+  "pool": "miradata",
+  "category": "vehicle",
+  "caption": "A sleek blue sports car drives through a sunny cityscape with palm trees and modern architecture.",
+  "time": "2026-10-17 20:52",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| 000000000217.0.006 | ok | branch | V2_negs/True/True | 296 / 6.82px / 0.458 | def / 0.058 / plane / 1.00 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\n000000000217.0.006: t_a=0 admitted=True heading=True up=True(plane) kappa=1.000 area=4974 trunc=0.000 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 27032,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 700,
+      "object_height_px": 700,
+      "n_pixels": 433084,
+      "frac_below_horizon": 0.5386772155761719
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.48465304174339985,
+   "n_points": 599,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 156,
+   "half_split_rel": 0.024865335164473645,
+   "ratio": 0.9889993157149115,
+   "ci95": [
+    0.978071081786899,
+    1.0007554145573077
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "000000000221.7.011",
+  "pool": "miradata",
+  "category": "human",
+  "caption": "A warrior with a shield and spear walks through an autumnal forest, surrounded by fallen leaves and ancient ruins.",
+  "time": "2026-10-17 20:53",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| 000000000221.7.011 | ok | branch | V1_pts/True/True | 3739 / 8.19px / 0.542 | def / 0.023 / plane / 1.00 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\n000000000221.7.011: t_a=0 admitted=True heading=True up=True(plane) kappa=0.996 area=3274 trunc=0.002 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 35432,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 568,
+      "object_height_px": 568,
+      "n_pixels": 567349,
+      "frac_below_horizon": 0.6193742752075195
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.30139231489348833,
+   "n_points": 565,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 337,
+   "half_split_rel": 0.004919853580215072,
+   "ratio": 0.9659114073493893,
+   "ci95": [
+    0.9629781714428933,
+    0.9701802260162372
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "000000000222.4.003",
+  "pool": "miradata",
+  "category": "human",
+  "caption": "A character rides a horse through a cobblestone street lined with old buildings and debris under a cloudy sky.",
+  "time": "2026-10-17 20:53",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| 000000000222.4.003 | ok | branch | V1_pts/True/True | 4597 / 3.91px / 0.579 | def / 0.059 / plane / 1.00 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\n000000000222.4.003: t_a=0 admitted=True heading=True up=True(plane) kappa=0.999 area=3224 trunc=0.067 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 34693,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 548,
+      "object_height_px": 548,
+      "n_pixels": 555554,
+      "frac_below_horizon": 0.6071491241455078
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.22920873042853004,
+   "n_points": 378,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 292,
+   "half_split_rel": 0.0013924360745671827,
+   "ratio": 0.9951077789770071,
+   "ci95": [
+    0.9917653749924713,
+    0.9989127386835448
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "000000000252.1.018",
+  "pool": "miradata",
+  "category": "vehicle",
+  "caption": "A horse-drawn carriage travels through a cobblestone street at night, illuminated by streetlights and surrounded by historic buildings.",
+  "time": "2026-10-17 20:55",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| 000000000252.1.018 | ok | branch | V1_pts/True/True | 3081 / 16.6px / 0.75 | def / 0.027 / plane / 1.00 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\n000000000252.1.018: t_a=0 admitted=True heading=True up=True(plane) kappa=1.000 area=2386 trunc=0.028 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 32182,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 564,
+      "object_height_px": 564,
+      "n_pixels": 515390,
+      "frac_below_horizon": 0.5577621459960938
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.48235266317598724,
+   "n_points": 858,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 463,
+   "half_split_rel": 0.004547596704921109,
+   "ratio": 1.0080179717197406,
+   "ci95": [
+    1.0046389639046422,
+    1.0119403022689963
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "000000000252.2.007",
+  "pool": "miradata",
+  "category": "human",
+  "caption": "A lone rider on horseback traverses a lush green field under a partly cloudy sky, heading towards a distant campsite.",
+  "time": "2026-10-17 20:55",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| 000000000252.2.007 | ok | branch | V3_negs_box/True/True | 460 / 29.22px / 0.6 | def / 0.026 / plane / 1.00 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\n000000000252.2.007: t_a=0 admitted=True heading=True up=True(plane) kappa=0.996 area=3890 trunc=0.021 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 40243,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 868,
+      "object_height_px": 868,
+      "n_pixels": 645296,
+      "frac_below_horizon": 0.7085018157958984
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.43474795293668966,
+   "n_points": 662,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 439,
+   "half_split_rel": 0.00020938474200793422,
+   "ratio": 0.993865889327657,
+   "ci95": [
+    0.9883998355271029,
+    1.0007445345678094
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "000000000256.3.010",
+  "pool": "miradata",
+  "category": "human",
+  "caption": "A character runs through a bustling, historical cityscape with horse-drawn carriages and vintage architecture.",
+  "time": "2026-10-17 20:56",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| 000000000256.3.010 | ok | branch | V1_pts/True/True | 3916 / 2.75px / 0.458 | def / 0.023 / plane / 1.00 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\n000000000256.3.010: t_a=0 admitted=True heading=True up=True(plane) kappa=0.999 area=2145 trunc=0.000 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 29637,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 516,
+      "object_height_px": 516,
+      "n_pixels": 473834,
+      "frac_below_horizon": 0.5183658599853516
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.3186852079040827,
+   "n_points": 581,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 274,
+   "half_split_rel": 0.006778489085592643,
+   "ratio": 0.9795665349580736,
+   "ci95": [
+    0.9750910876512591,
+    0.9883546098137851
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "000000000265.4.002",
+  "pool": "miradata",
+  "category": "human",
+  "caption": "A rider gallops through a lush forest, surrounded by tall trees and rocky terrain, under a bright sky.",
+  "time": "2026-10-17 20:57",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| 000000000265.4.002 | ok | branch | V3_negs_box/True/True | 2713 / 3.93px / 0.083 | def / 0.041 / plane / 1.00 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\n000000000265.4.002: t_a=0 admitted=True heading=True up=True(plane) kappa=1.000 area=890 trunc=0.014 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 31074,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 492,
+      "object_height_px": 492,
+      "n_pixels": 497184,
+      "frac_below_horizon": 0.5429468154907227
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.28747122299497846,
+   "n_points": 572,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 328,
+   "half_split_rel": 0.0024404974510945365,
+   "ratio": 0.9962452263262827,
+   "ci95": [
+    0.9935271150223829,
+    0.9987855894618735
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "000000000299.1.005",
+  "pool": "miradata",
+  "category": "vehicle",
+  "caption": "A sleek white sports car speeds through a futuristic cityscape, navigating tight turns and high-speed chases.",
+  "time": "2026-10-17 20:59",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| 000000000299.1.005 | ok | branch | V1_pts/True/True | 922 / 4.94px / 1.0 | def / 0.049 / plane / 0.78 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\n000000000299.1.005: t_a=1 admitted=True heading=True up=True(plane) kappa=0.777 area=10412 trunc=0.000 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 1,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 42606,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 444,
+      "object_height_px": 444,
+      "n_pixels": 682073,
+      "frac_below_horizon": 0.9419355392456055
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.4769883808049158,
+   "n_points": 465,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 211,
+   "half_split_rel": 0.027124533689459107,
+   "ratio": 0.980236899896559,
+   "ci95": [
+    0.9486347328561561,
+    1.0169320320251811
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "000000000362.2.005",
+  "pool": "miradata",
+  "category": "human",
+  "caption": "A warrior in armor walks through a field of wildflowers, with a distant city and lighthouse in the background.",
+  "time": "2026-10-17 21:00",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| 000000000362.2.005 | ok | branch | V3_negs_box/True/True | 465 / 2.54px / 0.75 | def / 0.048 / plane / 1.00 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\n000000000362.2.005: t_a=0 admitted=True heading=True up=True(plane) kappa=0.998 area=4127 trunc=0.002 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 35502,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 648,
+      "object_height_px": 648,
+      "n_pixels": 568352,
+      "frac_below_horizon": 0.6397857666015625
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.28861026245354654,
+   "n_points": 298,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 206,
+   "half_split_rel": 0.0006898022866514975,
+   "ratio": 1.0014967363589042,
+   "ci95": [
+    0.9980509652190686,
+    1.005316180936446
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "000000000370.1.009",
+  "pool": "miradata",
+  "category": "human",
+  "caption": "A warrior and his son navigate a misty forest path, preparing for an unseen challenge ahead.",
+  "time": "2026-10-17 21:00",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| 000000000370.1.009 | ok | x0 | V1_pts/True/True | 686 / 3.53px / 1.0 | def / 0.078 / plane / 1.00 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\n000000000370.1.009: t_a=0 admitted=True heading=True up=True(plane) kappa=0.998 area=6976 trunc=0.057 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 28459,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 596,
+      "object_height_px": 596,
+      "n_pixels": 455711,
+      "frac_below_horizon": 0.5758895874023438
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.20543673034238746,
+   "n_points": 378,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 246,
+   "half_split_rel": 0.0021952779509821774,
+   "ratio": 0.9544298937354292,
+   "ci95": [
+    0.9486830078372113,
+    0.9584618671474233
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "000000000391.0.016",
+  "pool": "miradata",
+  "category": "human",
+  "caption": "A man in a suit walks down a cobblestone street lined with vintage buildings and pedestrians under a clear blue sky.",
+  "time": "2026-10-17 21:01",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| 000000000391.0.016 | ok | branch | V1_pts/True/True | 575 / 3.02px / 0.958 | def / 0.072 / plane / 1.00 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\n000000000391.0.016: t_a=0 admitted=True heading=True up=True(plane) kappa=0.999 area=6122 trunc=0.041 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 28751,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 624,
+      "object_height_px": 624,
+      "n_pixels": 460561,
+      "frac_below_horizon": 0.5609674453735352
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.19228581019027402,
+   "n_points": 381,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 211,
+   "half_split_rel": 0.012915688034545347,
+   "ratio": 0.9766377450625635,
+   "ci95": [
+    0.9676510001772121,
+    0.982161670123965
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "000000000396.3.002",
+  "pool": "miradata",
+  "category": "vehicle",
+  "caption": "A sleek silver sports car speeds along a dirt track surrounded by palm trees and mountains under a clear blue sky.",
+  "time": "2026-10-17 21:01",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| 000000000396.3.002 | ok | branch | V1_pts/True/True | 292 / 13.15px / 0.667 | def / 0.018 / plane / 1.00 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\n000000000396.3.002: t_a=0 admitted=True heading=True up=True(plane) kappa=0.999 area=5565 trunc=0.000 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 41040,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 372,
+      "object_height_px": 372,
+      "n_pixels": 657054,
+      "frac_below_horizon": 0.7376823425292969
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.5008709982353311,
+   "n_points": 577,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 364,
+   "half_split_rel": 0.0152675614815041,
+   "ratio": 1.01107584532248,
+   "ci95": [
+    1.0019655375092313,
+    1.0338918769285605
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "000000000404.1.006",
+  "pool": "miradata",
+  "category": "human",
+  "caption": "A character exits a yellow car and walks down a city street, passing modern buildings and greenery.",
+  "time": "2026-10-17 21:02",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| 000000000404.1.006 | ok | branch | V2_negs/True/True | 489 / 14.3px / 0.417 | def / 0.083 / plane / 1.00 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\n000000000404.1.006: t_a=0 admitted=True heading=True up=True(plane) kappa=0.997 area=6359 trunc=0.000 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 34319,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 876,
+      "object_height_px": 876,
+      "n_pixels": 549540,
+      "frac_below_horizon": 0.6467018127441406
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.7757887082424388,
+   "n_points": 573,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 254,
+   "half_split_rel": 0.001739006409420929,
+   "ratio": 1.0174059799499786,
+   "ci95": [
+    1.0092856167438382,
+    1.027174779545016
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "000000000431.5.009",
+  "pool": "miradata",
+  "category": "human",
+  "caption": "A lone figure runs along a cobblestone path through a misty forest, with mountains in the distance.",
+  "time": "2026-10-17 21:04",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| 000000000431.5.009 | ok | x0 | V1_pts/True/True | 2385 / 3.41px / 0.375 | def / 0.036 / plane / 1.00 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\n000000000431.5.009: t_a=0 admitted=True heading=True up=True(plane) kappa=0.997 area=1496 trunc=0.000 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 33540,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 460,
+      "object_height_px": 460,
+      "n_pixels": 536951,
+      "frac_below_horizon": 0.6410551071166992
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.31044996332841746,
+   "n_points": 567,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 460,
+   "half_split_rel": 0.0010802721799078041,
+   "ratio": 1.0054428145238048,
+   "ci95": [
+    1.0031442432607027,
+    1.0100369426983924
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "bmx-bumps",
+  "pool": "davis",
+  "category": "human",
+  "caption": "A rider on a BMX bike launches over dirt jumps on a track",
+  "time": "2026-10-17 21:07",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| bmx-bumps | ok | branch | V1_pts/False/True | 759 / 2.91px / 0.375 | def / 0.116 / plane / 0.97 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\nbmx-bumps: t_a=13 admitted=True heading=True up=True(plane) kappa=0.972 area=6928 trunc=0.115 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 13,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 38026,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 432,
+      "object_height_px": 432,
+      "n_pixels": 608416,
+      "frac_below_horizon": 1.0
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.24545477557953002,
+   "n_points": 346,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 232,
+   "half_split_rel": 0.007031564234254883,
+   "ratio": 0.9520981442032548,
+   "ci95": [
+    0.9353676373649955,
+    0.9739353068526803
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "breakdance",
+  "pool": "davis",
+  "category": "human",
+  "caption": "A breakdancer spins on a city street in front of a watching crowd",
+  "time": "2026-10-17 21:10",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| breakdance | ok | x0 | V2_negs/False/True | 1377 / 1.98px / 0.292 | def / 0.168 / plane / 0.76 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\nbreakdance: t_a=0 admitted=True heading=True up=True(plane) kappa=0.761 area=7021 trunc=0.000 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 54309,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 948,
+      "object_height_px": 948,
+      "n_pixels": 868944,
+      "frac_below_horizon": 1.0
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.18114597382920947,
+   "n_points": 161,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 161,
+   "half_split_rel": 0.0026680738056255038,
+   "ratio": 0.9527917512908203,
+   "ci95": [
+    0.8909256634014695,
+    0.9852869962333406
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "breakdance-flare",
+  "pool": "davis",
+  "category": "human",
+  "caption": "A breakdancer performs a flare on paving beside a stone wall",
+  "time": "2026-10-17 21:11",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| breakdance-flare | ok | x0 | V1_pts/False/False | 3008 / 1.43px / 0.708 | def / 0.300 / plane / 1.00 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\nbreakdance-flare: t_a=0 admitted=True heading=True up=True(plane) kappa=0.997 area=24877 trunc=0.056 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 26165,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 1020,
+      "object_height_px": 1020,
+      "n_pixels": 418683,
+      "frac_below_horizon": 0.8906469345092773
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.18187249636431047,
+   "n_points": 156,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 137,
+   "half_split_rel": 0.025783322351485727,
+   "ratio": 0.9886233057511392,
+   "ci95": [
+    0.9761521518417239,
+    1.0209688877749798
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "camel",
+  "pool": "davis",
+  "category": "human",
+  "caption": "A camel walks slowly across a sandy enclosure beside a wooden fence",
+  "time": "2026-10-17 21:12",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| camel | ok | x0 | V2_negs/True/True | 1115 / 2.23px / 0.792 | def / 0.024 / plane / 1.00 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\ncamel: t_a=0 admitted=True heading=True up=True(plane) kappa=0.999 area=8367 trunc=0.001 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 35128,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 732,
+      "object_height_px": 732,
+      "n_pixels": 562517,
+      "frac_below_horizon": 0.7977132797241211
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.4206285841006593,
+   "n_points": 293,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 87,
+   "half_split_rel": 0.0005243853699653522,
+   "ratio": 0.9863533865648089,
+   "ci95": [
+    0.9746903587977486,
+    1.003550160150936
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "dancing",
+  "pool": "davis",
+  "category": "human",
+  "caption": "A crowd of people dance together at a lively evening street party",
+  "time": "2026-10-17 21:19",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| dancing | ok | x0 | V2_negs/False/True | 8617 / 1.54px / 0.083 | def / 0.529 / plane / 0.98 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\ndancing: t_a=0 admitted=True heading=True up=True(plane) kappa=0.979 area=2157 trunc=0.003 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 41892,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 796,
+      "object_height_px": 796,
+      "n_pixels": 670625,
+      "frac_below_horizon": 0.7495393753051758
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.5410967804468637,
+   "n_points": 285,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 131,
+   "half_split_rel": 0.010945250161717546,
+   "ratio": 0.2760829296791851,
+   "ci95": [
+    0.2562620075914528,
+    0.2872726861943171
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "disc-jockey",
+  "pool": "davis",
+  "category": "human",
+  "caption": "A DJ and a dancer move under warm orange light in a dark club",
+  "time": "2026-10-17 21:20",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| disc-jockey | ok | x0 | V1_pts/False/False | 2988 / 3.5px / 0.667 | def / 0.142 / plane / 0.51 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\ndisc-jockey: t_a=0 admitted=True heading=True up=True(plane) kappa=0.513 area=22095 trunc=0.020 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 26064,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 1024,
+      "object_height_px": 1024,
+      "n_pixels": 417024,
+      "frac_below_horizon": 1.0
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.5363331897350947,
+   "n_points": 105,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 55,
+   "half_split_rel": 0.012776515462418425,
+   "ratio": 0.9914759837160871,
+   "ci95": [
+    0.9798165799789923,
+    0.9959694478069554
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "dogs-scale",
+  "pool": "davis",
+  "category": "human",
+  "caption": "Several dachshund puppies clamber around a scale on a wooden floor",
+  "time": "2026-10-17 21:22",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| dogs-scale | ok | x0 | V1_pts/False/True | 535 / 9.56px / 0.526 | undef / nan / plane / nan | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\ndogs-scale: t_a=0 admitted=True heading=False up=True(plane) kappa=nan area=7060 trunc=0.065 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:n/a, g_up:ungated, g_basis:n/a}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": false,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 44911,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 716,
+      "object_height_px": 716,
+      "n_pixels": 718943,
+      "frac_below_horizon": 0.8525075912475586
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.5524513031079092,
+   "n_points": 347,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 273,
+   "half_split_rel": 0.013608711820520702,
+   "ratio": 1.0340558167890903,
+   "ci95": [
+    1.0139756582817543,
+    1.0475976494021808
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "elephant",
+  "pool": "davis",
+  "category": "human",
+  "caption": "An elephant walks slowly across a rocky enclosure past pale boulders",
+  "time": "2026-10-17 21:26",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| elephant | ok | x0 | V3_negs_box/True/True | 1247 / 2.95px / 0.917 | def / 0.090 / plane / 0.79 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\nelephant: t_a=0 admitted=True heading=True up=True(plane) kappa=0.794 area=11979 trunc=0.000 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 49772,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 692,
+      "object_height_px": 692,
+      "n_pixels": 796352,
+      "frac_below_horizon": 1.0
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.2632286820744496,
+   "n_points": 278,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 244,
+   "half_split_rel": 0.01564513878246332,
+   "ratio": 1.0360331323771061,
+   "ci95": [
+    1.0210587023624353,
+    1.0921197138562662
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "goat",
+  "pool": "davis",
+  "category": "human",
+  "caption": "A goat picks its way across a rocky sunlit hillside",
+  "time": "2026-10-17 21:27",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| goat | ok | branch | V1_pts/True/True | 1380 / 2.6px / 1.0 | def / 0.050 / plane / 0.99 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\ngoat: t_a=0 admitted=True heading=True up=True(plane) kappa=0.989 area=11648 trunc=0.054 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 49083,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 668,
+      "object_height_px": 668,
+      "n_pixels": 785328,
+      "frac_below_horizon": 1.0
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.3445619752430522,
+   "n_points": 317,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 202,
+   "half_split_rel": 0.028956284689731104,
+   "ratio": 0.9336052711389027,
+   "ci95": [
+    0.9145468695183179,
+    0.9509879129588267
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "gold-fish",
+  "pool": "davis",
+  "category": "human",
+  "caption": "Several goldfish swim among green plants in a blue aquarium",
+  "time": "2026-10-17 21:27",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| gold-fish | ok | x0 | V3_negs_box/True/True | 2332 / 2.05px / 0.25 | def / 0.507 / plane / 0.91 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\ngold-fish: t_a=0 admitted=True heading=True up=True(plane) kappa=0.914 area=16009 trunc=0.050 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 34517,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 1024,
+      "object_height_px": 1024,
+      "n_pixels": 552272,
+      "frac_below_horizon": 1.0
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.18122340174697976,
+   "n_points": 221,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 173,
+   "half_split_rel": 0.0015703105003304074,
+   "ratio": 0.9961852864014555,
+   "ci95": [
+    0.991725212838192,
+    1.0001202990264437
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "hockey",
+  "pool": "davis",
+  "category": "human",
+  "caption": "A hockey player skates with a stick past a small goal on a rink",
+  "time": "2026-10-17 21:28",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| hockey | ok | x0 | V3_negs_box/False/False | 2500 / 2.03px / 0.292 | def / 0.291 / plane / 1.00 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\nhockey: t_a=0 admitted=True heading=True up=True(plane) kappa=0.999 area=10504 trunc=0.037 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 33668,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 1020,
+      "object_height_px": 1020,
+      "n_pixels": 538774,
+      "frac_below_horizon": 0.9371528625488281
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.2741995243920649,
+   "n_points": 240,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 193,
+   "half_split_rel": 0.00432806757347326,
+   "ratio": 1.0207265944387305,
+   "ci95": [
+    1.0072605337319334,
+    1.0286641900795341
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "horsejump-high",
+  "pool": "davis",
+  "category": "human",
+  "caption": "A horse and rider clear a jump on a sandy show-jumping course",
+  "time": "2026-10-17 21:28",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| horsejump-high | ok | x0 | V2_negs/True/True | 5583 / 8.8px / 0.25 | def / 0.037 / plane / 0.95 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\nhorsejump-high: t_a=0 admitted=True heading=True up=True(plane) kappa=0.948 area=2137 trunc=0.024 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 30902,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 520,
+      "object_height_px": 520,
+      "n_pixels": 494735,
+      "frac_below_horizon": 0.6174564361572266
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.4076639866437565,
+   "n_points": 373,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 155,
+   "half_split_rel": 0.0011146884846811034,
+   "ratio": 1.0334655332695013,
+   "ci95": [
+    1.0063614622408397,
+    1.0522505618717495
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "kite-walk",
+  "pool": "davis",
+  "category": "human",
+  "caption": "A kitesurfer carries a board and kite along a sunlit sandy beach",
+  "time": "2026-10-17 21:31",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| kite-walk | ok | x0 | V3_negs_box/False/False | 4709 / 2.7px / 1.0 | def / 0.133 / plane / 1.00 | ok |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\nkite-walk: t_a=0 admitted=True heading=True up=True(plane) kappa=0.996 area=45288 trunc=0.124 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 9238,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 1020,
+      "object_height_px": 1020,
+      "n_pixels": 147808,
+      "frac_below_horizon": 1.0
+     }
+    }
+   },
+   "camera_c_rc": 0,
+   "camera_ba_rc": 0
+  },
+  "camera": {
+   "triangulated_median_px": 0.2104502262402331,
+   "n_points": 91,
+   "gate_patch": 0.3,
+   "outcome": "pass"
+  },
+  "support": {
+   "n_band_points": 65,
+   "half_split_rel": 0.01632055097934204,
+   "ratio": 1.0156131289266435,
+   "ci95": [
+    0.9963031712090563,
+    1.0305906021731692
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "PASS"
+ },
+ {
+  "clip": "000000000001.5.002",
+  "pool": "miradata",
+  "category": "human",
+  "caption": "A warrior walks through a rustic village at sunset, surrounded by wooden huts and lush greenery.",
+  "time": "2026-10-17 22:20",
+  "steps": {
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\n000000000001.5.002: t_a=23 admitted=True heading=False up=True(plane) kappa=nan area=4069 trunc=0.000 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:n/a, g_up:ungated, g_basis:n/a}\n"
+   },
+   "source_handoff": {
+    "t_a": 23,
+    "n_frames": 24,
+    "heading_defined": false,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 32388,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 868,
+      "object_height_px": 868,
+      "n_pixels": 518550,
+      "frac_below_horizon": 0.6171016693115234
+     }
+    }
+   },
+   "camera_c": {
+    "rc": 0,
+    "tail": "indow / after boundaries (p90) | G on the same held-out: first / after | rot C vs G: median first / max | gate | object heading vs d_src @12f | jerk C / ViPE | observability: depth/path, worst-axis \u03c3 (src units/px) |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| 000000000001.5.002 | ERROR ValueError: zero-size array to reduction operation fmax which has no identity |\n\nReading (reviewer, pre-stated): inside the first window camera C should coincide with G to about the px already measured; the test is whether the chaining holds the error across the boundaries. A pass admits 035 under `trajectory.source = static_pnp` (fallback, gated); a fail leaves 035 'camera undetermined'. Jerk is in each camera's own units (camera C in the source gauge, ViPE bridged) and is a shape comparison only.\n"
+   },
+   "camera_ba": {
+    "rc": 0,
+    "tail": "h above the tolerance is undetermined. A determined ratio is the bridge that replaces sigma_hat (D-M3-08 amendment, John's). Admission = time-split reprojection within the column's threshold AND the registered control failing AND the band ratio determined. The lifted-depth terciles are kept as information with the same ratios re-binned by triangulated depth and by image row (a near excess that survives re-binning is a bias; one that vanishes was selection). The band reprojection residual is reported beside the ratio.\n\nPre-registered (before this version ran): the band ratios on the x0 clips are determined and sit between 1.0 and the near-tercile values; the near excess survives re-binning by triangulated depth on 404 and 370 (narrow, clean mid/far bins) and is weaker on the two 265 clips.\n"
+   }
+  },
+  "camera": {
+   "triangulated_median_px": null,
+   "n_points": null,
+   "gate_patch": 0.3,
+   "outcome": "UNDETERMINED: camera instruments did not run (Reading (reviewer, pre-stated): inside the first window camera C should coincide with G to about the)"
+  },
+  "support": {
+   "n_band_points": null,
+   "half_split_rel": null,
+   "ratio": null,
+   "ci95": null,
+   "pass": false,
+   "reason": "not evaluated (the camera did not reach the gate)"
+  },
+  "census": "UNDETERMINED: camera instruments did not run (Reading (reviewer, pre-stated): inside the first window camera C should coincide with G to about the)"
+ },
+ {
+  "clip": "000000000035.1.003",
+  "pool": "miradata",
+  "category": "vehicle",
+  "caption": "A red sports car speeds through a scenic cityscape, navigating sharp turns and winding roads.",
+  "time": "2026-10-17 22:20",
+  "steps": {
+   "module1_outputs": false
+  },
+  "module1_refusal": {
+   "stage": "A",
+   "message": "[stage_a] GATES FAILED (from qc_failed.json; Module 1 not re-run)",
+   "gates_failed": {
+    "A-G2b": {
+     "median_px": 4.896167755126953,
+     "tau": 4,
+     "pass": false
+    }
+   },
+   "kind": "gate refusal (a verdict)"
+  },
+  "census": "FAIL: Module 1 stage A gate refused it (A-G2b)"
+ },
+ {
+  "clip": "000000000100.0.003",
+  "pool": "miradata",
+  "category": "vehicle",
+  "caption": "A sleek black sports car navigates through a vibrant cityscape with palm trees and modern buildings under a clear blue sky.",
+  "time": "2026-10-17 22:20",
+  "steps": {
+   "module1_outputs": false
+  },
+  "module1_refusal": {
+   "stage": "A",
+   "message": "[stage_a] GATES FAILED (from qc_failed.json; Module 1 not re-run)",
+   "gates_failed": {
+    "A-G2b": {
+     "median_px": 4.363331317901611,
+     "tau": 4,
+     "pass": false
+    }
+   },
+   "kind": "gate refusal (a verdict)"
+  },
+  "census": "FAIL: Module 1 stage A gate refused it (A-G2b)"
+ },
+ {
+  "clip": "000000000191.6.038",
+  "pool": "miradata",
+  "category": "human",
+  "caption": "A man in a brown coat walks through a bustling, sunlit chinatown street with traditional architecture and pedestrians.",
+  "time": "2026-10-17 22:20",
+  "steps": {
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\n000000000191.6.038: t_a=12 admitted=True heading=True up=True(plane) kappa=1.000 area=22020 trunc=0.081 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 12,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 8117,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 780,
+      "object_height_px": 780,
+      "n_pixels": 130368,
+      "frac_below_horizon": 0.5709953308105469
+     }
+    }
+   },
+   "camera_c": {
+    "rc": 0,
+    "tail": "fter | rot C vs G: median first / max | gate | object heading vs d_src @12f | jerk C / ViPE | observability: depth/path, worst-axis \u03c3 (src units/px) |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| 000000000191.6.038 | 12 | [12] | 466 / 259 | 9/9 | 0.44 / 0.44 / - (0.74) | 0.54 / - | 0.16 / 0.43 | **pass** (\u2264 4.92 px) | 5.7 | 0.0411 / n/a (IndexError) | 21.0, 0.0024 |\n\nReading (reviewer, pre-stated): inside the first window camera C should coincide with G to about the px already measured; the test is whether the chaining holds the error across the boundaries. A pass admits 035 under `trajectory.source = static_pnp` (fallback, gated); a fail leaves 035 'camera undetermined'. Jerk is in each camera's own units (camera C in the source gauge, ViPE bridged) and is a shape comparison only.\n"
+   },
+   "camera_ba": {
+    "rc": 0,
+    "tail": "h above the tolerance is undetermined. A determined ratio is the bridge that replaces sigma_hat (D-M3-08 amendment, John's). Admission = time-split reprojection within the column's threshold AND the registered control failing AND the band ratio determined. The lifted-depth terciles are kept as information with the same ratios re-binned by triangulated depth and by image row (a near excess that survives re-binning is a bias; one that vanishes was selection). The band reprojection residual is reported beside the ratio.\n\nPre-registered (before this version ran): the band ratios on the x0 clips are determined and sit between 1.0 and the near-tercile values; the near excess survives re-binning by triangulated depth on 404 and 370 (narrow, clean mid/far bins) and is weaker on the two 265 clips.\n"
+   }
+  },
+  "camera": {
+   "triangulated_median_px": 0.19092515057507603,
+   "n_points": 227,
+   "gate_patch": 0.3,
+   "outcome": "undetermined (band gauge: undetermined (n=22<30))"
+  },
+  "support": {
+   "n_band_points": 22,
+   "half_split_rel": null,
+   "ratio": null,
+   "ci95": null,
+   "pass": false,
+   "reason": "bridge undefined: no support surface (band points or half-split)"
+  },
+  "census": "FAIL: camera undetermined (band gauge: undetermined (n=22<30)); support surface undetermined"
+ },
+ {
+  "clip": "000000000201.1.008",
+  "pool": "miradata",
+  "category": "human",
+  "caption": "A lone warrior in dark armor stands amidst the ruins of an ancient city, ready for battle.",
+  "time": "2026-10-17 22:20",
+  "steps": {
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\n000000000201.1.008: t_a=17 admitted=True heading=True up=True(plane) kappa=1.000 area=4290 trunc=0.028 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 17,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 33052,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 932,
+      "object_height_px": 932,
+      "n_pixels": 529234,
+      "frac_below_horizon": 0.6253976821899414
+     }
+    }
+   },
+   "camera_c": {
+    "rc": 0,
+    "tail": "fter | rot C vs G: median first / max | gate | object heading vs d_src @12f | jerk C / ViPE | observability: depth/path, worst-axis \u03c3 (src units/px) |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| 000000000201.1.008 | 17 | [17] | 417 / 301 | 5/5 | 0.29 / 0.29 / - (0.36) | 0.31 / - | 0.03 / 0.04 | **pass** (\u2264 4.92 px) | 6.4 | 0.0139 / n/a (IndexError) | 56.1, 0.0021 |\n\nReading (reviewer, pre-stated): inside the first window camera C should coincide with G to about the px already measured; the test is whether the chaining holds the error across the boundaries. A pass admits 035 under `trajectory.source = static_pnp` (fallback, gated); a fail leaves 035 'camera undetermined'. Jerk is in each camera's own units (camera C in the source gauge, ViPE bridged) and is a shape comparison only.\n"
+   },
+   "camera_ba": {
+    "rc": 0,
+    "tail": "h above the tolerance is undetermined. A determined ratio is the bridge that replaces sigma_hat (D-M3-08 amendment, John's). Admission = time-split reprojection within the column's threshold AND the registered control failing AND the band ratio determined. The lifted-depth terciles are kept as information with the same ratios re-binned by triangulated depth and by image row (a near excess that survives re-binning is a bias; one that vanishes was selection). The band reprojection residual is reported beside the ratio.\n\nPre-registered (before this version ran): the band ratios on the x0 clips are determined and sit between 1.0 and the near-tercile values; the near excess survives re-binning by triangulated depth on 404 and 370 (narrow, clean mid/far bins) and is weaker on the two 265 clips.\n"
+   }
+  },
+  "camera": {
+   "triangulated_median_px": null,
+   "n_points": null,
+   "gate_patch": 0.3,
+   "outcome": "undetermined (too few static points for the camera solve)"
+  },
+  "support": {
+   "n_band_points": null,
+   "half_split_rel": null,
+   "ratio": null,
+   "ci95": null,
+   "pass": false,
+   "reason": "not evaluated (the camera did not reach the gate)"
+  },
+  "census": "FAIL: camera undetermined (too few static points for the camera solve)"
+ },
+ {
+  "clip": "000000000230.2.013",
+  "pool": "miradata",
+  "category": "human",
+  "caption": "A group of people on a safari jeep navigate through a scenic african landscape with rocky terrain and lush vegetation.",
+  "time": "2026-10-17 22:20",
+  "steps": {
+   "module1_outputs": false
+  },
+  "module1_refusal": {
+   "stage": "A",
+   "message": "[stage_a] GATES FAILED (from qc_failed.json; Module 1 not re-run)",
+   "gates_failed": {
+    "A-G2b": {
+     "median_px": 4.874167442321777,
+     "tau": 4,
+     "pass": false
+    }
+   },
+   "kind": "gate refusal (a verdict)"
+  },
+  "census": "FAIL: Module 1 stage A gate refused it (A-G2b)"
+ },
+ {
+  "clip": "000000000265.2.005",
+  "pool": "miradata",
+  "category": "human",
+  "caption": "A lone rider on horseback gazes at a serene geothermal pool amidst a rugged, volcanic landscape.",
+  "time": "2026-10-17 22:20",
+  "steps": {
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\n000000000265.2.005: t_a=19 admitted=True heading=True up=True(plane) kappa=0.963 area=4257 trunc=0.009 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 19,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 34906,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 592,
+      "object_height_px": 592,
+      "n_pixels": 559049,
+      "frac_below_horizon": 0.6662530899047852
+     }
+    }
+   },
+   "camera_c": {
+    "rc": 0,
+    "tail": "er | rot C vs G: median first / max | gate | object heading vs d_src @12f | jerk C / ViPE | observability: depth/path, worst-axis \u03c3 (src units/px) |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| 000000000265.2.005 | 19 | [19] | 332 / 323 | 5/5 | 0.16 / 0.16 / - (0.24) | 0.29 / - | 0.11 / 0.13 | **pass** (\u2264 4.92 px) | 28.8 | 0.0203 / n/a (IndexError) | 182.4, 0.0028 |\n\nReading (reviewer, pre-stated): inside the first window camera C should coincide with G to about the px already measured; the test is whether the chaining holds the error across the boundaries. A pass admits 035 under `trajectory.source = static_pnp` (fallback, gated); a fail leaves 035 'camera undetermined'. Jerk is in each camera's own units (camera C in the source gauge, ViPE bridged) and is a shape comparison only.\n"
+   },
+   "camera_ba": {
+    "rc": 0,
+    "tail": "h above the tolerance is undetermined. A determined ratio is the bridge that replaces sigma_hat (D-M3-08 amendment, John's). Admission = time-split reprojection within the column's threshold AND the registered control failing AND the band ratio determined. The lifted-depth terciles are kept as information with the same ratios re-binned by triangulated depth and by image row (a near excess that survives re-binning is a bias; one that vanishes was selection). The band reprojection residual is reported beside the ratio.\n\nPre-registered (before this version ran): the band ratios on the x0 clips are determined and sit between 1.0 and the near-tercile values; the near excess survives re-binning by triangulated depth on 404 and 370 (narrow, clean mid/far bins) and is weaker on the two 265 clips.\n"
+   }
+  },
+  "camera": {
+   "triangulated_median_px": null,
+   "n_points": null,
+   "gate_patch": 0.3,
+   "outcome": "undetermined (too few static points for the camera solve)"
+  },
+  "support": {
+   "n_band_points": null,
+   "half_split_rel": null,
+   "ratio": null,
+   "ci95": null,
+   "pass": false,
+   "reason": "not evaluated (the camera did not reach the gate)"
+  },
+  "census": "FAIL: camera undetermined (too few static points for the camera solve)"
+ },
+ {
+  "clip": "000000000284.0.006",
+  "pool": "miradata",
+  "category": "vehicle",
+  "caption": "A green vehicle drives along a dirt road through a scenic mountain landscape, guided by an on-screen navigation prompt.",
+  "time": "2026-10-17 22:20",
+  "steps": {
+   "module1_outputs": false
+  },
+  "module1_refusal": {
+   "stage": "A",
+   "message": "[stage_a] GATES FAILED (from qc_failed.json; Module 1 not re-run)",
+   "gates_failed": {
+    "A-G2": {
+     "median_rel": 0.015392590314149857,
+     "inlier_frac": 0.8044880530571454,
+     "median_px_viz_only": 1.1254408359527588,
+     "tau_rel": 0.15,
+     "min_inlier_frac": 0.814,
+     "pass": false
+    }
+   },
+   "kind": "gate refusal (a verdict)"
+  },
+  "census": "FAIL: Module 1 stage A gate refused it (A-G2)"
+ },
+ {
+  "clip": "000000000418.0.005",
+  "pool": "miradata",
+  "category": "vehicle",
+  "caption": "A range rover navigates through dense jungle terrain, surrounded by lush greenery and misty atmosphere.",
+  "time": "2026-10-17 22:20",
+  "steps": {
+   "module1_outputs": false
+  },
+  "module1_refusal": {
+   "stage": "A",
+   "message": "[stage_a] GATES FAILED (from qc_failed.json; Module 1 not re-run)",
+   "gates_failed": {
+    "A-G2b": {
+     "median_px": 4.419735431671143,
+     "tau": 4,
+     "pass": false
+    }
+   },
+   "kind": "gate refusal (a verdict)"
+  },
+  "census": "FAIL: Module 1 stage A gate refused it (A-G2b)"
+ },
+ {
+  "clip": "000000002376.4.008",
+  "pool": "miradata",
+  "category": "human",
+  "caption": "A character explores a snowy landscape with a pickaxe, surrounded by icy terrain and evergreen trees.",
+  "time": "2026-10-17 22:20",
+  "steps": {
+   "module1_outputs": false
+  },
+  "module1_refusal": {
+   "stage": "A",
+   "message": "[stage_a] GATES FAILED (from qc_failed.json; Module 1 not re-run)",
+   "gates_failed": {
+    "A-G2b": {
+     "median_px": 4.811526775360107,
+     "tau": 4,
+     "pass": false
+    }
+   },
+   "kind": "gate refusal (a verdict)"
+  },
+  "census": "FAIL: Module 1 stage A gate refused it (A-G2b)"
+ },
+ {
+  "clip": "bear",
+  "pool": "davis",
+  "category": "human",
+  "caption": "A brown bear walks across rocks in front of a stone cliff",
+  "time": "2026-10-17 22:20",
+  "steps": {
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\nbear: t_a=19 admitted=True heading=True up=True(plane) kappa=0.794 area=13943 trunc=0.134 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 19,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 46060,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 1012,
+      "object_height_px": 1012,
+      "n_pixels": 736960,
+      "frac_below_horizon": 1.0
+     }
+    }
+   },
+   "camera_c": {
+    "rc": 0,
+    "tail": "st / after | rot C vs G: median first / max | gate | object heading vs d_src @12f | jerk C / ViPE | observability: depth/path, worst-axis \u03c3 (src units/px) |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| bear/human | 19 | [19] | 256 / 231 | 5/5 | 0.13 / 0.13 / - (0.20) | 0.28 / - | 0.10 / 0.20 | **pass** (\u2264 4.92 px) | 31.7 | 0.0088 / n/a (IndexError) | 190.8, 0.0031 |\n\nReading (reviewer, pre-stated): inside the first window camera C should coincide with G to about the px already measured; the test is whether the chaining holds the error across the boundaries. A pass admits 035 under `trajectory.source = static_pnp` (fallback, gated); a fail leaves 035 'camera undetermined'. Jerk is in each camera's own units (camera C in the source gauge, ViPE bridged) and is a shape comparison only.\n"
+   },
+   "camera_ba": {
+    "rc": 0,
+    "tail": "h above the tolerance is undetermined. A determined ratio is the bridge that replaces sigma_hat (D-M3-08 amendment, John's). Admission = time-split reprojection within the column's threshold AND the registered control failing AND the band ratio determined. The lifted-depth terciles are kept as information with the same ratios re-binned by triangulated depth and by image row (a near excess that survives re-binning is a bias; one that vanishes was selection). The band reprojection residual is reported beside the ratio.\n\nPre-registered (before this version ran): the band ratios on the x0 clips are determined and sit between 1.0 and the near-tercile values; the near excess survives re-binning by triangulated depth on 404 and 370 (narrow, clean mid/far bins) and is weaker on the two 265 clips.\n"
+   }
+  },
+  "camera": {
+   "triangulated_median_px": null,
+   "n_points": null,
+   "gate_patch": 0.3,
+   "outcome": "undetermined (too few static points for the camera solve)"
+  },
+  "support": {
+   "n_band_points": null,
+   "half_split_rel": null,
+   "ratio": null,
+   "ci95": null,
+   "pass": false,
+   "reason": "not evaluated (the camera did not reach the gate)"
+  },
+  "census": "FAIL: camera undetermined (too few static points for the camera solve)"
+ },
+ {
+  "clip": "bike-packing",
+  "pool": "davis",
+  "category": "human",
+  "caption": "A man lifts a bicycle onto a rack on a cobbled city street",
+  "time": "2026-10-17 22:20",
+  "steps": {
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\nbike-packing: t_a=0 admitted=True heading=True up=True(plane) kappa=0.977 area=7545 trunc=0.013 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 36145,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 832,
+      "object_height_px": 832,
+      "n_pixels": 579208,
+      "frac_below_horizon": 0.8173828125
+     }
+    }
+   },
+   "camera_c": {
+    "rc": 0,
+    "tail": "er | rot C vs G: median first / max | gate | object heading vs d_src @12f | jerk C / ViPE | observability: depth/path, worst-axis \u03c3 (src units/px) |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| bike-packing/human | 0 | [0] | 208 / 219 | 21/21 | 0.40 / 0.40 / - (0.47) | 0.68 / - | 0.14 / 0.20 | **pass** (\u2264 4.92 px) | 122.5 | 0.0083 / n/a (IndexError) | 65.9, 0.0024 |\n\nReading (reviewer, pre-stated): inside the first window camera C should coincide with G to about the px already measured; the test is whether the chaining holds the error across the boundaries. A pass admits 035 under `trajectory.source = static_pnp` (fallback, gated); a fail leaves 035 'camera undetermined'. Jerk is in each camera's own units (camera C in the source gauge, ViPE bridged) and is a shape comparison only.\n"
+   },
+   "camera_ba": {
+    "rc": 0,
+    "tail": "h above the tolerance is undetermined. A determined ratio is the bridge that replaces sigma_hat (D-M3-08 amendment, John's). Admission = time-split reprojection within the column's threshold AND the registered control failing AND the band ratio determined. The lifted-depth terciles are kept as information with the same ratios re-binned by triangulated depth and by image row (a near excess that survives re-binning is a bias; one that vanishes was selection). The band reprojection residual is reported beside the ratio.\n\nPre-registered (before this version ran): the band ratios on the x0 clips are determined and sit between 1.0 and the near-tercile values; the near excess survives re-binning by triangulated depth on 404 and 370 (narrow, clean mid/far bins) and is weaker on the two 265 clips.\n"
+   }
+  },
+  "camera": {
+   "triangulated_median_px": 0.19980349219135862,
+   "n_points": 219,
+   "gate_patch": 0.3,
+   "outcome": "undetermined (band gauge: undetermined (half-split or interval wider than tol))"
+  },
+  "support": {
+   "n_band_points": 129,
+   "half_split_rel": 0.02282713355894206,
+   "ratio": 0.860933267164159,
+   "ci95": [
+    0.7748150079032712,
+    1.0227652500181266
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "FAIL: camera undetermined (band gauge: undetermined (half-split or interval wider than tol))"
+ },
+ {
+  "clip": "blackswan",
+  "pool": "davis",
+  "category": "human",
+  "caption": "A black swan glides across a calm river past leafy green banks",
+  "time": "2026-10-17 22:21",
+  "steps": {
+   "module1_outputs": false
+  },
+  "module1_refusal": {
+   "stage": "A",
+   "message": "[stage_a] GATES FAILED (from qc_failed.json; Module 1 not re-run)",
+   "gates_failed": {
+    "A-G2b": {
+     "median_px": 4.0155720710754395,
+     "tau": 4,
+     "pass": false
+    }
+   },
+   "kind": "gate refusal (a verdict)"
+  },
+  "census": "FAIL: Module 1 stage A gate refused it (A-G2b)"
+ },
+ {
+  "clip": "bmx-trees",
+  "pool": "davis",
+  "category": "human",
+  "caption": "A rider on a BMX bike speeds past a graffiti wall and trees",
+  "time": "2026-10-17 22:21",
+  "steps": {
+   "module1_outputs": false
+  },
+  "module1_refusal": {
+   "stage": "A",
+   "message": "[stage_a] GATES FAILED (from qc_failed.json; Module 1 not re-run)",
+   "gates_failed": {
+    "A-G2b": {
+     "median_px": 5.816267013549805,
+     "tau": 4,
+     "pass": false
+    }
+   },
+   "kind": "gate refusal (a verdict)"
+  },
+  "census": "FAIL: Module 1 stage A gate refused it (A-G2b)"
+ },
+ {
+  "clip": "boat",
+  "pool": "davis",
+  "category": "vehicle",
+  "caption": "A small boat motors across calm water past a low rocky shore",
+  "time": "2026-10-17 22:21",
+  "steps": {
+   "module1_outputs": false
+  },
+  "module1_refusal": {
+   "stage": "A",
+   "message": "[stage_a] GATES FAILED (from qc_failed.json; Module 1 not re-run)",
+   "gates_failed": {
+    "A-G2b": {
+     "median_px": 5.3411054611206055,
+     "tau": 4,
+     "pass": false
+    }
+   },
+   "kind": "gate refusal (a verdict)"
+  },
+  "census": "FAIL: Module 1 stage A gate refused it (A-G2b)"
+ },
+ {
+  "clip": "boxing-fisheye",
+  "pool": "davis",
+  "category": "human",
+  "caption": "Two boxers trade punches in a ring under evening floodlights",
+  "time": "2026-10-17 22:21",
+  "steps": {
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\nboxing-fisheye: t_a=0 admitted=True heading=True up=True(plane) kappa=0.976 area=8103 trunc=0.011 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 16930,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 940,
+      "object_height_px": 940,
+      "n_pixels": 271386,
+      "frac_below_horizon": 0.5773744583129883
+     }
+    }
+   },
+   "camera_c": {
+    "rc": 0,
+    "tail": "ter | rot C vs G: median first / max | gate | object heading vs d_src @12f | jerk C / ViPE | observability: depth/path, worst-axis \u03c3 (src units/px) |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| boxing-fisheye/hum | 0 | [0] | 360 / 286 | 21/21 | 1.26 / 1.26 / - (1.72) | 1.59 / - | 0.46 / 1.12 | **pass** (\u2264 4.92 px) | 128.8 | 0.0542 / n/a (IndexError) | 9.2, 0.0025 |\n\nReading (reviewer, pre-stated): inside the first window camera C should coincide with G to about the px already measured; the test is whether the chaining holds the error across the boundaries. A pass admits 035 under `trajectory.source = static_pnp` (fallback, gated); a fail leaves 035 'camera undetermined'. Jerk is in each camera's own units (camera C in the source gauge, ViPE bridged) and is a shape comparison only.\n"
+   },
+   "camera_ba": {
+    "rc": 0,
+    "tail": "h above the tolerance is undetermined. A determined ratio is the bridge that replaces sigma_hat (D-M3-08 amendment, John's). Admission = time-split reprojection within the column's threshold AND the registered control failing AND the band ratio determined. The lifted-depth terciles are kept as information with the same ratios re-binned by triangulated depth and by image row (a near excess that survives re-binning is a bias; one that vanishes was selection). The band reprojection residual is reported beside the ratio.\n\nPre-registered (before this version ran): the band ratios on the x0 clips are determined and sit between 1.0 and the near-tercile values; the near excess survives re-binning by triangulated depth on 404 and 370 (narrow, clean mid/far bins) and is weaker on the two 265 clips.\n"
+   }
+  },
+  "camera": {
+   "triangulated_median_px": 0.4568567506603308,
+   "n_points": 312,
+   "gate_patch": 0.3,
+   "outcome": "undetermined (band gauge: undetermined (half-split or interval wider than tol))"
+  },
+  "support": {
+   "n_band_points": 79,
+   "half_split_rel": 0.05628771251778608,
+   "ratio": 0.7520071871758616,
+   "ci95": [
+    0.6959743065141341,
+    0.8802813490721059
+   ],
+   "pass": false,
+   "reason": "bridge undefined: no support surface (band points or half-split)"
+  },
+  "census": "FAIL: camera undetermined (band gauge: undetermined (half-split or interval wider than tol)); support surface undetermined"
+ },
+ {
+  "clip": "bus",
+  "pool": "davis",
+  "category": "vehicle",
+  "caption": "A white and blue bus drives along a tree-lined city street",
+  "time": "2026-10-17 22:21",
+  "steps": {
+   "module1_outputs": false
+  },
+  "module1_refusal": {
+   "stage": "A",
+   "message": "[stage_a] GATES FAILED (from qc_failed.json; Module 1 not re-run)",
+   "gates_failed": {
+    "A-G2b": {
+     "median_px": 5.9376420974731445,
+     "tau": 4,
+     "pass": false
+    }
+   },
+   "kind": "gate refusal (a verdict)"
+  },
+  "census": "FAIL: Module 1 stage A gate refused it (A-G2b)"
+ },
+ {
+  "clip": "car-roundabout",
+  "pool": "davis",
+  "category": "vehicle",
+  "caption": "A dark car drives around a roundabout past tall stone buildings",
+  "time": "2026-10-17 22:21",
+  "steps": {
+   "module1_outputs": false
+  },
+  "module1_refusal": {
+   "stage": "A",
+   "message": "[stage_a] GATES FAILED (from qc_failed.json; Module 1 not re-run)",
+   "gates_failed": {
+    "A-G2b": {
+     "median_px": 4.359622955322266,
+     "tau": 4,
+     "pass": false
+    }
+   },
+   "kind": "gate refusal (a verdict)"
+  },
+  "census": "FAIL: Module 1 stage A gate refused it (A-G2b)"
+ },
+ {
+  "clip": "car-turn",
+  "pool": "davis",
+  "category": "vehicle",
+  "caption": "A silver car rounds a bend on a road through a mountain meadow",
+  "time": "2026-10-17 22:21",
+  "steps": {
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\ncar-turn: t_a=0 admitted=True heading=True up=True(plane) kappa=1.000 area=425 trunc=0.014 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 7648,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 180,
+      "object_height_px": 180,
+      "n_pixels": 122473,
+      "frac_below_horizon": 0.6356525421142578
+     }
+    }
+   },
+   "camera_c": {
+    "rc": 0,
+    "tail": " after | rot C vs G: median first / max | gate | object heading vs d_src @12f | jerk C / ViPE | observability: depth/path, worst-axis \u03c3 (src units/px) |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| car-turn/vehicle | 0 | [0] | 417 / 361 | 21/21 | 0.58 / 0.58 / - (1.04) | 1.12 / - | 0.21 / 0.36 | **pass** (\u2264 4.92 px) | 2.1 | 0.0074 / n/a (IndexError) | 31.3, 0.0017 |\n\nReading (reviewer, pre-stated): inside the first window camera C should coincide with G to about the px already measured; the test is whether the chaining holds the error across the boundaries. A pass admits 035 under `trajectory.source = static_pnp` (fallback, gated); a fail leaves 035 'camera undetermined'. Jerk is in each camera's own units (camera C in the source gauge, ViPE bridged) and is a shape comparison only.\n"
+   },
+   "camera_ba": {
+    "rc": 0,
+    "tail": "h above the tolerance is undetermined. A determined ratio is the bridge that replaces sigma_hat (D-M3-08 amendment, John's). Admission = time-split reprojection within the column's threshold AND the registered control failing AND the band ratio determined. The lifted-depth terciles are kept as information with the same ratios re-binned by triangulated depth and by image row (a near excess that survives re-binning is a bias; one that vanishes was selection). The band reprojection residual is reported beside the ratio.\n\nPre-registered (before this version ran): the band ratios on the x0 clips are determined and sit between 1.0 and the near-tercile values; the near excess survives re-binning by triangulated depth on 404 and 370 (narrow, clean mid/far bins) and is weaker on the two 265 clips.\n"
+   }
+  },
+  "camera": {
+   "triangulated_median_px": 0.2509399309333563,
+   "n_points": 361,
+   "gate_patch": 0.3,
+   "outcome": "undetermined (band gauge: undetermined (n=15<30))"
+  },
+  "support": {
+   "n_band_points": 15,
+   "half_split_rel": null,
+   "ratio": null,
+   "ci95": null,
+   "pass": false,
+   "reason": "bridge undefined: no support surface (band points or half-split)"
+  },
+  "census": "FAIL: camera undetermined (band gauge: undetermined (n=15<30)); support surface undetermined"
+ },
+ {
+  "clip": "cat-girl",
+  "pool": "davis",
+  "category": "human",
+  "caption": "A girl and a kitten play together in front of a garden fence",
+  "time": "2026-10-17 22:22",
+  "steps": {
+   "module1_outputs": false
+  },
+  "module1_refusal": {
+   "stage": "A",
+   "message": "[stage_a] GATES FAILED (from qc_failed.json; Module 1 not re-run)",
+   "gates_failed": {
+    "A-G2b": {
+     "median_px": 4.782225608825684,
+     "tau": 4,
+     "pass": false
+    }
+   },
+   "kind": "gate refusal (a verdict)"
+  },
+  "census": "FAIL: Module 1 stage A gate refused it (A-G2b)"
+ },
+ {
+  "clip": "classic-car",
+  "pool": "davis",
+  "category": "vehicle",
+  "caption": "A vintage racing car and its driver pass a crowd along a street",
+  "time": "2026-10-17 22:22",
+  "steps": {
+   "module1_outputs": false
+  },
+  "module1_refusal": {
+   "stage": "A",
+   "message": "[stage_a] GATES FAILED (from qc_failed.json; Module 1 not re-run)",
+   "gates_failed": {
+    "A-G2b": {
+     "median_px": 8.541015625,
+     "tau": 4,
+     "pass": false
+    }
+   },
+   "kind": "gate refusal (a verdict)"
+  },
+  "census": "FAIL: Module 1 stage A gate refused it (A-G2b)"
+ },
+ {
+  "clip": "color-run",
+  "pool": "davis",
+  "category": "human",
+  "caption": "Runners covered in orange powder move through a cloud of colour",
+  "time": "2026-10-17 22:22",
+  "steps": {
+   "module1_outputs": false
+  },
+  "module1_refusal": {
+   "stage": "A",
+   "message": "[stage_a] GATES FAILED (from qc_failed.json; Module 1 not re-run)",
+   "gates_failed": {
+    "A-G2b": {
+     "median_px": 5.54644775390625,
+     "tau": 4,
+     "pass": false
+    }
+   },
+   "kind": "gate refusal (a verdict)"
+  },
+  "census": "FAIL: Module 1 stage A gate refused it (A-G2b)"
+ },
+ {
+  "clip": "cows",
+  "pool": "davis",
+  "category": "human",
+  "caption": "A brown and white cow walks across a grassy field beside a fence",
+  "time": "2026-10-17 22:22",
+  "steps": {
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\ncows: t_a=0 admitted=True heading=True up=True(plane) kappa=0.941 area=19521 trunc=0.029 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 18216,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 1016,
+      "object_height_px": 1016,
+      "n_pixels": 291456,
+      "frac_below_horizon": 1.0
+     }
+    }
+   },
+   "camera_c": {
+    "rc": 0,
+    "tail": "rst / after | rot C vs G: median first / max | gate | object heading vs d_src @12f | jerk C / ViPE | observability: depth/path, worst-axis \u03c3 (src units/px) |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| cows/human | 0 | [0] | 139 / 137 | 21/21 | 0.91 / 0.91 / - (1.38) | 2.05 / - | 0.40 / 0.80 | **pass** (\u2264 4.92 px) | 11.2 | 0.0179 / n/a (IndexError) | 22.7, 0.0037 |\n\nReading (reviewer, pre-stated): inside the first window camera C should coincide with G to about the px already measured; the test is whether the chaining holds the error across the boundaries. A pass admits 035 under `trajectory.source = static_pnp` (fallback, gated); a fail leaves 035 'camera undetermined'. Jerk is in each camera's own units (camera C in the source gauge, ViPE bridged) and is a shape comparison only.\n"
+   },
+   "camera_ba": {
+    "rc": 0,
+    "tail": "h above the tolerance is undetermined. A determined ratio is the bridge that replaces sigma_hat (D-M3-08 amendment, John's). Admission = time-split reprojection within the column's threshold AND the registered control failing AND the band ratio determined. The lifted-depth terciles are kept as information with the same ratios re-binned by triangulated depth and by image row (a near excess that survives re-binning is a bias; one that vanishes was selection). The band reprojection residual is reported beside the ratio.\n\nPre-registered (before this version ran): the band ratios on the x0 clips are determined and sit between 1.0 and the near-tercile values; the near excess survives re-binning by triangulated depth on 404 and 370 (narrow, clean mid/far bins) and is weaker on the two 265 clips.\n"
+   }
+  },
+  "camera": {
+   "triangulated_median_px": 0.2967355872448324,
+   "n_points": 126,
+   "gate_patch": 0.3,
+   "outcome": "undetermined (band gauge: undetermined (half-split or interval wider than tol))"
+  },
+  "support": {
+   "n_band_points": 72,
+   "half_split_rel": 0.08424842723713166,
+   "ratio": 0.9467057204931377,
+   "ci95": [
+    0.9019298910223025,
+    1.0804449907564442
+   ],
+   "pass": false,
+   "reason": "bridge undefined: no support surface (band points or half-split)"
+  },
+  "census": "FAIL: camera undetermined (band gauge: undetermined (half-split or interval wider than tol)); support surface undetermined"
+ },
+ {
+  "clip": "crossing",
+  "pool": "davis",
+  "category": "human",
+  "caption": "Two people cross a road as a white truck waits at the crossing",
+  "time": "2026-10-17 22:22",
+  "steps": {
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\ncrossing: t_a=0 admitted=True heading=True up=True(plane) kappa=0.998 area=4267 trunc=0.009 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 22649,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 716,
+      "object_height_px": 716,
+      "n_pixels": 362595,
+      "frac_below_horizon": 0.5339078903198242
+     }
+    }
+   },
+   "camera_c": {
+    "rc": 0,
+    "tail": " / after | rot C vs G: median first / max | gate | object heading vs d_src @12f | jerk C / ViPE | observability: depth/path, worst-axis \u03c3 (src units/px) |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| crossing/human | 0 | [0] | 215 / 228 | 21/21 | 0.31 / 0.31 / - (0.38) | 0.44 / - | 0.14 / 0.25 | **pass** (\u2264 4.92 px) | 5.2 | 0.0070 / n/a (IndexError) | 65.0, 0.0025 |\n\nReading (reviewer, pre-stated): inside the first window camera C should coincide with G to about the px already measured; the test is whether the chaining holds the error across the boundaries. A pass admits 035 under `trajectory.source = static_pnp` (fallback, gated); a fail leaves 035 'camera undetermined'. Jerk is in each camera's own units (camera C in the source gauge, ViPE bridged) and is a shape comparison only.\n"
+   },
+   "camera_ba": {
+    "rc": 0,
+    "tail": "h above the tolerance is undetermined. A determined ratio is the bridge that replaces sigma_hat (D-M3-08 amendment, John's). Admission = time-split reprojection within the column's threshold AND the registered control failing AND the band ratio determined. The lifted-depth terciles are kept as information with the same ratios re-binned by triangulated depth and by image row (a near excess that survives re-binning is a bias; one that vanishes was selection). The band reprojection residual is reported beside the ratio.\n\nPre-registered (before this version ran): the band ratios on the x0 clips are determined and sit between 1.0 and the near-tercile values; the near excess survives re-binning by triangulated depth on 404 and 370 (narrow, clean mid/far bins) and is weaker on the two 265 clips.\n"
+   }
+  },
+  "camera": {
+   "triangulated_median_px": 0.1303507583502374,
+   "n_points": 226,
+   "gate_patch": 0.3,
+   "outcome": "undetermined (band gauge: undetermined (half-split or interval wider than tol))"
+  },
+  "support": {
+   "n_band_points": 57,
+   "half_split_rel": 0.04334446034586559,
+   "ratio": 2.1003877465238063,
+   "ci95": [
+    1.7966483605413068,
+    2.8463721228366023
+   ],
+   "pass": true,
+   "reason": null
+  },
+  "census": "FAIL: camera undetermined (band gauge: undetermined (half-split or interval wider than tol))"
+ },
+ {
+  "clip": "dance-jump",
+  "pool": "davis",
+  "category": "human",
+  "caption": "A girl in a pink dress dances beside a stone fountain in a square",
+  "time": "2026-10-17 22:22",
+  "steps": {
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\ndance-jump: t_a=18 admitted=True heading=True up=True(plane) kappa=0.941 area=1363 trunc=0.119 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 18,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 0,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 640,
+      "object_height_px": 640,
+      "n_pixels": 0,
+      "frac_below_horizon": 0.0
+     }
+    }
+   },
+   "camera_c": {
+    "rc": 0,
+    "tail": "after | rot C vs G: median first / max | gate | object heading vs d_src @12f | jerk C / ViPE | observability: depth/path, worst-axis \u03c3 (src units/px) |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| dance-jump/human | 18 | [18] | 588 / 414 | 5/5 | 0.26 / 0.26 / - (0.31) | 0.70 / - | 0.09 / 0.21 | **pass** (\u2264 4.92 px) | 31.1 | 0.0222 / n/a (IndexError) | 73.0, 0.0021 |\n\nReading (reviewer, pre-stated): inside the first window camera C should coincide with G to about the px already measured; the test is whether the chaining holds the error across the boundaries. A pass admits 035 under `trajectory.source = static_pnp` (fallback, gated); a fail leaves 035 'camera undetermined'. Jerk is in each camera's own units (camera C in the source gauge, ViPE bridged) and is a shape comparison only.\n"
+   },
+   "camera_ba": {
+    "rc": 0,
+    "tail": "h above the tolerance is undetermined. A determined ratio is the bridge that replaces sigma_hat (D-M3-08 amendment, John's). Admission = time-split reprojection within the column's threshold AND the registered control failing AND the band ratio determined. The lifted-depth terciles are kept as information with the same ratios re-binned by triangulated depth and by image row (a near excess that survives re-binning is a bias; one that vanishes was selection). The band reprojection residual is reported beside the ratio.\n\nPre-registered (before this version ran): the band ratios on the x0 clips are determined and sit between 1.0 and the near-tercile values; the near excess survives re-binning by triangulated depth on 404 and 370 (narrow, clean mid/far bins) and is weaker on the two 265 clips.\n"
+   }
+  },
+  "camera": {
+   "triangulated_median_px": null,
+   "n_points": null,
+   "gate_patch": 0.3,
+   "outcome": "undetermined (too few static points for the camera solve)"
+  },
+  "support": {
+   "n_band_points": null,
+   "half_split_rel": null,
+   "ratio": null,
+   "ci95": null,
+   "pass": false,
+   "reason": "not evaluated (the camera did not reach the gate)"
+  },
+  "census": "FAIL: camera undetermined (too few static points for the camera solve)"
+ },
+ {
+  "clip": "dance-twirl",
+  "pool": "davis",
+  "category": "human",
+  "caption": "A woman twirls in a summer dress before a seated outdoor audience",
+  "time": "2026-10-17 22:22",
+  "steps": {
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\ndance-twirl: t_a=18 admitted=True heading=True up=True(plane) kappa=0.998 area=3667 trunc=0.010 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 18,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 43576,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 980,
+      "object_height_px": 980,
+      "n_pixels": 697625,
+      "frac_below_horizon": 0.7893276214599609
+     }
+    }
+   },
+   "camera_c": {
+    "rc": 0,
+    "tail": "ter | rot C vs G: median first / max | gate | object heading vs d_src @12f | jerk C / ViPE | observability: depth/path, worst-axis \u03c3 (src units/px) |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| dance-twirl/human | 18 | [18] | 724 / 486 | 5/5 | 0.36 / 0.36 / - (0.42) | 0.86 / - | 0.25 / 0.31 | **pass** (\u2264 4.92 px) | 17.2 | 0.0427 / n/a (IndexError) | 101.1, 0.0021 |\n\nReading (reviewer, pre-stated): inside the first window camera C should coincide with G to about the px already measured; the test is whether the chaining holds the error across the boundaries. A pass admits 035 under `trajectory.source = static_pnp` (fallback, gated); a fail leaves 035 'camera undetermined'. Jerk is in each camera's own units (camera C in the source gauge, ViPE bridged) and is a shape comparison only.\n"
+   },
+   "camera_ba": {
+    "rc": 0,
+    "tail": "h above the tolerance is undetermined. A determined ratio is the bridge that replaces sigma_hat (D-M3-08 amendment, John's). Admission = time-split reprojection within the column's threshold AND the registered control failing AND the band ratio determined. The lifted-depth terciles are kept as information with the same ratios re-binned by triangulated depth and by image row (a near excess that survives re-binning is a bias; one that vanishes was selection). The band reprojection residual is reported beside the ratio.\n\nPre-registered (before this version ran): the band ratios on the x0 clips are determined and sit between 1.0 and the near-tercile values; the near excess survives re-binning by triangulated depth on 404 and 370 (narrow, clean mid/far bins) and is weaker on the two 265 clips.\n"
+   }
+  },
+  "camera": {
+   "triangulated_median_px": null,
+   "n_points": null,
+   "gate_patch": 0.3,
+   "outcome": "undetermined (too few static points for the camera solve)"
+  },
+  "support": {
+   "n_band_points": null,
+   "half_split_rel": null,
+   "ratio": null,
+   "ci95": null,
+   "pass": false,
+   "reason": "not evaluated (the camera did not reach the gate)"
+  },
+  "census": "FAIL: camera undetermined (too few static points for the camera solve)"
+ },
+ {
+  "clip": "dog",
+  "pool": "davis",
+  "category": "human",
+  "caption": "A golden retriever runs across a grassy bank in a sunlit park",
+  "time": "2026-10-17 22:22",
+  "steps": {
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\ndog: t_a=3 admitted=True heading=True up=True(plane) kappa=0.996 area=36157 trunc=0.046 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 3,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 0,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 836,
+      "object_height_px": 836,
+      "n_pixels": 0,
+      "frac_below_horizon": 0.0
+     }
+    }
+   },
+   "camera_c": {
+    "rc": 0,
+    "tail": "fter | rot C vs G: median first / max | gate | object heading vs d_src @12f | jerk C / ViPE | observability: depth/path, worst-axis \u03c3 (src units/px) |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| dog/human | 3 | [3] | 48 / 23 | 7/21 | 0.53 / 0.53 / - (1.55) | 1.16 / - | 0.65 / 1.10 | **fail** (\u2264 4.92 px) 14 frames unsolved | - | 0.2536 / n/a (IndexError) | 11.0, - |\n\nReading (reviewer, pre-stated): inside the first window camera C should coincide with G to about the px already measured; the test is whether the chaining holds the error across the boundaries. A pass admits 035 under `trajectory.source = static_pnp` (fallback, gated); a fail leaves 035 'camera undetermined'. Jerk is in each camera's own units (camera C in the source gauge, ViPE bridged) and is a shape comparison only.\n"
+   },
+   "camera_ba": {
+    "rc": 0,
+    "tail": "h above the tolerance is undetermined. A determined ratio is the bridge that replaces sigma_hat (D-M3-08 amendment, John's). Admission = time-split reprojection within the column's threshold AND the registered control failing AND the band ratio determined. The lifted-depth terciles are kept as information with the same ratios re-binned by triangulated depth and by image row (a near excess that survives re-binning is a bias; one that vanishes was selection). The band reprojection residual is reported beside the ratio.\n\nPre-registered (before this version ran): the band ratios on the x0 clips are determined and sit between 1.0 and the near-tercile values; the near excess survives re-binning by triangulated depth on 404 and 370 (narrow, clean mid/far bins) and is weaker on the two 265 clips.\n"
+   }
+  },
+  "camera": {
+   "triangulated_median_px": null,
+   "n_points": null,
+   "gate_patch": 0.3,
+   "outcome": "undetermined (camera C unsolved on some frames: too few static tracks there)"
+  },
+  "support": {
+   "n_band_points": null,
+   "half_split_rel": null,
+   "ratio": null,
+   "ci95": null,
+   "pass": false,
+   "reason": "not evaluated (the camera did not reach the gate)"
+  },
+  "census": "FAIL: camera undetermined (camera C unsolved on some frames: too few static tracks there)"
+ },
+ {
+  "clip": "dog-gooses",
+  "pool": "davis",
+  "category": "human",
+  "caption": "A dog runs across a wide green field past a line of geese",
+  "time": "2026-10-17 22:22",
+  "steps": {
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\ndog-gooses: t_a=17 admitted=True heading=True up=True(plane) kappa=0.985 area=7797 trunc=0.050 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 17,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 43802,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 1004,
+      "object_height_px": 1004,
+      "n_pixels": 701202,
+      "frac_below_horizon": 0.9853553771972656
+     }
+    }
+   },
+   "camera_c": {
+    "rc": 0,
+    "tail": "fter | rot C vs G: median first / max | gate | object heading vs d_src @12f | jerk C / ViPE | observability: depth/path, worst-axis \u03c3 (src units/px) |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| dog-gooses/human | 17 | [17] | 368 / 295 | 5/5 | 0.34 / 0.34 / - (0.40) | 0.43 / - | 0.11 / 0.18 | **pass** (\u2264 4.92 px) | 41.8 | 0.0155 / n/a (IndexError) | 102.0, 0.0030 |\n\nReading (reviewer, pre-stated): inside the first window camera C should coincide with G to about the px already measured; the test is whether the chaining holds the error across the boundaries. A pass admits 035 under `trajectory.source = static_pnp` (fallback, gated); a fail leaves 035 'camera undetermined'. Jerk is in each camera's own units (camera C in the source gauge, ViPE bridged) and is a shape comparison only.\n"
+   },
+   "camera_ba": {
+    "rc": 0,
+    "tail": "h above the tolerance is undetermined. A determined ratio is the bridge that replaces sigma_hat (D-M3-08 amendment, John's). Admission = time-split reprojection within the column's threshold AND the registered control failing AND the band ratio determined. The lifted-depth terciles are kept as information with the same ratios re-binned by triangulated depth and by image row (a near excess that survives re-binning is a bias; one that vanishes was selection). The band reprojection residual is reported beside the ratio.\n\nPre-registered (before this version ran): the band ratios on the x0 clips are determined and sit between 1.0 and the near-tercile values; the near excess survives re-binning by triangulated depth on 404 and 370 (narrow, clean mid/far bins) and is weaker on the two 265 clips.\n"
+   }
+  },
+  "camera": {
+   "triangulated_median_px": null,
+   "n_points": null,
+   "gate_patch": 0.3,
+   "outcome": "undetermined (too few static points for the camera solve)"
+  },
+  "support": {
+   "n_band_points": null,
+   "half_split_rel": null,
+   "ratio": null,
+   "ci95": null,
+   "pass": false,
+   "reason": "not evaluated (the camera did not reach the gate)"
+  },
+  "census": "FAIL: camera undetermined (too few static points for the camera solve)"
+ },
+ {
+  "clip": "dogs-jump",
+  "pool": "davis",
+  "category": "human",
+  "caption": "A man and two dogs leap across an open field under a cloudy sky",
+  "time": "2026-10-17 22:22",
+  "steps": {
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\ndogs-jump: t_a=0 admitted=True heading=True up=True(plane) kappa=1.000 area=1421 trunc=0.000 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 11124,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 264,
+      "object_height_px": 264,
+      "n_pixels": 178147,
+      "frac_below_horizon": 0.28713321685791016
+     }
+    }
+   },
+   "camera_c": {
+    "rc": 0,
+    "tail": "/ after | rot C vs G: median first / max | gate | object heading vs d_src @12f | jerk C / ViPE | observability: depth/path, worst-axis \u03c3 (src units/px) |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| dogs-jump/human | 0 | [0] | 352 / 314 | 21/21 | 0.87 / 0.87 / - (1.03) | 1.54 / - | 0.36 / 0.53 | **pass** (\u2264 4.92 px) | 2.6 | 0.0469 / n/a (IndexError) | 15.7, 0.0018 |\n\nReading (reviewer, pre-stated): inside the first window camera C should coincide with G to about the px already measured; the test is whether the chaining holds the error across the boundaries. A pass admits 035 under `trajectory.source = static_pnp` (fallback, gated); a fail leaves 035 'camera undetermined'. Jerk is in each camera's own units (camera C in the source gauge, ViPE bridged) and is a shape comparison only.\n"
+   },
+   "camera_ba": {
+    "rc": 0,
+    "tail": "h above the tolerance is undetermined. A determined ratio is the bridge that replaces sigma_hat (D-M3-08 amendment, John's). Admission = time-split reprojection within the column's threshold AND the registered control failing AND the band ratio determined. The lifted-depth terciles are kept as information with the same ratios re-binned by triangulated depth and by image row (a near excess that survives re-binning is a bias; one that vanishes was selection). The band reprojection residual is reported beside the ratio.\n\nPre-registered (before this version ran): the band ratios on the x0 clips are determined and sit between 1.0 and the near-tercile values; the near excess survives re-binning by triangulated depth on 404 and 370 (narrow, clean mid/far bins) and is weaker on the two 265 clips.\n"
+   }
+  },
+  "camera": {
+   "triangulated_median_px": 0.3753258149427423,
+   "n_points": 343,
+   "gate_patch": 0.3,
+   "outcome": "undetermined (band gauge: undetermined (half-split or interval wider than tol))"
+  },
+  "support": {
+   "n_band_points": 44,
+   "half_split_rel": 0.15840070338561585,
+   "ratio": 6.008008597163128,
+   "ci95": [
+    4.9816601572277115,
+    6.688424689631374
+   ],
+   "pass": false,
+   "reason": "bridge undefined: no support surface (band points or half-split)"
+  },
+  "census": "FAIL: camera undetermined (band gauge: undetermined (half-split or interval wider than tol)); support surface undetermined"
+ },
+ {
+  "clip": "drift-chicane",
+  "pool": "davis",
+  "category": "vehicle",
+  "caption": "A drift car slides through a chicane trailing thick white smoke",
+  "time": "2026-10-17 22:23",
+  "steps": {
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\ndrift-chicane: t_a=0 admitted=True heading=True up=True(plane) kappa=0.995 area=6189 trunc=0.075 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 27516,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 692,
+      "object_height_px": 692,
+      "n_pixels": 440533,
+      "frac_below_horizon": 0.43363285064697266
+     }
+    }
+   },
+   "camera_c": {
+    "rc": 0,
+    "tail": "r | rot C vs G: median first / max | gate | object heading vs d_src @12f | jerk C / ViPE | observability: depth/path, worst-axis \u03c3 (src units/px) |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| drift-chicane/vehi | 0 | [0] | 283 / 283 | 21/21 | 0.30 / 0.30 / - (0.37) | 0.66 / - | 0.19 / 0.35 | **pass** (\u2264 4.92 px) | 150.2 | 0.0026 / n/a (IndexError) | 178.8, 0.0017 |\n\nReading (reviewer, pre-stated): inside the first window camera C should coincide with G to about the px already measured; the test is whether the chaining holds the error across the boundaries. A pass admits 035 under `trajectory.source = static_pnp` (fallback, gated); a fail leaves 035 'camera undetermined'. Jerk is in each camera's own units (camera C in the source gauge, ViPE bridged) and is a shape comparison only.\n"
+   },
+   "camera_ba": {
+    "rc": 0,
+    "tail": "h above the tolerance is undetermined. A determined ratio is the bridge that replaces sigma_hat (D-M3-08 amendment, John's). Admission = time-split reprojection within the column's threshold AND the registered control failing AND the band ratio determined. The lifted-depth terciles are kept as information with the same ratios re-binned by triangulated depth and by image row (a near excess that survives re-binning is a bias; one that vanishes was selection). The band reprojection residual is reported beside the ratio.\n\nPre-registered (before this version ran): the band ratios on the x0 clips are determined and sit between 1.0 and the near-tercile values; the near excess survives re-binning by triangulated depth on 404 and 370 (narrow, clean mid/far bins) and is weaker on the two 265 clips.\n"
+   }
+  },
+  "camera": {
+   "triangulated_median_px": 0.14064145179108586,
+   "n_points": 272,
+   "gate_patch": 0.3,
+   "outcome": "undetermined (band gauge: undetermined (half-split or interval wider than tol))"
+  },
+  "support": {
+   "n_band_points": 150,
+   "half_split_rel": 0.22673819854807253,
+   "ratio": 1.0527793779582661,
+   "ci95": [
+    0.886231959484092,
+    1.4542562444504852
+   ],
+   "pass": false,
+   "reason": "bridge undefined: no support surface (band points or half-split)"
+  },
+  "census": "FAIL: camera undetermined (band gauge: undetermined (half-split or interval wider than tol)); support surface undetermined"
+ },
+ {
+  "clip": "drift-straight",
+  "pool": "davis",
+  "category": "vehicle",
+  "caption": "A red rally car drifts along a track lined with striped barriers",
+  "time": "2026-10-17 22:24",
+  "steps": {
+   "module1_outputs": false
+  },
+  "module1_refusal": {
+   "stage": "A",
+   "message": "[stage_a] GATES FAILED (from qc_failed.json; Module 1 not re-run)",
+   "gates_failed": {
+    "A-G2b": {
+     "median_px": 19.84585189819336,
+     "tau": 4,
+     "pass": false
+    }
+   },
+   "kind": "gate refusal (a verdict)"
+  },
+  "census": "FAIL: Module 1 stage A gate refused it (A-G2b)"
+ },
+ {
+  "clip": "drift-turn",
+  "pool": "davis",
+  "category": "vehicle",
+  "caption": "A race car drifts through a turn trailing smoke past track barriers",
+  "time": "2026-10-17 22:24",
+  "steps": {
+   "module1_outputs": false
+  },
+  "module1_refusal": {
+   "stage": "A",
+   "message": "[stage_a] GATES FAILED (from qc_failed.json; Module 1 not re-run)",
+   "gates_failed": {
+    "A-G2b": {
+     "median_px": 12.473030090332031,
+     "tau": 4,
+     "pass": false
+    }
+   },
+   "kind": "gate refusal (a verdict)"
+  },
+  "census": "FAIL: Module 1 stage A gate refused it (A-G2b)"
+ },
+ {
+  "clip": "flamingo",
+  "pool": "davis",
+  "category": "human",
+  "caption": "A flamingo dips its head into shallow water beside mossy rocks",
+  "time": "2026-10-17 22:24",
+  "steps": {
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\nflamingo: t_a=1 admitted=True heading=True up=True(plane) kappa=0.805 area=25089 trunc=0.040 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 1,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 14448,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 1024,
+      "object_height_px": 1024,
+      "n_pixels": 231168,
+      "frac_below_horizon": 1.0
+     }
+    }
+   },
+   "camera_c": {
+    "rc": 0,
+    "tail": "st / after | rot C vs G: median first / max | gate | object heading vs d_src @12f | jerk C / ViPE | observability: depth/path, worst-axis \u03c3 (src units/px) |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| flamingo/human | 1 | [1] | 85 / 92 | 21/21 | 0.76 / 0.76 / - (0.90) | 2.47 / - | 2.20 / 3.11 | **pass** (\u2264 4.92 px) | 28.3 | 0.0758 / n/a (IndexError) | 6.5, 0.0110 |\n\nReading (reviewer, pre-stated): inside the first window camera C should coincide with G to about the px already measured; the test is whether the chaining holds the error across the boundaries. A pass admits 035 under `trajectory.source = static_pnp` (fallback, gated); a fail leaves 035 'camera undetermined'. Jerk is in each camera's own units (camera C in the source gauge, ViPE bridged) and is a shape comparison only.\n"
+   },
+   "camera_ba": {
+    "rc": 0,
+    "tail": "h above the tolerance is undetermined. A determined ratio is the bridge that replaces sigma_hat (D-M3-08 amendment, John's). Admission = time-split reprojection within the column's threshold AND the registered control failing AND the band ratio determined. The lifted-depth terciles are kept as information with the same ratios re-binned by triangulated depth and by image row (a near excess that survives re-binning is a bias; one that vanishes was selection). The band reprojection residual is reported beside the ratio.\n\nPre-registered (before this version ran): the band ratios on the x0 clips are determined and sit between 1.0 and the near-tercile values; the near excess survives re-binning by triangulated depth on 404 and 370 (narrow, clean mid/far bins) and is weaker on the two 265 clips.\n"
+   }
+  },
+  "camera": {
+   "triangulated_median_px": 0.3023845527160951,
+   "n_points": 45,
+   "gate_patch": 0.3,
+   "outcome": "undetermined (band gauge: undetermined (n=29<30))"
+  },
+  "support": {
+   "n_band_points": 29,
+   "half_split_rel": null,
+   "ratio": null,
+   "ci95": null,
+   "pass": false,
+   "reason": "bridge undefined: no support surface (band points or half-split)"
+  },
+  "census": "FAIL: camera undetermined (band gauge: undetermined (n=29<30)); support surface undetermined"
+ },
+ {
+  "clip": "hike",
+  "pool": "davis",
+  "category": "human",
+  "caption": "A hiker with a backpack walks a trail below a rocky mountain ridge",
+  "time": "2026-10-17 22:24",
+  "steps": {
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\nhike: t_a=17 admitted=True heading=True up=True(plane) kappa=1.000 area=3216 trunc=0.000 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 17,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 47685,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 600,
+      "object_height_px": 600,
+      "n_pixels": 763296,
+      "frac_below_horizon": 0.813018798828125
+     }
+    }
+   },
+   "camera_c": {
+    "rc": 0,
+    "tail": "irst / after | rot C vs G: median first / max | gate | object heading vs d_src @12f | jerk C / ViPE | observability: depth/path, worst-axis \u03c3 (src units/px) |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| hike/human | 17 | [17] | 360 / 288 | 5/5 | 0.21 / 0.21 / - (0.24) | 0.37 / - | 0.10 / 0.11 | **pass** (\u2264 4.92 px) | 9.8 | 0.0115 / n/a (IndexError) | 86.3, 0.0028 |\n\nReading (reviewer, pre-stated): inside the first window camera C should coincide with G to about the px already measured; the test is whether the chaining holds the error across the boundaries. A pass admits 035 under `trajectory.source = static_pnp` (fallback, gated); a fail leaves 035 'camera undetermined'. Jerk is in each camera's own units (camera C in the source gauge, ViPE bridged) and is a shape comparison only.\n"
+   },
+   "camera_ba": {
+    "rc": 0,
+    "tail": "h above the tolerance is undetermined. A determined ratio is the bridge that replaces sigma_hat (D-M3-08 amendment, John's). Admission = time-split reprojection within the column's threshold AND the registered control failing AND the band ratio determined. The lifted-depth terciles are kept as information with the same ratios re-binned by triangulated depth and by image row (a near excess that survives re-binning is a bias; one that vanishes was selection). The band reprojection residual is reported beside the ratio.\n\nPre-registered (before this version ran): the band ratios on the x0 clips are determined and sit between 1.0 and the near-tercile values; the near excess survives re-binning by triangulated depth on 404 and 370 (narrow, clean mid/far bins) and is weaker on the two 265 clips.\n"
+   }
+  },
+  "camera": {
+   "triangulated_median_px": null,
+   "n_points": null,
+   "gate_patch": 0.3,
+   "outcome": "undetermined (too few static points for the camera solve)"
+  },
+  "support": {
+   "n_band_points": null,
+   "half_split_rel": null,
+   "ratio": null,
+   "ci95": null,
+   "pass": false,
+   "reason": "not evaluated (the camera did not reach the gate)"
+  },
+  "census": "FAIL: camera undetermined (too few static points for the camera solve)"
+ },
+ {
+  "clip": "horsejump-low",
+  "pool": "davis",
+  "category": "human",
+  "caption": "A white horse and rider clear a low jump in a sandy arena",
+  "time": "2026-10-17 22:24",
+  "steps": {
+   "module1_outputs": false
+  },
+  "module1_refusal": {
+   "stage": "A",
+   "message": "[stage_a] GATES FAILED (from qc_failed.json; Module 1 not re-run)",
+   "gates_failed": {
+    "A-G2b": {
+     "median_px": 5.260623931884766,
+     "tau": 4,
+     "pass": false
+    }
+   },
+   "kind": "gate refusal (a verdict)"
+  },
+  "census": "FAIL: Module 1 stage A gate refused it (A-G2b)"
+ },
+ {
+  "clip": "kid-football",
+  "pool": "davis",
+  "category": "human",
+  "caption": "A boy in an orange shirt juggles a football on a grassy field",
+  "time": "2026-10-17 22:24",
+  "steps": {
+   "module1_outputs": false
+  },
+  "module1_refusal": {
+   "stage": "A",
+   "message": "[stage_a] GATES FAILED (from qc_failed.json; Module 1 not re-run)",
+   "gates_failed": {
+    "A-G2b": {
+     "median_px": 4.987548351287842,
+     "tau": 4,
+     "pass": false
+    }
+   },
+   "kind": "gate refusal (a verdict)"
+  },
+  "census": "FAIL: Module 1 stage A gate refused it (A-G2b)"
+ },
+ {
+  "clip": "soapbox",
+  "pool": "davis",
+  "category": "vehicle",
+  "caption": "A soapbox cart and its riders roll over a wooden ramp on a street",
+  "time": "2026-10-17 22:24",
+  "steps": {
+   "module1_outputs": true,
+   "m2a": {
+    "rc": 0,
+    "tail": "m2_a config hash ab6d897605ca78b9; thresholds {m2a_theta_max_deg=None, m2a_kappa_min=None, m2a_planarity_min=None, m2a_spread_min=None, m2a_mask_area_min_px=None, m2a_truncation_max=None}\nsoapbox: t_a=0 admitted=True heading=True up=True(plane) kappa=0.992 area=43652 trunc=0.100 gates={g_b5_present:pass, g_present:pass, g_mask_area:ungated, g_mask_trunc:ungated, g_heading:ungated, g_up:ungated, g_basis:ungated}\n"
+   },
+   "source_handoff": {
+    "t_a": 0,
+    "n_frames": 24,
+    "heading_defined": true,
+    "plane_defined": true,
+    "band": {
+     "n_pixels_256": 3301,
+     "info": {
+      "definition": "annulus(dilate(anchor|M_obj), inner_px, outer_frac*obj_h) & below_horizon & valid & ~hole",
+      "inner_px": 16,
+      "outer_px": 948,
+      "object_height_px": 948,
+      "n_pixels": 52837,
+      "frac_below_horizon": 0.05610370635986328
+     }
+    }
+   },
+   "camera_c": {
+    "rc": 0,
+    "tail": " / after | rot C vs G: median first / max | gate | object heading vs d_src @12f | jerk C / ViPE | observability: depth/path, worst-axis \u03c3 (src units/px) |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| soapbox/vehicle | 0 | [0] | 72 / 24 | 21/21 | 0.47 / 0.47 / - (0.64) | 0.78 / - | 0.22 / 0.41 | **pass** (\u2264 4.92 px) | 60.1 | 0.0106 / n/a (IndexError) | 36.0, 0.0127 |\n\nReading (reviewer, pre-stated): inside the first window camera C should coincide with G to about the px already measured; the test is whether the chaining holds the error across the boundaries. A pass admits 035 under `trajectory.source = static_pnp` (fallback, gated); a fail leaves 035 'camera undetermined'. Jerk is in each camera's own units (camera C in the source gauge, ViPE bridged) and is a shape comparison only.\n"
+   },
+   "camera_ba": {
+    "rc": 0,
+    "tail": "h above the tolerance is undetermined. A determined ratio is the bridge that replaces sigma_hat (D-M3-08 amendment, John's). Admission = time-split reprojection within the column's threshold AND the registered control failing AND the band ratio determined. The lifted-depth terciles are kept as information with the same ratios re-binned by triangulated depth and by image row (a near excess that survives re-binning is a bias; one that vanishes was selection). The band reprojection residual is reported beside the ratio.\n\nPre-registered (before this version ran): the band ratios on the x0 clips are determined and sit between 1.0 and the near-tercile values; the near excess survives re-binning by triangulated depth on 404 and 370 (narrow, clean mid/far bins) and is weaker on the two 265 clips.\n"
+   }
+  },
+  "camera": {
+   "triangulated_median_px": 0.2204407003719064,
+   "n_points": 22,
+   "gate_patch": 0.3,
+   "outcome": "undetermined (band gauge: undetermined (n=1<30))"
+  },
+  "support": {
+   "n_band_points": 1,
+   "half_split_rel": null,
+   "ratio": null,
+   "ci95": null,
+   "pass": false,
+   "reason": "bridge undefined: no support surface (band points or half-split)"
+  },
+  "census": "FAIL: camera undetermined (band gauge: undetermined (n=1<30)); support surface undetermined"
+ },
+ {
+  "clip": "drone",
+  "pool": "davis",
+  "category": "human",
+  "caption": "A man and a small drone move across the floor of a bright shop",
+  "time": "2026-10-18 00:34",
+  "steps": {
+   "module1": {
+    "rc": 0,
+    "tail": "| drone | ok | x0 | - | - | - | FAILED at C: ValueError: zero-size array to reduction operation minimum which has no identity |\n\nsummary -> /content/drive/MyDrive/motion_transfer_exp/viz/pipeline_summary.md\n"
+   },
+   "module1_outputs": false
+  },
+  "module1_refusal": {
+   "stage": "C",
+   "message": "ValueError: zero-size array to reduction operation minimum which has no identity",
+   "gates_failed": null,
+   "kind": "crash (re-run, not a verdict)"
+  },
+  "census": "UNDETERMINED: Module 1 stage C crashed \u2014 ValueError: zero-size array to reduction operation minimum which has no identity"
+ }
+]

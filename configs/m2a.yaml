@@ -1,0 +1,9 @@
+# m2_a — Module 2 admission reader (SKILL_m2_a_v2_thin_reader.md).
+# NO thresholds here: they live in calibration.lock.yaml under thresholds.m2a_*
+# (all null = ungated as of 2026-09-10). This file holds only paths and
+# non-tunable I/O settings; its `m2a` section enters the stage's config hash.
+m2a:
+  b5_schema: b5_v1.2        # refuse any other B.5 schema (contract_stage_b5_v1_2.md)
+paths:
+  b5_cache:  ${paths.drive_root}/cache/stage_b5
+  out_dir:   ${paths.drive_root}/cache/m2_a

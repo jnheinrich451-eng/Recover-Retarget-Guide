@@ -1,0 +1,402 @@
+{
+ "abl__000000000265.2.003__vehicle__A0__seed0": {
+  "stem": "abl__000000000265.2.003__vehicle__A0__seed0",
+  "video": "/content/abl21/abl__000000000265.2.003__vehicle__A0__seed0.mp4",
+  "pair": "000000000265.2.003/vehicle",
+  "arm": "A0",
+  "label": "A0 (no guidance)",
+  "window": [
+   0.85,
+   0.6
+  ],
+  "role": "backbone",
+  "seed": 0,
+  "fps": 30.0,
+  "prompt": "a red car driving, on a desert highway, side profile, moving right to left, medium shot",
+  "source": "motion_transfer_exp/reports/m3_ablation/export/000000000265.2.003_vehicle/A0_seed0_rec_F33.mp4",
+  "source_sha256": "a081ebfbe212e199f04773178db92dcb33b291209a18aebc41cae03206ef2d7c",
+  "frames_used": "0..20 of 33",
+  "mapping": "rule (b): crop [65.0, 0.0, 767.0, 480.0] of the 832x480 frame, resized to 720x480",
+  "same_as_record": true
+ },
+ "abl__000000000265.2.003__vehicle__lock__seed0": {
+  "stem": "abl__000000000265.2.003__vehicle__lock__seed0",
+  "video": "/content/abl21/abl__000000000265.2.003__vehicle__lock__seed0.mp4",
+  "pair": "000000000265.2.003/vehicle",
+  "arm": "lock",
+  "label": "A3 [0.85, 0.60] (lock, of record)",
+  "window": [
+   0.85,
+   0.6
+  ],
+  "role": "lock window (of record)",
+  "seed": 0,
+  "fps": 30.0,
+  "prompt": "a red car driving, on a desert highway, side profile, moving right to left, medium shot",
+  "source": "motion_transfer_exp/reports/m3_ablation/export/000000000265.2.003_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "source_sha256": "16f15f03633f0aa6ef7f513e4eb3085bfe63de319fde65b29dbaae178bc844ec",
+  "frames_used": "0..20 of 33",
+  "mapping": "rule (b): crop [65.0, 0.0, 767.0, 480.0] of the 832x480 frame, resized to 720x480",
+  "same_as_record": true
+ },
+ "abl__000000000265.2.003__vehicle__A__seed0": {
+  "stem": "abl__000000000265.2.003__vehicle__A__seed0",
+  "video": "/content/abl21/abl__000000000265.2.003__vehicle__A__seed0.mp4",
+  "pair": "000000000265.2.003/vehicle",
+  "arm": "A",
+  "label": "A3 [0.85, 0.75] (A: ends earlier)",
+  "window": [
+   0.85,
+   0.75
+  ],
+  "role": "ablation",
+  "seed": 0,
+  "fps": 30.0,
+  "prompt": "a red car driving, on a desert highway, side profile, moving right to left, medium shot",
+  "source": "motion_transfer_exp/reports/m3_ablation/export/000000000265.2.003_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm_sky_bw0.75.mp4",
+  "source_sha256": "ef7b1d582087513da6043dc8370a94f0766e3a409cc26c7a2b5b603718a15395",
+  "frames_used": "0..20 of 33",
+  "mapping": "rule (b): crop [65.0, 0.0, 767.0, 480.0] of the 832x480 frame, resized to 720x480",
+  "same_as_record": ""
+ },
+ "abl__000000000265.2.003__vehicle__B__seed0": {
+  "stem": "abl__000000000265.2.003__vehicle__B__seed0",
+  "video": "/content/abl21/abl__000000000265.2.003__vehicle__B__seed0.mp4",
+  "pair": "000000000265.2.003/vehicle",
+  "arm": "B",
+  "label": "A3 [0.85, 0.45] (B: ends later)",
+  "window": [
+   0.85,
+   0.45
+  ],
+  "role": "ablation",
+  "seed": 0,
+  "fps": 30.0,
+  "prompt": "a red car driving, on a desert highway, side profile, moving right to left, medium shot",
+  "source": "motion_transfer_exp/reports/m3_ablation/export/000000000265.2.003_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm_sky_bw0.45.mp4",
+  "source_sha256": "baa61c75084dfcdec955810aa0d575951c6b39ed0fad9329e7571cb885b6422f",
+  "frames_used": "0..20 of 33",
+  "mapping": "rule (b): crop [65.0, 0.0, 767.0, 480.0] of the 832x480 frame, resized to 720x480",
+  "same_as_record": ""
+ },
+ "abl__000000000265.2.005__vehicle__A0__seed0": {
+  "stem": "abl__000000000265.2.005__vehicle__A0__seed0",
+  "video": "/content/abl21/abl__000000000265.2.005__vehicle__A0__seed0.mp4",
+  "pair": "000000000265.2.005/vehicle",
+  "arm": "A0",
+  "label": "A0 (no guidance)",
+  "window": [
+   0.85,
+   0.6
+  ],
+  "role": "backbone",
+  "seed": 0,
+  "fps": 30.0,
+  "prompt": "a red car driving, on open scrubland, side profile, moving right to left, medium shot",
+  "source": "motion_transfer_exp/reports/m3_ablation/export/000000000265.2.005_vehicle/A0_seed0_rec_F33.mp4",
+  "source_sha256": "fb53c7745276beb5f24f057c71c889f5b4b5e692851b2f486fd59b1ba5efc2ab",
+  "frames_used": "0..20 of 33",
+  "mapping": "rule (b): crop [65.0, 0.0, 767.0, 480.0] of the 832x480 frame, resized to 720x480",
+  "same_as_record": true
+ },
+ "abl__000000000265.2.005__vehicle__lock__seed0": {
+  "stem": "abl__000000000265.2.005__vehicle__lock__seed0",
+  "video": "/content/abl21/abl__000000000265.2.005__vehicle__lock__seed0.mp4",
+  "pair": "000000000265.2.005/vehicle",
+  "arm": "lock",
+  "label": "A3 [0.85, 0.60] (lock, of record)",
+  "window": [
+   0.85,
+   0.6
+  ],
+  "role": "lock window (of record)",
+  "seed": 0,
+  "fps": 30.0,
+  "prompt": "a red car driving, on open scrubland, side profile, moving right to left, medium shot",
+  "source": "motion_transfer_exp/reports/m3_ablation/export/000000000265.2.005_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "source_sha256": "7c642e581db1ebcab60ee89e87b4d34abefc1b15bc661f292a278d779881a2e1",
+  "frames_used": "0..20 of 33",
+  "mapping": "rule (b): crop [65.0, 0.0, 767.0, 480.0] of the 832x480 frame, resized to 720x480",
+  "same_as_record": true
+ },
+ "abl__000000000265.2.005__vehicle__A__seed0": {
+  "stem": "abl__000000000265.2.005__vehicle__A__seed0",
+  "video": "/content/abl21/abl__000000000265.2.005__vehicle__A__seed0.mp4",
+  "pair": "000000000265.2.005/vehicle",
+  "arm": "A",
+  "label": "A3 [0.85, 0.75] (A: ends earlier)",
+  "window": [
+   0.85,
+   0.75
+  ],
+  "role": "ablation",
+  "seed": 0,
+  "fps": 30.0,
+  "prompt": "a red car driving, on open scrubland, side profile, moving right to left, medium shot",
+  "source": "motion_transfer_exp/reports/m3_ablation/export/000000000265.2.005_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm_sky_bw0.75.mp4",
+  "source_sha256": "6bce5bda0bd9fe0804225282d10a8a8ecd952a5e51df661bf41b3d6215303337",
+  "frames_used": "0..20 of 33",
+  "mapping": "rule (b): crop [65.0, 0.0, 767.0, 480.0] of the 832x480 frame, resized to 720x480",
+  "same_as_record": ""
+ },
+ "abl__000000000265.2.005__vehicle__B__seed0": {
+  "stem": "abl__000000000265.2.005__vehicle__B__seed0",
+  "video": "/content/abl21/abl__000000000265.2.005__vehicle__B__seed0.mp4",
+  "pair": "000000000265.2.005/vehicle",
+  "arm": "B",
+  "label": "A3 [0.85, 0.45] (B: ends later)",
+  "window": [
+   0.85,
+   0.45
+  ],
+  "role": "ablation",
+  "seed": 0,
+  "fps": 30.0,
+  "prompt": "a red car driving, on open scrubland, side profile, moving right to left, medium shot",
+  "source": "motion_transfer_exp/reports/m3_ablation/export/000000000265.2.005_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm_sky_bw0.45.mp4",
+  "source_sha256": "fad7b179c54d534f5b15d7d8a35526813288541b331644c52b005d74993af0c6",
+  "frames_used": "0..20 of 33",
+  "mapping": "rule (b): crop [65.0, 0.0, 767.0, 480.0] of the 832x480 frame, resized to 720x480",
+  "same_as_record": ""
+ },
+ "abl__000000000265.2.005__human__A0__seed0": {
+  "stem": "abl__000000000265.2.005__human__A0__seed0",
+  "video": "/content/abl21/abl__000000000265.2.005__human__A0__seed0.mp4",
+  "pair": "000000000265.2.005/human",
+  "arm": "A0",
+  "label": "A0 (no guidance)",
+  "window": [
+   0.85,
+   0.6
+  ],
+  "role": "backbone",
+  "seed": 0,
+  "fps": 30.0,
+  "prompt": "a man in a grey jacket and dark trousers walking, on a rocky riverbank, side profile, moving right to left, wide shot",
+  "source": "motion_transfer_exp/reports/m3_ablation/export/000000000265.2.005_human/A0_seed0_rec_F33.mp4",
+  "source_sha256": "a5cd6ed2f1a1b338dc5e2274e6204da22257874a90a7bf863d59cfa23ed28bc8",
+  "frames_used": "0..20 of 33",
+  "mapping": "rule (b): crop [65.0, 0.0, 767.0, 480.0] of the 832x480 frame, resized to 720x480",
+  "same_as_record": true
+ },
+ "abl__000000000265.2.005__human__lock__seed0": {
+  "stem": "abl__000000000265.2.005__human__lock__seed0",
+  "video": "/content/abl21/abl__000000000265.2.005__human__lock__seed0.mp4",
+  "pair": "000000000265.2.005/human",
+  "arm": "lock",
+  "label": "A3 [0.85, 0.60] (lock, of record)",
+  "window": [
+   0.85,
+   0.6
+  ],
+  "role": "lock window (of record)",
+  "seed": 0,
+  "fps": 30.0,
+  "prompt": "a man in a grey jacket and dark trousers walking, on a rocky riverbank, side profile, moving right to left, wide shot",
+  "source": "motion_transfer_exp/reports/m3_ablation/export/000000000265.2.005_human/A3_seed0_rec_F33_sm_sky.mp4",
+  "source_sha256": "e6f75ea45fbe5ea338b136c7f95c3b1bad8fa43211830100d05b3f8dc1a347ab",
+  "frames_used": "0..20 of 33",
+  "mapping": "rule (b): crop [65.0, 0.0, 767.0, 480.0] of the 832x480 frame, resized to 720x480",
+  "same_as_record": true
+ },
+ "abl__000000000265.2.005__human__A__seed0": {
+  "stem": "abl__000000000265.2.005__human__A__seed0",
+  "video": "/content/abl21/abl__000000000265.2.005__human__A__seed0.mp4",
+  "pair": "000000000265.2.005/human",
+  "arm": "A",
+  "label": "A3 [0.85, 0.75] (A: ends earlier)",
+  "window": [
+   0.85,
+   0.75
+  ],
+  "role": "ablation",
+  "seed": 0,
+  "fps": 30.0,
+  "prompt": "a man in a grey jacket and dark trousers walking, on a rocky riverbank, side profile, moving right to left, wide shot",
+  "source": "motion_transfer_exp/reports/m3_ablation/export/000000000265.2.005_human/A3_seed0_rec_F33_sm_sky_bw0.75.mp4",
+  "source_sha256": "351471acb7954c95c3102190b6f33163926dfa96d78b3685aed44b57ef94b3b7",
+  "frames_used": "0..20 of 33",
+  "mapping": "rule (b): crop [65.0, 0.0, 767.0, 480.0] of the 832x480 frame, resized to 720x480",
+  "same_as_record": ""
+ },
+ "abl__000000000265.2.005__human__B__seed0": {
+  "stem": "abl__000000000265.2.005__human__B__seed0",
+  "video": "/content/abl21/abl__000000000265.2.005__human__B__seed0.mp4",
+  "pair": "000000000265.2.005/human",
+  "arm": "B",
+  "label": "A3 [0.85, 0.45] (B: ends later)",
+  "window": [
+   0.85,
+   0.45
+  ],
+  "role": "ablation",
+  "seed": 0,
+  "fps": 30.0,
+  "prompt": "a man in a grey jacket and dark trousers walking, on a rocky riverbank, side profile, moving right to left, wide shot",
+  "source": "motion_transfer_exp/reports/m3_ablation/export/000000000265.2.005_human/A3_seed0_rec_F33_sm_sky_bw0.45.mp4",
+  "source_sha256": "01f42f12798d31fbb4b7db561d753a362b788334ebeeed17b25226d48449657f",
+  "frames_used": "0..20 of 33",
+  "mapping": "rule (b): crop [65.0, 0.0, 767.0, 480.0] of the 832x480 frame, resized to 720x480",
+  "same_as_record": ""
+ },
+ "abl__000000000370.1.008__human__A0__seed0": {
+  "stem": "abl__000000000370.1.008__human__A0__seed0",
+  "video": "/content/abl21/abl__000000000370.1.008__human__A0__seed0.mp4",
+  "pair": "000000000370.1.008/human",
+  "arm": "A0",
+  "label": "A0 (no guidance)",
+  "window": [
+   0.85,
+   0.6
+  ],
+  "role": "backbone",
+  "seed": 0,
+  "fps": 30.0,
+  "prompt": "a man in a grey jacket and dark trousers walking, in a misty pine forest, rear three-quarter view, moving away from the camera, medium-wide shot",
+  "source": "motion_transfer_exp/reports/m3_ablation/export/000000000370.1.008_human/A0_seed0_rec_F33.mp4",
+  "source_sha256": "1b848dfdd4f7b9844467b73f673f7bb2c2deaba69038e545625e945e4dffde00",
+  "frames_used": "0..20 of 33",
+  "mapping": "rule (b): crop [65.0, 0.0, 767.0, 480.0] of the 832x480 frame, resized to 720x480",
+  "same_as_record": true
+ },
+ "abl__000000000370.1.008__human__lock__seed0": {
+  "stem": "abl__000000000370.1.008__human__lock__seed0",
+  "video": "/content/abl21/abl__000000000370.1.008__human__lock__seed0.mp4",
+  "pair": "000000000370.1.008/human",
+  "arm": "lock",
+  "label": "A3 [0.85, 0.60] (lock, of record)",
+  "window": [
+   0.85,
+   0.6
+  ],
+  "role": "lock window (of record)",
+  "seed": 0,
+  "fps": 30.0,
+  "prompt": "a man in a grey jacket and dark trousers walking, in a misty pine forest, rear three-quarter view, moving away from the camera, medium-wide shot",
+  "source": "motion_transfer_exp/reports/m3_ablation/export/000000000370.1.008_human/A3_seed0_rec_F33_sm_sky.mp4",
+  "source_sha256": "4c4dd77fe6441f58b327682e21902a198a8127cd65f8ecf408b6f7539c8e1cbb",
+  "frames_used": "0..20 of 33",
+  "mapping": "rule (b): crop [65.0, 0.0, 767.0, 480.0] of the 832x480 frame, resized to 720x480",
+  "same_as_record": true
+ },
+ "abl__000000000370.1.008__human__A__seed0": {
+  "stem": "abl__000000000370.1.008__human__A__seed0",
+  "video": "/content/abl21/abl__000000000370.1.008__human__A__seed0.mp4",
+  "pair": "000000000370.1.008/human",
+  "arm": "A",
+  "label": "A3 [0.85, 0.75] (A: ends earlier)",
+  "window": [
+   0.85,
+   0.75
+  ],
+  "role": "ablation",
+  "seed": 0,
+  "fps": 30.0,
+  "prompt": "a man in a grey jacket and dark trousers walking, in a misty pine forest, rear three-quarter view, moving away from the camera, medium-wide shot",
+  "source": "motion_transfer_exp/reports/m3_ablation/export/000000000370.1.008_human/A3_seed0_rec_F33_sm_sky_bw0.75.mp4",
+  "source_sha256": "6a61ea0f61c9aa8abc7fc137c6cc5e48de415f24710261e37e445c0cf75bac93",
+  "frames_used": "0..20 of 33",
+  "mapping": "rule (b): crop [65.0, 0.0, 767.0, 480.0] of the 832x480 frame, resized to 720x480",
+  "same_as_record": ""
+ },
+ "abl__000000000370.1.008__human__B__seed0": {
+  "stem": "abl__000000000370.1.008__human__B__seed0",
+  "video": "/content/abl21/abl__000000000370.1.008__human__B__seed0.mp4",
+  "pair": "000000000370.1.008/human",
+  "arm": "B",
+  "label": "A3 [0.85, 0.45] (B: ends later)",
+  "window": [
+   0.85,
+   0.45
+  ],
+  "role": "ablation",
+  "seed": 0,
+  "fps": 30.0,
+  "prompt": "a man in a grey jacket and dark trousers walking, in a misty pine forest, rear three-quarter view, moving away from the camera, medium-wide shot",
+  "source": "motion_transfer_exp/reports/m3_ablation/export/000000000370.1.008_human/A3_seed0_rec_F33_sm_sky_bw0.45.mp4",
+  "source_sha256": "aa27e0584efbab70c7c0d55d62622515df086470ee357e842256fcbddb66471d",
+  "frames_used": "0..20 of 33",
+  "mapping": "rule (b): crop [65.0, 0.0, 767.0, 480.0] of the 832x480 frame, resized to 720x480",
+  "same_as_record": ""
+ },
+ "abl__000000000404.1.004__vehicle__A0__seed0": {
+  "stem": "abl__000000000404.1.004__vehicle__A0__seed0",
+  "video": "/content/abl21/abl__000000000404.1.004__vehicle__A0__seed0.mp4",
+  "pair": "000000000404.1.004/vehicle",
+  "arm": "A0",
+  "label": "A0 (no guidance)",
+  "window": [
+   0.85,
+   0.6
+  ],
+  "role": "backbone",
+  "seed": 0,
+  "fps": 30.0,
+  "prompt": "a red car driving, on a desert highway, front three-quarter view, approaching the camera, medium shot",
+  "source": "motion_transfer_exp/reports/m3_ablation/export/000000000404.1.004_vehicle/A0_seed0_rec_F33.mp4",
+  "source_sha256": "cc44fe5c10e6cf5cc26655da6475328ba09208b9d319416cc9739d8b21ed99d1",
+  "frames_used": "0..20 of 33",
+  "mapping": "rule (b): crop [65.0, 0.0, 767.0, 480.0] of the 832x480 frame, resized to 720x480",
+  "same_as_record": true
+ },
+ "abl__000000000404.1.004__vehicle__lock__seed0": {
+  "stem": "abl__000000000404.1.004__vehicle__lock__seed0",
+  "video": "/content/abl21/abl__000000000404.1.004__vehicle__lock__seed0.mp4",
+  "pair": "000000000404.1.004/vehicle",
+  "arm": "lock",
+  "label": "A3 [0.85, 0.60] (lock, of record)",
+  "window": [
+   0.85,
+   0.6
+  ],
+  "role": "lock window (of record)",
+  "seed": 0,
+  "fps": 30.0,
+  "prompt": "a red car driving, on a desert highway, front three-quarter view, approaching the camera, medium shot",
+  "source": "motion_transfer_exp/reports/m3_ablation/export/000000000404.1.004_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm_sky.mp4",
+  "source_sha256": "84cb900d4396a791971909af1303c0268daa0267cc7765e946df6a996f3af605",
+  "frames_used": "0..20 of 33",
+  "mapping": "rule (b): crop [65.0, 0.0, 767.0, 480.0] of the 832x480 frame, resized to 720x480",
+  "same_as_record": true
+ },
+ "abl__000000000404.1.004__vehicle__A__seed0": {
+  "stem": "abl__000000000404.1.004__vehicle__A__seed0",
+  "video": "/content/abl21/abl__000000000404.1.004__vehicle__A__seed0.mp4",
+  "pair": "000000000404.1.004/vehicle",
+  "arm": "A",
+  "label": "A3 [0.85, 0.75] (A: ends earlier)",
+  "window": [
+   0.85,
+   0.75
+  ],
+  "role": "ablation",
+  "seed": 0,
+  "fps": 30.0,
+  "prompt": "a red car driving, on a desert highway, front three-quarter view, approaching the camera, medium shot",
+  "source": "motion_transfer_exp/reports/m3_ablation/export/000000000404.1.004_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm_sky_bw0.75.mp4",
+  "source_sha256": "6164ca4b1ebcb7d2feb21667159b4d0d24d9c3af7ede8c5ec2dd438fd75747e0",
+  "frames_used": "0..20 of 33",
+  "mapping": "rule (b): crop [65.0, 0.0, 767.0, 480.0] of the 832x480 frame, resized to 720x480",
+  "same_as_record": ""
+ },
+ "abl__000000000404.1.004__vehicle__B__seed0": {
+  "stem": "abl__000000000404.1.004__vehicle__B__seed0",
+  "video": "/content/abl21/abl__000000000404.1.004__vehicle__B__seed0.mp4",
+  "pair": "000000000404.1.004/vehicle",
+  "arm": "B",
+  "label": "A3 [0.85, 0.45] (B: ends later)",
+  "window": [
+   0.85,
+   0.45
+  ],
+  "role": "ablation",
+  "seed": 0,
+  "fps": 30.0,
+  "prompt": "a red car driving, on a desert highway, front three-quarter view, approaching the camera, medium shot",
+  "source": "motion_transfer_exp/reports/m3_ablation/export/000000000404.1.004_vehicle/A3_seed0_rec_F33_obj_ow0.75_sm_sky_bw0.45.mp4",
+  "source_sha256": "7f6535316b7cc83589ab42c3dfb4f2c54fa644b28b569c1920f1c084630a6f7b",
+  "frames_used": "0..20 of 33",
+  "mapping": "rule (b): crop [65.0, 0.0, 767.0, 480.0] of the 832x480 frame, resized to 720x480",
+  "same_as_record": ""
+ }
+}

@@ -1,0 +1,115 @@
+{
+ "pair": "bmx-bumps/human",
+ "selected": 0,
+ "n_survivors": 4,
+ "S1_seeds": [
+  0,
+  1,
+  2,
+  3
+ ],
+ "tie_broken_by_seed": true,
+ "human_selected": null,
+ "agrees_with_human": null,
+ "blind_verdict_of_pick": null,
+ "human_pick_rank_note": null,
+ "sensitivity": {
+  "eps_half": 1,
+  "eps_double": 0
+ },
+ "heading_flag": false,
+ "candidates": [
+  {
+   "seed": 0,
+   "gates_failed": [],
+   "metrics": {
+    "object_iou": 0.5894976354064424,
+    "road_agreement": 0.0,
+    "subject_similarity": 0.1942620426416397,
+    "quality_full": 53.056976318359375,
+    "_ground_ok": true,
+    "_support_ok": true,
+    "_contact_outcome": "contact_fails_regauge",
+    "_kbg_ci": 0.040152638825511025,
+    "_heading_tier": "H1 pass"
+   },
+   "tier": "H1 pass",
+   "ground_g1": true,
+   "path_support_g2": true,
+   "extra_reasons": [],
+   "contact_outcome": "contact_fails_regauge",
+   "kbg_ci_rel_width": 0.040152638825511025
+  },
+  {
+   "seed": 1,
+   "gates_failed": [],
+   "metrics": {
+    "object_iou": 0.6498561668464581,
+    "road_agreement": 0.0,
+    "subject_similarity": 0.2065759301185608,
+    "quality_full": 74.30450439453125,
+    "_ground_ok": true,
+    "_support_ok": true,
+    "_contact_outcome": "contact_fails_regauge",
+    "_kbg_ci": 0.02929552408887016,
+    "_heading_tier": "H1 pass"
+   },
+   "tier": "H1 pass",
+   "ground_g1": true,
+   "path_support_g2": true,
+   "extra_reasons": [],
+   "contact_outcome": "contact_fails_regauge",
+   "kbg_ci_rel_width": 0.02929552408887016
+  },
+  {
+   "seed": 2,
+   "gates_failed": [],
+   "metrics": {
+    "object_iou": 0.5847499001375882,
+    "road_agreement": 0.0,
+    "subject_similarity": 0.19880573451519012,
+    "quality_full": 59.33695983886719,
+    "_ground_ok": true,
+    "_support_ok": true,
+    "_contact_outcome": "contact_fails_regauge",
+    "_kbg_ci": 0.05004921856673162,
+    "_heading_tier": "H1 pass"
+   },
+   "tier": "H1 pass",
+   "ground_g1": true,
+   "path_support_g2": true,
+   "extra_reasons": [],
+   "contact_outcome": "contact_fails_regauge",
+   "kbg_ci_rel_width": 0.05004921856673162
+  },
+  {
+   "seed": 3,
+   "gates_failed": [],
+   "metrics": {
+    "object_iou": 0.6003873176004324,
+    "road_agreement": 0.0,
+    "subject_similarity": 0.20298606157302856,
+    "quality_full": 75.29650115966797,
+    "_ground_ok": true,
+    "_support_ok": true,
+    "_contact_outcome": "contact_fails_regauge",
+    "_kbg_ci": 0.03552779191160211,
+    "_heading_tier": "H1 pass"
+   },
+   "tier": "H1 pass",
+   "ground_g1": true,
+   "path_support_g2": true,
+   "extra_reasons": [],
+   "contact_outcome": "contact_fails_regauge",
+   "kbg_ci_rel_width": 0.03552779191160211
+  }
+ ],
+ "lock": {
+  "eps_iou": 0.1017,
+  "eps_clip": 0.0159,
+  "delta_h": 0.0339,
+  "tau_q": 38.31406497955322,
+  "tau_sup": null,
+  "status": "calibrated_2026-10-18"
+ }
+}

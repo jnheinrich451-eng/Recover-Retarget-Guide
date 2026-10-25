@@ -1,0 +1,254 @@
+[
+ {
+  "pair": "000000000035.1.003/vehicle",
+  "human_seed": 2,
+  "record": {
+   "kbg_ci_rel_width": 0.11350378444452652,
+   "kbg_n_pixels": 113664,
+   "contact_outcome": "contact_holds",
+   "s_c": 1.0,
+   "admitted_in_record": true
+  },
+  "candidate_level": {
+   "band": {
+    "k_bg": 0.1556537234676851,
+    "ci95": [
+     0.15082072655764833,
+     0.1684995514508548
+    ],
+    "bootstrap_halfwidth_rel": 0.05678895595734567,
+    "half_split_rel": 0.007350516750912764,
+    "n_band_points": 113664,
+    "n_blocks": 50
+   },
+   "band_determinable": true,
+   "contact": {
+    "r_c_B": 1.0087712587605437,
+    "outcome": "contact_holds",
+    "s_c": 1.0,
+    "n_ground_px": 136,
+    "instrument": "the proxy as placed (control zeta_obj), not the reconstructed mesh of the record"
+   },
+   "g1_verdict": true
+  },
+  "known_answer_reproduced": true,
+  "kbg_ci_width_candidate": 0.11357791191469134,
+  "kbg_ci_width_matches_record": true
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "human_seed": 2,
+  "record": {
+   "kbg_ci_rel_width": 0.2986867327759624,
+   "kbg_n_pixels": 135175,
+   "contact_outcome": "no_contact_line_in_view",
+   "s_c": 1.0,
+   "admitted_in_record": true
+  },
+  "candidate_level": {
+   "band": {
+    "k_bg": 0.41461851580366677,
+    "ci95": [
+     0.3375768761221836,
+     0.4614313461363626
+    ],
+    "bootstrap_halfwidth_rel": 0.1493595501567367,
+    "half_split_rel": 0.029864286161778525,
+    "n_band_points": 135175,
+    "n_blocks": 61
+   },
+   "band_determinable": true,
+   "contact": {
+    "r_c_B": 0.8937324808950965,
+    "outcome": "no_contact_line_in_view",
+    "s_c": 1.0,
+    "n_ground_px": 52,
+    "instrument": "the proxy as placed (control zeta_obj), not the reconstructed mesh of the record"
+   },
+   "g1_verdict": true
+  },
+  "known_answer_reproduced": true,
+  "kbg_ci_width_candidate": 0.2987191003134734,
+  "kbg_ci_width_matches_record": true
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "human_seed": 1,
+  "record": {
+   "kbg_ci_rel_width": 0.042501760032382235,
+   "kbg_n_pixels": 166910,
+   "contact_outcome": "contact_holds",
+   "s_c": 1.0,
+   "admitted_in_record": true
+  },
+  "candidate_level": {
+   "band": {
+    "k_bg": 0.3442300577373252,
+    "ci95": [
+     0.3354101589567993,
+     0.3500441278467664
+    ],
+    "bootstrap_halfwidth_rel": 0.021256088132103175,
+    "half_split_rel": 0.0040333296844790294,
+    "n_band_points": 166906,
+    "n_blocks": 65
+   },
+   "band_determinable": true,
+   "contact": {
+    "r_c_B": 0.8976583560050808,
+    "outcome": "contact_fails_regauge",
+    "s_c": 1.1140095709133464,
+    "n_ground_px": 320,
+    "instrument": "the proxy as placed (control zeta_obj), not the reconstructed mesh of the record"
+   },
+   "g1_verdict": true
+  },
+  "known_answer_reproduced": true,
+  "kbg_ci_width_candidate": 0.04251217626420635,
+  "kbg_ci_width_matches_record": true
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "human_seed": 0,
+  "record": {
+   "kbg_ci_rel_width": 0.12293017078708827,
+   "kbg_n_pixels": 153078,
+   "contact_outcome": "contact_fails_regauge",
+   "s_c": 0.8540842350858395,
+   "admitted_in_record": true
+  },
+  "candidate_level": {
+   "band": {
+    "k_bg": 0.5120750525605935,
+    "ci95": [
+     0.4790345932824514,
+     0.5420043853589124
+    ],
+    "bootstrap_halfwidth_rel": 0.06148492468202188,
+    "half_split_rel": 0.014572859870027665,
+    "n_band_points": 153077,
+    "n_blocks": 66
+   },
+   "band_determinable": true,
+   "contact": {
+    "r_c_B": 1.0213445484298609,
+    "outcome": "contact_holds",
+    "s_c": 1.0,
+    "n_ground_px": 176,
+    "instrument": "the proxy as placed (control zeta_obj), not the reconstructed mesh of the record"
+   },
+   "g1_verdict": true
+  },
+  "known_answer_reproduced": true,
+  "kbg_ci_width_candidate": 0.12296984936404376,
+  "kbg_ci_width_matches_record": true
+ },
+ {
+  "pair": "000000000284.0.006/vehicle",
+  "human_seed": 3,
+  "record": {
+   "kbg_ci_rel_width": null,
+   "kbg_n_pixels": null,
+   "contact_outcome": null,
+   "s_c": null,
+   "admitted_in_record": false
+  },
+  "candidate_level": {
+   "band": {
+    "k_bg": 0.07107802501057191,
+    "ci95": [
+     0.0636944111705582,
+     0.08207407922634771
+    ],
+    "bootstrap_halfwidth_rel": 0.1292921972230924,
+    "half_split_rel": 0.029984380342489857,
+    "n_band_points": 138177,
+    "n_blocks": 57
+   },
+   "band_determinable": true,
+   "contact": {
+    "r_c_B": 0.7829669876007513,
+    "outcome": "contact_fails_regauge",
+    "s_c": 1.2771930564586174,
+    "n_ground_px": 872,
+    "instrument": "the proxy as placed (control zeta_obj), not the reconstructed mesh of the record"
+   },
+   "g1_verdict": true
+  },
+  "known_answer_reproduced": null,
+  "kbg_ci_width_candidate": 0.2585843944461848,
+  "kbg_ci_width_matches_record": null
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "human_seed": 2,
+  "record": {
+   "kbg_ci_rel_width": 0.1800896878290934,
+   "kbg_n_pixels": 163634,
+   "contact_outcome": "regauge_by_owner_decision",
+   "s_c": 1.2888548813918093,
+   "admitted_in_record": true
+  },
+  "candidate_level": {
+   "band": {
+    "k_bg": 0.19354364274200384,
+    "ci95": [
+     0.1783308662799739,
+     0.21317057716614363
+    ],
+    "bootstrap_halfwidth_rel": 0.09000479269838767,
+    "half_split_rel": 0.055016593710277555,
+    "n_band_points": 163617,
+    "n_blocks": 58
+   },
+   "band_determinable": true,
+   "contact": {
+    "r_c_B": 0.648758043645383,
+    "outcome": "no_contact_line_in_view",
+    "s_c": 1.0,
+    "n_ground_px": 0,
+    "instrument": "the proxy as placed (control zeta_obj), not the reconstructed mesh of the record"
+   },
+   "g1_verdict": true
+  },
+  "known_answer_reproduced": true,
+  "kbg_ci_width_candidate": 0.18000958539677533,
+  "kbg_ci_width_matches_record": true
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "human_seed": 1,
+  "record": {
+   "kbg_ci_rel_width": 0.06402285421663736,
+   "kbg_n_pixels": 115090,
+   "contact_outcome": "no_contact_line_in_view",
+   "s_c": 1.0,
+   "admitted_in_record": true
+  },
+  "candidate_level": {
+   "band": {
+    "k_bg": 0.2535107127268368,
+    "ci95": [
+     0.23923643736767236,
+     0.2554583840697261
+    ],
+    "bootstrap_halfwidth_rel": 0.031994598034074465,
+    "half_split_rel": 0.007079788740926309,
+    "n_band_points": 115089,
+    "n_blocks": 52
+   },
+   "band_determinable": true,
+   "contact": {
+    "r_c_B": 0.7925866347308929,
+    "outcome": "no_contact_line_in_view",
+    "s_c": 1.0,
+    "n_ground_px": 44,
+    "instrument": "the proxy as placed (control zeta_obj), not the reconstructed mesh of the record"
+   },
+   "g1_verdict": true
+  },
+  "known_answer_reproduced": true,
+  "kbg_ci_width_candidate": 0.06398919606814893,
+  "kbg_ci_width_matches_record": true
+ }
+]

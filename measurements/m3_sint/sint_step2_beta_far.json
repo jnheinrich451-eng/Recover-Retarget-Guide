@@ -1,0 +1,1093 @@
+[
+ {
+  "pair": "000000000035.1.003/vehicle",
+  "error": "AssertionError: 000000000035.1.003/vehicle: beta_far is not determined under vipe_over_sigma (v2.6 \u00a72.3: the pair does not enter S4)"
+ },
+ {
+  "pair": "000000000265.2.003/vehicle",
+  "disposition": "labelled",
+  "F_pair": 33,
+  "T_l": 9,
+  "t_a": 47,
+  "contact": {
+   "outcome": "no_contact_line_in_view",
+   "s_c_rule": 1.0,
+   "s_c_applied": 1.0,
+   "edge_offset_rows": 0.0
+  },
+  "bridge": {
+   "run": "far",
+   "beta": 1.8562241100364067,
+   "camera": "vipe_over_sigma",
+   "s_delta": 0.7696717818590216,
+   "contact_undefined": true,
+   "interval": [
+    1.4898439580921088,
+    1.8562241100364067
+   ],
+   "record_file": "/content/drive/MyDrive/motion_transfer/reports/m3_sint/bridge_interval.json"
+  },
+  "camera": {
+   "source": "vipe_a5",
+   "sigma_ta": 1.3295,
+   "record_degenerate": false,
+   "cam_path_len": 0.6559652666019862,
+   "cam_rot_total_deg": 10.538160727863263
+  },
+  "path_smoothing": {
+   "method": "savgol",
+   "sg_window": 13,
+   "heading_vs_d_src_deg_12f": {
+    "raw": 46.723733707416756,
+    "smoothed": 76.03276622006986
+   },
+   "invariant": "residual bias at the ends (reviewer 2026-10-06i)",
+   "tolerance_source": "lock m3.object_path",
+   "net_disp_tol_patch": 0.25,
+   "bias_first_window_patch": 0.04073303904396418,
+   "bias_last_window_patch": 0.08172035901682893,
+   "heading_tol_deg": 2.0,
+   "sigma_theta_deg": 1.466137396608612,
+   "resid_max_patch": 1.1060609289406567,
+   "resid_lag1_autocorr": 0.31514705268375504,
+   "sg_window_source": "configs/m3.yaml",
+   "delta_c0_is_zero": true,
+   "applied": false,
+   "invariant_net_disp_patch": 0.08172035901682893,
+   "invariant_heading_deg": 35.649202466080034,
+   "path_over_net_raw": 2.009558032470146,
+   "path_over_net_smooth": 1.4377233935088782
+  },
+  "object_path": {
+   "channel": "x0",
+   "drift_model": "stage_b",
+   "drift_note": "x0: B.5's track as delivered (Stage B drift fit upstream); g_t not applied",
+   "path_len": 1.3730806595381424,
+   "net_displacement": 0.6832749477009896,
+   "vipe_vs_d4rt_disp_diff_over_path": 0.10586660315602336,
+   "heading_vs_d_src_deg_first_window": 55.88144212835939,
+   "heading_window_latent_steps": 4
+  },
+  "occupancy": {
+   "source": "painted_mask_warped",
+   "affine_warp_residual_patches_median": [
+    0.0,
+    0.192,
+    0.21,
+    0.315,
+    0.435,
+    0.513,
+    0.88,
+    0.445,
+    0.316
+   ],
+   "painted_vs_gtar_patches_t0": [
+    426,
+    432
+   ],
+   "iou_painted_vs_gtar_t0": 0.8571428571428571,
+   "centroid_target_patches": [
+    [
+     25.2999778563803,
+     22.899558520747544
+    ],
+    [
+     25.471069336634635,
+     22.178634131409147
+    ],
+    [
+     24.344714157530827,
+     21.969550010834315
+    ],
+    [
+     24.112424632782954,
+     23.106848292670932
+    ],
+    [
+     23.794151962824202,
+     22.909513344998246
+    ],
+    [
+     23.352733495840937,
+     22.51246084810999
+    ],
+    [
+     24.98086723208322,
+     23.49834383933325
+    ],
+    [
+     22.134374337532243,
+     22.310044623220303
+    ],
+    [
+     21.410395645646727,
+     21.67885116843675
+    ]
+   ]
+  },
+  "coverage": {
+   "cov_curve": [
+    0.484,
+    0.3874,
+    0.3759,
+    0.3836,
+    0.3466,
+    0.336,
+    0.3092,
+    0.3215,
+    0.3162
+   ],
+   "cov_curve_sky_excluded": [
+    0.9917,
+    0.7882,
+    0.7496,
+    0.779,
+    0.7044,
+    0.6815,
+    0.6423,
+    0.6303,
+    0.5987
+   ],
+   "anchors_of_record": [
+    0
+   ],
+   "schedule_excludes_sky": true,
+   "anchors": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "anchors_sky_excluded": [
+    0
+   ],
+   "sky_patch_frac": 0.3935897435897436,
+   "bg_flow_median_patches_last": 3.786110047501438,
+   "bg_flow_p95_patches_last": 6.945105137277316,
+   "bg_flow_median_patches_step1": 0.6421184264245529,
+   "obj_patches_t0": 426,
+   "obj_patches_last": 285,
+   "obj_centre_shift_patches": 4.076637856621641
+  }
+ },
+ {
+  "pair": "000000000265.2.005/human",
+  "disposition": "accepted",
+  "F_pair": 81,
+  "T_l": 21,
+  "t_a": 0,
+  "contact": {
+   "outcome": "contact_fails_regauge",
+   "s_c_rule": 0.8540842350858395,
+   "s_c_applied": 0.8540842350858395,
+   "edge_offset_rows": -1.0
+  },
+  "bridge": {
+   "run": "far",
+   "beta": 1.6603179401529704,
+   "camera": "vipe_over_sigma",
+   "s_delta": 0.9560268398948278,
+   "contact_undefined": false,
+   "interval": [
+    1.143965076443526,
+    1.6603179401529704
+   ],
+   "record_file": "/content/drive/MyDrive/motion_transfer/reports/m3_sint/bridge_interval.json"
+  },
+  "camera": {
+   "source": "vipe_a5",
+   "sigma_ta": 1.33856,
+   "record_degenerate": false,
+   "cam_path_len": 1.2979950106855138,
+   "cam_rot_total_deg": 10.612718414113644
+  },
+  "path_smoothing": {
+   "method": "savgol",
+   "sg_window": 13,
+   "heading_vs_d_src_deg_12f": {
+    "raw": 5.1852290640801275,
+    "smoothed": 12.039862896137253
+   },
+   "invariant": "residual bias at the ends (reviewer 2026-10-06i)",
+   "tolerance_source": "lock m3.object_path",
+   "net_disp_tol_patch": 0.25,
+   "bias_first_window_patch": 0.021256392072608248,
+   "bias_last_window_patch": 0.009324034130941941,
+   "heading_tol_deg": 3.1070548885926543,
+   "sigma_theta_deg": 3.1070548885926543,
+   "resid_max_patch": 4.663598657609832,
+   "resid_lag1_autocorr": 0.7126856355019334,
+   "sg_window_source": "configs/m3.yaml",
+   "delta_c0_is_zero": true,
+   "applied": false,
+   "invariant_net_disp_patch": 0.021256392072608248,
+   "invariant_heading_deg": 6.8915619167126545,
+   "path_over_net_raw": 2.1441747418148465,
+   "path_over_net_smooth": 1.9531992576811779
+  },
+  "object_path": {
+   "channel": "x0",
+   "drift_model": "stage_b",
+   "drift_note": "x0: B.5's track as delivered (Stage B drift fit upstream); g_t not applied",
+   "path_len": 1.8512761467837655,
+   "net_displacement": 0.8633979827674076,
+   "vipe_vs_d4rt_disp_diff_over_path": 0.46111467410501916,
+   "heading_vs_d_src_deg_first_window": 2.363917186046864,
+   "heading_window_latent_steps": 4
+  },
+  "occupancy": {
+   "source": "painted_mask_warped",
+   "affine_warp_residual_patches_median": [
+    0.0,
+    0.012,
+    0.017,
+    0.025,
+    0.024,
+    0.028,
+    0.028,
+    0.034,
+    0.035,
+    0.044,
+    0.037,
+    0.047,
+    0.102,
+    0.103,
+    0.106,
+    0.109,
+    0.118,
+    0.111,
+    0.102,
+    0.128,
+    0.121
+   ],
+   "painted_vs_gtar_patches_t0": [
+    35,
+    34
+   ],
+   "iou_painted_vs_gtar_t0": 0.9714285714285714,
+   "centroid_target_patches": [
+    [
+     21.57431370376296,
+     22.567399825783973
+    ],
+    [
+     21.452863819167824,
+     22.658967243908464
+    ],
+    [
+     21.19211210399331,
+     22.109655960276683
+    ],
+    [
+     21.820446893726515,
+     22.428848074737644
+    ],
+    [
+     21.79162960854748,
+     22.530926867790694
+    ],
+    [
+     22.117677010009544,
+     22.863877384674364
+    ],
+    [
+     22.23401285331751,
+     23.214098516104585
+    ],
+    [
+     22.690276925711522,
+     22.976080159076123
+    ],
+    [
+     22.686398496056157,
+     22.64164416755949
+    ],
+    [
+     22.593697468704537,
+     24.038765441904076
+    ],
+    [
+     22.470083373030885,
+     23.473886250517257
+    ],
+    [
+     22.7414583269462,
+     23.957840437987162
+    ],
+    [
+     26.240062929459093,
+     28.451665480710755
+    ],
+    [
+     25.505328183254615,
+     28.863889873713777
+    ],
+    [
+     25.248054717838006,
+     29.603142907138594
+    ],
+    [
+     23.925725395223765,
+     25.34925215693981
+    ],
+    [
+     24.035967336512883,
+     25.99999214131097
+    ],
+    [
+     23.381269639845883,
+     26.637330726417986
+    ],
+    [
+     23.712636213873214,
+     26.99827451866613
+    ],
+    [
+     23.816636287575587,
+     26.723052903314596
+    ],
+    [
+     22.780566114942964,
+     27.3254781612706
+    ]
+   ]
+  },
+  "coverage": {
+   "cov_curve": [
+    1.0,
+    0.9254,
+    0.907,
+    0.8969,
+    0.8764,
+    0.8649,
+    0.851,
+    0.8338,
+    0.8222,
+    0.8188,
+    0.8131,
+    0.8186,
+    0.8267,
+    0.8281,
+    0.8296,
+    0.8342,
+    0.8391,
+    0.8471,
+    0.8445,
+    0.8477,
+    0.8414
+   ],
+   "cov_curve_sky_excluded": [
+    1.0,
+    0.9254,
+    0.907,
+    0.8969,
+    0.8764,
+    0.8649,
+    0.851,
+    0.8338,
+    0.8222,
+    0.8188,
+    0.8131,
+    0.8186,
+    0.8267,
+    0.8281,
+    0.8296,
+    0.8342,
+    0.8391,
+    0.8471,
+    0.8445,
+    0.8477,
+    0.8414
+   ],
+   "anchors_of_record": [
+    0
+   ],
+   "schedule_excludes_sky": true,
+   "anchors": [
+    0
+   ],
+   "anchors_sky_excluded": [
+    0
+   ],
+   "sky_patch_frac": 0.0,
+   "bg_flow_median_patches_last": 4.692550582357789,
+   "bg_flow_p95_patches_last": 11.846677294479349,
+   "bg_flow_median_patches_step1": 0.7886564437254138,
+   "obj_patches_t0": 35,
+   "obj_patches_last": 44,
+   "obj_centre_shift_patches": 4.908600037292176
+  }
+ },
+ {
+  "pair": "000000000265.2.005/vehicle",
+  "disposition": "accepted",
+  "F_pair": 81,
+  "T_l": 21,
+  "t_a": 0,
+  "contact": {
+   "outcome": "contact_holds",
+   "s_c_rule": 1.0,
+   "s_c_applied": 1.0,
+   "edge_offset_rows": 23.5
+  },
+  "bridge": {
+   "run": "far",
+   "beta": 1.604892157824997,
+   "camera": "vipe_over_sigma",
+   "s_delta": 0.9890437222251164,
+   "contact_undefined": false,
+   "interval": [
+    1.1057765116003853,
+    1.604892157824997
+   ],
+   "record_file": "/content/drive/MyDrive/motion_transfer/reports/m3_sint/bridge_interval.json"
+  },
+  "camera": {
+   "source": "vipe_a5",
+   "sigma_ta": 1.33856,
+   "record_degenerate": false,
+   "cam_path_len": 1.34282194100247,
+   "cam_rot_total_deg": 10.612718414113644
+  },
+  "path_smoothing": {
+   "method": "savgol",
+   "sg_window": 13,
+   "heading_vs_d_src_deg_12f": {
+    "raw": 5.185229064080198,
+    "smoothed": 12.03986289613707
+   },
+   "invariant": "residual bias at the ends (reviewer 2026-10-06i)",
+   "tolerance_source": "lock m3.object_path",
+   "net_disp_tol_patch": 0.25,
+   "bias_first_window_patch": 0.021256392072609695,
+   "bias_last_window_patch": 0.009324034130945118,
+   "heading_tol_deg": 3.1070548885926543,
+   "sigma_theta_deg": 3.1070548885926543,
+   "resid_max_patch": 4.663598657609829,
+   "resid_lag1_autocorr": 0.7126856355019344,
+   "sg_window_source": "configs/m3.yaml",
+   "delta_c0_is_zero": true,
+   "applied": false,
+   "invariant_net_disp_patch": 0.021256392072609695,
+   "invariant_heading_deg": 6.891561916712549,
+   "path_over_net_raw": 2.144174741814845,
+   "path_over_net_smooth": 1.9531992576811776
+  },
+  "object_path": {
+   "channel": "x0",
+   "drift_model": "stage_b",
+   "drift_note": "x0: B.5's track as delivered (Stage B drift fit upstream); g_t not applied",
+   "path_len": 1.915210927846976,
+   "net_displacement": 0.8932158795163904,
+   "vipe_vs_d4rt_disp_diff_over_path": 0.4611146741050194,
+   "heading_vs_d_src_deg_first_window": 2.3639171860465553,
+   "heading_window_latent_steps": 4
+  },
+  "occupancy": {
+   "source": "painted_mask_warped",
+   "affine_warp_residual_patches_median": [
+    0.0,
+    0.035,
+    0.04,
+    0.056,
+    0.054,
+    0.063,
+    0.068,
+    0.079,
+    0.075,
+    0.095,
+    0.083,
+    0.101,
+    0.383,
+    0.409,
+    0.438,
+    0.273,
+    0.351,
+    0.393,
+    0.45,
+    0.557,
+    0.644
+   ],
+   "painted_vs_gtar_patches_t0": [
+    236,
+    257
+   ],
+   "iou_painted_vs_gtar_t0": 0.779783393501805,
+   "centroid_target_patches": [
+    [
+     20.955399404731,
+     22.265385399673736
+    ],
+    [
+     20.7079901019144,
+     22.387557610290823
+    ],
+    [
+     20.448123498204534,
+     21.951207577368827
+    ],
+    [
+     20.964629152677578,
+     22.219833758592575
+    ],
+    [
+     20.93691653378293,
+     22.31020104678807
+    ],
+    [
+     21.207427582423577,
+     22.596464431939882
+    ],
+    [
+     21.30114723512795,
+     22.888922654853033
+    ],
+    [
+     21.69088681139551,
+     22.693415246506458
+    ],
+    [
+     21.68917170512367,
+     22.40861004398538
+    ],
+    [
+     21.582705587072656,
+     23.55018138973093
+    ],
+    [
+     21.48662102763638,
+     23.08135339753614
+    ],
+    [
+     21.7052995068955,
+     23.470464189236704
+    ],
+    [
+     24.400589772656073,
+     26.952930801991574
+    ],
+    [
+     23.7145928838743,
+     27.19912790620715
+    ],
+    [
+     23.413713362430364,
+     27.732778394806616
+    ],
+    [
+     22.41223030682337,
+     24.498635352956885
+    ],
+    [
+     22.38117247414067,
+     24.970937676870395
+    ],
+    [
+     21.76044571707845,
+     25.441272894065033
+    ],
+    [
+     21.886546778070926,
+     25.712569685891168
+    ],
+    [
+     21.627479099807566,
+     25.52067928228864
+    ],
+    [
+     20.456629963039337,
+     25.98923925664541
+    ]
+   ]
+  },
+  "coverage": {
+   "cov_curve": [
+    0.5356,
+    0.4005,
+    0.3988,
+    0.3908,
+    0.3894,
+    0.3986,
+    0.3765,
+    0.3464,
+    0.3146,
+    0.2932,
+    0.2896,
+    0.2867,
+    0.2947,
+    0.2989,
+    0.3052,
+    0.312,
+    0.3171,
+    0.3132,
+    0.3351,
+    0.367,
+    0.3616
+   ],
+   "cov_curve_sky_excluded": [
+    0.997,
+    0.7664,
+    0.758,
+    0.7435,
+    0.7376,
+    0.7569,
+    0.7127,
+    0.6505,
+    0.593,
+    0.5616,
+    0.5504,
+    0.5481,
+    0.5625,
+    0.5754,
+    0.5843,
+    0.6238,
+    0.635,
+    0.6263,
+    0.6692,
+    0.7396,
+    0.7365
+   ],
+   "anchors_of_record": [
+    0
+   ],
+   "schedule_excludes_sky": true,
+   "anchors": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "anchors_sky_excluded": [
+    0
+   ],
+   "sky_patch_frac": 0.4096153846153846,
+   "bg_flow_median_patches_last": 3.836990853410568,
+   "bg_flow_p95_patches_last": 10.160195330956137,
+   "bg_flow_median_patches_step1": 0.44880778380787345,
+   "obj_patches_t0": 236,
+   "obj_patches_last": 344,
+   "obj_centre_shift_patches": 3.757107731227335
+  }
+ },
+ {
+  "pair": "000000000370.1.008/human",
+  "disposition": "accepted",
+  "F_pair": 81,
+  "T_l": 21,
+  "t_a": 0,
+  "contact": {
+   "outcome": "regauge_by_owner_decision",
+   "s_c_rule": 1.2888548813918093,
+   "s_c_applied": 1.2888548813918093,
+   "edge_offset_rows": 0.0
+  },
+  "bridge": {
+   "run": "far",
+   "beta": 0.9525612231444925,
+   "camera": "vipe_over_sigma",
+   "s_delta": 1.351801064945074,
+   "contact_undefined": false,
+   "interval": [
+    0.7858762054968502,
+    0.9525612231444925
+   ],
+   "record_file": "/content/drive/MyDrive/motion_transfer/reports/m3_sint/bridge_interval.json"
+  },
+  "camera": {
+   "source": "vipe_a5",
+   "sigma_ta": 2.50565,
+   "record_degenerate": false,
+   "cam_path_len": 1.1070970530350426,
+   "cam_rot_total_deg": 1.17974618706254
+  },
+  "path_smoothing": {
+   "method": "savgol",
+   "sg_window": 13,
+   "heading_vs_d_src_deg_12f": {
+    "raw": 6.327245388799967,
+    "smoothed": 4.4164102532953
+   },
+   "invariant": "residual bias at the ends (reviewer 2026-10-06i)",
+   "tolerance_source": "lock m3.object_path",
+   "net_disp_tol_patch": 0.25,
+   "bias_first_window_patch": 0.007962646749679425,
+   "bias_last_window_patch": 0.01867806501678761,
+   "heading_tol_deg": 2.4421603387028634,
+   "sigma_theta_deg": 2.4421603387028634,
+   "resid_max_patch": 0.7489949184339152,
+   "resid_lag1_autocorr": 0.5510657115575538,
+   "sg_window_source": "configs/m3.yaml",
+   "delta_c0_is_zero": true,
+   "applied": false,
+   "invariant_net_disp_patch": 0.01867806501678761,
+   "invariant_heading_deg": 3.813975392982732,
+   "path_over_net_raw": 1.5302555179246282,
+   "path_over_net_smooth": 1.2298956435026915
+  },
+  "object_path": {
+   "channel": "x0",
+   "drift_model": "stage_b",
+   "drift_note": "x0: B.5's track as delivered (Stage B drift fit upstream); g_t not applied",
+   "path_len": 1.6596245039564264,
+   "net_displacement": 1.08454077408409,
+   "vipe_vs_d4rt_disp_diff_over_path": 0.11448489198929827,
+   "heading_vs_d_src_deg_first_window": 11.715058250474112,
+   "heading_window_latent_steps": 4
+  },
+  "occupancy": {
+   "source": "painted_mask_warped",
+   "affine_warp_residual_patches_median": [
+    0.0,
+    0.009,
+    0.01,
+    0.015,
+    0.021,
+    0.02,
+    0.024,
+    0.022,
+    0.021,
+    0.009,
+    0.011,
+    0.018,
+    0.017,
+    0.023,
+    0.027,
+    0.04,
+    0.045,
+    0.023,
+    0.043,
+    0.035,
+    0.022
+   ],
+   "painted_vs_gtar_patches_t0": [
+    57,
+    60
+   ],
+   "iou_painted_vs_gtar_t0": 0.95,
+   "centroid_target_patches": [
+    [
+     16.337404629587045,
+     22.769599131121645
+    ],
+    [
+     16.342344533170873,
+     22.80940524228357
+    ],
+    [
+     16.254339558405675,
+     22.676082845514603
+    ],
+    [
+     16.018672399419902,
+     23.232022802134626
+    ],
+    [
+     15.48591601917463,
+     23.298083089284404
+    ],
+    [
+     15.374734281113652,
+     22.870166602194455
+    ],
+    [
+     15.076087356423235,
+     22.619566242849974
+    ],
+    [
+     15.251646182526775,
+     22.69354970673709
+    ],
+    [
+     15.412433942926228,
+     23.2697781256322
+    ],
+    [
+     16.559751648867138,
+     22.455821641117712
+    ],
+    [
+     16.40184439351965,
+     22.966395556414195
+    ],
+    [
+     15.913036538665555,
+     23.35413165048256
+    ],
+    [
+     16.084039776931057,
+     22.08282625457246
+    ],
+    [
+     15.540855044790126,
+     22.821406721157153
+    ],
+    [
+     15.350317218303237,
+     22.71486528822476
+    ],
+    [
+     14.61734733943199,
+     24.501272933456
+    ],
+    [
+     14.86291374110485,
+     25.291888144305684
+    ],
+    [
+     16.351403181451797,
+     24.362537935545376
+    ],
+    [
+     15.587319938406853,
+     25.641678972602218
+    ],
+    [
+     15.917302425807344,
+     25.00669796180186
+    ],
+    [
+     16.355581893590973,
+     24.406633925932656
+    ]
+   ]
+  },
+  "coverage": {
+   "cov_curve": [
+    0.9999,
+    0.9911,
+    0.9837,
+    0.9816,
+    0.9807,
+    0.976,
+    0.9724,
+    0.9656,
+    0.9573,
+    0.9435,
+    0.9401,
+    0.9298,
+    0.9237,
+    0.9184,
+    0.9066,
+    0.8983,
+    0.8854,
+    0.8718,
+    0.8643,
+    0.8528,
+    0.8392
+   ],
+   "cov_curve_sky_excluded": [
+    0.9999,
+    0.9911,
+    0.9837,
+    0.9816,
+    0.9807,
+    0.976,
+    0.9724,
+    0.9655,
+    0.9573,
+    0.9434,
+    0.9401,
+    0.93,
+    0.924,
+    0.9189,
+    0.9074,
+    0.8987,
+    0.8856,
+    0.8718,
+    0.8643,
+    0.8526,
+    0.8391
+   ],
+   "anchors_of_record": [
+    0
+   ],
+   "schedule_excludes_sky": true,
+   "anchors": [
+    0
+   ],
+   "anchors_sky_excluded": [
+    0
+   ],
+   "sky_patch_frac": 0.001282051282051282,
+   "bg_flow_median_patches_last": 6.178573226740868,
+   "bg_flow_p95_patches_last": 12.237831412352767,
+   "bg_flow_median_patches_step1": 0.5774883942256792,
+   "obj_patches_t0": 57,
+   "obj_patches_last": 53,
+   "obj_centre_shift_patches": 1.637135709814125
+  }
+ },
+ {
+  "pair": "000000000404.1.004/vehicle",
+  "disposition": "labelled",
+  "F_pair": 33,
+  "T_l": 9,
+  "t_a": 47,
+  "contact": {
+   "outcome": "no_contact_line_in_view",
+   "s_c_rule": 1.0,
+   "s_c_applied": 1.0,
+   "edge_offset_rows": 1.0
+  },
+  "bridge": {
+   "run": "far",
+   "beta": 1.2322329622005181,
+   "camera": "vipe_over_sigma",
+   "s_delta": 0.9775150150302468,
+   "contact_undefined": true,
+   "interval": [
+    0.9658385209561948,
+    1.2322329622005181
+   ],
+   "record_file": "/content/drive/MyDrive/motion_transfer/reports/m3_sint/bridge_interval.json"
+  },
+  "camera": {
+   "source": "vipe_a5",
+   "sigma_ta": 3.04478,
+   "record_degenerate": false,
+   "cam_path_len": 0.9596806616658413,
+   "cam_rot_total_deg": 41.71609760567339
+  },
+  "path_smoothing": {
+   "method": "savgol",
+   "sg_window": 13,
+   "heading_vs_d_src_deg_12f": {
+    "raw": 24.901088812902206,
+    "smoothed": 26.46320183886205
+   },
+   "invariant": "residual bias at the ends (reviewer 2026-10-06i)",
+   "tolerance_source": "lock m3.object_path",
+   "net_disp_tol_patch": 0.25,
+   "bias_first_window_patch": 0.004836360917179344,
+   "bias_last_window_patch": 0.09068943127689548,
+   "heading_tol_deg": 4.565297552571223,
+   "sigma_theta_deg": 4.565297552571223,
+   "resid_max_patch": 1.9583797426039693,
+   "resid_lag1_autocorr": 0.3634977087134412,
+   "sg_window_source": "configs/m3.yaml",
+   "delta_c0_is_zero": true,
+   "applied": true,
+   "invariant_net_disp_patch": 0.09068943127689548,
+   "invariant_heading_deg": 2.1149701058105617,
+   "path_over_net_raw": 1.3752084223734695,
+   "path_over_net_smooth": 1.2029224604622824
+  },
+  "object_path": {
+   "channel": "x0",
+   "drift_model": "stage_b",
+   "drift_note": "x0: B.5's track as delivered (Stage B drift fit upstream); g_t not applied",
+   "path_len": 0.7634136542448623,
+   "net_displacement": 0.6346324716154048,
+   "vipe_vs_d4rt_disp_diff_over_path": 0.3766154451078554,
+   "heading_vs_d_src_deg_first_window": 27.05464995793769,
+   "heading_window_latent_steps": 4
+  },
+  "occupancy": {
+   "source": "painted_mask_warped",
+   "affine_warp_residual_patches_median": [
+    0.0,
+    0.203,
+    0.197,
+    0.237,
+    0.342,
+    0.337,
+    0.724,
+    1.619,
+    2.539
+   ],
+   "painted_vs_gtar_patches_t0": [
+    201,
+    208
+   ],
+   "iou_painted_vs_gtar_t0": 0.8506787330316742,
+   "centroid_target_patches": [
+    [
+     13.404980536447509,
+     23.456505102040815
+    ],
+    [
+     11.432115046665805,
+     24.217435207835727
+    ],
+    [
+     11.445347143003163,
+     24.406866020395274
+    ],
+    [
+     11.358980019503047,
+     24.632561988674123
+    ],
+    [
+     10.454858322022838,
+     25.185293923341966
+    ],
+    [
+     10.813733544353182,
+     24.925805217752828
+    ],
+    [
+     11.962276489990959,
+     24.632344584439547
+    ],
+    [
+     12.62824578726917,
+     24.464621504492943
+    ],
+    [
+     12.534163973416618,
+     24.283063441729244
+    ]
+   ]
+  },
+  "coverage": {
+   "cov_curve": [
+    0.4563,
+    0.4308,
+    0.3716,
+    0.3616,
+    0.3547,
+    0.3522,
+    0.3134,
+    0.3049,
+    0.2861
+   ],
+   "cov_curve_sky_excluded": [
+    0.9993,
+    0.9622,
+    0.8181,
+    0.787,
+    0.7718,
+    0.7616,
+    0.6644,
+    0.6424,
+    0.5815
+   ],
+   "anchors_of_record": [
+    0
+   ],
+   "schedule_excludes_sky": true,
+   "anchors": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "anchors_sky_excluded": [
+    0
+   ],
+   "sky_patch_frac": 0.491025641025641,
+   "bg_flow_median_patches_last": 12.566023934598462,
+   "bg_flow_p95_patches_last": 24.193370061090242,
+   "bg_flow_median_patches_step1": 0.6546812541722583,
+   "obj_patches_t0": 201,
+   "obj_patches_last": 173,
+   "obj_centre_shift_patches": 1.2006332393189127
+  }
+ }
+]

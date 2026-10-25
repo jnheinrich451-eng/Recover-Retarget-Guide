@@ -1,0 +1,9 @@
+{
+ "csv_sha256": "8dd54f6f81bf389ce195f7af8ef2e4b6adfccdac9468693bc8a84407e3996c0b",
+ "n_rows": 150,
+ "n_scored": 144,
+ "written_at": "2026-10-20T06:53:43",
+ "ditflow_commit": "0b60c28",
+ "export_zip_sha256": "c0288f20d714b5f751c14d167adbea45ebd8416e952c51596c470068f2636a21",
+ "set_records_sha256": "a194f1c1191a6abd22d6adaa584121646c8328489a63d33486e658b89c4fdc68"
+}

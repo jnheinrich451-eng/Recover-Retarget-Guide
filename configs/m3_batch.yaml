@@ -1,0 +1,38 @@
+# Module 3 batch of record (2026-10-14): the six frozen v1 handoffs, A0 and the A3 configuration of record, two seeds, 33 frames.
+# Nothing here is a gate threshold (those live in calibration.lock.yaml); this file names WHAT is run, not how it is judged.
+batch: m3_batch_v1
+frames: 33
+seeds: [0, 1]
+pairs:
+  - pair: 000000000035.1.003/vehicle
+    label_source: animal          # bear clip: the source object class for the mask-centroid arbiter (ADE20K)
+    label_target: car
+    note: camera failed its triangulated gate under ViPE / D4RT / BA (report 2026-10-13); runs as a flagged row, never a scored one
+    camera_gate_failed: true      # no bridge was determined: A3 is skipped and recorded; A0 (no guidance) still runs on the anchor
+  - pair: 000000000265.2.003/vehicle
+    label_source: car
+    label_target: car
+  - pair: 000000000265.2.005/vehicle
+    label_source: horse
+    label_target: car
+  - pair: 000000000265.2.005/human
+    label_source: person
+    label_target: person
+    nodyn: true                   # water in the anchor: the water-excluded A3 variant is also run (dynamic_mask.png from make_m3_dynamic_mask.py)
+    region_mask: water_mask.png   # the grader's non-rigid residual region
+    ground_mask: rock_mask.png    # the grader's rock-only local ground
+  - pair: 000000000370.1.008/human
+    label_source: person
+    label_target: person
+  - pair: 000000000404.1.004/vehicle
+    label_source: car
+    label_target: car
+arms:
+  A0: []                                            # the backbone: anchor + frozen prompt, no guidance
+  A3_vehicle: [--object, --soft-mask, --sky-mask]   # the configuration of record for a rigid object (object render, soft mask, sky in the mask, lock object window)
+  A3_human: [--soft-mask, --sky-mask]               # the configuration of record for an articulated subject (no object render: the object channel is deferred)
+  A3_human_nodyn: [--soft-mask, --sky-mask, --nodyn-mask]
+render:
+  vehicle: [--object, --sky-in-mask]
+  human: [--sky-in-mask]
+  human_nodyn: [--sky-in-mask, --exclude-mask, dynamic_mask.png]

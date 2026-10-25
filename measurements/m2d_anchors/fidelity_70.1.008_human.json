@@ -1,0 +1,138 @@
+{
+ "schema": "m2d_fidelity_v1",
+ "clip": "000000000370.1.008",
+ "category": "human",
+ "control_checksum": "992b36b9ff688ad6",
+ "p_ta_uv_1024": [
+  321.3434903047091,
+  781.840027700831
+ ],
+ "eps_shape": 0.8483122994984391,
+ "estimator": "depth-anything/Depth-Anything-V2-Small-hf",
+ "estimator_sign": 1,
+ "segmenter": {
+  "owl": "google/owlv2-base-patch16-ensemble",
+  "sam2": "facebook/sam2.1-hiera-large",
+  "query": [
+   "a person"
+  ]
+ },
+ "candidates": [
+  {
+   "seed": 0,
+   "object_found": true,
+   "obj_fidelity": 0.8620344011868009,
+   "E_loc": 0.002246528448244609,
+   "E_loc_vs_rendered_centroid": 0.0014973467346751366,
+   "E_area": 0.10357864840818169,
+   "log_area_ratio": 0.10357864840818169,
+   "A_generated_frac": 0.023290634155273438,
+   "A_obj_rendered_frac": 0.02099895477294922,
+   "centroid_generated_uv": [
+    321.97772500204735,
+    778.6491278355581
+   ],
+   "bg_fidelity": 0.9580314259728572,
+   "bg_domain_frac": 0.9762144088745117,
+   "segmenter": {
+    "box": [
+     280.27496337890625,
+     558.817138671875,
+     367.87188720703125,
+     1017.2030029296875
+    ],
+    "det_score": 0.34742018580436707,
+    "sam_score": 0.9765625
+   }
+  },
+  {
+   "seed": 1,
+   "object_found": true,
+   "obj_fidelity": 0.8425505248315839,
+   "E_loc": 0.005279891169852251,
+   "E_loc_vs_rendered_centroid": 0.006021688653011288,
+   "E_area": 0.12796960819863584,
+   "log_area_ratio": 0.12796960819863584,
+   "A_generated_frac": 0.023865699768066406,
+   "A_obj_rendered_frac": 0.02099895477294922,
+   "centroid_generated_uv": [
+    323.64193806193805,
+    789.1324875124875
+   ],
+   "bg_fidelity": 0.9629134000402699,
+   "bg_domain_frac": 0.9756507873535156,
+   "segmenter": {
+    "box": [
+     282.2911376953125,
+     555.6239624023438,
+     373.1636962890625,
+     1023.8329467773438
+    ],
+    "det_score": 0.2998512387275696,
+    "sam_score": 0.984375
+   }
+  },
+  {
+   "seed": 2,
+   "object_found": true,
+   "obj_fidelity": 0.8569231391913223,
+   "E_loc": 0.0032563796581850037,
+   "E_loc_vs_rendered_centroid": 0.002491658821110597,
+   "E_area": 0.08029769966712151,
+   "log_area_ratio": 0.08029769966712151,
+   "A_generated_frac": 0.022754669189453125,
+   "A_obj_rendered_frac": 0.02099895477294922,
+   "centroid_generated_uv": [
+    321.90641240569994,
+    777.1580050293378
+   ],
+   "bg_fidelity": 0.9735107135425886,
+   "bg_domain_frac": 0.9764375686645508,
+   "segmenter": {
+    "box": [
+     280.6124267578125,
+     557.9043579101562,
+     370.47662353515625,
+     1012.7094116210938
+    ],
+    "det_score": 0.32625991106033325,
+    "sam_score": 0.9765625
+   }
+  },
+  {
+   "seed": 3,
+   "object_found": true,
+   "obj_fidelity": 0.8568787741855975,
+   "E_loc": 0.005777748622938252,
+   "E_loc_vs_rendered_centroid": 0.005005423274367319,
+   "E_area": 0.05151353445010796,
+   "log_area_ratio": 0.05151353445010796,
+   "A_generated_frac": 0.022109031677246094,
+   "A_obj_rendered_frac": 0.02099895477294922,
+   "centroid_generated_uv": [
+    321.39009187766897,
+    773.4730837251434
+   ],
+   "bg_fidelity": 0.9659536569509278,
+   "bg_domain_frac": 0.9767847061157227,
+   "segmenter": {
+    "box": [
+     278.73358154296875,
+     553.576171875,
+     369.30938720703125,
+     1014.75927734375
+    ],
+    "det_score": 0.330966979265213,
+    "sam_score": 0.98046875
+   }
+  }
+ ],
+ "gates": {
+  "g_obj_fidelity": {
+   "outcome": "recorded"
+  },
+  "g_bg_fidelity": {
+   "outcome": "recorded"
+  }
+ }
+}

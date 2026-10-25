@@ -1,0 +1,36 @@
+# m2_b2 — reconstructor adapter (SKILL_m2_b2_reconstructor_adapter.md v1.1).
+# NO gate thresholds here (calibration.lock.yaml owns them; none are defined for m2_b2 yet).
+# Everything under `m2b2` enters the adapter's config hash and the cache key.
+m2b2:
+  adapter_version: "1.1"
+  objects:
+    hf_repo: facebook/sam-3d-objects
+    ckpt_tag: hf                         # checkpoints/<tag>/pipeline.yaml in the vendor repo
+    scale_rel_tol: 1.0e-6                # SKILL §3 isotropy gate: (max-min) < tol * mean
+    bg_depth_mult: 3.0                   # flat background at k x median mask depth (P1/P2 construction)
+    stage1_only: false
+    with_mesh_postprocess: false         # nvdiffrast is not installed and not needed (P0 decision)
+    with_texture_baking: false
+    with_layout_postprocess: false
+    use_vertex_color: true
+  body:
+    hf_repo: facebook/sam-3d-body-dinov3
+    principal_point_max_px: 4.0          # SKILL §4 assert after the square-pixel rescale (measured 3.5 on 370)
+  seeds:
+    r1: 5                                # SKILL §5 level 2
+    r2: 5                                # human 2026-09-14; measured first on anchors 035 / 284
+  save_seed_meshes: true               # R1 keeps each seed's mesh (orientation check by eye, 2026-09-15)
+  proxy_candidates:
+    k_max: 6                             # SKILL §5 level 1, stop early once one is accepted
+  ref_constants:                         # SKILL §7: at R_A = I on the normalised mesh, selection + QC only
+    q: 0.01                              # h_b low percentile (spec amendment; -3 % under-read on clean meshes measured)
+    grid_n: 800
+  proxy_prompt_template: "{object}, complete body visible, strict side profile, facing image-right, upright relative to the ground, unobstructed, neutral perspective, simple background."   # spec v3 §4.1 verbatim; part of the cache key
+  routing:                               # SKILL §1 (rider: excluded from v1 targets -> raises)
+    vehicle: objects
+    # figurine: objects              # dropped from v1 targets 2026-09-17 (0/6 strict profiles); 326 stays a SOURCE clip
+    human: body
+paths:
+  objects_repo: /content/sam-3d-objects     # env SAM3D_OBJECTS_DIR overrides
+  cache_r1: ${paths.drive_root}/cache/m2_b2
+  cache_r2: ${paths.drive_root}/cache/m2_e

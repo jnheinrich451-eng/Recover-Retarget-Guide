@@ -1,0 +1,36 @@
+# Module 3 instrument tunables that are NOT gate thresholds (thresholds live in calibration.lock.yaml, section m3).
+m3:
+  contact:                       # object-ground contact check (reviewer 2026-10-06c/d): plane fitted to k_bg x MoGe ground
+    plane_nbhd_px: 48            # ground pixels within this distance of the object's mask (square-pixel grid), below its mid row
+    ransac_iters: 500
+    ransac_rel_tol: 0.02         # inlier if |n.X + d| / z below this
+    min_inliers: 200             # fewer: plane_unreliable, no ratio reported
+    seed: 0
+  coverage:
+    exclude_sky: true              # John 2026-10-06 (reviewer agreed): sky patches never hold a frame-0 primitive; they leave the coverage
+                                   # denominator and the anchor schedule of record. The sky-included curve is still written, as a diagnostic.
+  pair_decisions:                  # owner decisions on single pairs; each names who decided and why. Never a threshold.
+    "000000000370.1.008/human":
+      label: "half-body source"    # the source subject is a torso seen from behind (no feet in the source); the anchor painted a whole person
+      contact: regauge_to_ground   # John 2026-10-06 + reviewer 2026-10-06f: keep the pre-registered re-gauge (s_c = 1 / B) although the painted
+                                   # feet reach the frame bottom; report beside the labelled pairs, outside accepted-set statistics
+  object_path:                   # reviewer 2026-10-06g, finding 2:
+    smoothing_record: strict     # John 2026-10-07: first pass as pre-registered (raw path of record where the invariant refused; smoothed = sub-row);
+                                 # the amended rule (vs d_src, 2 sigma_theta) applies from the Chapter 5 set on smooth the centroid path on the FULL-rate frames before subsampling
+    smooth: savgol
+    sg_window: 13                # odd, in source frames (~ the B.5 window); polyorder 2
+    polyorder: 2
+    invariant_net_disp_patch: 0.25   # pre-registered: smoothing must change the projected net displacement by < this
+    invariant_heading_deg: 2.0       # ... and the B.5-window heading by < this; otherwise the raw path is used and the pair is flagged
+  occupancy:                     # reviewer 2026-10-06g, finding 1: O_0 from the painted mask; O_t = that mask warped by G_tar's low-pass field
+    source: painted_mask_warped  # G_tar still supplies the z-buffer, the motion field F_geo and T_obj; only WHICH patches count as object changes
+    warp_stride_px: 4
+  readout:                       # S2 readout form (reviewer 2026-10-07g, after the diagnostic): windowed soft-argmax
+    window_radius_patches: 3     # mass renormalised within this radius of the most-attended key; set BEFORE the windowed run (3 = a 7x7 window)
+  trajectory:
+    triangulated_min_points: 30  # reviewer 2026-10-07i: fewer scorable held-out points than this -> record gate undetermined, whatever the interval
+  sampling:                      # the frozen I2V configuration arm F and the A0 row sample with (v2.6 §9.1); steps/shift live in the lock
+    guidance_scale: 5.0          # Wan2.1 I2V default; John may move it to the lock
+    negative_prompt: "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
+                                 # Wan 2.1's official default negative prompt (restored 2026-10-13, reviewer check 2: it was "" and CFG had lost its
+                                 # built-in push against static / motionless pictures: 静态, 静止, 静止不动的画面)

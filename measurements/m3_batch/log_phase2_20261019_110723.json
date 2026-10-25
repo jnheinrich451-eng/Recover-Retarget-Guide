@@ -1,0 +1,8 @@
+[
+ {
+  "cmd": "/usr/bin/python3 scripts/run_m3_s4_guided.py --drive-root /content/drive/MyDrive/motion_transfer_exp --pair 000000000252.1.018/vehicle --seed 0 --frames 21 --arm A0",
+  "rc": 1,
+  "wall_s": 6.2,
+  "tail": " <module>\n    @register_as_pytree_constant\n     ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/dist-packages/torchao/utils.py\", line 47, in register_as_pytree_constant\n    torch.utils._pytree.register_constant(cls)\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'torch.utils._pytree' has no attribute 'register_constant'\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 542, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/content/repo/scripts/run_m3_s4_guided.py\", line 135, in main\n    from diffusers import AutoencoderKLWan, FlowMatchEulerDiscreteScheduler, WanImageToVideoPipeline\n  File \"<frozen importlib._bootstrap>\", line 1420, in _handle_fromlist\n  File \"/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py\", line 1006, in __getattr__\n    value = getattr(module, name)\n  File \"/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py\", line 1005, in __getattr__\n    module = self._get_module(self._class_to_module[name])\n  File \"/usr/local/lib/python3.13/dist-packages/diffusers/utils/import_utils.py\", line 1017, in _get_module\n    raise RuntimeError(\n    ...<2 lines>...\n    ) from e\nRuntimeError: Failed to import diffusers.models.autoencoders.autoencoder_kl_wan because of the following error (look up to see its traceback):\nmodule 'torch.utils._pytree' has no attribute 'register_constant'\n"
+ }
+]

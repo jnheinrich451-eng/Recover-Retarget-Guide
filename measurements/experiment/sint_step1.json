@@ -1,0 +1,6 @@
+[
+ {
+  "pair": "bmx-bumps/human",
+  "refused": "F_pair 9 < min_frames 21"
+ }
+]

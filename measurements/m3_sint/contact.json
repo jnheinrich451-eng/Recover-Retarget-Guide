@@ -1,0 +1,902 @@
+[
+ {
+  "n_base_px": 89,
+  "n_ground_px": 200,
+  "upper_body_ratio": 1.6168140263960673,
+  "contact_band_empty": false,
+  "Z_base_gtar": 1.0157458373956858,
+  "Z_ground_image": 0.6041215658187866,
+  "r_c": 1.681360002467402,
+  "ci95": [
+   1.681360002467402,
+   1.681360002467402
+  ],
+  "n_col_blocks": 1,
+  "r_c_ground_extrapolated_to_base": 1.5812921692463529,
+  "ground_rel_depth_change_per_row": 0.00563860520472371,
+  "bottom_row_offset_px_gtar_minus_anchor": -4.0,
+  "r_c_ground_at_painted_edge": 1.632417310362823,
+  "n_cols_painted_edge": 25,
+  "plane_unreliable": false,
+  "r_c_plane": 1.579963186908083,
+  "ci95_plane": [
+   1.579963186908083,
+   1.579963186908083
+  ],
+  "n_cols": 25,
+  "plane_inliers": 14656,
+  "plane_inlier_frac": 0.987601078167116,
+  "plane_resid_rel_median": 0.005179848596864779,
+  "object_reaches_frame_bottom": false,
+  "mesh_reaches_frame_bottom": false,
+  "reading_raw_column": "contact fails: re-gauge the object to the ground proposed, s_c = 0.5948",
+  "pair": "000000000191.6.037/human",
+  "disposition": "experiment",
+  "median_ratio_gate": 1.6243555617860637,
+  "depth_gate": "fail",
+  "reading": "contact fails: object re-gauged to the ground, s_c = 0.6126 (displacement scaled alike; D-M3-03 for this pair)",
+  "instrument": {
+   "plane_nbhd_px": 48,
+   "ransac_iters": 500,
+   "ransac_rel_tol": 0.02,
+   "min_inliers": 200,
+   "seed": 0
+  },
+  "params": {
+   "contact_rows": 0.03,
+   "contact_band_px": 8,
+   "contact_tol": 0.05
+  },
+  "decision": {
+   "gate_column": "B: ground at the painted object's bottom edge",
+   "r_c_B": 1.632417310362823,
+   "r_c_A": 1.579963186908083,
+   "edge_offset_rows": -4.0,
+   "edge_offset_exceeds_half_patch": false,
+   "contact_tol": 0.05,
+   "s_c": 0.6125884561820402,
+   "outcome": "contact_fails_regauge",
+   "reading": "contact fails: object re-gauged to the ground, s_c = 0.6126 (displacement scaled alike; D-M3-03 for this pair)"
+  }
+ },
+ {
+  "n_base_px": 120,
+  "n_ground_px": 208,
+  "upper_body_ratio": 1.1262259888169253,
+  "contact_band_empty": false,
+  "Z_base_gtar": 2.231737554731791,
+  "Z_ground_image": 2.029749274253845,
+  "r_c": 1.099513906983511,
+  "ci95": [
+   1.099513906983511,
+   1.099513906983511
+  ],
+  "n_col_blocks": 1,
+  "r_c_ground_extrapolated_to_base": 1.0546408013217758,
+  "ground_rel_depth_change_per_row": 0.005137322339775463,
+  "bottom_row_offset_px_gtar_minus_anchor": -1.0,
+  "r_c_ground_at_painted_edge": 1.0977424846121344,
+  "n_cols_painted_edge": 26,
+  "plane_unreliable": false,
+  "r_c_plane": 1.0915624570211966,
+  "ci95_plane": [
+   1.0915624570211966,
+   1.0915624570211966
+  ],
+  "n_cols": 26,
+  "plane_inliers": 9811,
+  "plane_inlier_frac": 0.5846144678822548,
+  "plane_resid_rel_median": 0.0032126237944713836,
+  "object_reaches_frame_bottom": false,
+  "mesh_reaches_frame_bottom": false,
+  "reading_raw_column": "contact fails: re-gauge the object to the ground proposed, s_c = 0.9095",
+  "pair": "000000000200.1.006/human",
+  "disposition": "experiment",
+  "median_ratio_gate": 1.1100754003525997,
+  "depth_gate": "pass",
+  "reading": "contact fails: object re-gauged to the ground, s_c = 0.9110 (displacement scaled alike; D-M3-03 for this pair)",
+  "instrument": {
+   "plane_nbhd_px": 48,
+   "ransac_iters": 500,
+   "ransac_rel_tol": 0.02,
+   "min_inliers": 200,
+   "seed": 0
+  },
+  "params": {
+   "contact_rows": 0.03,
+   "contact_band_px": 8,
+   "contact_tol": 0.05
+  },
+  "decision": {
+   "gate_column": "B: ground at the painted object's bottom edge",
+   "r_c_B": 1.0977424846121344,
+   "r_c_A": 1.0915624570211966,
+   "edge_offset_rows": -1.0,
+   "edge_offset_exceeds_half_patch": false,
+   "contact_tol": 0.05,
+   "s_c": 0.9109604611443368,
+   "outcome": "contact_fails_regauge",
+   "reading": "contact fails: object re-gauged to the ground, s_c = 0.9110 (displacement scaled alike; D-M3-03 for this pair)"
+  }
+ },
+ {
+  "n_base_px": 62,
+  "n_ground_px": 112,
+  "upper_body_ratio": 1.032130987648319,
+  "contact_band_empty": false,
+  "Z_base_gtar": 0.9030611636803747,
+  "Z_ground_image": 0.8543184399604797,
+  "r_c": 1.0570545143824237,
+  "ci95": [
+   1.049522344626151,
+   1.0610316591358075
+  ],
+  "n_col_blocks": 2,
+  "r_c_ground_extrapolated_to_base": 1.024854376423154,
+  "ground_rel_depth_change_per_row": 0.006676632063276636,
+  "bottom_row_offset_px_gtar_minus_anchor": 1.0,
+  "r_c_ground_at_painted_edge": 1.0303934724946098,
+  "n_cols_painted_edge": 14,
+  "plane_unreliable": false,
+  "r_c_plane": 1.0365823920626531,
+  "ci95_plane": [
+   1.0238448220517937,
+   1.03717417674671
+  ],
+  "n_cols": 14,
+  "plane_inliers": 20104,
+  "plane_inlier_frac": 1.0,
+  "plane_resid_rel_median": 0.0015463324983699418,
+  "object_reaches_frame_bottom": false,
+  "mesh_reaches_frame_bottom": false,
+  "reading_raw_column": "contact fails: re-gauge the object to the ground proposed, s_c = 0.9460",
+  "pair": "000000000217.0.006/vehicle",
+  "disposition": "experiment",
+  "median_ratio_gate": 1.0733457726327145,
+  "depth_gate": "pass",
+  "reading": "contact holds: carry forward",
+  "instrument": {
+   "plane_nbhd_px": 48,
+   "ransac_iters": 500,
+   "ransac_rel_tol": 0.02,
+   "min_inliers": 200,
+   "seed": 0
+  },
+  "params": {
+   "contact_rows": 0.03,
+   "contact_band_px": 8,
+   "contact_tol": 0.05
+  },
+  "decision": {
+   "gate_column": "B: ground at the painted object's bottom edge",
+   "r_c_B": 1.0303934724946098,
+   "r_c_A": 1.0365823920626531,
+   "edge_offset_rows": 1.0,
+   "edge_offset_exceeds_half_patch": false,
+   "contact_tol": 0.05,
+   "s_c": 1.0,
+   "outcome": "contact_holds",
+   "reading": "contact holds: carry forward"
+  }
+ },
+ {
+  "n_base_px": 180,
+  "n_ground_px": 248,
+  "upper_body_ratio": 1.141159133093912,
+  "contact_band_empty": false,
+  "Z_base_gtar": 1.5917882178277956,
+  "Z_ground_image": 1.4299330711364746,
+  "r_c": 1.113190714977088,
+  "ci95": [
+   1.1080764417801692,
+   1.1139364829982024
+  ],
+  "n_col_blocks": 2,
+  "r_c_ground_extrapolated_to_base": 1.085002277585065,
+  "ground_rel_depth_change_per_row": 0.0035150344509336236,
+  "bottom_row_offset_px_gtar_minus_anchor": -3.0,
+  "r_c_ground_at_painted_edge": 1.1054704037439906,
+  "n_cols_painted_edge": 31,
+  "plane_unreliable": false,
+  "r_c_plane": 1.094614051188897,
+  "ci95_plane": [
+   1.0913457509959028,
+   1.0947603281625726
+  ],
+  "n_cols": 31,
+  "plane_inliers": 19536,
+  "plane_inlier_frac": 0.9862681744749596,
+  "plane_resid_rel_median": 0.007301020560293149,
+  "object_reaches_frame_bottom": false,
+  "mesh_reaches_frame_bottom": false,
+  "reading_raw_column": "contact fails: re-gauge the object to the ground proposed, s_c = 0.8983",
+  "pair": "000000000221.7.011/human",
+  "disposition": "experiment",
+  "median_ratio_gate": 1.1404211788090106,
+  "depth_gate": "pass",
+  "reading": "contact fails: object re-gauged to the ground, s_c = 0.9046 (displacement scaled alike; D-M3-03 for this pair)",
+  "instrument": {
+   "plane_nbhd_px": 48,
+   "ransac_iters": 500,
+   "ransac_rel_tol": 0.02,
+   "min_inliers": 200,
+   "seed": 0
+  },
+  "params": {
+   "contact_rows": 0.03,
+   "contact_band_px": 8,
+   "contact_tol": 0.05
+  },
+  "decision": {
+   "gate_column": "B: ground at the painted object's bottom edge",
+   "r_c_B": 1.1054704037439906,
+   "r_c_A": 1.094614051188897,
+   "edge_offset_rows": -3.0,
+   "edge_offset_exceeds_half_patch": false,
+   "contact_tol": 0.05,
+   "s_c": 0.9045922863364003,
+   "outcome": "contact_fails_regauge",
+   "reading": "contact fails: object re-gauged to the ground, s_c = 0.9046 (displacement scaled alike; D-M3-03 for this pair)"
+  }
+ },
+ {
+  "n_base_px": 67,
+  "n_ground_px": 184,
+  "upper_body_ratio": 1.1068730691656732,
+  "contact_band_empty": false,
+  "Z_base_gtar": 1.3241579079574437,
+  "Z_ground_image": 1.0413370728492737,
+  "r_c": 1.2715939367589446,
+  "ci95": [
+   1.2174049918765888,
+   1.284878257141435
+  ],
+  "n_col_blocks": 2,
+  "r_c_ground_extrapolated_to_base": 1.2279573500624232,
+  "ground_rel_depth_change_per_row": 0.006461839525734427,
+  "bottom_row_offset_px_gtar_minus_anchor": 27.0,
+  "r_c_ground_at_painted_edge": 0.9722311258159968,
+  "n_cols_painted_edge": 23,
+  "plane_unreliable": false,
+  "r_c_plane": 1.1962724774781173,
+  "ci95_plane": [
+   1.193776784063659,
+   1.255612725276448
+  ],
+  "n_cols": 23,
+  "plane_inliers": 18840,
+  "plane_inlier_frac": 0.998568929877564,
+  "plane_resid_rel_median": 0.0011811926386828247,
+  "object_reaches_frame_bottom": false,
+  "mesh_reaches_frame_bottom": false,
+  "reading_raw_column": "contact fails: re-gauge the object to the ground proposed, s_c = 0.7864",
+  "pair": "000000000252.1.018/vehicle",
+  "disposition": "experiment",
+  "median_ratio_gate": 1.114015462767617,
+  "depth_gate": "pass",
+  "reading": "contact holds: carry forward",
+  "instrument": {
+   "plane_nbhd_px": 48,
+   "ransac_iters": 500,
+   "ransac_rel_tol": 0.02,
+   "min_inliers": 200,
+   "seed": 0
+  },
+  "params": {
+   "contact_rows": 0.03,
+   "contact_band_px": 8,
+   "contact_tol": 0.05
+  },
+  "decision": {
+   "gate_column": "B: ground at the painted object's bottom edge",
+   "r_c_B": 0.9722311258159968,
+   "r_c_A": 1.1962724774781173,
+   "edge_offset_rows": 27.0,
+   "edge_offset_exceeds_half_patch": true,
+   "contact_tol": 0.05,
+   "s_c": 1.0,
+   "outcome": "contact_holds",
+   "reading": "contact holds: carry forward"
+  }
+ },
+ {
+  "n_base_px": 80,
+  "n_ground_px": 168,
+  "upper_body_ratio": 1.3136150060422096,
+  "contact_band_empty": false,
+  "Z_base_gtar": 1.2683547380856435,
+  "Z_ground_image": 0.9507133364677429,
+  "r_c": 1.3341084945731987,
+  "ci95": [
+   1.3341084945731987,
+   1.3366836567542615
+  ],
+  "n_col_blocks": 2,
+  "r_c_ground_extrapolated_to_base": 1.2953750394397676,
+  "ground_rel_depth_change_per_row": 0.0037819346383048745,
+  "bottom_row_offset_px_gtar_minus_anchor": -7.0,
+  "r_c_ground_at_painted_edge": 1.3480018143711225,
+  "n_cols_painted_edge": 21,
+  "plane_unreliable": false,
+  "r_c_plane": 1.3132972088075494,
+  "ci95_plane": [
+   1.3022323942814782,
+   1.314107233492883
+  ],
+  "n_cols": 21,
+  "plane_inliers": 12310,
+  "plane_inlier_frac": 0.6606558256856115,
+  "plane_resid_rel_median": 0.010230897443623318,
+  "object_reaches_frame_bottom": false,
+  "mesh_reaches_frame_bottom": false,
+  "reading_raw_column": "contact fails: re-gauge the object to the ground proposed, s_c = 0.7496",
+  "pair": "000000000252.2.007/human",
+  "disposition": "experiment",
+  "median_ratio_gate": 1.3068970407691587,
+  "depth_gate": "fail",
+  "reading": "contact fails: object re-gauged to the ground, s_c = 0.7418 (displacement scaled alike; D-M3-03 for this pair)",
+  "instrument": {
+   "plane_nbhd_px": 48,
+   "ransac_iters": 500,
+   "ransac_rel_tol": 0.02,
+   "min_inliers": 200,
+   "seed": 0
+  },
+  "params": {
+   "contact_rows": 0.03,
+   "contact_band_px": 8,
+   "contact_tol": 0.05
+  },
+  "decision": {
+   "gate_column": "B: ground at the painted object's bottom edge",
+   "r_c_B": 1.3480018143711225,
+   "r_c_A": 1.3132972088075494,
+   "edge_offset_rows": -7.0,
+   "edge_offset_exceeds_half_patch": false,
+   "contact_tol": 0.05,
+   "s_c": 0.7418387641165941,
+   "outcome": "contact_fails_regauge",
+   "reading": "contact fails: object re-gauged to the ground, s_c = 0.7418 (displacement scaled alike; D-M3-03 for this pair)"
+  }
+ },
+ {
+  "n_base_px": 45,
+  "n_ground_px": 144,
+  "upper_body_ratio": 1.0272608891962698,
+  "contact_band_empty": false,
+  "Z_base_gtar": 1.568546612271932,
+  "Z_ground_image": 1.4418166279792786,
+  "r_c": 1.0878960485219724,
+  "ci95": [
+   1.0878960485219724,
+   1.0878960485219724
+  ],
+  "n_col_blocks": 1,
+  "r_c_ground_extrapolated_to_base": 0.6862269606430494,
+  "ground_rel_depth_change_per_row": 0.008684595608132895,
+  "bottom_row_offset_px_gtar_minus_anchor": 0.0,
+  "r_c_ground_at_painted_edge": 1.0524468851814468,
+  "n_cols_painted_edge": 18,
+  "plane_unreliable": false,
+  "r_c_plane": 1.052263673566728,
+  "ci95_plane": [
+   1.052263673566728,
+   1.052263673566728
+  ],
+  "n_cols": 18,
+  "plane_inliers": 10922,
+  "plane_inlier_frac": 0.8421620788033002,
+  "plane_resid_rel_median": 0.0021464867379534652,
+  "object_reaches_frame_bottom": false,
+  "mesh_reaches_frame_bottom": false,
+  "reading_raw_column": "contact fails: re-gauge the object to the ground proposed, s_c = 0.9192",
+  "pair": "000000000256.3.010/human",
+  "disposition": "experiment",
+  "median_ratio_gate": 1.0346010389696336,
+  "depth_gate": "pass",
+  "reading": "contact fails: object re-gauged to the ground, s_c = 0.9502 (displacement scaled alike; D-M3-03 for this pair)",
+  "instrument": {
+   "plane_nbhd_px": 48,
+   "ransac_iters": 500,
+   "ransac_rel_tol": 0.02,
+   "min_inliers": 200,
+   "seed": 0
+  },
+  "params": {
+   "contact_rows": 0.03,
+   "contact_band_px": 8,
+   "contact_tol": 0.05
+  },
+  "decision": {
+   "gate_column": "B: ground at the painted object's bottom edge",
+   "r_c_B": 1.0524468851814468,
+   "r_c_A": 1.052263673566728,
+   "edge_offset_rows": 0.0,
+   "edge_offset_exceeds_half_patch": false,
+   "contact_tol": 0.05,
+   "s_c": 0.9501667153754703,
+   "outcome": "contact_fails_regauge",
+   "reading": "contact fails: object re-gauged to the ground, s_c = 0.9502 (displacement scaled alike; D-M3-03 for this pair)"
+  }
+ },
+ {
+  "n_base_px": 18,
+  "n_ground_px": 56,
+  "upper_body_ratio": 1.2006444225044834,
+  "contact_band_empty": false,
+  "Z_base_gtar": 1.2569314987406162,
+  "Z_ground_image": 0.9415612518787384,
+  "r_c": 1.3349439521142206,
+  "ci95": [
+   1.3349439521142206,
+   1.3349439521142206
+  ],
+  "n_col_blocks": 1,
+  "r_c_ground_extrapolated_to_base": 1.3228072332385234,
+  "ground_rel_depth_change_per_row": 0.006018502742830576,
+  "bottom_row_offset_px_gtar_minus_anchor": 16.0,
+  "r_c_ground_at_painted_edge": 1.0132995886771763,
+  "n_cols_painted_edge": 7,
+  "plane_unreliable": false,
+  "r_c_plane": 1.114207970651164,
+  "ci95_plane": [
+   1.114207970651164,
+   1.114207970651164
+  ],
+  "n_cols": 7,
+  "plane_inliers": 7805,
+  "plane_inlier_frac": 0.6177285318559557,
+  "plane_resid_rel_median": 0.008325359117750402,
+  "object_reaches_frame_bottom": false,
+  "mesh_reaches_frame_bottom": false,
+  "reading_raw_column": "contact fails: re-gauge the object to the ground proposed, s_c = 0.7491",
+  "pair": "000000000265.4.002/human",
+  "disposition": "experiment",
+  "median_ratio_gate": 1.2063416571543488,
+  "depth_gate": "fail",
+  "reading": "contact holds: carry forward",
+  "instrument": {
+   "plane_nbhd_px": 48,
+   "ransac_iters": 500,
+   "ransac_rel_tol": 0.02,
+   "min_inliers": 200,
+   "seed": 0
+  },
+  "params": {
+   "contact_rows": 0.03,
+   "contact_band_px": 8,
+   "contact_tol": 0.05
+  },
+  "decision": {
+   "gate_column": "B: ground at the painted object's bottom edge",
+   "r_c_B": 1.0132995886771763,
+   "r_c_A": 1.114207970651164,
+   "edge_offset_rows": 16.0,
+   "edge_offset_exceeds_half_patch": true,
+   "contact_tol": 0.05,
+   "s_c": 1.0,
+   "outcome": "contact_holds",
+   "reading": "contact holds: carry forward"
+  }
+ },
+ {
+  "n_base_px": 478,
+  "n_ground_px": 7,
+  "upper_body_ratio": 2.838239979400184,
+  "contact_band_empty": false,
+  "Z_base_gtar": 1.4212329902070113,
+  "Z_ground_image": 0.20238220691680908,
+  "r_c": 7.022519478657633,
+  "ci95": [
+   6.891820889847758,
+   6.891820889847758
+  ],
+  "n_col_blocks": 2,
+  "r_c_ground_extrapolated_to_base": 6.984494107688931,
+  "ground_rel_depth_change_per_row": 0.0024136183712031266,
+  "bottom_row_offset_px_gtar_minus_anchor": 12.5,
+  "r_c_ground_at_painted_edge": 0.8009435009220867,
+  "n_cols_painted_edge": 54,
+  "plane_unreliable": false,
+  "r_c_plane": 0.8231071504868206,
+  "ci95_plane": [
+   0.8229679489283545,
+   0.8232011756506312
+  ],
+  "n_cols": 54,
+  "plane_inliers": 8173,
+  "plane_inlier_frac": 0.40079442918791686,
+  "plane_resid_rel_median": 0.00819416838567777,
+  "object_reaches_frame_bottom": true,
+  "mesh_reaches_frame_bottom": true,
+  "reading_raw_column": "contact fails: re-gauge the object to the ground proposed, s_c = 0.1424",
+  "pair": "000000000362.2.005/human",
+  "disposition": "experiment",
+  "median_ratio_gate": 3.1217587119712555,
+  "depth_gate": "fail",
+  "reading": "object cut by the frame bottom: no contact line in view; nothing to re-gauge against",
+  "instrument": {
+   "plane_nbhd_px": 48,
+   "ransac_iters": 500,
+   "ransac_rel_tol": 0.02,
+   "min_inliers": 200,
+   "seed": 0
+  },
+  "params": {
+   "contact_rows": 0.03,
+   "contact_band_px": 8,
+   "contact_tol": 0.05
+  },
+  "decision": {
+   "gate_column": "B: ground at the painted object's bottom edge",
+   "r_c_B": 0.8009435009220867,
+   "r_c_A": 0.8231071504868206,
+   "edge_offset_rows": 12.5,
+   "edge_offset_exceeds_half_patch": true,
+   "contact_tol": 0.05,
+   "s_c": 1.0,
+   "outcome": "no_contact_line_in_view",
+   "reading": "object cut by the frame bottom: no contact line in view; nothing to re-gauge against"
+  }
+ },
+ {
+  "n_base_px": 199,
+  "n_ground_px": 224,
+  "upper_body_ratio": 1.9536737733053644,
+  "contact_band_empty": false,
+  "Z_base_gtar": 1.4845934915099033,
+  "Z_ground_image": 0.7967776954174042,
+  "r_c": 1.8632468002661349,
+  "ci95": [
+   1.8632468002661349,
+   1.8632468002661349
+  ],
+  "n_col_blocks": 1,
+  "r_c_ground_extrapolated_to_base": 1.792302172201242,
+  "ground_rel_depth_change_per_row": 0.005824106768246539,
+  "bottom_row_offset_px_gtar_minus_anchor": 0.0,
+  "r_c_ground_at_painted_edge": 1.6916425715519514,
+  "n_cols_painted_edge": 35,
+  "plane_unreliable": false,
+  "r_c_plane": 1.6917110367475225,
+  "ci95_plane": [
+   1.6917110367475225,
+   1.6917110367475225
+  ],
+  "n_cols": 35,
+  "plane_inliers": 14819,
+  "plane_inlier_frac": 0.9950312227220842,
+  "plane_resid_rel_median": 0.007465343657596297,
+  "object_reaches_frame_bottom": false,
+  "mesh_reaches_frame_bottom": false,
+  "reading_raw_column": "contact fails: re-gauge the object to the ground proposed, s_c = 0.5367",
+  "pair": "000000000391.0.016/human",
+  "disposition": "experiment",
+  "median_ratio_gate": 1.9553687382516753,
+  "depth_gate": "fail",
+  "reading": "contact fails: object re-gauged to the ground, s_c = 0.5911 (displacement scaled alike; D-M3-03 for this pair)",
+  "instrument": {
+   "plane_nbhd_px": 48,
+   "ransac_iters": 500,
+   "ransac_rel_tol": 0.02,
+   "min_inliers": 200,
+   "seed": 0
+  },
+  "params": {
+   "contact_rows": 0.03,
+   "contact_band_px": 8,
+   "contact_tol": 0.05
+  },
+  "decision": {
+   "gate_column": "B: ground at the painted object's bottom edge",
+   "r_c_B": 1.6916425715519514,
+   "r_c_A": 1.6917110367475225,
+   "edge_offset_rows": 0.0,
+   "edge_offset_exceeds_half_patch": false,
+   "contact_tol": 0.05,
+   "s_c": 0.5911414248002622,
+   "outcome": "contact_fails_regauge",
+   "reading": "contact fails: object re-gauged to the ground, s_c = 0.5911 (displacement scaled alike; D-M3-03 for this pair)"
+  }
+ },
+ {
+  "n_base_px": 178,
+  "n_ground_px": 392,
+  "upper_body_ratio": 0.8771467117858169,
+  "contact_band_empty": false,
+  "Z_base_gtar": 0.699519104304172,
+  "Z_ground_image": 0.8339644074440002,
+  "r_c": 0.8387877205072974,
+  "ci95": [
+   0.8371628295116511,
+   0.8398591887745146
+  ],
+  "n_col_blocks": 2,
+  "r_c_ground_extrapolated_to_base": 0.8307646108437695,
+  "ground_rel_depth_change_per_row": 0.0016467799904603272,
+  "bottom_row_offset_px_gtar_minus_anchor": 17.0,
+  "r_c_ground_at_painted_edge": 0.8142146407221225,
+  "n_cols_painted_edge": 49,
+  "plane_unreliable": false,
+  "r_c_plane": 0.8365723262204185,
+  "ci95_plane": [
+   0.8356799752310298,
+   0.8383758384286103
+  ],
+  "n_cols": 49,
+  "plane_inliers": 16791,
+  "plane_inlier_frac": 0.9999404478323011,
+  "plane_resid_rel_median": 0.0025412801786664206,
+  "object_reaches_frame_bottom": false,
+  "mesh_reaches_frame_bottom": false,
+  "reading_raw_column": "contact fails: re-gauge the object to the ground proposed, s_c = 1.1922",
+  "pair": "000000000396.3.002/vehicle",
+  "disposition": "experiment",
+  "median_ratio_gate": 0.8456028305856056,
+  "depth_gate": "fail",
+  "reading": "contact fails: object re-gauged to the ground, s_c = 1.2282 (displacement scaled alike; D-M3-03 for this pair)",
+  "instrument": {
+   "plane_nbhd_px": 48,
+   "ransac_iters": 500,
+   "ransac_rel_tol": 0.02,
+   "min_inliers": 200,
+   "seed": 0
+  },
+  "params": {
+   "contact_rows": 0.03,
+   "contact_band_px": 8,
+   "contact_tol": 0.05
+  },
+  "decision": {
+   "gate_column": "B: ground at the painted object's bottom edge",
+   "r_c_B": 0.8142146407221225,
+   "r_c_A": 0.8365723262204185,
+   "edge_offset_rows": 17.0,
+   "edge_offset_exceeds_half_patch": true,
+   "contact_tol": 0.05,
+   "s_c": 1.2281773748419773,
+   "outcome": "contact_fails_regauge",
+   "reading": "contact fails: object re-gauged to the ground, s_c = 1.2282 (displacement scaled alike; D-M3-03 for this pair)"
+  }
+ },
+ {
+  "n_base_px": 14,
+  "n_ground_px": 56,
+  "upper_body_ratio": 1.522873528297594,
+  "contact_band_empty": false,
+  "Z_base_gtar": 1.146756100797934,
+  "Z_ground_image": 0.7545683681964874,
+  "r_c": 1.5197510909963325,
+  "ci95": [
+   1.5197510909963325,
+   1.5197510909963325
+  ],
+  "n_col_blocks": 1,
+  "r_c_ground_extrapolated_to_base": 1.453578767666401,
+  "ground_rel_depth_change_per_row": 0.006883274440245972,
+  "bottom_row_offset_px_gtar_minus_anchor": -1.0,
+  "r_c_ground_at_painted_edge": 1.512918218478618,
+  "n_cols_painted_edge": 7,
+  "plane_unreliable": false,
+  "r_c_plane": 1.5025043871751818,
+  "ci95_plane": [
+   1.5025043871751818,
+   1.5025043871751818
+  ],
+  "n_cols": 7,
+  "plane_inliers": 15904,
+  "plane_inlier_frac": 0.9984305355012869,
+  "plane_resid_rel_median": 0.0033914565287370213,
+  "object_reaches_frame_bottom": false,
+  "mesh_reaches_frame_bottom": false,
+  "reading_raw_column": "contact fails: re-gauge the object to the ground proposed, s_c = 0.6580",
+  "pair": "000000000404.1.006/human",
+  "disposition": "experiment",
+  "median_ratio_gate": 1.5153010605830461,
+  "depth_gate": "fail",
+  "reading": "contact fails: object re-gauged to the ground, s_c = 0.6610 (displacement scaled alike; D-M3-03 for this pair)",
+  "instrument": {
+   "plane_nbhd_px": 48,
+   "ransac_iters": 500,
+   "ransac_rel_tol": 0.02,
+   "min_inliers": 200,
+   "seed": 0
+  },
+  "params": {
+   "contact_rows": 0.03,
+   "contact_band_px": 8,
+   "contact_tol": 0.05
+  },
+  "decision": {
+   "gate_column": "B: ground at the painted object's bottom edge",
+   "r_c_B": 1.512918218478618,
+   "r_c_A": 1.5025043871751818,
+   "edge_offset_rows": -1.0,
+   "edge_offset_exceeds_half_patch": false,
+   "contact_tol": 0.05,
+   "s_c": 0.6609742600664789,
+   "outcome": "contact_fails_regauge",
+   "reading": "contact fails: object re-gauged to the ground, s_c = 0.6610 (displacement scaled alike; D-M3-03 for this pair)"
+  }
+ },
+ {
+  "n_base_px": 54,
+  "n_ground_px": 144,
+  "upper_body_ratio": 1.0472189411147133,
+  "contact_band_empty": false,
+  "Z_base_gtar": 1.5783367906363595,
+  "Z_ground_image": 1.4082443714141846,
+  "r_c": 1.1207833119555557,
+  "ci95": [
+   1.1207833119555557,
+   1.123367295816665
+  ],
+  "n_col_blocks": 2,
+  "r_c_ground_extrapolated_to_base": 1.0874029056431282,
+  "ground_rel_depth_change_per_row": 0.004219134763137485,
+  "bottom_row_offset_px_gtar_minus_anchor": -2.0,
+  "r_c_ground_at_painted_edge": 1.1101889885734004,
+  "n_cols_painted_edge": 18,
+  "plane_unreliable": false,
+  "r_c_plane": 1.102576701737078,
+  "ci95_plane": [
+   1.1012259003497717,
+   1.1036705140716083
+  ],
+  "n_cols": 18,
+  "plane_inliers": 14847,
+  "plane_inlier_frac": 0.9987891019172553,
+  "plane_resid_rel_median": 0.002952549463313944,
+  "object_reaches_frame_bottom": false,
+  "mesh_reaches_frame_bottom": false,
+  "reading_raw_column": "contact fails: re-gauge the object to the ground proposed, s_c = 0.8922",
+  "pair": "000000000431.5.009/human",
+  "disposition": "experiment",
+  "median_ratio_gate": 1.056322586787138,
+  "depth_gate": "pass",
+  "reading": "contact fails: object re-gauged to the ground, s_c = 0.9007 (displacement scaled alike; D-M3-03 for this pair)",
+  "instrument": {
+   "plane_nbhd_px": 48,
+   "ransac_iters": 500,
+   "ransac_rel_tol": 0.02,
+   "min_inliers": 200,
+   "seed": 0
+  },
+  "params": {
+   "contact_rows": 0.03,
+   "contact_band_px": 8,
+   "contact_tol": 0.05
+  },
+  "decision": {
+   "gate_column": "B: ground at the painted object's bottom edge",
+   "r_c_B": 1.1101889885734004,
+   "r_c_A": 1.102576701737078,
+   "edge_offset_rows": -2.0,
+   "edge_offset_exceeds_half_patch": false,
+   "contact_tol": 0.05,
+   "s_c": 0.9007475396463859,
+   "outcome": "contact_fails_regauge",
+   "reading": "contact fails: object re-gauged to the ground, s_c = 0.9007 (displacement scaled alike; D-M3-03 for this pair)"
+  }
+ },
+ {
+  "n_base_px": 434,
+  "n_ground_px": 392,
+  "upper_body_ratio": 1.2229900934410023,
+  "contact_band_empty": false,
+  "Z_base_gtar": 3.457212968384533,
+  "Z_ground_image": 2.7792898416519165,
+  "r_c": 1.243919549725581,
+  "ci95": [
+   1.243919549725581,
+   1.243919549725581
+  ],
+  "n_col_blocks": 1,
+  "r_c_ground_extrapolated_to_base": 1.192485075576024,
+  "ground_rel_depth_change_per_row": 0.00364668532203764,
+  "bottom_row_offset_px_gtar_minus_anchor": -2.0,
+  "r_c_ground_at_painted_edge": 1.1976737983252208,
+  "n_cols_painted_edge": 49,
+  "plane_unreliable": false,
+  "r_c_plane": 1.18687208894828,
+  "ci95_plane": [
+   1.18687208894828,
+   1.18687208894828
+  ],
+  "n_cols": 49,
+  "plane_inliers": 24295,
+  "plane_inlier_frac": 0.8446028159221276,
+  "plane_resid_rel_median": 0.0025424807387296683,
+  "object_reaches_frame_bottom": false,
+  "mesh_reaches_frame_bottom": false,
+  "reading_raw_column": "contact fails: re-gauge the object to the ground proposed, s_c = 0.8039",
+  "pair": "camel/human",
+  "disposition": "experiment",
+  "median_ratio_gate": 1.2305536960359535,
+  "depth_gate": "fail",
+  "reading": "contact fails: object re-gauged to the ground, s_c = 0.8350 (displacement scaled alike; D-M3-03 for this pair)",
+  "instrument": {
+   "plane_nbhd_px": 48,
+   "ransac_iters": 500,
+   "ransac_rel_tol": 0.02,
+   "min_inliers": 200,
+   "seed": 0
+  },
+  "params": {
+   "contact_rows": 0.03,
+   "contact_band_px": 8,
+   "contact_tol": 0.05
+  },
+  "decision": {
+   "gate_column": "B: ground at the painted object's bottom edge",
+   "r_c_B": 1.1976737983252208,
+   "r_c_A": 1.18687208894828,
+   "edge_offset_rows": -2.0,
+   "edge_offset_exceeds_half_patch": false,
+   "contact_tol": 0.05,
+   "s_c": 0.8349518887349461,
+   "outcome": "contact_fails_regauge",
+   "reading": "contact fails: object re-gauged to the ground, s_c = 0.8350 (displacement scaled alike; D-M3-03 for this pair)"
+  }
+ },
+ {
+  "n_base_px": 136,
+  "n_ground_px": 320,
+  "upper_body_ratio": 0.8396725438582922,
+  "contact_band_empty": false,
+  "Z_base_gtar": 2.3049241467405337,
+  "Z_ground_image": 2.6376185417175293,
+  "r_c": 0.8738656141079612,
+  "ci95": [
+   0.8699795757827814,
+   0.8930364576041684
+  ],
+  "n_col_blocks": 2,
+  "r_c_ground_extrapolated_to_base": 0.8169325140796931,
+  "ground_rel_depth_change_per_row": 0.007470045133407499,
+  "bottom_row_offset_px_gtar_minus_anchor": -3.0,
+  "r_c_ground_at_painted_edge": 0.860272123148536,
+  "n_cols_painted_edge": 40,
+  "plane_unreliable": false,
+  "r_c_plane": 0.8482843066389607,
+  "ci95_plane": [
+   0.8441652945819555,
+   0.8507939282624393
+  ],
+  "n_cols": 40,
+  "plane_inliers": 15359,
+  "plane_inlier_frac": 0.828916833072481,
+  "plane_resid_rel_median": 0.006417475846943794,
+  "object_reaches_frame_bottom": false,
+  "mesh_reaches_frame_bottom": false,
+  "reading_raw_column": "contact fails: re-gauge the object to the ground proposed, s_c = 1.1443",
+  "pair": "horsejump-high/human",
+  "disposition": "experiment",
+  "median_ratio_gate": 0.8397959599297931,
+  "depth_gate": "fail",
+  "reading": "contact fails: object re-gauged to the ground, s_c = 1.1624 (displacement scaled alike; D-M3-03 for this pair)",
+  "instrument": {
+   "plane_nbhd_px": 48,
+   "ransac_iters": 500,
+   "ransac_rel_tol": 0.02,
+   "min_inliers": 200,
+   "seed": 0
+  },
+  "params": {
+   "contact_rows": 0.03,
+   "contact_band_px": 8,
+   "contact_tol": 0.05
+  },
+  "decision": {
+   "gate_column": "B: ground at the painted object's bottom edge",
+   "r_c_B": 0.860272123148536,
+   "r_c_A": 0.8482843066389607,
+   "edge_offset_rows": -3.0,
+   "edge_offset_exceeds_half_patch": false,
+   "contact_tol": 0.05,
+   "s_c": 1.1624228811926043,
+   "outcome": "contact_fails_regauge",
+   "reading": "contact fails: object re-gauged to the ground, s_c = 1.1624 (displacement scaled alike; D-M3-03 for this pair)"
+  }
+ }
+]

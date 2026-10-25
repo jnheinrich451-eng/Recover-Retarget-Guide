@@ -1,0 +1,152 @@
+{
+ "abl__000000000265.2.003__vehicle__ref21": {
+  "status": "ok",
+  "extract_dir": "/content/drive/MyDrive/ditflow_extract/extract/extract-v1-f21/000000000265.2.003__vehicle__ref21",
+  "reused": true,
+  "video_sha256": "75305a4c1d296f0b7545313ad5d10ecbf20d5141b2a09f4646eb2ba41d5549c2"
+ },
+ "abl__000000000265.2.005__vehicle__ref21": {
+  "status": "ok",
+  "extract_dir": "/content/drive/MyDrive/ditflow_extract/extract/extract-v1-f21/000000000265.2.005__human__ref21",
+  "reused": true,
+  "video_sha256": "6b3127c3b1031871fd5a5385aa806ae0aa698bc40d1d5b93d42ec1562504dade"
+ },
+ "abl__000000000265.2.005__human__ref21": {
+  "status": "ok",
+  "extract_dir": "/content/drive/MyDrive/ditflow_extract/extract/extract-v1-f21/000000000265.2.005__human__ref21",
+  "reused": true,
+  "video_sha256": "6b3127c3b1031871fd5a5385aa806ae0aa698bc40d1d5b93d42ec1562504dade"
+ },
+ "abl__000000000370.1.008__human__ref21": {
+  "status": "ok",
+  "extract_dir": "/content/drive/MyDrive/ditflow_extract/extract/extract-v1-f21/000000000370.1.008__human__ref21",
+  "reused": true,
+  "video_sha256": "0c92da0c4fefcadf84925db9fac4639c1a5ea4025763aab27183bea9e53496e5"
+ },
+ "abl__000000000404.1.004__vehicle__ref21": {
+  "status": "ok",
+  "extract_dir": "/content/drive/MyDrive/ditflow_extract/extract/extract-v1-f21/000000000404.1.004__vehicle__ref21",
+  "reused": true,
+  "video_sha256": "96a90b268f00495cedde8b3fbd72a469ae458bc109da4ca1313153e7d8048660"
+ },
+ "abl__000000000265.2.003__vehicle__A0__seed0": {
+  "status": "ok",
+  "extract_dir": "/content/drive/MyDrive/ditflow_extract/extract/extract-v1-f21/000000000265.2.003__vehicle__ours_noguide__seed0",
+  "reused": true,
+  "video_sha256": "10f405af69a7f6fbc7c0380073e4316fbe2dc27fc3a87cc62edb055a1685a5ea"
+ },
+ "abl__000000000265.2.003__vehicle__lock__seed0": {
+  "status": "ok",
+  "extract_dir": "/content/drive/MyDrive/ditflow_extract/extract/extract-v1-f21/000000000265.2.003__vehicle__ours__seed0",
+  "reused": true,
+  "video_sha256": "065f08057c09f11405482e9dac23315c013239706757b30082b5200a119d7d24"
+ },
+ "abl__000000000265.2.003__vehicle__A__seed0": {
+  "status": "ok",
+  "extract_dir": "/content/drive/MyDrive/ditflow_extract/extract/extract-v1-f21/abl__000000000265.2.003__vehicle__A__seed0",
+  "reused": false,
+  "video_sha256": "14a570a469d30aa5eaf941ccc45f4e85e5f1c7ca220aa1cf9345d277e46931b9"
+ },
+ "abl__000000000265.2.003__vehicle__B__seed0": {
+  "status": "ok",
+  "extract_dir": "/content/drive/MyDrive/ditflow_extract/extract/extract-v1-f21/abl__000000000265.2.003__vehicle__B__seed0",
+  "reused": false,
+  "video_sha256": "f4d5de5f1e10dde6fdc57ad3943bfad73ae2e9fdab90985d0124b9fc1613d463"
+ },
+ "abl__000000000265.2.005__vehicle__A0__seed0": {
+  "status": "ok",
+  "extract_dir": "/content/drive/MyDrive/ditflow_extract/extract/extract-v1-f21/000000000265.2.005__vehicle__ours_noguide__seed0",
+  "reused": true,
+  "video_sha256": "5439c300f87c562a2ee8cb9cda93b640797c6206b8c369e8a2848978288707b7"
+ },
+ "abl__000000000265.2.005__vehicle__lock__seed0": {
+  "status": "ok",
+  "extract_dir": "/content/drive/MyDrive/ditflow_extract/extract/extract-v1-f21/000000000265.2.005__vehicle__ours__seed0",
+  "reused": true,
+  "video_sha256": "c55760bb81403ea79c1d36554532b8eccc751ea99fa45ef95c2a53e91768dbc5"
+ },
+ "abl__000000000265.2.005__vehicle__A__seed0": {
+  "status": "ok",
+  "extract_dir": "/content/drive/MyDrive/ditflow_extract/extract/extract-v1-f21/abl__000000000265.2.005__vehicle__A__seed0",
+  "reused": false,
+  "video_sha256": "bfed838612d493e7be534d77286d4a252440b782c232d417514fbbb7b6a30f60"
+ },
+ "abl__000000000265.2.005__vehicle__B__seed0": {
+  "status": "ok",
+  "extract_dir": "/content/drive/MyDrive/ditflow_extract/extract/extract-v1-f21/abl__000000000265.2.005__vehicle__B__seed0",
+  "reused": false,
+  "video_sha256": "4ee9a48756aa8f1c0fad069e48291f040783cd8d010e69713f040a311d917c0d"
+ },
+ "abl__000000000265.2.005__human__A0__seed0": {
+  "status": "ok",
+  "extract_dir": "/content/drive/MyDrive/ditflow_extract/extract/extract-v1-f21/000000000265.2.005__human__ours_noguide__seed0",
+  "reused": true,
+  "video_sha256": "0a17b83354eb5735f3e645dca1e3330df96c923ee72e554d54b187944f9b1eae"
+ },
+ "abl__000000000265.2.005__human__lock__seed0": {
+  "status": "ok",
+  "extract_dir": "/content/drive/MyDrive/ditflow_extract/extract/extract-v1-f21/000000000265.2.005__human__ours__seed0",
+  "reused": true,
+  "video_sha256": "1505c15a7259d1bc881f23d5b9b47a3e8d28d1418cb6ebed50e6cbf7614ccccf"
+ },
+ "abl__000000000265.2.005__human__A__seed0": {
+  "status": "ok",
+  "extract_dir": "/content/drive/MyDrive/ditflow_extract/extract/extract-v1-f21/abl__000000000265.2.005__human__A__seed0",
+  "reused": false,
+  "video_sha256": "acabf7f051d0e891091dc32e9a708588cb131e154c510c5cfd14bf7574c46991"
+ },
+ "abl__000000000265.2.005__human__B__seed0": {
+  "status": "ok",
+  "extract_dir": "/content/drive/MyDrive/ditflow_extract/extract/extract-v1-f21/abl__000000000265.2.005__human__B__seed0",
+  "reused": false,
+  "video_sha256": "cee8819739529a3ea58cbbb9e5ce1ae063ee6a33522b15b502099144e54a472d"
+ },
+ "abl__000000000370.1.008__human__A0__seed0": {
+  "status": "ok",
+  "extract_dir": "/content/drive/MyDrive/ditflow_extract/extract/extract-v1-f21/000000000370.1.008__human__ours_noguide__seed0",
+  "reused": true,
+  "video_sha256": "dbba2b6176ac6372541656c992454b0f470b7e2d96b88850073c6587aa7e5e96"
+ },
+ "abl__000000000370.1.008__human__lock__seed0": {
+  "status": "ok",
+  "extract_dir": "/content/drive/MyDrive/ditflow_extract/extract/extract-v1-f21/000000000370.1.008__human__ours__seed0",
+  "reused": true,
+  "video_sha256": "12ffdef6c1214c25fc0687b5e4c3fa59506a9390a1b7eb4feefc5d3a82da7d30"
+ },
+ "abl__000000000370.1.008__human__A__seed0": {
+  "status": "ok",
+  "extract_dir": "/content/drive/MyDrive/ditflow_extract/extract/extract-v1-f21/abl__000000000370.1.008__human__A__seed0",
+  "reused": false,
+  "video_sha256": "dfd662980acb5bf60f555d6bb7f11b33eda1abfa8923b7642c133e06dba073ba"
+ },
+ "abl__000000000370.1.008__human__B__seed0": {
+  "status": "ok",
+  "extract_dir": "/content/drive/MyDrive/ditflow_extract/extract/extract-v1-f21/abl__000000000370.1.008__human__B__seed0",
+  "reused": false,
+  "video_sha256": "72d2599584c1849fe2b26e50895d279e690b4a4a190e56dc9a72d6c27641b90f"
+ },
+ "abl__000000000404.1.004__vehicle__A0__seed0": {
+  "status": "ok",
+  "extract_dir": "/content/drive/MyDrive/ditflow_extract/extract/extract-v1-f21/000000000404.1.004__vehicle__ours_noguide__seed0",
+  "reused": true,
+  "video_sha256": "1d660723720233d44d0a6322075b6e495a4928dd6148521a30ad447b7b973611"
+ },
+ "abl__000000000404.1.004__vehicle__lock__seed0": {
+  "status": "ok",
+  "extract_dir": "/content/drive/MyDrive/ditflow_extract/extract/extract-v1-f21/000000000404.1.004__vehicle__ours__seed0",
+  "reused": true,
+  "video_sha256": "75a765bc0d276096b7342fb361ee0fa911a65d51bdb10a6a70fc6ace02b656f9"
+ },
+ "abl__000000000404.1.004__vehicle__A__seed0": {
+  "status": "ok",
+  "extract_dir": "/content/drive/MyDrive/ditflow_extract/extract/extract-v1-f21/abl__000000000404.1.004__vehicle__A__seed0",
+  "reused": false,
+  "video_sha256": "4d5fce20e15e699027c467b1a575a0ee18a8d9398cb3f7db91f19757cfb427b4"
+ },
+ "abl__000000000404.1.004__vehicle__B__seed0": {
+  "status": "ok",
+  "extract_dir": "/content/drive/MyDrive/ditflow_extract/extract/extract-v1-f21/abl__000000000404.1.004__vehicle__B__seed0",
+  "reused": false,
+  "video_sha256": "17445a48cafaca728e91fd58638b5ea57471b89472fb5313978fc98182851a0b"
+ }
+}

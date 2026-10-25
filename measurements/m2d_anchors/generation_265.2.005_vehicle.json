@@ -1,0 +1,75 @@
+{
+ "schema": "m2d_generation_v1",
+ "clip": "000000000265.2.005",
+ "category": "vehicle",
+ "polarity": "near_bright",
+ "guidance": 10.0,
+ "steps": 30,
+ "seeds": 4,
+ "target": {
+  "object": "a red car",
+  "action": "driving",
+  "scene": "on open scrubland"
+ },
+ "prompt": {
+  "prompt": "a red car driving, on open scrubland, side profile, moving right to left, medium shot",
+  "dictionary_rows": [
+   "lateral_right_to_left",
+   "large_area"
+  ],
+  "heading_class": "lateral_right_to_left",
+  "heading_azimuth_deg": -165.22506254441612,
+  "heading_frame": "camera_t_a",
+  "shot_class": "large_area",
+  "obj_area_frac": 0.12918758392333984,
+  "camera_low": false,
+  "camera_height": 1.0272523974214989,
+  "object_height": 0.5793914643783282,
+  "camera_height_over_object_height": 1.7729850378857646
+ },
+ "control_checksum": "bbf3e96669ad94df",
+ "calls": [
+  {
+   "seed": 0,
+   "control_checksum": "bbf3e96669ad94df",
+   "tensor_max_dev": 0.0,
+   "png_sha256": "47219367a5c18c65c40dbc377ab6928486872104d736d94fc9fdb129e1a8c41d"
+  },
+  {
+   "seed": 1,
+   "control_checksum": "bbf3e96669ad94df",
+   "tensor_max_dev": 0.0,
+   "png_sha256": "a371b11c757513611a2f8531305123e309207ea210b0030c2aae15054904f299"
+  },
+  {
+   "seed": 2,
+   "control_checksum": "bbf3e96669ad94df",
+   "tensor_max_dev": 0.0,
+   "png_sha256": "7a66cb1ede3b0555f4e45410ba8a7d40fecef3377becee357a14f1f910e5348e"
+  },
+  {
+   "seed": 3,
+   "control_checksum": "bbf3e96669ad94df",
+   "tensor_max_dev": 0.0,
+   "png_sha256": "fbd481c8cf317ffbd79e96014d597529542a6417801a660fd5fb99a1a182fd0c"
+  }
+ ],
+ "pipeline": "FluxControlPipeline",
+ "diffusers": "0.40.0",
+ "gpu": "NVIDIA A100-SXM4-40GB",
+ "config_hash": "009c71d32375c705",
+ "upstream_hashes": {
+  "c3": "1fd70e54b6d431bedf5b039bfbadeaaac468c8d12f464c54cf9d49ae8dd145f9",
+  "c1": "8363134865701ad34dd0a87e36f1fd507227cc7487a35ce6e68468ac4ce3af4f",
+  "m2a": "96ee134e427a4035b575de1a9514fc37f7987862217d9485059a7f20cb8bd8b4",
+  "proxy_cache_key": "5fbdb89abb315954",
+  "c2_params": {
+   "r": 4,
+   "w": 6,
+   "N": 32,
+   "sigma1": 2.0,
+   "sigma2": 0.5,
+   "fill_order": "fill_then_coarsen"
+  }
+ }
+}

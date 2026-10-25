@@ -1,0 +1,502 @@
+experiment_set:
+  frozen: '2026-10-19'
+  source: measurements/census/census.json
+  n_pairs: 32
+  rule: the census passes (Module 1 gates, m2a admission, camera gate of record, support surface); no clip added or removed after the gates ran; never used to tune
+  prompt_rule:
+    module: src/anchor/m2d/auto_target.py
+    object_action:
+      vehicle:
+        object: a red car
+        action: driving
+      human:
+        object: a man in a grey jacket and dark trousers
+        action: walking
+    scene: caption after the first listed motion verb, from its first locative preposition when the verb takes an object; cut at the first clause-opening comma or full stop; failures disclosed, never edited
+  proxy_keys:
+    vehicle: 5fbdb89abb315954
+    human: 7b1379d4dfce7cad
+  frames: 21
+  seeds:
+  - 0
+  pairs:
+  - pair: 000000000064.3.002/human
+    clip: 000000000064.3.002
+    pool: miradata
+    category: human
+    caption: A warrior in armor walks through a serene village by a river, surrounded by lush greenery and rustic buildings.
+    t_a: 6
+    n_frames_clip: 24
+    n_frames_after_t_a: 18
+    target:
+      object: a man in a grey jacket and dark trousers
+      action: walking
+      scene: through a serene village by a river
+      scene_source: verb 'walks'
+    label_source: person
+    label_target: person
+  - pair: 000000000119.5.007/human
+    clip: 000000000119.5.007
+    pool: miradata
+    category: human
+    caption: A man in a blue robe walks through a grand, ornate greenhouse filled with lush plants and intricate architecture.
+    t_a: 2
+    n_frames_clip: 24
+    n_frames_after_t_a: 22
+    target:
+      object: a man in a grey jacket and dark trousers
+      action: walking
+      scene: through a grand, ornate greenhouse filled with lush plants and intricate architecture
+      scene_source: verb 'walks'
+    label_source: person
+    label_target: person
+  - pair: 000000000130.0.015/human
+    clip: 000000000130.0.015
+    pool: miradata
+    category: human
+    caption: A character runs through a futuristic, dimly lit corridor with industrial elements and glowing lights.
+    t_a: 0
+    n_frames_clip: 24
+    n_frames_after_t_a: 24
+    target:
+      object: a man in a grey jacket and dark trousers
+      action: walking
+      scene: through a futuristic, dimly lit corridor with industrial elements and glowing lights
+      scene_source: verb 'runs'
+    label_source: person
+    label_target: person
+  - pair: 000000000191.6.037/human
+    clip: 000000000191.6.037
+    pool: miradata
+    category: human
+    caption: A man in a brown coat walks through a vibrant chinatown street, surrounded by colorful buildings and bustling activity.
+    t_a: 0
+    n_frames_clip: 24
+    n_frames_after_t_a: 24
+    target:
+      object: a man in a grey jacket and dark trousers
+      action: walking
+      scene: through a vibrant chinatown street
+      scene_source: verb 'walks'
+    label_source: person
+    label_target: person
+  - pair: 000000000200.1.006/human
+    clip: 000000000200.1.006
+    pool: miradata
+    category: human
+    caption: A character walks through a bustling medieval town, surrounded by carts and people, under a bright sky.
+    t_a: 0
+    n_frames_clip: 24
+    n_frames_after_t_a: 24
+    target:
+      object: a man in a grey jacket and dark trousers
+      action: walking
+      scene: through a bustling medieval town
+      scene_source: verb 'walks'
+    label_source: person
+    label_target: person
+  - pair: 000000000217.0.006/vehicle
+    clip: 000000000217.0.006
+    pool: miradata
+    category: vehicle
+    caption: A sleek blue sports car drives through a sunny cityscape with palm trees and modern architecture.
+    t_a: 0
+    n_frames_clip: 24
+    n_frames_after_t_a: 24
+    target:
+      object: a red car
+      action: driving
+      scene: through a sunny cityscape with palm trees and modern architecture
+      scene_source: verb 'drives'
+    label_source: car
+    label_target: car
+  - pair: 000000000221.7.011/human
+    clip: 000000000221.7.011
+    pool: miradata
+    category: human
+    caption: A warrior with a shield and spear walks through an autumnal forest, surrounded by fallen leaves and ancient ruins.
+    t_a: 0
+    n_frames_clip: 24
+    n_frames_after_t_a: 24
+    target:
+      object: a man in a grey jacket and dark trousers
+      action: walking
+      scene: through an autumnal forest
+      scene_source: verb 'walks'
+    label_source: person
+    label_target: person
+  - pair: 000000000222.4.003/human
+    clip: 000000000222.4.003
+    pool: miradata
+    category: human
+    caption: A character rides a horse through a cobblestone street lined with old buildings and debris under a cloudy sky.
+    t_a: 0
+    n_frames_clip: 24
+    n_frames_after_t_a: 24
+    target:
+      object: a man in a grey jacket and dark trousers
+      action: walking
+      scene: through a cobblestone street lined with old buildings and debris under a cloudy sky
+      scene_source: verb 'rides' -> locative 'through'
+    label_source: person
+    label_target: person
+  - pair: 000000000252.1.018/vehicle
+    clip: 000000000252.1.018
+    pool: miradata
+    category: vehicle
+    caption: A horse-drawn carriage travels through a cobblestone street at night, illuminated by streetlights and surrounded by historic buildings.
+    t_a: 0
+    n_frames_clip: 24
+    n_frames_after_t_a: 24
+    target:
+      object: a red car
+      action: driving
+      scene: through a cobblestone street at night
+      scene_source: verb 'travels'
+    label_source: horse
+    label_target: car
+  - pair: 000000000252.2.007/human
+    clip: 000000000252.2.007
+    pool: miradata
+    category: human
+    caption: A lone rider on horseback traverses a lush green field under a partly cloudy sky, heading towards a distant campsite.
+    t_a: 0
+    n_frames_clip: 24
+    n_frames_after_t_a: 24
+    target:
+      object: a man in a grey jacket and dark trousers
+      action: walking
+      scene: under a partly cloudy sky
+      scene_source: verb 'traverses' -> locative 'under'
+    label_source: horse
+    label_target: person
+  - pair: 000000000256.3.010/human
+    clip: 000000000256.3.010
+    pool: miradata
+    category: human
+    caption: A character runs through a bustling, historical cityscape with horse-drawn carriages and vintage architecture.
+    t_a: 0
+    n_frames_clip: 24
+    n_frames_after_t_a: 24
+    target:
+      object: a man in a grey jacket and dark trousers
+      action: walking
+      scene: through a bustling, historical cityscape with horse-drawn carriages and vintage architecture
+      scene_source: verb 'runs'
+    label_source: person
+    label_target: person
+  - pair: 000000000265.4.002/human
+    clip: 000000000265.4.002
+    pool: miradata
+    category: human
+    caption: A rider gallops through a lush forest, surrounded by tall trees and rocky terrain, under a bright sky.
+    t_a: 0
+    n_frames_clip: 24
+    n_frames_after_t_a: 24
+    target:
+      object: a man in a grey jacket and dark trousers
+      action: walking
+      scene: through a lush forest
+      scene_source: verb 'gallops'
+    label_source: horse
+    label_target: person
+  - pair: 000000000299.1.005/vehicle
+    clip: 000000000299.1.005
+    pool: miradata
+    category: vehicle
+    caption: A sleek white sports car speeds through a futuristic cityscape, navigating tight turns and high-speed chases.
+    t_a: 1
+    n_frames_clip: 24
+    n_frames_after_t_a: 23
+    target:
+      object: a red car
+      action: driving
+      scene: through a futuristic cityscape
+      scene_source: verb 'speeds'
+    label_source: car
+    label_target: car
+  - pair: 000000000362.2.005/human
+    clip: 000000000362.2.005
+    pool: miradata
+    category: human
+    caption: A warrior in armor walks through a field of wildflowers, with a distant city and lighthouse in the background.
+    t_a: 0
+    n_frames_clip: 24
+    n_frames_after_t_a: 24
+    target:
+      object: a man in a grey jacket and dark trousers
+      action: walking
+      scene: through a field of wildflowers
+      scene_source: verb 'walks'
+    label_source: person
+    label_target: person
+  - pair: 000000000370.1.009/human
+    clip: 000000000370.1.009
+    pool: miradata
+    category: human
+    caption: A warrior and his son navigate a misty forest path, preparing for an unseen challenge ahead.
+    t_a: 0
+    n_frames_clip: 24
+    n_frames_after_t_a: 24
+    target:
+      object: a man in a grey jacket and dark trousers
+      action: walking
+      scene: a misty forest path
+      scene_source: verb 'navigate'
+    label_source: person
+    label_target: person
+  - pair: 000000000391.0.016/human
+    clip: 000000000391.0.016
+    pool: miradata
+    category: human
+    caption: A man in a suit walks down a cobblestone street lined with vintage buildings and pedestrians under a clear blue sky.
+    t_a: 0
+    n_frames_clip: 24
+    n_frames_after_t_a: 24
+    target:
+      object: a man in a grey jacket and dark trousers
+      action: walking
+      scene: down a cobblestone street lined with vintage buildings and pedestrians under a clear blue sky
+      scene_source: verb 'walks'
+    label_source: person
+    label_target: person
+  - pair: 000000000396.3.002/vehicle
+    clip: 000000000396.3.002
+    pool: miradata
+    category: vehicle
+    caption: A sleek silver sports car speeds along a dirt track surrounded by palm trees and mountains under a clear blue sky.
+    t_a: 0
+    n_frames_clip: 24
+    n_frames_after_t_a: 24
+    target:
+      object: a red car
+      action: driving
+      scene: along a dirt track surrounded by palm trees and mountains under a clear blue sky
+      scene_source: verb 'speeds'
+    label_source: car
+    label_target: car
+  - pair: 000000000404.1.006/human
+    clip: 000000000404.1.006
+    pool: miradata
+    category: human
+    caption: A character exits a yellow car and walks down a city street, passing modern buildings and greenery.
+    t_a: 0
+    n_frames_clip: 24
+    n_frames_after_t_a: 24
+    target:
+      object: a man in a grey jacket and dark trousers
+      action: walking
+      scene: down a city street
+      scene_source: verb 'exits' -> locative 'down'
+    label_source: person
+    label_target: person
+  - pair: 000000000431.5.009/human
+    clip: 000000000431.5.009
+    pool: miradata
+    category: human
+    caption: A lone figure runs along a cobblestone path through a misty forest, with mountains in the distance.
+    t_a: 0
+    n_frames_clip: 24
+    n_frames_after_t_a: 24
+    target:
+      object: a man in a grey jacket and dark trousers
+      action: walking
+      scene: along a cobblestone path through a misty forest
+      scene_source: verb 'runs'
+    label_source: person
+    label_target: person
+  - pair: bmx-bumps/human
+    clip: bmx-bumps
+    pool: davis
+    category: human
+    caption: A rider on a BMX bike launches over dirt jumps on a track
+    t_a: 13
+    n_frames_clip: 24
+    n_frames_after_t_a: 11
+    target:
+      object: a man in a grey jacket and dark trousers
+      action: walking
+      scene: over dirt jumps on a track
+      scene_source: verb 'launches'
+    label_source: bicycle
+    label_target: person
+  - pair: breakdance/human
+    clip: breakdance
+    pool: davis
+    category: human
+    caption: A breakdancer spins on a city street in front of a watching crowd
+    t_a: 0
+    n_frames_clip: 24
+    n_frames_after_t_a: 24
+    target:
+      object: a man in a grey jacket and dark trousers
+      action: walking
+      scene: on a city street in front of a watching crowd
+      scene_source: verb 'spins'
+    label_source: person
+    label_target: person
+  - pair: breakdance-flare/human
+    clip: breakdance-flare
+    pool: davis
+    category: human
+    caption: A breakdancer performs a flare on paving beside a stone wall
+    t_a: 0
+    n_frames_clip: 24
+    n_frames_after_t_a: 24
+    target:
+      object: a man in a grey jacket and dark trousers
+      action: walking
+      scene: on paving beside a stone wall
+      scene_source: verb 'performs' -> locative 'on'
+    label_source: person
+    label_target: person
+  - pair: camel/human
+    clip: camel
+    pool: davis
+    category: human
+    caption: A camel walks slowly across a sandy enclosure beside a wooden fence
+    t_a: 0
+    n_frames_clip: 24
+    n_frames_after_t_a: 24
+    target:
+      object: a man in a grey jacket and dark trousers
+      action: walking
+      scene: across a sandy enclosure beside a wooden fence
+      scene_source: verb 'walks' -> locative 'across'
+    label_source: animal
+    label_target: person
+  - pair: dancing/human
+    clip: dancing
+    pool: davis
+    category: human
+    caption: A crowd of people dance together at a lively evening street party
+    t_a: 0
+    n_frames_clip: 24
+    n_frames_after_t_a: 24
+    target:
+      object: a man in a grey jacket and dark trousers
+      action: walking
+      scene: at a lively evening street party
+      scene_source: verb 'dance' -> locative 'at'
+    label_source: person
+    label_target: person
+  - pair: disc-jockey/human
+    clip: disc-jockey
+    pool: davis
+    category: human
+    caption: A DJ and a dancer move under warm orange light in a dark club
+    t_a: 0
+    n_frames_clip: 24
+    n_frames_after_t_a: 24
+    target:
+      object: a man in a grey jacket and dark trousers
+      action: walking
+      scene: under warm orange light in a dark club
+      scene_source: verb 'move'
+    label_source: person
+    label_target: person
+  - pair: dogs-scale/human
+    clip: dogs-scale
+    pool: davis
+    category: human
+    caption: Several dachshund puppies clamber around a scale on a wooden floor
+    t_a: 0
+    n_frames_clip: 24
+    n_frames_after_t_a: 24
+    target:
+      object: a man in a grey jacket and dark trousers
+      action: walking
+      scene: around a scale on a wooden floor
+      scene_source: verb 'clamber'
+    label_source: animal
+    label_target: person
+  - pair: elephant/human
+    clip: elephant
+    pool: davis
+    category: human
+    caption: An elephant walks slowly across a rocky enclosure past pale boulders
+    t_a: 0
+    n_frames_clip: 24
+    n_frames_after_t_a: 24
+    target:
+      object: a man in a grey jacket and dark trousers
+      action: walking
+      scene: across a rocky enclosure past pale boulders
+      scene_source: verb 'walks' -> locative 'across'
+    label_source: animal
+    label_target: person
+  - pair: goat/human
+    clip: goat
+    pool: davis
+    category: human
+    caption: A goat picks its way across a rocky sunlit hillside
+    t_a: 0
+    n_frames_clip: 24
+    n_frames_after_t_a: 24
+    target:
+      object: a man in a grey jacket and dark trousers
+      action: walking
+      scene: across a rocky sunlit hillside
+      scene_source: verb 'picks' -> locative 'across'
+    label_source: animal
+    label_target: person
+  - pair: gold-fish/human
+    clip: gold-fish
+    pool: davis
+    category: human
+    caption: Several goldfish swim among green plants in a blue aquarium
+    t_a: 0
+    n_frames_clip: 24
+    n_frames_after_t_a: 24
+    target:
+      object: a man in a grey jacket and dark trousers
+      action: walking
+      scene: among green plants in a blue aquarium
+      scene_source: verb 'swim'
+    label_source: animal
+    label_target: person
+  - pair: hockey/human
+    clip: hockey
+    pool: davis
+    category: human
+    caption: A hockey player skates with a stick past a small goal on a rink
+    t_a: 0
+    n_frames_clip: 24
+    n_frames_after_t_a: 24
+    target:
+      object: a man in a grey jacket and dark trousers
+      action: walking
+      scene: past a small goal on a rink
+      scene_source: verb 'skates' -> locative 'past'
+    label_source: person
+    label_target: person
+  - pair: horsejump-high/human
+    clip: horsejump-high
+    pool: davis
+    category: human
+    caption: A horse and rider clear a jump on a sandy show-jumping course
+    t_a: 0
+    n_frames_clip: 24
+    n_frames_after_t_a: 24
+    target:
+      object: a man in a grey jacket and dark trousers
+      action: walking
+      scene: on a sandy show-jumping course
+      scene_source: verb 'clear' -> locative 'on'
+    label_source: horse
+    label_target: person
+  - pair: kite-walk/human
+    clip: kite-walk
+    pool: davis
+    category: human
+    caption: A kitesurfer carries a board and kite along a sunlit sandy beach
+    t_a: 0
+    n_frames_clip: 24
+    n_frames_after_t_a: 24
+    target:
+      object: a man in a grey jacket and dark trousers
+      action: walking
+      scene: along a sunlit sandy beach
+      scene_source: verb 'carries' -> locative 'along'
+    label_source: person
+    label_target: person

@@ -1,0 +1,44 @@
+experiment_handoffs:
+  frozen: '2026-10-19'
+  rule: every pair with a Module 2 handoff under the rules of record after D7 and R1; R2 not adopted (check verdict), so a pair whose control was re-composed under R2 is a follow-up row
+  main:
+  - 000000000191.6.037/human
+  - 000000000200.1.006/human
+  - 000000000217.0.006/vehicle
+  - 000000000221.7.011/human
+  - 000000000252.1.018/vehicle
+  - 000000000252.2.007/human
+  - 000000000256.3.010/human
+  - 000000000265.4.002/human
+  - 000000000362.2.005/human
+  - 000000000391.0.016/human
+  - 000000000396.3.002/vehicle
+  - 000000000404.1.006/human
+  - 000000000431.5.009/human
+  - bmx-bumps/human
+  - camel/human
+  - horsejump-high/human
+  follow_up:
+    hockey/human: control re-composed under R2 in the 09:21 session (R2 not adopted by the non-regression check); reported separately
+  refused:
+  - 000000000064.3.002/human
+  - 000000000119.5.007/human
+  - 000000000130.0.015/human
+  - 000000000222.4.003/human
+  - 000000000299.1.005/vehicle
+  - 000000000370.1.009/human
+  - breakdance/human
+  - breakdance-flare/human
+  - dancing/human
+  - disc-jockey/human
+  - dogs-scale/human
+  - elephant/human
+  - goat/human
+  - gold-fish/human
+  - kite-walk/human
+  notes:
+    000000000362.2.005/human: 'handoff R2 IoU 0.42 against the anchor mask: Module 3''s footprint gate (lift.obj_place_iou_min 0.7) will refuse it; a recorded Module 3 outcome, kept in the run'
+  module3:
+    frames: 21
+    seed: 0
+    arms: A0 and A3 per category (configs/m3_batch_exp.yaml)

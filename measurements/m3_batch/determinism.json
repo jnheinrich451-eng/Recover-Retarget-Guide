@@ -1,0 +1,37 @@
+{
+ "clip": "000000000265.2.005",
+ "deterministic": true,
+ "fields": {
+  "cam_extrinsics": {
+   "shape_equal": true,
+   "bitwise_equal": true,
+   "max_abs_diff": 0.0
+  },
+  "depth": {
+   "shape_equal": true,
+   "bitwise_equal": true,
+   "max_abs_diff": 0.0
+  },
+  "track_xy": {
+   "shape_equal": true,
+   "bitwise_equal": true,
+   "max_abs_diff": 0.0
+  },
+  "track_xyz": {
+   "shape_equal": true,
+   "bitwise_equal": true,
+   "max_abs_diff": 0.0
+  },
+  "track_visible": {
+   "shape_equal": true,
+   "bitwise_equal": true,
+   "max_abs_diff": 0.0
+  },
+  "instances": {
+   "shape_equal": true,
+   "bitwise_equal": true,
+   "max_abs_diff": 0.0
+  }
+ },
+ "stamp": "20260923T072545Z"
+}

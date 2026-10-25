@@ -1,0 +1,138 @@
+{
+ "schema": "m2d_fidelity_v1",
+ "clip": "000000000265.2.005",
+ "category": "vehicle",
+ "control_checksum": "bbf3e96669ad94df",
+ "p_ta_uv_1024": [
+  424.7947254477465,
+  757.9567014367251
+ ],
+ "eps_shape": 0.5531850788764087,
+ "estimator": "depth-anything/Depth-Anything-V2-Small-hf",
+ "estimator_sign": 1,
+ "segmenter": {
+  "owl": "google/owlv2-base-patch16-ensemble",
+  "sam2": "facebook/sam2.1-hiera-large",
+  "query": [
+   "a car"
+  ]
+ },
+ "candidates": [
+  {
+   "seed": 0,
+   "object_found": true,
+   "obj_fidelity": 0.9707448542676433,
+   "E_loc": 0.0016645459148119188,
+   "E_loc_vs_rendered_centroid": 0.0015727593589262945,
+   "E_area": 0.008014277352033411,
+   "log_area_ratio": 0.008014277352033411,
+   "A_generated_frac": 0.13022708892822266,
+   "A_obj_rendered_frac": 0.12918758392333984,
+   "centroid_generated_uv": [
+    425.25902396871544,
+    760.322083733056
+   ],
+   "bg_fidelity": 0.8391495029690238,
+   "bg_domain_frac": 0.8683671951293945,
+   "segmenter": {
+    "box": [
+     177.71803283691406,
+     556.0733032226562,
+     664.8331298828125,
+     985.5187377929688
+    ],
+    "det_score": 0.4833016097545624,
+    "sam_score": 0.98828125
+   }
+  },
+  {
+   "seed": 1,
+   "object_found": true,
+   "obj_fidelity": 0.9218496345539354,
+   "E_loc": 0.008337639709754183,
+   "E_loc_vs_rendered_centroid": 0.008346602628733699,
+   "E_area": 0.07108418811545597,
+   "log_area_ratio": -0.07108418811545597,
+   "A_generated_frac": 0.12032318115234375,
+   "A_obj_rendered_frac": 0.12918758392333984,
+   "centroid_generated_uv": [
+    412.85886278612645,
+    759.7791436814406
+   ],
+   "bg_fidelity": 0.8569505136992311,
+   "bg_domain_frac": 0.8701715469360352,
+   "segmenter": {
+    "box": [
+     177.0372314453125,
+     559.9067993164062,
+     554.7049560546875,
+     979.4733276367188
+    ],
+    "det_score": 0.4102880358695984,
+    "sam_score": 0.90234375
+   }
+  },
+  {
+   "seed": 2,
+   "object_found": true,
+   "obj_fidelity": 0.9627062127062127,
+   "E_loc": 0.0008148584749391768,
+   "E_loc_vs_rendered_centroid": 0.000900017336990446,
+   "E_area": 0.018793119525106566,
+   "log_area_ratio": -0.018793119525106566,
+   "A_generated_frac": 0.12678241729736328,
+   "A_obj_rendered_frac": 0.12918758392333984,
+   "centroid_generated_uv": [
+    424.08058085917816,
+    757.0172896247208
+   ],
+   "bg_fidelity": 0.8618497548205091,
+   "bg_domain_frac": 0.8695831298828125,
+   "segmenter": {
+    "box": [
+     182.04075622558594,
+     554.4082641601562,
+     641.7823486328125,
+     986.3391723632812
+    ],
+    "det_score": 0.4570606052875519,
+    "sam_score": 0.98828125
+   }
+  },
+  {
+   "seed": 3,
+   "object_found": true,
+   "obj_fidelity": 0.9080122815995322,
+   "E_loc": 0.009498898591288234,
+   "E_loc_vs_rendered_centroid": 0.00950626015426794,
+   "E_area": 0.07612190208541622,
+   "log_area_ratio": -0.07612190208541622,
+   "A_generated_frac": 0.11971855163574219,
+   "A_obj_rendered_frac": 0.12918758392333984,
+   "centroid_generated_uv": [
+    411.23331527713606,
+    760.2615307406759
+   ],
+   "bg_fidelity": 0.8861424602849385,
+   "bg_domain_frac": 0.8695468902587891,
+   "segmenter": {
+    "box": [
+     179.998779296875,
+     553.0082397460938,
+     556.9497680664062,
+     984.0935668945312
+    ],
+    "det_score": 0.40197888016700745,
+    "sam_score": 0.90234375
+   }
+  }
+ ],
+ "gates": {
+  "g_obj_fidelity": {
+   "outcome": "recorded"
+  },
+  "g_bg_fidelity": {
+   "outcome": "recorded"
+  }
+ }
+}

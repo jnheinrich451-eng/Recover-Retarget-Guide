@@ -1,0 +1,129 @@
+# READ-ONLY to Claude Code. Changes only via human-reviewed calibration report
+# (CLAUDE.md §4).
+#
+# Every value below is provisional — pending calibration (Task 4 report on the
+# three-clip calibration set). Values were moved verbatim from
+# configs/stage_a.yaml (and A-COV constants from bundle.py) on 2026-08-02; the
+# audit trail of how each provisional value was arrived at lives in the git
+# history of configs/stage_a.yaml.
+
+thresholds:
+  # ---- validity factors (q gate, per track point) --------------------------
+  tau_v: 0.005          # provisional — pending calibration (Task 4)
+  tau_c: 0.5            # provisional — pending calibration (Task 4)
+
+  # ---- A-G2: Eq(24) consistency -------------------------------------------
+  # Gated statistics since Task 2 (clip-invariant): null = UNGATED — the gate
+  # reports its numbers with pass=null until the human reviews the Task 4
+  # calibration table and writes values here (CLAUDE.md §4).
+  tau_g_rel: 0.15             # primary: median relative 3D residual ||X0-G·Xl||/max(Z,Zmin)
+  a_g2_min_inlier_frac: 0.814  # secondary: share of valid points with rel residual < 5x clip median
+  tau_g_px: 8.41        # LEGACY pixel median — histogram marker in viz ONLY,
+                        # never gated after Task 2; provisional
+
+  # ---- A-G2b: source-frame self-projection --------------------------------
+  tau_g2b_px: 4       # provisional — pending calibration (Task 4)
+
+  # ---- A-COV: valid-track coverage -----------------------------------------
+  a_cov_min_tracks: 200 # provisional — pending calibration (Task 4)
+  a_cov_min_frac: 0.9   # provisional — pending calibration (Task 4)
+
+  # --- A-CLIP: clip-level consistency ----------------------------------------
+  rho: 0.45
+  tau_b: 0.02
+  tau_z: 1.5
+  tau_r: null
+  tau_d: 0.15
+  tau_x: null
+  f_min: 20
+  n_min: 10
+  lambda_1: 1
+  lambda_2: 1
+  lambda_3: 1
+  tau_r_floor_mult: 1.5   # per-clip tau_r = mult x de-gauged static-pair e_ij median
+  tau_x_depth_frac: 0.6   # per-clip tau_x = frac x clip median depth
+  fc_quiet_frac: 0.5
+  fc_min_quiet: 50
+  fc_compact_frac: 0.5
+  fc_travel_floor_mult: 2.0
+  fc_min_winner_frac: 0.05
+  fc_min_winner_blob_overlap: 0.1
+  fc_min_winner_core_overlap: 0.07
+  
+  # --- Stage C gates ---
+  c_tau_iou: 0.12
+  c_size_lo: 0.5
+  c_size_hi: 4.0
+  c_tau_temp: 0.8
+  c_abs_area_max: 0.2
+
+m2:
+  # --- Module 2 / m2_a admission (consumer thresholds ONLY — producer parameters
+  #     heading_L / weighting / traj_source stay in configs/stage_b5.yaml).
+  #     ALL null = UNGATED: the reader records every statistic per clip with pass=null
+  #     and refuses only on hard conditions (missing B.5 artifact, object absent at t_a,
+  #     hash mismatch). Held-out validation is DEFERRED for lack of x0 footage
+  #     (docs/CC-TASK-b5-heldout-validation.md; docs/report_b5_v12_sweep.md).
+  #     sigma_theta does NOT separate correct from wrong headings (measured 2026-09-09:
+  #     failures at 11.6/12.9 deg, a correct clip at 27.2 deg) — theta_max alone cannot
+  #     be an admission gate; a companion gate (sigma_spec candidate) is unvalidated.
+  #     Admission for Module 2 is NOT validated. Set from distributions after the
+  #     held-out set, permissively (catch conditioning failures, not maximise accuracy).
+  m2a_theta_max_deg: null       # heading sanity ceiling (must exceed 27.2 if ever set)
+  m2a_kappa_min: null           # basis conditioning; derivation suggests 1/3 (sin 19.5 deg)
+  m2a_planarity_min: null       # up-plane conditioning (B.5 already applies its ladder)
+  m2a_spread_min: null
+  m2a_mask_area_min_px: null    # spec v3 §13 "too few pixels" — 256^2 process px
+  m2a_truncation_max: null      # fraction of mask pixels on the image border
+  m2c_contact_step_max: null    # update to null
+  m2d_polarity: near_bright
+  m2d_e_loc_rel_max: 0.5      # ||delta|| / sqrt(A_obj); derived from failure semantics, 4x worst observed; UNVALIDATED (never fired)
+  m2d_e_area_max: 0.693       # log 2; derived, 1.5x worst observed (265/human, size floor); UNVALIDATED
+  m2d_heading: motion_direction       # the object's ground-relative motion direction (reviewer 2026-10-17)
+  m2d_eps_shape_max: null     # clip-level, from C1, not per-candidate
+
+  m2e_alpha_pixels_min: null   # record, flag low-confidence below it; set from the first run
+  m2e_delta_width_max: null    # record; set from the first run
+  m2e_alpha_ci_rel_max: null   # band-fit interval relative width; wider -> object-mask fallback, flag possibly_proxy_pulled
+  selection: {gates: [object_found, ground_g1, path_support_g2, quality_floor, heading_h1h2, computable], tau_q: 38.31406497955322, eps_iou: 0.1017, eps_clip: 0.0159, order: [proxy_iou, clip_identity], tie: lowest_seed, n_seeds: 4, status: calibrated_2026-10-18, delta_h: 0.0339, tau_sup: null}
+
+
+  # --- Module 3
+m3:
+  backbone: "Wan2.1-I2V-14B-480P"
+  depth_model: "MoGe-2-metric"
+  depth: {pass_fov: true, square_pixel_input: true}
+  lattice: {Hp: 30, Wp: 52, px_per_patch: 16}
+  scheduler: {name: UniPCMultistep, steps: 50, shift: 3.0, corrector_off: correction_steps}
+  int: {frame0_tol: 1.0e-6, kbg_ci_rel_max: null, kbg_block_px: 64, segment_gauge_px_max: null, min_frames: 21, contact_rows: 0.03, contact_band_px: 8, contact_tol: 0.05}
+  rasterizer: {kernel: bilinear, radius: 1.0, zbuf_rel_tol: 0.03, cgeo_coherence: false}
+  lift: {stride_px: 4, obj_place_iou_min: 0.7, obj_depth_rel_tol: 0.15, obj_voxel_frac: 0.025}
+  anchors: {tau_anchor: 0.5, max_anchors: 6}
+  object_path: {invariant_net_disp_patch: 0.25, invariant_heading_deg: 2.0}
+  weights: fp8
+  checkpointing: true
+  gates: {G1_fhat_epe_patch_max: 1.0, G1_fhat_spearman_min: 0.6, G2_depth_absrel_patch_max: 0.15}
+  eval: {seeds: [0, 1]}
+  attention: {block: 20, head_mode: mean}
+  readout: {form: windowed, window_radius_patches: 3}
+  guidance: {T_g_sigma: [0.85, 0.60], lambda_bg: 1.0, lambda_mass: null, lambda_obj: 1.0, lambda_perp: 0.1, eta: 0.05, obj_mode: centroid, sigma_o: null, perp_segment: false, tau_rot_only: 0.05, gamma_render: 1.0, gamma_obj: 1.0, obj_window_sigma: [0.85, 0.75]}
+  refresh: {R_sigma: [], tau_birth: 0.2, tau_obj: 0.3, align_cov_min: 0.6, consist_rel_margin: 0.05}
+  tracker: {name: cotracker3_offline, checkpoint: facebook/cotracker3/scaled_offline.pth, grid: patch_centres_16px, query_frame: 0, input: clean_source_video, readout_input: noised_latent}
+  selection: {band_points_min: 30, band_halfsplit_max: 0.05, band_bootstrap_halfwidth_max: 0.05}
+  trajectory:
+    source: vipe_a5
+    sigma_t_record: bakeoff/stage_a5/calibration_record.json
+    drift_model_x0: stage_b
+    drift_model_branch: none
+    corr_min: 0.7
+    k_null: 2
+    camera_c_gate_patch: 1.0
+    triangulated_gauge_tol: 0.05
+    triangulated_gate_patch: 0.3
+    bridge: contact_carried
+    bridge_camera: vipe_over_sigma
+    bridge_record: measurements/m3_sint/bridge_interval.json
+    bridge_runs: [rec, far, mid]
+
+
+  

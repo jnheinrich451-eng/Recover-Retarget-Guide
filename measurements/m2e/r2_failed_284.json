@@ -1,0 +1,58 @@
+{
+ "schema": "m2e_r2_failed_v1",
+ "variant": "objects",
+ "error": "all seeds failed: IndexError: min(): Expected reduction dim 0 to have non-zero size.",
+ "per_seed": [
+  {
+   "seed": 0,
+   "ok": false,
+   "error": "IndexError: min(): Expected reduction dim 0 to have non-zero size."
+  },
+  {
+   "seed": 1,
+   "ok": false,
+   "error": "IndexError: min(): Expected reduction dim 0 to have non-zero size."
+  },
+  {
+   "seed": 2,
+   "ok": false,
+   "error": "IndexError: min(): Expected reduction dim 0 to have non-zero size."
+  },
+  {
+   "seed": 3,
+   "ok": false,
+   "error": "IndexError: min(): Expected reduction dim 0 to have non-zero size."
+  },
+  {
+   "seed": 4,
+   "ok": false,
+   "error": "IndexError: min(): Expected reduction dim 0 to have non-zero size."
+  }
+ ],
+ "pointmap": {
+  "pointmap_source": "alpha_scaled_zeta_hat",
+  "a": 0.36319843972951865,
+  "b": -0.1820228271364341,
+  "region_nonpositive_frac": 0.013281952001592767,
+  "far_field_nonpositive_frac": 0.17360210418701172,
+  "z_bg": 3.6502637635783026
+ },
+ "pointmap_tripwire": {
+  "checked": true,
+  "relative_residual": 0.12405722731201199
+ },
+ "object_depth": {
+  "n_mask": 31806,
+  "n_valid": 31806,
+  "p02": 0.6128468846215401,
+  "p50": 0.6580387638788637,
+  "p98": 0.8404031663988301,
+  "p98_over_p02": 1.3713101714106224,
+  "frac_invalid_in_mask": 0.0,
+  "z_bg": 3.6502637635783026,
+  "disparity_p02_in_mask": 1.189905083686665
+ },
+ "alpha_used": 0.36319843972951865,
+ "b_used": -0.1820228271364341,
+ "alpha_source": "ground_band"
+}

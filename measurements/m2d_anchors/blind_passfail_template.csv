@@ -1,0 +1,29 @@
+pair,seed,verdict,reason
+000000000035.1.003/vehicle,0,fail,"road direction is wrong, should turn right in first scene"
+000000000035.1.003/vehicle,1,fail,"road direction is wrong, should turn right in first scene"
+000000000035.1.003/vehicle,2,fail,"road direction is wrong, should turn right in first scene"
+000000000035.1.003/vehicle,3,fail,"road direction is wrong, should turn right in first scene"
+000000000265.2.003/vehicle,0,fail,"road at the end of the left, no curve, the car should turn on its right"
+000000000265.2.003/vehicle,1,pass,
+000000000265.2.003/vehicle,2,pass,
+000000000265.2.003/vehicle,3,fail,"road at the end of the left, no curve, the car should turn on its right"
+000000000265.2.005/vehicle,0,fail,the cartoon red car
+000000000265.2.005/vehicle,1,pass,
+000000000265.2.005/vehicle,2,pass,
+000000000265.2.005/vehicle,3,pass,
+000000000265.2.005/human,0,pass,
+000000000265.2.005/human,1,fail,"the background has distorted area, but we can give them grace, half pass"
+000000000265.2.005/human,2,fail,"the background has distorted area, but we can give them grace, half pass"
+000000000265.2.005/human,3,fail,"the background has distorted area, but we can give them grace, half pass"
+000000000284.0.006/vehicle,0,pass,
+000000000284.0.006/vehicle,1,fail,"the road should turn left at the end, not straight or right"
+000000000284.0.006/vehicle,2,fail,"the road should turn left at the end, not straight or right"
+000000000284.0.006/vehicle,3,fail,"the road should turn left at the end, not straight or right"
+000000000370.1.008/human,0,pass,
+000000000370.1.008/human,1,fail,"the human is twisted, the image quality problem"
+000000000370.1.008/human,2,pass,
+000000000370.1.008/human,3,pass,
+000000000404.1.004/vehicle,0,pass,
+000000000404.1.004/vehicle,1,pass,
+000000000404.1.004/vehicle,2,pass,
+000000000404.1.004/vehicle,3,pass,

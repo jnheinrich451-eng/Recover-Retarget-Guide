@@ -1,0 +1,220 @@
+{
+ "schema": "m2d_qc_v1",
+ "clip": "000000000035.1.003",
+ "category": "vehicle",
+ "polarity": "near_bright",
+ "guidance": 10.0,
+ "steps": 30,
+ "seeds": [
+  0,
+  1,
+  2,
+  3
+ ],
+ "selected_seed": 2,
+ "outcome": "selected",
+ "n_survivors": 4,
+ "candidates": [
+  {
+   "seed": 0,
+   "heading_class": "away",
+   "obj_fidelity": 0.9114344456745216,
+   "bg_fidelity": 0.7894999660163642,
+   "E_loc": 0.0028597176881357197,
+   "E_loc_rel": 0.019849691417888553,
+   "E_area": 0.058029091265722754,
+   "log_area_ratio": -0.058029091265722754,
+   "gates": {
+    "g_object_found": {
+     "value": true,
+     "outcome": "pass"
+    },
+    "g_heading": {
+     "value": "away",
+     "control_class": "away",
+     "instrument": "human",
+     "outcome": "pass"
+    },
+    "g_eps_shape": {
+     "value": 0.1344958103486347,
+     "threshold": null,
+     "outcome": "ungated"
+    },
+    "g_e_loc_rel": {
+     "value": 0.019849691417888553,
+     "threshold": 0.5,
+     "outcome": "pass"
+    },
+    "g_e_area": {
+     "value": 0.058029091265722754,
+     "threshold": 0.693,
+     "outcome": "pass"
+    }
+   },
+   "phase1_pass": true,
+   "phase2_rank": 2
+  },
+  {
+   "seed": 1,
+   "heading_class": "away",
+   "obj_fidelity": 0.8118878304038643,
+   "bg_fidelity": 0.6766304173476144,
+   "E_loc": 0.009657611684354786,
+   "E_loc_rel": 0.06703480296798424,
+   "E_area": 0.14917014856321922,
+   "log_area_ratio": -0.14917014856321922,
+   "gates": {
+    "g_object_found": {
+     "value": true,
+     "outcome": "pass"
+    },
+    "g_heading": {
+     "value": "away",
+     "control_class": "away",
+     "instrument": "human",
+     "outcome": "pass"
+    },
+    "g_eps_shape": {
+     "value": 0.1344958103486347,
+     "threshold": null,
+     "outcome": "ungated"
+    },
+    "g_e_loc_rel": {
+     "value": 0.06703480296798424,
+     "threshold": 0.5,
+     "outcome": "pass"
+    },
+    "g_e_area": {
+     "value": 0.14917014856321922,
+     "threshold": 0.693,
+     "outcome": "pass"
+    }
+   },
+   "phase1_pass": true,
+   "phase2_rank": 4
+  },
+  {
+   "seed": 2,
+   "heading_class": "away",
+   "obj_fidelity": 0.9236329639257537,
+   "bg_fidelity": 0.75878146449832,
+   "E_loc": 0.004944032187154719,
+   "E_loc_rel": 0.034317203296772514,
+   "E_area": 0.06396281235681037,
+   "log_area_ratio": -0.06396281235681037,
+   "gates": {
+    "g_object_found": {
+     "value": true,
+     "outcome": "pass"
+    },
+    "g_heading": {
+     "value": "away",
+     "control_class": "away",
+     "instrument": "human",
+     "outcome": "pass"
+    },
+    "g_eps_shape": {
+     "value": 0.1344958103486347,
+     "threshold": null,
+     "outcome": "ungated"
+    },
+    "g_e_loc_rel": {
+     "value": 0.034317203296772514,
+     "threshold": 0.5,
+     "outcome": "pass"
+    },
+    "g_e_area": {
+     "value": 0.06396281235681037,
+     "threshold": 0.693,
+     "outcome": "pass"
+    }
+   },
+   "phase1_pass": true,
+   "phase2_rank": 1
+  },
+  {
+   "seed": 3,
+   "heading_class": "away",
+   "obj_fidelity": 0.8975952813067151,
+   "bg_fidelity": 0.6940265003285685,
+   "E_loc": 0.004631772145757849,
+   "E_loc_rel": 0.03214976366118187,
+   "E_area": 0.08157929778111835,
+   "log_area_ratio": -0.08157929778111835,
+   "gates": {
+    "g_object_found": {
+     "value": true,
+     "outcome": "pass"
+    },
+    "g_heading": {
+     "value": "away",
+     "control_class": "away",
+     "instrument": "human",
+     "outcome": "pass"
+    },
+    "g_eps_shape": {
+     "value": 0.1344958103486347,
+     "threshold": null,
+     "outcome": "ungated"
+    },
+    "g_e_loc_rel": {
+     "value": 0.03214976366118187,
+     "threshold": 0.5,
+     "outcome": "pass"
+    },
+    "g_e_area": {
+     "value": 0.08157929778111835,
+     "threshold": 0.693,
+     "outcome": "pass"
+    }
+   },
+   "phase1_pass": true,
+   "phase2_rank": 3
+  }
+ ],
+ "gate_outcomes": {
+  "g_phase1_survivors": {
+   "value": 4,
+   "outcome": "pass"
+  }
+ },
+ "prompt": "a red car driving, on a coastal cliff road, rear three-quarter view, moving away from the camera, medium-wide shot",
+ "dictionary_row": [
+  "away",
+  "medium_area"
+ ],
+ "heading_anchor_frame": {
+  "class": "away",
+  "azimuth_deg": 67.2592742785035,
+  "frame": "camera_t_a"
+ },
+ "shot_class_near_band_edge": false,
+ "eps_shape": 0.1344958103486347,
+ "heading_instrument": "human label (heading_labels.csv); NOT blind on the first run: the control's class was printed beside the label",
+ "phase2_instrument": "human rank (phase2_ranks.csv), spec \u00a74.2",
+ "resample_count": 0,
+ "thresholds": {
+  "m2d_e_loc_rel_max": 0.5,
+  "m2d_e_area_max": 0.693,
+  "m2d_heading": "human",
+  "m2d_eps_shape_max": null
+ },
+ "config_hash": "48933f55cdd88b73",
+ "upstream_hashes": {
+  "c3": "71c94709b330e2e13e6e8237352e074c46ab610917e1edaa8a6f48d5a9bf1372",
+  "c1": "e1a521ce45df9dbb7ef871b774c69f0daa2f4679f45c4e42bb9c80bf905143e0",
+  "m2a": "4417cd9dd4ae4bc87ce538e31caff9554e7546e34a2efe403fdc5508ccf42bba",
+  "proxy_cache_key": "5fbdb89abb315954",
+  "c2_params": {
+   "r": 4,
+   "w": 6,
+   "N": 32,
+   "sigma1": 2.0,
+   "sigma2": 0.5,
+   "fill_order": "fill_then_coarsen"
+  },
+  "m2b2": "116add80e192e515335b760e92ae13ae35a5fddee7aae48deb66767f7f062ec6",
+  "generation": "99dc3f8953c67954b8ff4b33949ce961f940004bd2ab933584b4926f65ef572f",
+  "fidelity": "546ecf2d2253e500cb5fd1c87df97b0707fe8f373362be25c0d0d7c8a5e74d52"
+ }
+}
