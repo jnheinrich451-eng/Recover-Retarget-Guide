@@ -4,7 +4,7 @@
 
 ### Camera and object motion transfer with a frozen video model
 
-**John Zeng** · supervisor **Dr Jing Zhang** · Australian National University, honours thesis, 2026
+**Jiazhouxin Zeng** · supervisor **Dr Jing Zhang** · Australian National University, honours thesis, 2026
 
 [![Project page](https://img.shields.io/badge/Project%20page-videos-c9a227?style=flat-square)](https://jnheinrich451-eng.github.io/camera-object-motion-transfer/)
 [![Open in Colab](https://img.shields.io/badge/Colab-quick%20start-F9AB00?style=flat-square&logo=googlecolab&logoColor=white)](https://colab.research.google.com/github/jnheinrich451-eng/Recover-Retarget-Guide/blob/main/colab_quickstart.ipynb)
