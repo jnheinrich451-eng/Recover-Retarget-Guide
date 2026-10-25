@@ -146,7 +146,14 @@ both and shows the videos. It needs an A100 (40 GB) runtime; Google Drive is opt
 sessions). The four notebooks under `notebooks/development/` are the author's session records, bound to the author's Drive; they
 are not entry points.
 
-**The whole pipeline on your own clip.** `colab_full_pipeline.ipynb` has a one-click cell: it builds the three environments side by side in one runtime (two virtual environments on Colab's torch and the SAM 3D Objects environment), screens the clip as the thesis's test set was screened, makes a new subject's proxy if you named one, and runs Modules 2 and 3 on the automatic path; resumable after a disconnect. The three-part fallback runs Modules 1, 2 and 3 on a clip you supply, with its caption and a target category, as the thesis's test set was run (no human step): three parts with a runtime restart between them, your Drive as the data root, a Hugging Face token with access to FLUX.1-Depth-dev and SAM 3D as the Colab secret `HF_TOKEN`, and the category proxies from the release asset `proxies_of_record.zip`. A refusal by a check is a recorded outcome; the status cell names it.
+**The whole pipeline on your own clip, in one line.** `scripts/run_full.py` takes a clip and either a target and a scene or one sentence, and does everything: the environments (on Colab), Module 1 with the screening checks, the proxies, Modules 2 and 3.
+
+```bash
+python scripts/run_full.py --video camel.mp4 --target human --scene "on a rocky riverbank at dusk"
+python scripts/run_full.py --video camel.mp4 --prompt "a brown bear walking on a snowy hill" --kind rigid
+```
+
+The subject of a sentence names the target (the thesis's two by their identity, otherwise a new subject with `--kind`), the verb its action, the phrase after the verb the scene; `--scene` given alone keeps the target's identity and changes only the background; neither given keeps the reference's own scene, as the thesis's test set did. Every stage is resumable. `colab_full_pipeline.ipynb` wraps this line in a one-click cell: it builds the three environments side by side in one runtime (two virtual environments on Colab's torch and the SAM 3D Objects environment), screens the clip as the thesis's test set was screened, makes a new subject's proxy if you named one, and runs Modules 2 and 3 on the automatic path; resumable after a disconnect. The three-part fallback runs Modules 1, 2 and 3 on a clip you supply, with its caption and a target category, as the thesis's test set was run (no human step): three parts with a runtime restart between them, your Drive as the data root, a Hugging Face token with access to FLUX.1-Depth-dev and SAM 3D as the Colab secret `HF_TOKEN`, and the category proxies from the release asset `proxies_of_record.zip`. A refusal by a check is a recorded outcome; the status cell names it.
 
 **Target subjects.** Two category proxies exist in this repository, the ones the thesis validated: a red car (`vehicle`, rigid,
 rendered along its path in Module 3) and a man in a grey jacket and dark trousers (`human`, articulated, no object render). The

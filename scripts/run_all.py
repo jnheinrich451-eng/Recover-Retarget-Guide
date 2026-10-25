@@ -207,7 +207,7 @@ def handoff_verdict(R: Path, clip: str, cat: str):
 def run_pair(args, e, env, py, clip, cat, exp):
     R = Path(os.path.expandvars(str(e["root"]))); data = os.path.expandvars(str(e["data"])); pair = f"{clip}/{cat}"
     video = Path(data) / "videos" / f"{clip}.mp4"
-    auto = bool(args.auto); es = ["--experiment-set", args.set] if (args.set and auto) else (["--caption", args.caption] if (auto and args.caption) else [])
+    auto = bool(args.auto); es = ["--experiment-set", args.set] if (args.set and auto) else (["--caption", args.caption] + (["--scene", args.scene] if args.scene else []) if (auto and args.caption) else [])
     from src.anchor import subjects
     rigid = subjects.variant(cat) == "objects"                                    # the subject's kind decides the reconstructor and the arm
     if auto and exp is None:                                                      # a clip outside the set: the proxies of record are the set's
@@ -345,6 +345,7 @@ def main(argv=None):
     ap.add_argument("--proxy-from", default=None, help="--auto: root holding the proxies of record (cache/m2_b2/<cat>/<key>), copied into this root once")
     ap.add_argument("--caption", default=None, help="--auto on a clip outside the experiment set: the clip's caption; Module 2's target text follows the fixed rule "
                     "(src/anchor/m2d/auto_target.py) and the proxies of record are keyed as in configs/experiment_set.yaml")
+    ap.add_argument("--scene", default=None, help="with --caption: the target scene given directly, e.g. 'on a rocky riverbank at dusk'")
     ap.add_argument("--m3-config", default=None, help="Module 3 batch config (default: configs/m3_batch_exp.yaml with --set, else the batch driver's default)")
     ap.add_argument("--stop-on-fail", action="store_true", help="--set: stop at the first pair that fails (default: record it and go on)")
     ap.add_argument("--include-follow-up", action="store_true", help="Module 3 on the set: also run the follow-up rows of configs/experiment_handoffs.yaml (reported separately)")
