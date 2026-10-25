@@ -70,6 +70,24 @@ def gerund(v: str) -> str:
     return DOUBLED.get(v) or (v[:-1] + "ing" if v.endswith("e") else v + "ing")
 
 
+VEHICLE_WORDS = ("car", "bus", "truck", "jeep", "rover", "van", "motorcycle", "vehicle", "carriage", "cart", "boat")   # the census's rule
+PERSON_WORDS = ("man", "woman", "person", "people", "boy", "girl", "child", "warrior", "soldier", "knight", "hiker", "runner", "walker",
+                "worker", "player", "guy", "lady", "gentleman", "pedestrian", "human", "figure")
+
+
+def infer_target(subject: str, kind: str | None) -> str:
+    """A sentence without --target: a vehicle word -> the red car; a person word -> the man; otherwise a new subject (needs --kind),
+    named after the subject's words. The thesis's two identities map to their targets whatever the exact wording."""
+    words = set(re.findall(r"[a-z]+", subject.lower()))
+    if words & set(VEHICLE_WORDS):
+        return "vehicle"
+    if words & set(PERSON_WORDS):
+        return "human"
+    if not kind:
+        raise SystemExit(f"{subject!r} is neither a vehicle nor a person, so it is a new subject: add --kind rigid (animals, machines) or --kind human")
+    return re.sub(r"[^a-z0-9]+", "_", subject.lower().removeprefix("a ").removeprefix("an ").removeprefix("the ")).strip("_")
+
+
 def parse_prompt(prompt: str):
     """One sentence -> (subject text, action as a gerund, scene): the first motion verb (any form) splits the subject from the
     scene; the scene starts at the first locative after the verb, else is the remainder, and ends at a full stop or clause opener."""
@@ -119,9 +137,9 @@ def main(argv=None):
         subject_text, verb, scene = parse_prompt(args.prompt)
     target = args.target
     new = False
-    if target in (None, "human", "vehicle") and args.prompt:
-        known = {s["object"]: c for c, s in subjects.load().items()}
-        target = target or known.get(subject_text.lower()) or re.sub(r"[^a-z0-9]+", "_", subject_text.lower().removeprefix("a ").removeprefix("an ").removeprefix("the ")).strip("_")
+    if target is None and args.prompt:
+        target = infer_target(subject_text, args.kind)
+        print(f"[full] the sentence's subject {subject_text!r} -> target {target}", flush=True)
     assert target, "give --target (human | vehicle | a new name) or --prompt"
     new = target not in subjects.load()
     obj = args.object or subject_text
@@ -143,7 +161,14 @@ def main(argv=None):
     if args.setup == "colab":
         for v in (VENV1, VENV2):
             if not (v / "bin" / "python").exists():
-                sh([sys.executable, "-m", "venv", "--system-site-packages", str(v)])
+                # Colab's python has no ensurepip (python3-venv is not installed), so `python -m venv` fails at the pip step:
+                # virtualenv (pure python, brings its own pip) builds the same thing
+                r = subprocess.run([sys.executable, "-m", "venv", "--system-site-packages", str(v)], capture_output=True, text=True)
+                if r.returncode != 0:
+                    shutil.rmtree(v, ignore_errors=True)
+                    sh([sys.executable, "-m", "pip", "install", "-q", "virtualenv"])
+                    sh([sys.executable, "-m", "virtualenv", "-q", "--system-site-packages", str(v)])
+                assert (v / "bin" / "python").exists(), f"no interpreter in {v}"
         sh(f"source {VENV1}/bin/activate && bash scripts/bootstrap.sh", env=env, shell=True)
         sh(f"source {VENV2}/bin/activate && bash scripts/bootstrap_phase2.sh && (python -c 'import sam2' 2>/dev/null || pip install -q 'git+https://github.com/facebookresearch/sam2.git')", env=env, shell=True)
         cap = subprocess.run(["nvidia-smi", "--query-gpu=compute_cap", "--format=csv,noheader"], capture_output=True, text=True).stdout.strip() or "8.0"
