@@ -140,20 +140,66 @@ own. The prompts of the six development pairs are in `docs/m3_batch_prompts.json
 
 ## Running it yourself
 
-**On Colab.** `colab_quickstart.ipynb` is the entry point: it clones this repository (no token), installs the Module 3 environment,
-downloads the release asset, takes the source clip from a path or a URL you give, runs the backbone and ours on one pair, grades
-both and shows the videos. It needs an A100 (40 GB) runtime; Google Drive is optional (mount it to keep the outputs between
-sessions). The four notebooks under `notebooks/development/` are the author's session records, bound to the author's Drive; they
-are not entry points.
+### The environments
 
-**The whole pipeline on your own clip, in one line.** `scripts/run_full.py` takes a clip and either a target and a scene or one sentence, and does everything: the environments (on Colab), Module 1 with the screening checks, the proxies, Modules 2 and 3.
+The pipeline runs in three environments that cannot share one Python installation (the tracker pins one torch, the generators
+another, the rigid reconstructor needs its own compiled stack). Each is built by one script; the one-line runner below builds all
+three on Colab by itself (`--setup colab`), and on your own machine you build them once and pass `--setup none`.
+
+| environment | holds | built by | used for | GPU |
+|---|---|---|---|---|
+| Phase 1 | `requirements.txt`, OpenD4RT (tracks, depth, camera), SAM 2.1 (masks) | `scripts/bootstrap.sh` | Module 1 and the screening checks | 24 GB |
+| Phase 2 | diffusers, transformers, MoGe-2; SAM 3D Body (people) and SAM 2 for the anchor's checks | `scripts/bootstrap_phase2.sh`, then `scripts/setup_sam3d.sh body` | Module 2 (anchor, reconstruction, handoff) and Module 3 (renders, guided sampling, grading) | 24 GB for Module 2, 40 GB for Module 3 |
+| SAM 3D Objects | the rigid reconstructor in its own conda-style environment (micromamba, compiled once, saved under `<root>/envs/`) | `scripts/setup_sam3d.sh objects` | rigid targets only (the red car, or a new rigid subject) | 24 GB |
+
+`configs/environment.yaml` names the interpreter of each environment per preset: `colab_oneclick` (the three side by side in one
+Colab VM, two virtual environments on Colab's torch), `colab_public` (one environment per session), `local` (edit the paths). Every
+runner reads its data root from `MT_ROOT` (`cache/`, `reports/`, `videos/` live there) and overrides it with `--root` or
+`--drive-root`. Model weights download on first use: Wan 2.1, MoGe-2, SAM 2.1 and the tracker are public; FLUX.1-Depth-dev, SAM
+3D Body and SAM 3D Objects are gated on Hugging Face, so Module 2 needs an `HF_TOKEN` in the environment from an account that
+accepted their terms (the bootstrap scripts also read it from `<Drive>/secrets/hf_token.env` when a Drive is mounted). No GitHub
+token is needed. The reference clips of the thesis are MiraData and DAVIS clips and are not redistributed; `SKIP_VIDEOS=1` tells the
+bootstrap scripts not to try the author's dataset.
+
+### One line: a reference clip in, a generated video out
+
+`scripts/run_full.py` runs the automatic path the thesis's test set used, end to end and resumable: Module 1 with the screening
+checks, the proxies, Module 2, Module 3 in the final configuration (camera from the bundle-adjusted static-track solve, 21 frames,
+seed 0). A clip refused by a check is a recorded outcome with its reason, not an error.
 
 ```bash
-python scripts/run_full.py --video camel.mp4 --target human --scene "on a rocky riverbank at dusk"
-python scripts/run_full.py --video camel.mp4 --prompt "a brown bear walking on a snowy hill" --kind rigid
+# the thesis's human target, a new background
+python scripts/run_full.py --video camel.mp4 --target human --scene "on a rocky riverbank at dusk" --root DATA --setup colab
+# one sentence: subject, motion verb, scene; a person or vehicle word picks the thesis's target, anything else is a new subject
+python scripts/run_full.py --video camel.mp4 --prompt "a man walking on a beach at sunset" --root DATA --setup none
+python scripts/run_full.py --video camel.mp4 --prompt "a brown bear walking on a snowy hill" --kind rigid --root DATA --setup none
 ```
 
-The subject of a sentence names the target (the thesis's two by their identity, otherwise a new subject with `--kind`), the verb its action, the phrase after the verb the scene; `--scene` given alone keeps the target's identity and changes only the background; neither given keeps the reference's own scene, as the thesis's test set did. Every stage is resumable. `colab_full_pipeline.ipynb` wraps this line in a one-click cell: it builds the three environments side by side in one runtime (two virtual environments on Colab's torch and the SAM 3D Objects environment), screens the clip as the thesis's test set was screened, makes a new subject's proxy if you named one, and runs Modules 2 and 3 on the automatic path; resumable after a disconnect. The three-part fallback runs Modules 1, 2 and 3 on a clip you supply, with its caption and a target category, as the thesis's test set was run (no human step): three parts with a runtime restart between them, your Drive as the data root, a Hugging Face token with access to FLUX.1-Depth-dev and SAM 3D as the Colab secret `HF_TOKEN`, and the category proxies from the release asset `proxies_of_record.zip`. A refusal by a check is a recorded outcome; the status cell names it.
+| parameter | meaning |
+|---|---|
+| `--video` | the reference clip, mp4, at least 24 frames (the pipeline reads up to 81); its motion is what is transferred |
+| `--clip` | the clip's id in the data root (default: the file name) |
+| `--target` | `human` (a man in a grey jacket and dark trousers, walking), `vehicle` (a red car, driving), or a new subject's name |
+| `--prompt` | one sentence, `<subject> <motion verb> <scene>`; the rule splits it: subject → target, verb → action, the rest → scene |
+| `--scene` | the background, e.g. `"on a rocky riverbank at dusk"`; empty = the reference's own scene, as in the thesis |
+| `--object`, `--kind`, `--action` | a new subject: its identity text, `rigid` (reconstructed as an object, rendered along the path) or `human` (SAM 3D Body), and its verb; from a sentence only `--kind` is needed |
+| `--caption` | a caption of the clip, recorded with the run (default: built from the target and the scene) |
+| `--root` | the data root: `cache/`, `reports/`, `videos/`; on Colab a Drive folder so a disconnected run resumes |
+| `--env` | the interpreter preset of `configs/environment.yaml` (`colab_oneclick`, `colab_public`, `local`) |
+| `--setup` | `colab` builds the three environments in this VM; `none` assumes they exist |
+| `--proxy-asset` | URL or path of `proxies_of_record.zip` (default: the release asset) |
+| `--seeds`, `--module` | the sampling seeds (default 0); run one module only when the others are done |
+
+The subject of the generated video is always the target's identity, because the generator is given the target's geometry as its
+depth control; the sentence or `--scene` decides the background, and the clip decides the motion. The outputs land under
+`<root>/cache/m3/<clip>/<target>/` (the backbone's video `A0_*.mp4` and ours `A3_*.mp4`) and the grader's table under
+`<root>/reports/m3_s4/`.
+
+### On Colab
+
+- `colab_quickstart.ipynb`: Module 3 only, on the bundled example from the release asset, in one runtime (A100); the quickest way to see the sampler work and to compare its grading with the thesis's rows.
+- `colab_full_pipeline.ipynb`: the line above in a one-click cell, with a settings form (target, caption, scene, a new subject's fields, Drive on or off); the three-part path below it runs the modules in three runtimes and is the fallback if an environment refuses to share a VM.
+- `notebooks/development/`: the author's session records, bound to the author's Drive; not entry points.
 
 **Target subjects.** Two category proxies exist in this repository, the ones the thesis validated: a red car (`vehicle`, rigid,
 rendered along its path in Module 3) and a man in a grey jacket and dark trousers (`human`, articulated, no object render). The
@@ -162,15 +208,11 @@ and almost all of it is automatic: a candidate image from a fixed prompt templat
 reconstruction by SAM 3D Objects (rigid) or SAM 3D Body (articulated), the medoid over seeds, a scale-free normalisation. The one
 reading taken by eye is which way the candidate faces, left or right, because placement defines the proxy's forward axis from it;
 `scripts/run_m2b2.py --r1 --category <name> --image <png> --mask <png> --facing left|right` then `--promote` is that step. A subject beyond
-these two is one command, `scripts/make_proxy.py --category bear --object "a brown bear" --kind rigid|human`: it generates the
-candidates from the same template, masks them, picks one by a fixed rule, reconstructs it by kind, records the facing as the template
-asked for it, and registers the subject in `configs/subjects.yaml`, after which every runner accepts `--category bear`. This path is
-experimental: the thesis's measurements say nothing about how such a subject performs, and the facing is assumed rather than read.
-
-**On your own machine.** Module 3 needs a GPU with 40 GB (Wan 2.1 I2V 14B in fp8; bf16 needs 80 GB); Modules 1 and 2 run on
-24 GB. Tokens: none for Module 3 (Wan 2.1 is public on Hugging Face); an `HF_TOKEN` with access to FLUX.1-dev for Module 2; no
-GitHub token. The reference clips of the thesis are MiraData and DAVIS clips and are not redistributed; `scripts/bootstrap*.sh`
-try the author's dataset and continue without it (`SKIP_VIDEOS=1` skips the attempt).
+these two is one command, `scripts/make_proxy.py --category bear --object "a brown bear" --kind rigid|human` (what `run_full.py` runs
+for a new subject): it generates the candidates from the same template, masks them, picks one by a fixed rule, reconstructs it by
+kind, records the facing as the template asked for it, and registers the subject in `configs/subjects.yaml`, after which every runner
+accepts `--category bear`. This path is experimental: the thesis's measurements say nothing about how such a subject performs, and
+the facing is assumed rather than read.
 
 ## Repository layout
 
