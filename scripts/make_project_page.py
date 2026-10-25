@@ -333,6 +333,44 @@ def main(argv=None):
         sub = (f"camera {cv[0]:.2f}°<br>path {cv[1]:.1f} px" if cv[0] is not None and cv[1] is not None else "")
         abl_tiles.append(video_tile(f"videos/abl/{dst.name}" if dst.exists() else None, c["label"], sub))
 
+    # ---- intermediates: six pairs from their caches
+    inter_html = ""
+    IM = cfg.get("intermediates")
+    if IM:
+        sys.path.insert(0, str(ROOT / "scripts" / "project_page"))
+        import intermediates as IMG
+        idir = out / "figures" / "intermediates"
+        rows_i = []
+        for it in IM["pairs"]:
+            p = it["pair"]; clip, cat = p.split("/"); k = pair_key(p); d = Path(it["dir"])
+            if it["layout"] == "cache":
+                lift, stage_c = d / "m3" / clip / cat / "lift.npz", d / "stage_c" / clip / "stage_c.npz"
+                rend = next(iter(sorted((d / "m3" / clip / cat).glob("render*sky.npz"))), d / "m3" / clip / cat / "render.npz")
+            else:
+                lift, stage_c = d / "lift.npz", d / "stage_c.npz"
+                rend = next(iter(sorted(d.glob("render*.npz"))), d / "render.npz")
+            ref_video = out / it.get("reference", f"videos/test/{k}_reference.mp4")
+            ours_video = it.get("ours", f"videos/test/{k}_A3.mp4")
+            anchor = f"figures/anchors/{k}.jpg" if (out / "figures" / "anchors" / f"{k}.jpg").exists() else None
+            if anchor is None and it["layout"] == "cache":
+                a = d / "m2_d" / clip / cat / "anchor.png"
+                if a.exists():
+                    from PIL import Image
+                    (out / "figures" / "anchors").mkdir(parents=True, exist_ok=True)
+                    im = Image.open(a).convert("RGB"); im.thumbnail((720, 720)); im.save(out / "figures" / "anchors" / f"{k}.jpg", quality=86)
+                    anchor = f"figures/anchors/{k}.jpg"
+            fr = IMG.reference_frame(ref_video, idir / f"{k}_ref.jpg", ffmpeg())
+            mk = IMG.stage1_mask(stage_c, idir / f"{k}_ref.jpg", idir / f"{k}_mask.jpg")
+            dp = IMG.lifted_depth(lift, idir / f"{k}_depth.jpg")
+            rt = IMG.render_target(rend, idir / f"{k}_render.jpg")
+            rel = lambda q: f"figures/intermediates/{q.name}" if q else None
+            tiles = (image_tile(rel(fr), "reference, frame 0") + image_tile(rel(mk), "Stage I: subject mask")
+                     + image_tile(anchor, "Stage II: anchor") + image_tile(rel(dp), "Stage III: lifted depth")
+                     + image_tile(rel(rt), "Stage III: render target, frame 20") + video_tile(ours_video if (out / ours_video).exists() else None, "ours"))
+            rows_i.append(f"<article class='pair inter'><header><p class='label'>{esc(short_pair(p))}</p><div class='ctl'></div></header><div class='grid g6'>{tiles}</div></article>")
+        inter_html = (f"<section class='band' id='inside'><div class='frame'><p class='label'>Inside the pipeline</p><h2>What the stages hand to each other</h2>"
+                      f"<p class='lede'>{esc(IM['intro'])}</p><div class='rows'>{''.join(rows_i)}</div></div></section>")
+
     # ---- method figure
     fig_src = thesis / P["method_figure"]
     fig_dst = out / "figures" / fig_src.name
@@ -437,7 +475,7 @@ def main(argv=None):
 </head>
 <body>
 <header class="top"><a class="brand" href="#top">{esc(S['title'])}</a>
-<nav><a href="#method">How it works</a><a href="#results">Results</a><a href="#others">Other methods</a><a href="#process">How we got here</a><a href="#ablations">Ablations</a><a href="#notes">Notes</a></nav></header>
+<nav><a href="#method">How it works</a><a href="#inside">Inside</a><a href="#results">Results</a><a href="#others">Other methods</a><a href="#process">How we got here</a><a href="#ablations">Ablations</a><a href="#notes">Notes</a></nav></header>
 
 <section class="hero" id="top"><div class="frame">
 <p class="label">{esc(S['eyebrow'])}</p>
@@ -457,6 +495,8 @@ def main(argv=None):
 <figure><img src="figures/{fig_dst.name}" alt="The three stages of the method"></figure>
 <div class="stages">{''.join(f"<div class='stage'><p class='label'>{i + 1:02d}</p><h3>{esc(s['name'])}</h3><p>{esc(s['text'])}</p></div>" for i, s in enumerate(cfg['stages']))}</div>
 </div></section>
+
+{inter_html}
 
 <section class="band" id="results"><div class="frame">
 <p class="label">Results</p><h2>Fifteen test pairs, against the same generator without guidance</h2>

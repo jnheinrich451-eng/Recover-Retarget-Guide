@@ -171,3 +171,16 @@ baselines:                   # the other methods' 21-frame videos on the test pa
     - {key: moft,        label: "MOFT (re-impl., CogVideoX-5B)"}
     - {key: fym_noguide, label: "No guidance (Wan2.1 T2V 1.3B)"}
     - {key: fym,         label: "Follow-Your-Motion (Wan2.1 T2V 1.3B)"}
+
+intermediates:               # "Inside the pipeline": six pairs drawn from their caches (stage_c.npz, lift.npz, render*.npz)
+  intro: >
+    Six pairs, read left to right. Stage I marks the subject on the reference; Stage II makes the anchor;
+    Stage III lifts the anchor into the source scale and renders it along the recovered camera, and corrects the generator toward
+    that render wherever the mask (the bright region) holds. The last tile is the result.
+  pairs:
+    - {pair: "000000000265.2.005/human",  dir: "D:/6528/Recover-Retarget-Guide/DATA/cache", layout: cache, reference: "videos/000000000265.2.005_human_reference.mp4", ours: "videos/000000000265.2.005_human_ours.mp4"}
+    - {pair: "000000000265.2.005/vehicle", dir: "D:/6528/Recover-Retarget-Guide/DATA/cache", layout: cache, reference: "videos/000000000265.2.005_vehicle_reference.mp4", ours: "videos/000000000265.2.005_vehicle_ours.mp4"}
+    - {pair: "000000000217.0.006/vehicle", dir: "D:/6528/ditflow/pairs_intermediates/217.0.006 vehicle", layout: flat}
+    - {pair: "000000000191.6.037/human",  dir: "D:/6528/ditflow/pairs_intermediates/191.6.037 human", layout: flat}
+    - {pair: "000000000431.5.009/human",  dir: "D:/6528/ditflow/pairs_intermediates/431.5.009 human", layout: flat}
+    - {pair: "camel/human",                dir: "D:/6528/ditflow/pairs_intermediates/camel human", layout: flat}
