@@ -160,7 +160,8 @@ def main(argv=None):
     # ---- [setup]
     if args.setup == "colab":
         for v in (VENV1, VENV2):
-            if not (v / "bin" / "python").exists():
+            if not ((v / "bin" / "activate").exists() and (v / "bin" / "pip").exists()):        # absent, or half-built by a failed attempt
+                shutil.rmtree(v, ignore_errors=True)
                 # Colab's python has no ensurepip (python3-venv is not installed), so `python -m venv` fails at the pip step:
                 # virtualenv (pure python, brings its own pip) builds the same thing
                 r = subprocess.run([sys.executable, "-m", "venv", "--system-site-packages", str(v)], capture_output=True, text=True)
