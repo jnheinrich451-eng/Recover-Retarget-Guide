@@ -342,6 +342,7 @@ def main():
     ap.add_argument("--seeds", type=int, help="step 5 only: generate this many seeds in total (resampling after a zero-survivor selection)")
     ap.add_argument("--dry-run", action="store_true", help="CPU only: inputs checked, prompt printed, nothing generated")
     ap.add_argument("--experiment-set", default=None, help="configs/experiment_set.yaml: target text by the fixed caption rule for pairs without human text")
+    ap.add_argument("--caption", default=None, help="a clip outside the experiment set: its caption; target text by the fixed rule of src/anchor/m2d/auto_target.py")
     ap.add_argument("--config", default="configs/stage_a.yaml"); ap.add_argument("--config-m2b2", default="configs/m2b2.yaml")
     args = ap.parse_args()
     import yaml
@@ -359,6 +360,9 @@ def main():
     if args.experiment_set:
         es = yaml.safe_load(Path(args.experiment_set).read_text(encoding="utf-8"))["experiment_set"]
         ctx["experiment_targets"] = {p_["pair"]: p_ for p_ in es["pairs"]}
+    if args.caption:
+        from src.anchor.m2d.auto_target import target_for
+        ctx.setdefault("experiment_targets", {})[f"{args.clip}/{args.category}"] = {"target": target_for(args.category, args.caption), "caption": args.caption}
     todo = [tuple(k.split("/")) for k in cfg["targets"]] if args.all else [(args.clip, args.category)]
     assert all(c and k for c, k in todo), "give --clip and --category, or --all"
     items = []

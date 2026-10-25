@@ -579,7 +579,7 @@ def run_handoff(pairs: list, ctx: dict) -> int:
              "d_src": st0["d_src"].astype(float).tolist(), "frame": "camera_t_a", "gauge": "source (D4RT)",
              "R2_iou": q["r2_iou_vs_anchor_mask"], "gtar_shape_yaw_deg": (q.get("gtar_shape_yaw") or {}).get("delta_gtar_shape_deg"), "gtar_shape_extents": q.get("gtar_shape_extents"),
              "known_properties": {"heading_accuracy_ungated": True, "within_object_scale_error": "7-27 % in the point map; does NOT reach G_tar's shape (extents match the vendor-map reconstruction)",
-                                  "r2_orientation_error": hv.get("known_r2_orientation_error_deg"), "human_facing_offset_deg": -12 if it["category"] == "human" else None,
+                                  "r2_orientation_error": hv.get("known_r2_orientation_error_deg"), "human_facing_offset_deg": (__import__("src.anchor.subjects", fromlist=["facing_offset"]).facing_offset(it["category"]) or None),
                                   "contact_plane_replacement": q.get("contact_plane_replacement") if pv == "contact_plane" else None},
              "upstream_hashes": {**q["upstream_hashes"], "qc_m2e": cache.sha256_file(out / "qc_m2e.json")}, "hard_stop": {"verdict": verdict, "declared": (None if verdict_source["source"].startswith("automatic") else hv.get("declared_on")), **verdict_source}}
         (out / "handoff.json").write_text(json.dumps(h, indent=1), encoding="utf-8")

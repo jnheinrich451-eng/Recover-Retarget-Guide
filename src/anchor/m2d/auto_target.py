@@ -22,8 +22,12 @@ LOCATIVES = ("through", "along", "across", "down", "past", "around", "inside", "
              "towards", "toward", "near", "among", "between", "beneath")
 CLAUSE_OPENERS = ("with", "under", "surrounded", "while", "as", "and")
 
-PROXY_IDENTITY = {"vehicle": {"object": "a red car", "action": "driving"},
-                  "human": {"object": "a man in a grey jacket and dark trousers", "action": "walking"}}
+def _identities():
+    from src.anchor import subjects
+    return {c: {"object": s["object"], "action": s.get("action", "moving")} for c, s in subjects.load().items()}
+
+
+PROXY_IDENTITY = _identities()                 # the thesis's two plus any subject registered by scripts/make_proxy.py
 
 _WB = chr(92) + "b"                                                         # the regex word boundary, spelled out so no shell ever mangles it
 
@@ -78,6 +82,9 @@ def arbiter_label(category: str, caption: str) -> str:
     verb = next((w for w in words if w.lower() in MOTION_VERBS), None)
     subject = text[:re.search(_WB + re.escape(verb) + _WB, text).start()] if verb else text
     c = subject.lower()
+    if category not in ("vehicle", "human"):
+        from src.anchor import subjects
+        return subjects.arbiter_label(category) or "person"
     if category == "vehicle":
         for kw, lab in (("carriage", "horse"), ("truck", "truck"), ("bus", "bus"), ("van", "van"), ("boat", "boat"), ("motorbike", "motorbike"), ("motorcycle", "motorbike")):
             if kw in c:

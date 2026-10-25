@@ -219,7 +219,7 @@ def measure(args):
                 rec["object_iou"] = iou(mask, M_obj); rec["m_H"] = iou(mask, M_obj) - iou(mask, Pf)
                 ys, xs = np.nonzero(mask); x0, x1, y0, y1 = xs.min(), xs.max(), ys.min(), ys.max(); w, hgt = x1 - x0, y1 - y0
                 cr = img[max(0, int(y0 - .2 * hgt)):min(1024, int(y1 + .2 * hgt)), max(0, int(x0 - .2 * w)):min(1024, int(x1 + .2 * w))]
-                inputs = clip_p(text=[CLIP_TEXT[cat]], images=[Image.fromarray(cr)], padding=True, return_tensors="pt")
+                inputs = clip_p(text=[CLIP_TEXT.get(cat) or __import__("src.anchor.subjects", fromlist=["identity"]).identity(cat)["object"]], images=[Image.fromarray(cr)], padding=True, return_tensors="pt")
                 with torch.inference_mode():
                     r_ = clip_m(**{kk: v.to(dev) for kk, v in inputs.items()})
                 rec["subject_similarity"] = float((r_.image_embeds.float() @ r_.text_embeds.float().T)[0, 0].cpu())

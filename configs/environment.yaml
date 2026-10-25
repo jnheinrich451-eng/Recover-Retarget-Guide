@@ -19,6 +19,21 @@ colab_exp:                  # the EXPERIMENT SET (census pools, 24-frame canonic
     default: python
     sam3d_objects: /content/micromamba/envs/sam3d-objects/bin/python
     phase2: python
+colab_oneclick:             # the one-click notebook: three environments in ONE Colab VM (two venvs with the system torch, the
+  root: ${MT_ROOT}          # micromamba env for SAM 3D Objects); Module 1 runs in phase1, Modules 2 and 3 in default / phase2
+  data: ${MT_DATA}
+  python:
+    phase1: /content/venv-phase1/bin/python
+    default: /content/venv-phase2/bin/python
+    phase2: /content/venv-phase2/bin/python
+    sam3d_objects: /content/micromamba/envs/sam3d-objects/bin/python
+colab_public:               # a reader's own Colab: MT_ROOT / MT_DATA from the shell (the public notebook sets them, Drive recommended),
+  root: ${MT_ROOT}          # the SAM 3D Objects interpreter where scripts/setup_sam3d.sh builds it
+  data: ${MT_DATA}
+  python:
+    default: python
+    sam3d_objects: /content/micromamba/envs/sam3d-objects/bin/python
+    phase2: python
 local:
   root: ${MT_ROOT}          # set MT_ROOT and MT_DATA in the shell, or edit these two lines
   data: ${MT_DATA}

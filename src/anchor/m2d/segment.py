@@ -25,6 +25,9 @@ def segment(seg: dict, img_rgb, category: str) -> tuple[np.ndarray, dict]:
     from PIL import Image
     img = np.ascontiguousarray(img_rgb); Hh, Ww = img.shape[:2]
     owl_p, owl, pred = seg["owl_p"], seg["owl"], seg["sam"]
+    if category not in QUERIES:
+        from src.anchor import subjects
+        QUERIES[category] = [subjects.query(category)]
     inputs = owl_p(text=[QUERIES[category]], images=Image.fromarray(img), return_tensors="pt").to("cuda")
     with torch.no_grad():
         post = getattr(owl_p, "post_process_grounded_object_detection", None) or owl_p.post_process_object_detection   # renamed (measured 2026-09-14)

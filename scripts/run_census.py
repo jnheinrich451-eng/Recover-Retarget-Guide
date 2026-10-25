@@ -97,6 +97,8 @@ def main(argv=None):
     ap.add_argument("--videos-dir", default=os.environ.get("MT_DATA", "/content/data") + "/videos")
     ap.add_argument("--clips", nargs="*", default=None, help="subset of the config's clips")
     ap.add_argument("--category-rule", default="default")
+    ap.add_argument("--category", default=None, help="a clip outside the config (named in --clips): its target category (vehicle, human, or a registered subject)")
+    ap.add_argument("--caption", default=None, help="a clip outside the config: its caption (recorded; the category rule reads it when --category is absent)")
     ap.add_argument("--skip-m1", action="store_true", help="Module 1 already run for these clips (its outputs are checked, not re-made)")
     ap.add_argument("--only-failed", action="store_true", help="re-examine only the clips whose last verdict is not PASS (a reasons pass after a code change)")
     ap.add_argument("--sensitivity-g2b", action="store_true", help="SENSITIVITY RUN (reviewer 2026-10-18): Stage A's A-G2b gate report-only; use a THIRD root (never the record's); "
@@ -114,6 +116,10 @@ def main(argv=None):
         assert "exp" not in str(root).rstrip("/").split("/")[-1] or "sens" in str(root), f"the sensitivity run needs its own root, not {root}"
         env["STAGE_A_REPORT_ONLY_GATES"] = "A-G2b"; print("[census] SENSITIVITY RUN: A-G2b report-only; root", root, flush=True)
     clips = [c for c in cfg["clips"] if not args.clips or c["id"] in args.clips]
+    for cid in (args.clips or []):                                                  # a clip outside the config: the reader's own
+        if cid not in {c["id"] for c in clips}:
+            assert args.category or args.caption, f"{cid} is not in {args.config}: give --category (or --caption for the category rule)"
+            clips.append({"id": cid, "pool": "own", "caption": args.caption, "category": args.category})
     tri_patch = float(lock_m3["trajectory"]["triangulated_gate_patch"])
     if not args.skip_m1:
         sa = yaml.safe_load((ROOT / "configs" / "stage_a.yaml").read_text(encoding="utf-8"))["paths"]

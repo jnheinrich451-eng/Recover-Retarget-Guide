@@ -7,10 +7,11 @@
 # secrets, git credentials, deps, model repo, checkpoint, videos — happens here.
 set -euo pipefail
 
-DRIVE="${DRIVE:-/content/drive/MyDrive}"   # optional: secrets are read from here when it is mounted
+DRIVE=/content/drive/MyDrive
 REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$REPO_DIR"
 
+[ -d "$DRIVE" ] || { echo "FATAL: Drive not mounted at /content/drive — run the notebook mount cell first."; exit 1; }
 
 # ---- secrets -> process env only (SKILL §1.3: never print, never persist) ----
 # colab.ipynb cell 0 already exports GH_TOKEN/HF_TOKEN; parsing here is the
@@ -27,17 +28,14 @@ load_secret () {  # $1 = dotenv file, $2 = canonical env var name
   val="${val%\"}"; val="${val#\"}"; val="${val%\'}"; val="${val#\'}"
   export "$var"="$val"
 }
-[ -n "${GH_TOKEN:-}" ] || [ ! -f "$DRIVE/secrets/gh_token.env" ] || load_secret "$DRIVE/secrets/gh_token.env" GH_TOKEN
-[ -n "${HF_TOKEN:-}" ] || [ ! -f "$DRIVE/secrets/hf_token.env" ] || load_secret "$DRIVE/secrets/hf_token.env" HF_TOKEN
-export GH_TOKEN="${GH_TOKEN:-}" HF_TOKEN="${HF_TOKEN:-}"   # a public clone needs no GitHub token; Module 2 needs an HF token for FLUX.1-dev
+[ -n "${GH_TOKEN:-}" ] || load_secret "$DRIVE/secrets/gh_token.env" GH_TOKEN
+[ -n "${HF_TOKEN:-}" ] || load_secret "$DRIVE/secrets/hf_token.env" HF_TOKEN
 export GH_TOKEN HF_TOKEN   # huggingface_hub picks HF_TOKEN up implicitly
 
 # ---- ephemeral git credentials: /tmp dies with the VM (that is the point) ----
-if [ -n "$GH_TOKEN" ]; then
-  git config --global credential.helper 'store --file /tmp/.git-credentials'
-  printf 'https://x-access-token:%s@github.com\n' "$GH_TOKEN" > /tmp/.git-credentials
-  chmod 600 /tmp/.git-credentials
-fi
+git config --global credential.helper 'store --file /tmp/.git-credentials'
+printf 'https://x-access-token:%s@github.com\n' "$GH_TOKEN" > /tmp/.git-credentials
+chmod 600 /tmp/.git-credentials
 git pull --ff-only 2>/dev/null || true   # no-op if just cloned / no upstream yet
 
 # ---- python deps (torch ships with Colab) ----
@@ -84,10 +82,10 @@ PY
 fi
 
 # ---- reference videos -> local disk, NOT Drive (read speed) ----
-if [[ "$HF_DATASET_ID" == \<* ]]; then
-  echo "WARN: repo.hf_dataset_id not filled — skipping video download."
+if [[ "$HF_DATASET_ID" == \<* ]] || [ "${SKIP_VIDEOS:-0}" = "1" ]; then
+  echo "skipping the reference-video download (SKIP_VIDEOS=1 or no dataset id): put the clips under $DATA_DIR yourself"
 else
-  python - <<'PY'
+  python - <<'PY' || echo "WARN: the reference-video dataset was not downloaded (private or unreachable); put the clips under $DATA_DIR yourself"
 import os
 from huggingface_hub import snapshot_download
 p = snapshot_download(repo_id=os.environ["HF_DATASET_ID"], repo_type="dataset",

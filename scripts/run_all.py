@@ -207,21 +207,25 @@ def handoff_verdict(R: Path, clip: str, cat: str):
 def run_pair(args, e, env, py, clip, cat, exp):
     R = Path(os.path.expandvars(str(e["root"]))); data = os.path.expandvars(str(e["data"])); pair = f"{clip}/{cat}"
     video = Path(data) / "videos" / f"{clip}.mp4"
-    auto = bool(args.auto); es = ["--experiment-set", args.set] if (args.set and auto) else []
-    key = (exp or {}).get("proxy_keys", {}).get(cat) if auto else None
+    auto = bool(args.auto); es = ["--experiment-set", args.set] if (args.set and auto) else (["--caption", args.caption] if (auto and args.caption) else [])
+    from src.anchor import subjects
+    rigid = subjects.variant(cat) == "objects"                                    # the subject's kind decides the reconstructor and the arm
+    if auto and exp is None:                                                      # a clip outside the set: the proxies of record are the set's
+        exp = {"proxy_keys": yaml.safe_load((ROOT / "configs" / "experiment_set.yaml").read_text(encoding="utf-8"))["experiment_set"]["proxy_keys"]}
+    key = ((exp or {}).get("proxy_keys", {}).get(cat) or subjects.proxy_key(cat)) if auto else None
     print(f"[all] env {args.env}: root {R}; data {data}; clip {clip} ({cat}); video {'present' if video.exists() else 'ABSENT'}; path {'automatic (gates only)' if auto else 'with human stops'}", flush=True)
     if args.redo_from == "r2" and cat in (args.redo_categories or []) and (not args.redo_pairs or pair in args.redo_pairs) and not args.status and not args.dry_run:
         archive_m2e_from_r2(R, clip, cat)
 
     # ---- every stage: (name, done-check -> True | False | 'refused: ...', command(s), interpreter key, human-stop message or None) --------
     m1 = [("M1 A..B5 (depth, motion, mask, dense tracks, heading)", lambda: (R / "cache/stage_b5" / f"{clip}_qc_b5.json").exists(),
-           ["scripts/run_pipeline.py", "--clip-id", clip, "--videos-dir", str(Path(data) / "videos")], "default", None)]
+           ["scripts/run_pipeline.py", "--clip-id", clip, "--videos-dir", str(Path(data) / "videos")], "phase1", None)]      # the Phase-1 interpreter (defaults to `default`)
     proxy_done = (lambda: (R / "cache/m2_b2" / cat / key / "proxy.npz").exists()) if auto else \
                  (lambda: any((R / "cache/m2_b2").glob(f"{cat}/*")) if (R / "cache/m2_b2").exists() else False)
     proxy_cmd = (("copy_proxy", lambda: copy_proxy_of_record(R, Path(args.proxy_from), cat, key, args.dry_run)) if (auto and args.proxy_from) else None)
     m2 = [
         ("M2 a admission (stage0)", lambda: (R / "cache/m2_a" / clip / "qc_m2a.json").exists(), ["scripts/run_m2a.py", "--clip-id", clip], "default", None),
-        ("M2 b2 R1 proxy" + (" of record (copied)" if auto else " (reconstructor)"), proxy_done, proxy_cmd, "sam3d_objects" if cat == "vehicle" else "default",
+        ("M2 b2 R1 proxy" + (" of record (copied)" if auto else " (reconstructor)"), proxy_done, proxy_cmd, "sam3d_objects" if rigid else "default",
          None if (auto and args.proxy_from) else (
          "the proxy of record is absent under this root: pass --proxy-from <root of the six pairs> (experiment path, copied, never regenerated)" if auto else
          "HARD STOP (SKILL m2_b2 §12): the R1 proxy is generated from a candidate image and reviewed before it enters the cache:\n"
@@ -250,13 +254,13 @@ def run_pair(args, e, env, py, clip, cat, exp):
         rr = read_json(d_ / "r2_refused.json")
         return f"refused: R2 {rr.get('stage')}: {rr.get('reason')}" if rr else False
     r2_stage = ("M2 e r2 reconstruction", r2_verdict,
-                ["scripts/run_m2e.py", "--r2", "--clip", clip, "--category", cat] + (["--auto"] if auto else []), "sam3d_objects" if cat == "vehicle" else "default", None)
+                ["scripts/run_m2e.py", "--r2", "--clip", clip, "--category", cat] + (["--auto"] if auto else []), "sam3d_objects" if rigid else "default", None)
     delta_stage = ("M2 e delta", lambda: (R / "cache/m2_e" / clip / cat / "delta.json").exists(), ["scripts/run_m2e.py", "--delta", "--clip", clip, "--category", cat] + (["--auto"] if auto else []), "default", None)
     body_env = ("M2 e Body environment (detectron2 in the default interpreter)", lambda: importable(py.get("default", "python"), "detectron2", env),
                 ("env", "SAM 3D Body needs detectron2 in the default interpreter (scripts/setup_sam3d.sh installs it; its FAILED line is in <root>/envs/setup_sam3d_*.log): "
                         "re-run `bash scripts/setup_sam3d.sh body` and read the log before this pair is re-run"), "default", None)
     # vehicles: the delta step's fallback decision fixes alpha BEFORE R2 (run_m2e asserts it); humans: the Body R2 record feeds delta
-    m2 += ([delta_stage, r2_stage] if cat == "vehicle" else [body_env, r2_stage, delta_stage]) + [
+    m2 += ([delta_stage, r2_stage] if rigid else [body_env, r2_stage, delta_stage]) + [
         ("M2 e qc", lambda: (R / "cache/m2_e" / clip / cat / "qc_m2e.json").exists(), ["scripts/run_m2e.py", "--qc", "--clip", clip, "--category", cat] + (["--auto"] if auto else []), "default", None),
         ("M2 e handoff" + (" (verdict = gate outcomes)" if auto else ""), (lambda: handoff_verdict(R, clip, cat)) if auto else (lambda: (R / "cache/m2_e" / clip / cat / "handoff.json").exists()),
          ["scripts/run_m2e.py", "--handoff", "--clip", clip, "--category", cat] + (["--auto"] if auto else []), "default", None),
@@ -329,7 +333,7 @@ def run_pair(args, e, env, py, clip, cat, exp):
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--env", default="colab", help="preset in configs/environment.yaml")
-    ap.add_argument("--clip"); ap.add_argument("--category", choices=["vehicle", "human"])
+    ap.add_argument("--clip"); ap.add_argument("--category", help="vehicle, human, or a subject registered in configs/subjects.yaml (scripts/make_proxy.py)")
     ap.add_argument("--set", default=None, help="configs/experiment_set.yaml: run every pair of the set (or --clip/--category as a subset of it)")
     ap.add_argument("--module", default="all", choices=["1", "2", "3", "all"])
     ap.add_argument("--seeds", nargs="*", type=int, default=None, help="Module 3 seeds (default: the batch config's; the set's config says seed 0)")
@@ -339,6 +343,8 @@ def main(argv=None):
     ap.add_argument("--c3-reviewed", action="store_true", help="Module 2: the composed control image has been reviewed (SKILL C3 §10 hard stop)")
     ap.add_argument("--auto", action="store_true", help="the experiment path: no human stop; review stops are gate records; selection by the rule of record; handoff verdict = gate outcomes")
     ap.add_argument("--proxy-from", default=None, help="--auto: root holding the proxies of record (cache/m2_b2/<cat>/<key>), copied into this root once")
+    ap.add_argument("--caption", default=None, help="--auto on a clip outside the experiment set: the clip's caption; Module 2's target text follows the fixed rule "
+                    "(src/anchor/m2d/auto_target.py) and the proxies of record are keyed as in configs/experiment_set.yaml")
     ap.add_argument("--m3-config", default=None, help="Module 3 batch config (default: configs/m3_batch_exp.yaml with --set, else the batch driver's default)")
     ap.add_argument("--stop-on-fail", action="store_true", help="--set: stop at the first pair that fails (default: record it and go on)")
     ap.add_argument("--include-follow-up", action="store_true", help="Module 3 on the set: also run the follow-up rows of configs/experiment_handoffs.yaml (reported separately)")
@@ -354,6 +360,7 @@ def main(argv=None):
     assert "$" not in root and "$" not in data, f"environment {args.env}: set MT_ROOT / MT_DATA in the shell or edit configs/environment.yaml ({root}, {data})"
     env = {**os.environ, "MT_ROOT": root, "MT_DATA": data, "PYTHONUNBUFFERED": "1"}
     py = {k: str(v) for k, v in e["python"].items()}
+    py.setdefault("phase1", py.get("default", "python"))                              # presets without a Phase-1 interpreter: one environment for all
     exp = None
     if args.set:
         exp = yaml.safe_load(Path(args.set).read_text(encoding="utf-8"))["experiment_set"]

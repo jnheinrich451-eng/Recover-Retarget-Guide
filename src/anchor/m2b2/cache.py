@@ -34,7 +34,13 @@ def route(category: str, cfg: dict) -> str:
         raise TargetExcluded(f"{category!r} targets are excluded from v1 scope: {why.get(category, '')}; sources are unaffected")
     table = cfg["m2b2"]["routing"]
     if category not in table:
-        raise KeyError(f"no routing for category {category!r}; known: {sorted(table)}")
+        from src.anchor import subjects                                   # a registered subject (configs/subjects.yaml): by its kind
+        try:
+            v = subjects.variant(category)
+        except KeyError:
+            raise KeyError(f"no routing for category {category!r}; known: {sorted(table)} and configs/subjects.yaml")
+        assert v in ("objects", "body"), v
+        return v
     v = table[category]
     assert v in ("objects", "body"), v
     return v

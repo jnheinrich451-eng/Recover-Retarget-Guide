@@ -66,6 +66,21 @@ def geometry_status(d):
     return f"off-record: missing {missing}" if missing else "ok"
 
 
+
+def tbl(table: dict, key: str):
+    """A table keyed on the thesis's categories (vehicle / human) serves a registered subject through its kind:
+    A3_bear -> A3_vehicle when bear is rigid; bear_nodyn -> human_nodyn when bear is of the human kind."""
+    if key in table:
+        return table[key]
+    from src.anchor import subjects
+    parts = key.split("_")
+    for cat in sorted(subjects.load(), key=len, reverse=True):
+        if cat in parts:
+            k2 = "_".join(subjects.default_name(cat) if part == cat else part for part in parts)
+            if k2 in table:
+                return table[k2]
+    raise KeyError(f"no entry {key!r} in the batch config, and no registered subject maps it to one of {sorted(table)}")
+
 def video_name(arm, seed, frames, flags):
     """The sampler's output stem for an arm's flags (mirrors run_m3_s4_guided.py's naming of the flags the config uses)."""
     base = f"{arm}_seed{seed}_rec_F{frames}"
@@ -94,6 +109,12 @@ def main(argv=None):
     cfg = yaml.safe_load(Path(args.config).read_text(encoding="utf-8"))
     frames, seeds = int(cfg["frames"]), [int(s) for s in (args.seeds or cfg["seeds"])]
     pairs = [p for p in cfg["pairs"] if not args.pairs or p["pair"] in args.pairs]
+    for pr in (args.pairs or []):                                                   # a pair outside the config (a reader's clip): a plain entry, labels from the registry
+        if pr not in {p["pair"] for p in pairs}:
+            from src.anchor import subjects
+            lab = subjects.arbiter_label(pr.split("/")[1]) or "person"
+            pairs.append({"pair": pr, "label_source": lab, "label_target": lab, "note": "outside the batch config: entry synthesised by --pairs"})
+            print(f"[batch] {pr}: not in {args.config}; running it as a plain entry (labels {lab})", flush=True)
     root = Path(args.drive_root); rep = root / "reports" / "m3_batch"; rep.mkdir(parents=True, exist_ok=True)
     mf = rep / "manifest.json"
     manifest = json.loads(mf.read_text(encoding="utf-8")) if mf.exists() else []
@@ -129,7 +150,7 @@ def main(argv=None):
                 steps.append(("dynamic_mask", [PY, "scripts/make_m3_dynamic_mask.py", "--drive-root", args.drive_root, "--pair", pair]))
             rk = [] if p.get("camera_gate_failed") else [cat] + ([f"{cat}_nodyn"] if p.get("nodyn") else [])
             for k in rk:
-                flags = list(cfg["render"][k])
+                flags = list(tbl(cfg["render"], k))
                 if "--exclude-mask" in flags:
                     flags[flags.index("--exclude-mask") + 1] = str(d / flags[flags.index("--exclude-mask") + 1])
                 suf = ("_obj" if "--object" in flags else "") + ("_sky" if "--sky-in-mask" in flags else "") + ("_nodyn" if "--exclude-mask" in flags else "")
@@ -160,7 +181,7 @@ def main(argv=None):
         elif args.phase == "phase2":
             gstat = geometry_status(d)
             for ak in arm_keys:
-                arm = ak.split("_")[0]; flags = list(cfg["arms"][ak])
+                arm = ak.split("_")[0]; flags = list(tbl(cfg["arms"], ak))
                 if arm == "A3" and (p.get("camera_gate_failed") or gstat != "ok"):
                     why = "camera gate failed (flagged pair)" if p.get("camera_gate_failed") else f"geometry {gstat}: not the configuration of record; run phase1 first"
                     print(f"[batch] {pair}: {ak} skipped — {why}", flush=True)
@@ -186,7 +207,7 @@ def main(argv=None):
                     rc, _ = sh(cmd, args.dry_run, log)
                     record({"phase": "phase2", "pair": pair, "video": f"{stem}.mp4", "arm": arm, "arm_key": ak, "seed": seed, "flags": flags, "rc": rc, "time": time.strftime("%Y-%m-%d %H:%M")})
         elif args.phase == "grade":
-            vids = [f"{video_name(ak.split('_')[0], s, frames, list(cfg['arms'][ak]))}.mp4" for ak in arm_keys for s in seeds]
+            vids = [f"{video_name(ak.split('_')[0], s, frames, list(tbl(cfg['arms'], ak)))}.mp4" for ak in arm_keys for s in seeds]
             vids = [v for v in vids if args.dry_run or (d / v).exists()]
             if not vids:
                 print(f"[batch] {pair}: no videos to grade", flush=True); continue
@@ -220,7 +241,7 @@ def main(argv=None):
                 st = " STALE (older than geometry)" if gp.exists() and rf.stat().st_mtime < gp.stat().st_mtime else ""
                 print(f"  {rf.name}: {age(rf)}{st}", flush=True)
             for ak in arm_keys:
-                arm = ak.split("_")[0]; flags = list(cfg["arms"][ak])
+                arm = ak.split("_")[0]; flags = list(tbl(cfg["arms"], ak))
                 for seed in seeds:
                     stem = video_name(arm, seed, frames, flags); vp = d / f"{stem}.mp4"
                     st = ""
@@ -260,7 +281,7 @@ def main(argv=None):
             if anc.exists():
                 shutil.copy2(anc, pdir / "anchor.png")
             for ak in arm_keys:
-                arm = ak.split("_")[0]; flags = list(cfg["arms"][ak])
+                arm = ak.split("_")[0]; flags = list(tbl(cfg["arms"], ak))
                 for seed in seeds:
                     stem = video_name(arm, seed, frames, flags); vp = d / f"{stem}.mp4"
                     if not vp.exists():
@@ -303,13 +324,13 @@ def main(argv=None):
             runs = []
             for ak in arm_keys:
                 for s_ in seeds:
-                    stem = video_name(ak.split("_")[0], s_, frames, list(cfg["arms"][ak]))
+                    stem = video_name(ak.split("_")[0], s_, frames, list(tbl(cfg["arms"], ak)))
                     vp = d / f"{stem}.mp4"
                     cfg_run = None
                     if (d / f"{stem}.npz").exists():
                         with np.load(d / f"{stem}.npz") as zr:
                             cfg_run = json.loads(str(zr["config"]))
-                    runs.append({"arm": ak.split("_")[0], "arm_key": ak, "seed": s_, "video": str(vp), "exists": vp.exists(), "flags": list(cfg["arms"][ak]), "run_config": cfg_run})
+                    runs.append({"arm": ak.split("_")[0], "arm_key": ak, "seed": s_, "video": str(vp), "exists": vp.exists(), "flags": list(tbl(cfg["arms"], ak)), "run_config": cfg_run})
             pack = {"pair": pair, "batch": cfg["batch"], "frames": frames, "note": p.get("note"), "camera_gate_failed": bool(p.get("camera_gate_failed")), "geometry_status": gstat,
                     "geometry_keys_absent": absent, "label_source": p["label_source"], "label_target": p["label_target"],
                     "source_clip": str(Path(args.videos_dir) / f"{clip}.mp4"), "t_a": int(g["src_frames"][0]), "src_frames": g["src_frames"].tolist(),

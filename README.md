@@ -146,6 +146,20 @@ both and shows the videos. It needs an A100 (40 GB) runtime; Google Drive is opt
 sessions). The four notebooks under `notebooks/development/` are the author's session records, bound to the author's Drive; they
 are not entry points.
 
+**The whole pipeline on your own clip.** `colab_full_pipeline.ipynb` has a one-click cell: it builds the three environments side by side in one runtime (two virtual environments on Colab's torch and the SAM 3D Objects environment), screens the clip as the thesis's test set was screened, makes a new subject's proxy if you named one, and runs Modules 2 and 3 on the automatic path; resumable after a disconnect. The three-part fallback runs Modules 1, 2 and 3 on a clip you supply, with its caption and a target category, as the thesis's test set was run (no human step): three parts with a runtime restart between them, your Drive as the data root, a Hugging Face token with access to FLUX.1-Depth-dev and SAM 3D as the Colab secret `HF_TOKEN`, and the category proxies from the release asset `proxies_of_record.zip`. A refusal by a check is a recorded outcome; the status cell names it.
+
+**Target subjects.** Two category proxies exist in this repository, the ones the thesis validated: a red car (`vehicle`, rigid,
+rendered along its path in Module 3) and a man in a grey jacket and dark trousers (`human`, articulated, no object render). The
+proxy fixes the target's identity; the caption of a clip supplies only the scene. A proxy is made once per category, not per clip,
+and almost all of it is automatic: a candidate image from a fixed prompt template, its mask from a detector and a segmenter, a 3D
+reconstruction by SAM 3D Objects (rigid) or SAM 3D Body (articulated), the medoid over seeds, a scale-free normalisation. The one
+reading taken by eye is which way the candidate faces, left or right, because placement defines the proxy's forward axis from it;
+`scripts/run_m2b2.py --r1 --category <name> --image <png> --mask <png> --facing left|right` then `--promote` is that step. A subject beyond
+these two is one command, `scripts/make_proxy.py --category bear --object "a brown bear" --kind rigid|human`: it generates the
+candidates from the same template, masks them, picks one by a fixed rule, reconstructs it by kind, records the facing as the template
+asked for it, and registers the subject in `configs/subjects.yaml`, after which every runner accepts `--category bear`. This path is
+experimental: the thesis's measurements say nothing about how such a subject performs, and the facing is assumed rather than read.
+
 **On your own machine.** Module 3 needs a GPU with 40 GB (Wan 2.1 I2V 14B in fp8; bf16 needs 80 GB); Modules 1 and 2 run on
 24 GB. Tokens: none for Module 3 (Wan 2.1 is public on Hugging Face); an `HF_TOKEN` with access to FLUX.1-dev for Module 2; no
 GitHub token. The reference clips of the thesis are MiraData and DAVIS clips and are not redistributed; `scripts/bootstrap*.sh`

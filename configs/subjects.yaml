@@ -1,0 +1,23 @@
+# Target subjects (2026-10-26). A subject is a category name with a kind, an identity (the words the proxy's candidate image and
+# the anchor prompt use), the detector query for its mask, the grader's arbiter label and, once its proxy is built, the proxy's
+# cache key. `vehicle` and `human` are the two of the thesis (their proxies of record are the release asset); any other entry
+# is appended by scripts/make_proxy.py and is experimental: the thesis's measurements say nothing about it.
+#   kind: rigid  -> SAM 3D Objects reconstructs it, Module 3 renders the object along its path (the vehicle arm)
+#   kind: human  -> SAM 3D Body reconstructs it, Module 3 holds the camera only (the human arm)
+subjects:
+  vehicle:
+    kind: rigid
+    object: a red car
+    action: driving
+    query: a car
+    arbiter_label: car
+    facing_offset_deg: 0
+    proxy_key: 5fbdb89abb315954
+  human:
+    kind: human
+    object: a man in a grey jacket and dark trousers
+    action: walking
+    query: a person
+    arbiter_label: person
+    facing_offset_deg: -12
+    proxy_key: 7b1379d4dfce7cad
