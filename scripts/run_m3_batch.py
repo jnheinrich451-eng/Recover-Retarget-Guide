@@ -74,12 +74,10 @@ def tbl(table: dict, key: str):
     if key in table:
         return table[key]
     from src.anchor import subjects
-    parts = key.split("_")
-    for cat in sorted(subjects.load(), key=len, reverse=True):
-        if cat in parts:
-            k2 = "_".join(subjects.default_name(cat) if part == cat else part for part in parts)
-            if k2 in table:
-                return table[k2]
+    for cat in sorted(subjects.load(), key=len, reverse=True):          # longest name first; a name may itself hold underscores (brown_bear)
+        k2 = f"_{key}_".replace(f"_{cat}_", f"_{subjects.default_name(cat)}_", 1)[1:-1]    # the whole name, between underscores or ends
+        if k2 != key and k2 in table:
+            return table[k2]
     raise KeyError(f"no entry {key!r} in the batch config, and no registered subject maps it to one of {sorted(table)}")
 
 def video_name(arm, seed, frames, flags):
