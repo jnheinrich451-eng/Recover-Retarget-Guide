@@ -18,11 +18,16 @@ KINDS = ("rigid", "human")
 HEADER = "# Target subjects (2026-10-26). A subject is a category name with a kind, an identity (the words the proxy's candidate image and\n# the anchor prompt use), the detector query for its mask, the grader's arbiter label and, once its proxy is built, the proxy's\n# cache key. `vehicle` and `human` are the two of the thesis (their proxies of record are the release asset); any other entry\n# is appended by scripts/make_proxy.py and is experimental: the thesis's measurements say nothing about it.\n#   kind: rigid  -> SAM 3D Objects reconstructs it, Module 3 renders the object along its path (the vehicle arm)\n#   kind: human  -> SAM 3D Body reconstructs it, Module 3 holds the camera only (the human arm)\n"
 
 
+LOCAL = ROOT / "configs" / "subjects.local.yaml"      # a reader's own subjects (git-ignored, so a pull never collides with them)
+
+
 def load() -> dict:
-    if PATH.exists():
-        d = yaml.safe_load(PATH.read_text(encoding="utf-8")) or {}
-        return {**DEFAULTS, **(d.get("subjects") or {})}
-    return dict(DEFAULTS)
+    s = dict(DEFAULTS)
+    for p in (PATH, LOCAL):
+        if p.exists():
+            d = yaml.safe_load(p.read_text(encoding="utf-8")) or {}
+            s.update(d.get("subjects") or {})
+    return s
 
 
 def get(category: str) -> dict:
@@ -71,13 +76,17 @@ def default_name(category: str) -> str:
 
 
 def register(category: str, **fields) -> dict:
-    """Add or update a subject in configs/subjects.yaml (the two of the thesis keep their fields unless given)."""
-    d = yaml.safe_load(PATH.read_text(encoding="utf-8")) if PATH.exists() else {}
-    subs = d.setdefault("subjects", {})
-    cur = dict(subs.get(category) or DEFAULTS.get(category) or {})
+    """Add or update a subject. The thesis's two live in configs/subjects.yaml; any other subject is written to
+    configs/subjects.local.yaml, which git ignores, so that registering one never blocks a pull."""
+    target = PATH if category in DEFAULTS else LOCAL
+    d = (yaml.safe_load(target.read_text(encoding="utf-8")) or {}) if target.exists() else {}
+    subs = d.setdefault("subjects", {}) or {}
+    d["subjects"] = subs
+    cur = dict(subs.get(category) or load().get(category) or {})
     cur.update({k: v for k, v in fields.items() if v is not None})
     assert cur.get("kind") in KINDS, f"{category}: kind must be one of {KINDS}"
     assert cur.get("object"), f"{category}: an object text is required"
     subs[category] = cur
-    PATH.write_text(HEADER + yaml.safe_dump(d, sort_keys=False, allow_unicode=True), encoding="utf-8", newline="\n")
+    head = HEADER if target is PATH else "# A reader's own target subjects, registered by scripts/make_proxy.py (git-ignored; merged over configs/subjects.yaml).\n"
+    target.write_text(head + yaml.safe_dump(d, sort_keys=False, allow_unicode=True), encoding="utf-8", newline="\n")
     return cur
