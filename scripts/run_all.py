@@ -40,6 +40,7 @@ from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))                                                   # the repository on the import path (src.anchor.subjects)
 
 
 LAST_TAIL = []
