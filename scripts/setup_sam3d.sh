@@ -76,6 +76,8 @@ fi
 if [ "$WHICH" = both ] || [ "$WHICH" = objects ]; then
   say "== SAM 3D Objects (micromamba env, vendor recipe: doc/setup.md) =="
   [ -d "$OBJ_DIR/.git" ] || git clone -q https://github.com/facebookresearch/sam-3d-objects.git "$OBJ_DIR"
+  OBJ_COMMIT="${SAM3D_OBJECTS_COMMIT:-f91db411c50e}"      # the vendor commit the proxies of record were reconstructed with (facebook/sam-3d-objects@hf+f91db411c50e)
+  git -C "$OBJ_DIR" checkout -q "$OBJ_COMMIT" 2>/dev/null || say "WARN: could not check out sam-3d-objects@$OBJ_COMMIT (using the clone as is)"
   mkdir -p "$MM_ROOT/bin"
   if [ ! -x "$MM_ROOT/bin/micromamba" ]; then
     curl -Ls https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xj -C "$MM_ROOT" bin/micromamba
@@ -140,6 +142,12 @@ if [ "$WHICH" = both ] || [ "$WHICH" = objects ]; then
   say "p3d build: FORCE_CUDA=1 TORCH_CUDA_ARCH_LIST=$TORCH_CUDA_ARCH_LIST CUDA_HOME=${CUDA_HOME:-<unset>} nvcc: $( (command -v nvcc || ls "${CUDA_HOME:-/nonexistent}/bin/nvcc") 2>/dev/null || echo NOT FOUND ); env numpy $NP_VER; MAX_JOBS=$MAX_JOBS"
   step "build deps (ninja, setuptools, wheel)"                        "$OBJ_PY" -m pip install -q ninja setuptools wheel
   P3D_WHL=$(ls "$WHEEL_DIR"/pytorch3d-*.whl 2>/dev/null | head -1 || true)
+  P3D_WHEEL_URL="${P3D_WHEEL_URL:-https://github.com/jnheinrich451-eng/Recover-Retarget-Guide/releases/download/v1.0/pytorch3d-0.7.8-cp311-cp311-linux_x86_64.whl}"   # the thesis's wheel (python 3.11, torch 2.5.1 cu121, sm_80/sm_89)
+  if [ -z "$P3D_WHL" ] && [ -n "${P3D_WHEEL_URL:-}" ]; then
+    say "downloading a prebuilt pytorch3d wheel: $P3D_WHEEL_URL"
+    curl -Ls -o "$WHEEL_DIR/$(basename "$P3D_WHEEL_URL")" "$P3D_WHEEL_URL" || say "wheel download FAILED (building instead)"
+    P3D_WHL=$(ls "$WHEEL_DIR"/pytorch3d-*.whl 2>/dev/null | head -1 || true)
+  fi
   if [ -n "$P3D_WHL" ]; then
     say "pytorch3d: cached wheel found on Drive: $(basename "$P3D_WHL")"
   else
@@ -154,11 +162,14 @@ if [ "$WHICH" = both ] || [ "$WHICH" = objects ]; then
   # [p3d] extras are now both satisfied (pytorch3d from the wheel, flash_attn from the release
   # wheel); running `pip install -e .[p3d]` would re-resolve the git URL and REBUILD, so skip it.
   export PIP_FIND_LINKS="https://nvidia-kaolin.s3.us-east-2.amazonaws.com/torch-2.5.1_cu121.html"
-  step "[inference] (kaolin 0.17.0, gsplat, gradio)"                 "$OBJ_PY" -m pip install -q -e '.[inference]'
+  step "kaolin 0.17.0 (NVIDIA wheel for torch 2.5.1 cu121; notebook/inference.py imports kaolin.visualize)" "$OBJ_PY" -m pip install -q "kaolin==0.17.0"
+  step "[inference] (kaolin 0.17.0, gsplat, gradio; no build isolation so gsplat sees the env's torch)" "$OBJ_PY" -m pip install -q --no-build-isolation -e '.[inference]'
+  "$OBJ_PY" -c "import kaolin" 2>/dev/null || say "objects: kaolin NOT importable after the extras (the wheel index needs torch 2.5.1+cu121 in the env; see $LOG)"
   step "hydra patch (a PYTHON script — run with the env python, not bash)" "$OBJ_PY" ./patching/hydra
   NP_VER2=$("$OBJ_PY" -c "import numpy; print(numpy.__version__)")
   [ "$NP_VER" = "$NP_VER2" ] || say "WARNING: numpy changed during install: $NP_VER -> $NP_VER2 (compiled extensions built against $NP_VER)"
   step "probe deps (scipy, opencv-headless; numpy held at $NP_VER2)"  "$OBJ_PY" -m pip install -q "numpy==$NP_VER2" scipy opencv-python-headless
+  step "inference-notebook deps (seaborn; numpy held at $NP_VER2)"    "$OBJ_PY" -m pip install -q "numpy==$NP_VER2" seaborn   # notebook/inference.py imports it (measured 2026-10-26)
   mkdir -p "$OBJ_DIR/checkpoints"
   python - <<PY 2>&1 | tee -a "$LOG"
 import shutil

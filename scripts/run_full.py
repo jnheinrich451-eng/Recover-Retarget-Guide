@@ -88,6 +88,22 @@ def infer_target(subject: str, kind: str | None) -> str:
     return re.sub(r"[^a-z0-9]+", "_", subject.lower().removeprefix("a ").removeprefix("an ").removeprefix("the ")).strip("_")
 
 
+def hf_token(path: str | None):
+    """The Hugging Face token for the gated models: the environment, a given file, the Drive secrets file the thesis sessions used,
+    or the CLI's saved login. A file holds KEY=VALUE (or the bare token)."""
+    for v in (os.environ.get("HF_TOKEN"), os.environ.get("HUGGING_FACE_HUB_TOKEN")):
+        if v:
+            return v.strip()
+    cands = [path, "/content/drive/MyDrive/secrets/hf_token.env", Path.home() / ".cache" / "huggingface" / "token"]
+    for c in cands:
+        if c and Path(c).exists():
+            for line in Path(c).read_text(encoding="utf-8").splitlines():
+                line = line.strip()
+                if line and not line.startswith("#"):
+                    return line.split("=", 1)[1].strip().strip("\"'") if "=" in line else line
+    return None
+
+
 def parse_prompt(prompt: str):
     """One sentence -> (subject text, action as a gerund, scene): the first motion verb (any form) splits the subject from the
     scene; the scene starts at the first locative after the verb, else is the remainder, and ends at a full stop or clause opener."""
@@ -120,12 +136,23 @@ def main(argv=None):
     ap.add_argument("--env", default="colab_oneclick", help="interpreter preset in configs/environment.yaml")
     ap.add_argument("--setup", default="colab", choices=["colab", "none"], help="build the environments (Colab) or assume they exist")
     ap.add_argument("--proxy-asset", default=PROXY_ASSET, help="URL or local path of proxies_of_record.zip")
+    ap.add_argument("--hf-token-file", default=None, help="a file holding the Hugging Face token (KEY=VALUE or bare); default: HF_TOKEN in the environment, "
+                    "<Drive>/secrets/hf_token.env, or the saved login of huggingface-cli")
+    ap.add_argument("--sam3d-env-root", default=None, help="where scripts/setup_sam3d.sh keeps / restores the SAM 3D Objects environment tar and the pytorch3d wheel "
+                    "(<root>/envs/); default: --root. The thesis's own: /content/drive/MyDrive/motion_transfer")
+    ap.add_argument("--p3d-wheel-url", default=None, help="a prebuilt pytorch3d wheel for the objects environment (skips a 1-2 h build)")
     ap.add_argument("--seeds", nargs="*", type=int, default=[0])
     ap.add_argument("--module", default="all", choices=["1", "2", "3", "all"], help="run only one module (the others must be done)")
     args = ap.parse_args(argv)
     assert args.root, "give --root or set MT_ROOT"
     root = Path(args.root); root.mkdir(parents=True, exist_ok=True); (root / "videos").mkdir(exist_ok=True)
     env = {"MT_ROOT": str(root), "MT_DATA": str(root), "PYTHONUNBUFFERED": "1", "SKIP_VIDEOS": "1"}
+    tok = hf_token(args.hf_token_file)
+    if tok:
+        env["HF_TOKEN"] = env["HUGGING_FACE_HUB_TOKEN"] = tok; print("[full] Hugging Face token: found (gated models can download)", flush=True)
+    else:
+        print("[full] Hugging Face token: NONE (Module 2's gated models, FLUX.1-dev / FLUX.1-Depth-dev / SAM 3D, will fail to download): "
+              "set HF_TOKEN, or pass --hf-token-file, or put a KEY=VALUE file at <Drive>/secrets/hf_token.env", flush=True)
     clip = args.clip or Path(args.video).stem
     dst = root / "videos" / f"{clip}.mp4"
     if not dst.exists():
@@ -174,7 +201,10 @@ def main(argv=None):
         sh(f"source {VENV2}/bin/activate && bash scripts/bootstrap_phase2.sh && (python -c 'import sam2' 2>/dev/null || pip install -q 'git+https://github.com/facebookresearch/sam2.git')", env=env, shell=True)
         cap = subprocess.run(["nvidia-smi", "--query-gpu=compute_cap", "--format=csv,noheader"], capture_output=True, text=True).stdout.strip() or "8.0"
         which = "both" if (kind == "rigid" or (not new and subjects.kind(target) == "rigid")) else "body"
-        sh(f"source {VENV2}/bin/activate && bash scripts/setup_sam3d.sh {which}", env={**env, "DRIVE_ROOT": str(root), "TORCH_CUDA_ARCH_LIST": cap}, shell=True)
+        senv = {**env, "DRIVE_ROOT": str(args.sam3d_env_root or root), "TORCH_CUDA_ARCH_LIST": cap}
+        if args.p3d_wheel_url:
+            senv["P3D_WHEEL_URL"] = args.p3d_wheel_url
+        sh(f"source {VENV2}/bin/activate && bash scripts/setup_sam3d.sh {which}", env=senv, shell=True)
 
     # ---- [1] Module 1 and the screening
     if args.module in ("1", "all"):

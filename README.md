@@ -155,7 +155,7 @@ three on Colab by itself (`--setup colab`), and on your own machine you build th
 `configs/environment.yaml` names the interpreter of each environment per preset: `colab_oneclick` (the three side by side in one
 Colab VM, two virtual environments on Colab's torch), `colab_public` (one environment per session), `local` (edit the paths). Every
 runner reads its data root from `MT_ROOT` (`cache/`, `reports/`, `videos/` live there) and overrides it with `--root` or
-`--drive-root`. Model weights download on first use: Wan 2.1, MoGe-2, SAM 2.1 and the tracker are public; FLUX.1-Depth-dev, SAM
+`--drive-root`. Model weights download on first use: Wan 2.1, MoGe-2, SAM 2.1 and the tracker are public; FLUX.1-dev (a new subject's proxy candidates), FLUX.1-Depth-dev (the anchors), SAM
 3D Body and SAM 3D Objects are gated on Hugging Face, so Module 2 needs an `HF_TOKEN` in the environment from an account that
 accepted their terms (the bootstrap scripts also read it from `<Drive>/secrets/hf_token.env` when a Drive is mounted). No GitHub
 token is needed. The reference clips of the thesis are MiraData and DAVIS clips and are not redistributed; `SKIP_VIDEOS=1` tells the
@@ -188,6 +188,7 @@ python scripts/run_full.py --video camel.mp4 --prompt "a brown bear walking on a
 | `--env` | the interpreter preset of `configs/environment.yaml` (`colab_oneclick`, `colab_public`, `local`) |
 | `--setup` | `colab` builds the three environments in this VM; `none` assumes they exist |
 | `--proxy-asset` | URL or path of `proxies_of_record.zip` (default: the release asset) |
+| `--hf-token-file` | a file with your Hugging Face token; default: `HF_TOKEN` in the environment, `<Drive>/secrets/hf_token.env`, or the saved login of `huggingface-cli login` |
 | `--seeds`, `--module` | the sampling seeds (default 0); run one module only when the others are done |
 
 The subject of the generated video is always the target's identity, because the generator is given the target's geometry as its
