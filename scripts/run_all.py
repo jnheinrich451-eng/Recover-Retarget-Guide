@@ -384,7 +384,8 @@ def main(argv=None):
             args.seeds = [0, 1]
         todo = [(args.clip, args.category)]
     if args.auto:
-        assert args.set, "--auto is the experiment path: it takes --set (the proxy keys and the target text come from the set)"
+        assert args.set or args.caption or args.module == "3", ("--auto is the experiment path: it takes --set (the experiment set) or, for a clip outside "
+                                                            "the set, --caption (the target text by the fixed rule; the proxies by category)")
     global OCCLUSION_EXCLUDES_FILL
     if args.occlusion_excludes_fill:
         vf = Path(root) / "reports" / "m2c_fill_occlusion" / "fill_occlusion.json"
