@@ -60,6 +60,7 @@ def main(argv=None):
     ap.add_argument("--env", default="colab_public", help="preset in configs/environment.yaml (the SAM 3D Objects interpreter)")
     ap.add_argument("--drive-root", default=os.environ.get("MT_ROOT"), help="the root that holds cache/ (MT_ROOT)")
     ap.add_argument("--skip-generate", action="store_true", help="use candidates already under probe/m2d/proxies/<category>/")
+    ap.add_argument("--select-seed", type=int, default=None, help="use this candidate seed instead of the fixed rule's choice (after looking at the overlays)")
     args = ap.parse_args(argv)
     assert args.drive_root, "set MT_ROOT or pass --drive-root"
     root = Path(args.drive_root)
@@ -105,6 +106,8 @@ def main(argv=None):
 
     # 4. choose
     k, why = choose(masks)
+    if args.select_seed is not None:
+        k = next(i for i, c in enumerate(cands) if c.stem == f"s{args.select_seed}"); why = f"seed {args.select_seed} chosen by eye (--select-seed)"
     choice = {"category": args.category, "object": args.object, "kind": args.kind, "prompt": prompt, "selected_seed": int(cands[k].stem[1:]),
               "rule": why, "facing": args.facing, "facing_source": "assumed from the template (facing image-right)" if args.facing == "right" else "given",
               "mask_fraction": [float(m.mean()) for m in masks], "time": time.strftime("%Y-%m-%d %H:%M")}

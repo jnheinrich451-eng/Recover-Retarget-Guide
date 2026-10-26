@@ -116,6 +116,9 @@ def main(argv=None):
         assert "exp" not in str(root).rstrip("/").split("/")[-1] or "sens" in str(root), f"the sensitivity run needs its own root, not {root}"
         env["STAGE_A_REPORT_ONLY_GATES"] = "A-G2b"; print("[census] SENSITIVITY RUN: A-G2b report-only; root", root, flush=True)
     clips = [c for c in cfg["clips"] if not args.clips or c["id"] in args.clips]
+    if args.clips and (args.category or args.caption):                             # a listed clip run as another target: the given category / caption win
+        clips = [{**c, **({"category": args.category} if args.category else {}), **({"caption": args.caption} if args.caption else {})}
+                 if c["id"] in args.clips else c for c in clips]
     for cid in (args.clips or []):                                                  # a clip outside the config: the reader's own
         if cid not in {c["id"] for c in clips}:
             assert args.category or args.caption, f"{cid} is not in {args.config}: give --category (or --caption for the category rule)"

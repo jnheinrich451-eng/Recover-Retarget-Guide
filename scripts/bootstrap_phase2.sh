@@ -7,9 +7,10 @@
 #
 #   Fresh runtime -> notebook cell 0 (mount Drive, clone, cd into the repo) -> bash scripts/bootstrap_phase2.sh
 set -euo pipefail
-DRIVE="${DRIVE:-/content/drive/MyDrive}"   # optional: secrets are read from here when it is mounted
+DRIVE=/content/drive/MyDrive
 REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$REPO_DIR"
+[ -d "$DRIVE" ] || { echo "FATAL: Drive not mounted at /content/drive — run the notebook mount cell first."; exit 1; }
 
 load_secret () {
   local file="$1" var="$2" line val
@@ -19,16 +20,13 @@ load_secret () {
   val="${val%\"}"; val="${val#\"}"; val="${val%\'}"; val="${val#\'}"
   export "$var"="$val"
 }
-[ -n "${GH_TOKEN:-}" ] || [ ! -f "$DRIVE/secrets/gh_token.env" ] || load_secret "$DRIVE/secrets/gh_token.env" GH_TOKEN
-[ -n "${HF_TOKEN:-}" ] || [ ! -f "$DRIVE/secrets/hf_token.env" ] || load_secret "$DRIVE/secrets/hf_token.env" HF_TOKEN
-export GH_TOKEN="${GH_TOKEN:-}" HF_TOKEN="${HF_TOKEN:-}"   # a public clone needs no GitHub token; Module 2 needs an HF token for FLUX.1-dev
+[ -n "${GH_TOKEN:-}" ] || load_secret "$DRIVE/secrets/gh_token.env" GH_TOKEN
+[ -n "${HF_TOKEN:-}" ] || load_secret "$DRIVE/secrets/hf_token.env" HF_TOKEN
 export GH_TOKEN HF_TOKEN
 
-if [ -n "$GH_TOKEN" ]; then
-  git config --global credential.helper 'store --file /tmp/.git-credentials'
-  printf 'https://x-access-token:%s@github.com\n' "$GH_TOKEN" > /tmp/.git-credentials
-  chmod 600 /tmp/.git-credentials
-fi
+git config --global credential.helper 'store --file /tmp/.git-credentials'
+printf 'https://x-access-token:%s@github.com\n' "$GH_TOKEN" > /tmp/.git-credentials
+chmod 600 /tmp/.git-credentials
 # Pull, then re-exec the PULLED copy of this script: bash reads a script as it runs, so a pull that changes this file mid-run
 # would otherwise leave the old copy executing (measured 2026-10-07: the video-download step was pulled in and not run).
 if [ "${1:-}" != "--pulled" ]; then
@@ -52,6 +50,9 @@ pip install -q -U "torchao>=0.12" 2>/dev/null || pip uninstall -y -q torchao || 
 python -c "import utils3d" 2>/dev/null || pip install -q --no-deps "git+https://github.com/EasternJournalist/utils3d.git"   # MoGe's own geometry helper, not on PyPI
 python -c "import moge" 2>/dev/null || pip install -q --no-deps "git+https://github.com/microsoft/MoGe.git"
 python -c "import moge.model.v2" || echo "WARN: moge import failed; install the named package alone (plain pip, it will not touch torch)"
+# the anchor selection's image-quality score (MUSIQ via pyiqa); --no-deps as the thesis sessions did, so torch and timm are not re-resolved
+python -c "import pyiqa" 2>/dev/null || pip install -q --no-deps pyiqa
+python -c "import timm" 2>/dev/null || pip install -q timm                       # pyiqa's MUSIQ needs timm
 # ---- reference videos -> local disk, as bootstrap.sh does (S2 reads the source clips at Wan's frame size) ----
 eval "$(python - <<'PY'
 import yaml
@@ -61,14 +62,12 @@ print(f"export DATA_DIR='{c['paths']['data_dir']}'")
 PY
 )"
 mkdir -p "$DATA_DIR"
-if [ "${SKIP_VIDEOS:-0}" != "1" ]; then
-python - <<'PY' || echo "WARN: the reference-video dataset was not downloaded (private or unreachable); put the clips under $DATA_DIR yourself"
+python - <<'PY'
 import os
 from huggingface_hub import snapshot_download
 p = snapshot_download(repo_id=os.environ["HF_DATASET_ID"], repo_type="dataset", local_dir=os.environ["DATA_DIR"])
 print("videos ->", p)
 PY
-fi
 python - <<'PY'
 import torch, diffusers, transformers
 from diffusers import WanImageToVideoPipeline, FluxControlPipeline  # noqa: F401
