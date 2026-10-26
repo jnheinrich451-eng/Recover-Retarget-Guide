@@ -196,7 +196,7 @@ def main(argv=None):
         with zipfile.ZipFile(z) as zf:
             zf.extractall(root)
         print(f"[full] proxies of record unpacked under {root}", flush=True)
-    if new and not subjects.proxy_key(target):
+    if new or not subjects.proxy_key(target):                                       # not registered yet, or registered without a proxy
         sh([P2, "scripts/make_proxy.py", "--category", target, "--object", obj, "--kind", kind, "--action", action, "--env", args.env, "--drive-root", str(root)], env=env)
 
     # ---- [2] [3]
