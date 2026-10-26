@@ -34,6 +34,7 @@ import numpy as np
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))                                   # the src package, for the subject registry (run from any cwd)
 PY = sys.executable
 
 

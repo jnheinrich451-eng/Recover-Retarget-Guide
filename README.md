@@ -210,10 +210,14 @@ reconstruction by SAM 3D Objects (rigid) or SAM 3D Body (articulated), the medoi
 reading taken by eye is which way the candidate faces, left or right, because placement defines the proxy's forward axis from it;
 `scripts/run_m2b2.py --r1 --category <name> --image <png> --mask <png> --facing left|right` then `--promote` is that step. A subject beyond
 these two is one command, `scripts/make_proxy.py --category bear --object "a brown bear" --kind rigid|human` (what `run_full.py` runs
-for a new subject): it generates the candidates from the same template, masks them, picks one by a fixed rule, reconstructs it by
-kind, records the facing as the template asked for it, and registers the subject in `configs/subjects.yaml`, after which every runner
-accepts `--category bear`. This path is experimental: the thesis's measurements say nothing about how such a subject performs, and
-the facing is assumed rather than read.
+for a new subject): it generates the candidates from the same template, masks them, reads each one's facing (the generator does not
+obey "facing image-right" reliably: the detector is asked for the subject's head, and the head's side of the body's centroid is the
+facing, accepted only when the mirrored image reads the other way), picks the first well-masked candidate that faces the template's
+way, reconstructs it by kind, and registers the subject in `configs/subjects.local.yaml`, after which every runner accepts
+`--category bear`. A candidate whose facing cannot be read is recorded as assumed, with a warning; `--facing left|right` is your own
+reading and wins, `--select-seed k` picks a candidate after a look at the overlays under `<root>/probe/m2d/proxies/<name>/`, and
+`--head-query` names the front of a subject without a head ("the front of a car"). This path is experimental: the thesis's measurements
+say nothing about how such a subject performs.
 
 ## Repository layout
 
