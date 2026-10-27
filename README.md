@@ -150,7 +150,7 @@ three on Colab by itself (`--setup colab`), and on your own machine you build th
 |---|---|---|---|---|
 | Phase 1 | `requirements.txt`, OpenD4RT (tracks, depth, camera), SAM 2.1 (masks) | `scripts/bootstrap.sh` | Module 1 and the screening checks | 24 GB |
 | Phase 2 | diffusers, transformers, MoGe-2; SAM 3D Body (people) and SAM 2 for the anchor's checks | `scripts/bootstrap_phase2.sh`, then `scripts/setup_sam3d.sh body` | Module 2 (anchor, reconstruction, handoff) and Module 3 (renders, guided sampling, grading) | 24 GB for Module 2, 40 GB for Module 3 |
-| SAM 3D Objects | the rigid reconstructor in its own conda-style environment (micromamba, compiled once, saved under `<root>/envs/`) | `scripts/setup_sam3d.sh objects` | rigid targets only (the red car, or a new rigid subject) | 24 GB |
+| SAM 3D Objects | the rigid reconstructor in its own conda-style environment (micromamba; its two compiled extensions, pytorch3d and gsplat, are wheels on the release page, so the build is downloads only; saved under `<root>/envs/`) | `scripts/setup_sam3d.sh objects` | rigid targets only (the red car, or a new rigid subject) | 24 GB |
 
 `configs/environment.yaml` names the interpreter of each environment per preset: `colab_oneclick` (the three side by side in one
 Colab VM, two virtual environments on Colab's torch), `colab_public` (one environment per session), `local` (edit the paths). Every

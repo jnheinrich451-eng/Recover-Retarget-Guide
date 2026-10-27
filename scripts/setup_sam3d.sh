@@ -137,6 +137,18 @@ if [ "$WHICH" = both ] || [ "$WHICH" = objects ]; then
   export TORCH_CUDA_ARCH_LIST="${TORCH_CUDA_ARCH_LIST:-8.0}"
   NVCC_PY=$("$OBJ_PY" -c "import nvidia.cuda_nvcc, os; print(os.path.dirname(nvidia.cuda_nvcc.__file__))" 2>/dev/null || true)
   if [ -n "$NVCC_PY" ] && [ -x "$NVCC_PY/bin/nvcc" ]; then export CUDA_HOME="$NVCC_PY"; fi
+  # The compiler for the builds below comes from the env itself, pinned to CUDA 12.4: torch 2.5.1+cu121 refuses an nvcc of another
+  # MAJOR version (Colab's system toolkit is CUDA 13 since 2026-10; measured 2026-10-27 "Build cuda_13.0"), and nvcc 12.1 (the one
+  # the vendor recipe leaves in the env) rejects the gcc 13 of current Colab images (measured 2026-10-27, Ubuntu 24.04, gcc 13.3);
+  # 12.4 is the same major as torch and accepts gcc 13. The install is a no-op when the env already holds 12.4.
+  nvcc_rel () { "$1" --version 2>/dev/null | grep -o 'release [0-9]*[.][0-9]*' | grep -o '[0-9]*[.][0-9]*$'; }
+  ENV_NVCC="$MM_ROOT/envs/$ENV_NAME/bin/nvcc"
+  if [ "$(nvcc_rel "$ENV_NVCC")" != "12.4" ]; then
+    say "env nvcc: $(nvcc_rel "$ENV_NVCC" || echo none); system nvcc: $(nvcc_rel "$(command -v nvcc || echo /usr/local/cuda/bin/nvcc)" || echo none); gcc $(gcc -dumpfullversion 2>/dev/null || echo ?) -> pinning cuda-nvcc 12.4 in the env"
+    "$MM" install -y -q -n "$ENV_NAME" -c nvidia/label/cuda-12.4.1 "cuda-nvcc=12.4.*" "cuda-cudart-dev=12.4.*" >>"$LOG" 2>&1 || say "objects: cuda-nvcc 12.4 install FAILED (see $LOG)"
+  fi
+  if [ -x "$ENV_NVCC" ]; then export CUDA_HOME="$MM_ROOT/envs/$ENV_NAME"; fi
+  say "builds use nvcc $(nvcc_rel "${CUDA_HOME:-/usr/local/cuda}/bin/nvcc" || echo none) at ${CUDA_HOME:-<unset>}"
   P3D_REF="git+https://github.com/facebookresearch/pytorch3d.git@75ebeeaea0908c5527e7b1e305fbc7681382db47"   # = requirements.p3d.txt (v0.7.8)
   NP_VER=$("$OBJ_PY" -c "import numpy; print(numpy.__version__)")
   say "p3d build: FORCE_CUDA=1 TORCH_CUDA_ARCH_LIST=$TORCH_CUDA_ARCH_LIST CUDA_HOME=${CUDA_HOME:-<unset>} nvcc: $( (command -v nvcc || ls "${CUDA_HOME:-/nonexistent}/bin/nvcc") 2>/dev/null || echo NOT FOUND ); env numpy $NP_VER; MAX_JOBS=$MAX_JOBS"
@@ -163,7 +175,29 @@ if [ "$WHICH" = both ] || [ "$WHICH" = objects ]; then
   # wheel); running `pip install -e .[p3d]` would re-resolve the git URL and REBUILD, so skip it.
   export PIP_FIND_LINKS="https://nvidia-kaolin.s3.us-east-2.amazonaws.com/torch-2.5.1_cu121.html"
   step "kaolin 0.17.0 (NVIDIA wheel for torch 2.5.1 cu121; notebook/inference.py imports kaolin.visualize)" "$OBJ_PY" -m pip install -q "kaolin==0.17.0"
-  step "[inference] (kaolin 0.17.0, gsplat, gradio; no build isolation so gsplat sees the env's torch)" "$OBJ_PY" -m pip install -q --no-build-isolation -e '.[inference]'
+  # gsplat (a git commit in requirements.inference.txt) is the last from-source CUDA build of this environment. As for pytorch3d:
+  # a wheel is downloaded (GSPLAT_WHEEL_URL) or built once and cached to Drive, then installed; `pip install -e .[inference]` would
+  # re-resolve the git URL and rebuild, so the extra's other members (kaolin above; seaborn, gradio) are installed by name instead.
+  GSPLAT_REF="git+https://github.com/nerfstudio-project/gsplat.git@2323de5905d5e90e035f792fe65bad0fedd413e7"   # = requirements.inference.txt
+  GSPLAT_WHL=$(ls "$WHEEL_DIR"/gsplat-*.whl 2>/dev/null | head -1 || true)
+  GSPLAT_WHEEL_URL="${GSPLAT_WHEEL_URL:-https://github.com/jnheinrich451-eng/Recover-Retarget-Guide/releases/download/v1.0/gsplat-1.5.3-cp311-cp311-linux_x86_64.whl}"   # built 2026-10-27 (python 3.11, torch 2.5.1 cu121, nvcc 12.4, sm_80/sm_86/sm_89)
+  if [ -z "$GSPLAT_WHL" ] && [ -n "$GSPLAT_WHEEL_URL" ]; then
+    say "downloading a prebuilt gsplat wheel: $GSPLAT_WHEEL_URL"
+    curl -Ls -o "$WHEEL_DIR/$(basename "$GSPLAT_WHEEL_URL")" "$GSPLAT_WHEEL_URL" || say "wheel download FAILED (building instead)"
+    GSPLAT_WHL=$(ls "$WHEEL_DIR"/gsplat-*.whl 2>/dev/null | head -1 || true)
+  fi
+  if [ -n "$GSPLAT_WHL" ]; then
+    say "gsplat: cached wheel found on Drive: $(basename "$GSPLAT_WHL")"
+  else
+    step "gsplat WHEEL build (no build isolation, CUDA arch $TORCH_CUDA_ARCH_LIST; cached to Drive after)" "$OBJ_PY" -m pip wheel -q --no-build-isolation --no-deps -w "$WHEEL_DIR" "gsplat @ $GSPLAT_REF"
+    GSPLAT_WHL=$(ls "$WHEEL_DIR"/gsplat-*.whl 2>/dev/null | head -1 || true)
+  fi
+  if [ -n "$GSPLAT_WHL" ]; then
+    step "gsplat install from wheel (with its pure-python deps; torch already satisfied)" "$OBJ_PY" -m pip install -q "$GSPLAT_WHL"
+  else
+    say "objects: gsplat wheel build FAILED (see $LOG)"
+  fi
+  step "[inference] members by name (seaborn 0.13.2, gradio 5.49.0; kaolin and gsplat above)" "$OBJ_PY" -m pip install -q "seaborn==0.13.2" "gradio==5.49.0"
   "$OBJ_PY" -c "import kaolin" 2>/dev/null || say "objects: kaolin NOT importable after the extras (the wheel index needs torch 2.5.1+cu121 in the env; see $LOG)"
   step "hydra patch (a PYTHON script — run with the env python, not bash)" "$OBJ_PY" ./patching/hydra
   NP_VER2=$("$OBJ_PY" -c "import numpy; print(numpy.__version__)")

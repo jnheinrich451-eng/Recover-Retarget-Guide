@@ -138,6 +138,8 @@ def main(argv=None):
     ap.add_argument("--proxy-asset", default=PROXY_ASSET, help="URL or local path of proxies_of_record.zip")
     ap.add_argument("--hf-token-file", default=None, help="a file holding the Hugging Face token (KEY=VALUE or bare); default: HF_TOKEN in the environment, "
                     "<Drive>/secrets/hf_token.env, or the saved login of huggingface-cli")
+    ap.add_argument("--pack-envs", default="auto", choices=["auto", "yes", "no"], help="after a successful build, tar the two virtual environments to <env root>/envs/ "
+                    "and restore them in the next session (auto: when that root is on a mounted Drive)")
     ap.add_argument("--sam3d-env-root", default=None, help="where scripts/setup_sam3d.sh keeps / restores the SAM 3D Objects environment tar and the pytorch3d wheel "
                     "(<root>/envs/); default: --root. The thesis's own: /content/drive/MyDrive/motion_transfer")
     ap.add_argument("--p3d-wheel-url", default=None, help="a prebuilt pytorch3d wheel for the objects environment (skips a 1-2 h build)")
@@ -186,7 +188,17 @@ def main(argv=None):
 
     # ---- [setup]
     if args.setup == "colab":
+        # the two virtual environments sit on Colab's python and torch, so a packed copy is only valid on the same pair: the stamp
+        # names both, and a tar with another stamp is ignored (the SAM 3D Objects environment is packed by setup_sam3d.sh the same way)
+        env_root = Path(args.sam3d_env_root or root) / "envs"
+        torch_v = subprocess.run([sys.executable, "-c", "import torch; print(torch.__version__)"], capture_output=True, text=True).stdout.strip() or "notorch"
+        stamp = f"py{sys.version_info[0]}.{sys.version_info[1]}-torch{torch_v}".replace("+", "_")
+        pack = args.pack_envs == "yes" or (args.pack_envs == "auto" and str(env_root).startswith("/content/drive/"))
         for v in (VENV1, VENV2):
+            tar = env_root / f"{v.name}-{stamp}.tar"
+            if not (v / "bin" / "activate").exists() and tar.exists() and tar.with_suffix(".tar.ok").exists():
+                t0 = time.time(); sh(["tar", "-xf", str(tar), "-C", str(v.parent)])
+                print(f"[full] {v.name} restored from {tar} in {time.time() - t0:.0f} s", flush=True)
             if not ((v / "bin" / "activate").exists() and (v / "bin" / "pip").exists()):        # absent, or half-built by a failed attempt
                 shutil.rmtree(v, ignore_errors=True)
                 # Colab's python has no ensurepip (python3-venv is not installed), so `python -m venv` fails at the pip step:
@@ -199,6 +211,13 @@ def main(argv=None):
                 assert (v / "bin" / "python").exists(), f"no interpreter in {v}"
         sh(f"source {VENV1}/bin/activate && bash scripts/bootstrap.sh", env=env, shell=True)
         sh(f"source {VENV2}/bin/activate && bash scripts/bootstrap_phase2.sh && (python -c 'import sam2' 2>/dev/null || pip install -q 'git+https://github.com/facebookresearch/sam2.git')", env=env, shell=True)
+        if pack:
+            for v in (VENV1, VENV2):
+                tar = env_root / f"{v.name}-{stamp}.tar"
+                if not tar.with_suffix(".tar.ok").exists():
+                    env_root.mkdir(parents=True, exist_ok=True); t0 = time.time()
+                    sh(["tar", "-cf", str(tar), "-C", str(v.parent), v.name]); tar.with_suffix(".tar.ok").write_text(stamp)
+                    print(f"[full] {v.name} packed -> {tar} ({tar.stat().st_size / 2**30:.1f} GB) in {time.time() - t0:.0f} s", flush=True)
         cap = subprocess.run(["nvidia-smi", "--query-gpu=compute_cap", "--format=csv,noheader"], capture_output=True, text=True).stdout.strip() or "8.0"
         which = "both" if (kind == "rigid" or (not new and subjects.kind(target) == "rigid")) else "body"
         senv = {**env, "DRIVE_ROOT": str(args.sam3d_env_root or root), "TORCH_CUDA_ARCH_LIST": cap}

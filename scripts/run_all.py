@@ -143,7 +143,7 @@ def m3_outcome(R: Path, clip: str, cat: str, m3_config):
     and the runner's recorded reason (reports/m3_sint/sint_step{1,2}.json) otherwise. The batch driver returns 0 on recorded failures,
     so the chain reads the cache, not the return code."""
     sys.path.insert(0, str(ROOT))
-    from scripts.run_m3_batch import video_name
+    from scripts.run_m3_batch import tbl, video_name                       # tbl: a registered subject's keys map onto the config's vehicle / human entries
     cfg = yaml.safe_load(Path(m3_config or "configs/m3_batch.yaml").read_text(encoding="utf-8"))
     d = R / "cache/m3" / clip / cat; frames = int(cfg["frames"]); seeds = [int(s) for s in cfg["seeds"]]
     def why(step):
@@ -157,7 +157,7 @@ def m3_outcome(R: Path, clip: str, cat: str, m3_config):
     missing = []
     for ak in ["A0", f"A3_{cat}"]:
         for s in seeds:
-            name = f"{video_name(ak.split('_')[0], s, frames, list(cfg['arms'][ak]))}.mp4"
+            name = f"{video_name(ak.split('_')[0], s, frames, list(tbl(cfg['arms'], ak)))}.mp4"
             if not (d / name).exists():
                 missing.append(name)
     if missing:
