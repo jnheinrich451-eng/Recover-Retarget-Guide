@@ -32,3 +32,6 @@ docs/2026S1-paper77_For_reference_STAR_STAR_STAR.pdf
 
 # the bundled example caches (release asset), never committed
 DATA/
+
+# a reader's own target subjects (scripts/make_proxy.py); never committed
+configs/subjects.local.yaml
