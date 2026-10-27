@@ -62,12 +62,16 @@ print(f"export DATA_DIR='{c['paths']['data_dir']}'")
 PY
 )"
 mkdir -p "$DATA_DIR"
+if [[ "$HF_DATASET_ID" == \<* ]] || [ "${SKIP_VIDEOS:-0}" = "1" ]; then
+  echo "skipping the reference-video download (SKIP_VIDEOS=1 or no dataset id): the clips are read from $DATA_DIR or the data root's videos/"
+else
 python - <<'PY'
 import os
 from huggingface_hub import snapshot_download
 p = snapshot_download(repo_id=os.environ["HF_DATASET_ID"], repo_type="dataset", local_dir=os.environ["DATA_DIR"])
 print("videos ->", p)
 PY
+fi
 python - <<'PY'
 import torch, diffusers, transformers
 from diffusers import WanImageToVideoPipeline, FluxControlPipeline  # noqa: F401
